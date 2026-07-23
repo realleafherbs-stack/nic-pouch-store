@@ -107,7 +107,7 @@ nav a:hover { opacity:.55; }
 .quick-product { min-height:190px; display:grid; grid-template-columns:58px 170px minmax(180px,1fr) minmax(380px,.85fr); align-items:center; gap:24px; border-bottom:1px solid #c8c5bc; }
 .quick-product-number { align-self:start; padding-top:28px; color:#8b887f; font-size:12px; font-weight:800; }
 .quick-product-image { height:170px; display:grid; place-items:center; overflow:hidden; }
-.quick-product-image img { width:150px; height:150px; object-fit:contain; transition:transform .35s cubic-bezier(.22,1,.36,1); }
+.quick-product-image img { width:160px; height:160px; object-fit:contain; mix-blend-mode:multiply; transition:transform .35s cubic-bezier(.22,1,.36,1); }
 .quick-product:hover .quick-product-image img { transform:scale(1.08) rotate(-4deg); }
 .quick-product-copy p { margin:0 0 7px; font-size:12px; font-weight:900; letter-spacing:.14em; }
 .quick-product-copy h3 { margin:0 0 12px; font-size:clamp(24px,2.4vw,36px); line-height:1; letter-spacing:-.035em; }
@@ -150,8 +150,8 @@ nav a:hover { opacity:.55; }
 .brand-cuba { background:#dfe6ee; }
 .product-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
 .product-card { background:white; border:1px solid var(--line); min-width:0; }
-.product-image { position:relative; display:grid; place-items:center; min-height:280px; overflow:hidden; background:#eeeae2; }
-.product-image img { width:85%; height:230px; object-fit:contain; transition:.35s; }
+.product-image { position:relative; display:grid; place-items:center; min-height:300px; overflow:hidden; background:#faf9f6; }
+.product-image img { width:94%; height:270px; object-fit:contain; mix-blend-mode:multiply; transition:.35s; }
 .product-card:hover img { transform:scale(1.06) rotate(-2deg); }
 .strength-pill { position:absolute; z-index:2; top:14px; right:14px; padding:5px 9px; background:#111; color:white; font-size:12px; }
 .can-placeholder { display:grid; place-items:center; width:180px; aspect-ratio:1; border-radius:50%; background:#111; color:white; font-weight:900; font-size:24px; }
@@ -615,7 +615,7 @@ nav a:hover { opacity:.55; }
   .brand-tile { min-height:95px; font-size:16px; }
   .product-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
   .product-image { min-height:180px; }
-  .product-image img { height:160px; }
+  .product-image img { width:96%; height:175px; }
   .product-copy { padding:14px; }
   .product-copy h3 { font-size:16px; min-height:44px; }
   .price-row { align-items:flex-end; }
