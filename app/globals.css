@@ -45,7 +45,7 @@ nav a:hover { opacity:.55; }
 .brands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
 .brand-tile { min-height:135px; display:grid; place-items:center; padding:20px; background:white; border:1px solid var(--line); font-weight:800; font-size:22px; letter-spacing:.04em; transition:.25s; }
 .brand-tile:hover { background:#111; color:white; transform:translateY(-3px); }
-.brand-showcase { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(260px,1fr); gap:14px; overflow-x:auto; padding:4px 2px 18px; scroll-snap-type:x mandatory; }
+.brand-showcase { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; padding:4px 2px 18px; }
 .brand-card { position:relative; min-height:330px; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; padding:26px 24px 0; border:1px solid rgba(0,0,0,.09); scroll-snap-align:start; transition:transform .3s ease,box-shadow .3s ease; }
 .brand-card:hover { transform:translateY(-6px); box-shadow:0 22px 45px rgba(0,0,0,.12); }
 .brand-card-copy { position:relative; z-index:2; text-align:center; }
@@ -206,7 +206,7 @@ nav a:hover { opacity:.55; }
   .hero-cans img:nth-child(2) { width:180px; }
   .section { padding-block:60px; }
   .brands { grid-template-columns:repeat(3,1fr); }
-  .brand-showcase { grid-auto-columns:78%; margin-left:-14px; padding-left:14px; }
+  .brand-showcase { grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:78%; overflow-x:auto; margin-left:-14px; padding-left:14px; scroll-snap-type:x mandatory; }
   .brand-card { min-height:315px; }
   .brand-tile { min-height:95px; font-size:16px; }
   .product-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
