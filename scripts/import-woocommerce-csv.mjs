@@ -13,7 +13,7 @@ const previousBySku = new Map(previous.map((product) => [String(product.sku), pr
 const brands = ["HQD", "PABLO", "KILLA", "CUBA", "NOIS", "QWEET", "ZYN", "VELO"];
 const slugify = (value) => value.normalize("NFKD").replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "").toLowerCase();
 const products = data
-  .filter((row) => row["פורסם"] === "1" && /פאוצ|טבק הרחה/i.test(row["קטגוריות"] || ""))
+  .filter((row) => /פאוצ|טבק הרחה/i.test(`${row["שם"] || ""} ${row["קטגוריות"] || ""}`))
   .map((row) => {
     const name = row["שם"].trim();
     const haystack = `${name} ${row["קטגוריות"]}`.toUpperCase();

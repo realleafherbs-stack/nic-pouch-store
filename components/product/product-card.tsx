@@ -14,6 +14,7 @@ export function ProductCard({ product }: { product: Product }) {
   const { dispatch } = useCart();
 
   function addProduct() {
+    if (product.stock <= 0) return;
     dispatch({ type: "add", product, quantity: selectedQuantity });
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1600);
@@ -37,7 +38,7 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
         <div className="price-row">
           <strong>{(product.retailPrice * selectedQuantity).toFixed(2)} ₪</strong>
-          <button className={added ? "card-add added" : "card-add"} onClick={addProduct} aria-label={`הוספת ${selectedQuantity} יחידות של ${product.name} לעגלה`}>{added ? <Check /> : <Plus />}<span>{added ? "נוסף" : `הוספת ${selectedQuantity}`}</span></button>
+          <button disabled={product.stock <= 0} className={added ? "card-add added" : "card-add"} onClick={addProduct} aria-label={product.stock <= 0 ? `${product.name} אזל מהמלאי` : `הוספת ${selectedQuantity} יחידות של ${product.name} לעגלה`}>{product.stock <= 0 ? null : added ? <Check /> : <Plus />}<span>{product.stock <= 0 ? "אזל" : added ? "נוסף" : `הוספת ${selectedQuantity}`}</span></button>
         </div>
       </div>
     </article>

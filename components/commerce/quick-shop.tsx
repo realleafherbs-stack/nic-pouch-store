@@ -111,6 +111,7 @@ function QuickProduct({ product, index }: { product: Product; index: number }) {
   const { dispatch } = useCart();
 
   function add() {
+    if (product.stock <= 0) return;
     dispatch({ type: "add", product, quantity });
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1500);
@@ -136,8 +137,8 @@ function QuickProduct({ product, index }: { product: Product; index: number }) {
           ))}
         </div>
         <div className="quick-price"><strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong><small>{product.retailPrice.toFixed(2)} ₪ ליח׳</small></div>
-        <button className={added ? "quick-add added" : "quick-add"} onClick={add}>
-          {added ? <Check /> : <Plus />}<span>{added ? "נוסף לעגלה" : "הוספה"}</span>
+        <button disabled={product.stock <= 0} className={added ? "quick-add added" : "quick-add"} onClick={add}>
+          {product.stock <= 0 ? null : added ? <Check /> : <Plus />}<span>{product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : "הוספה"}</span>
         </button>
       </div>
     </article>
