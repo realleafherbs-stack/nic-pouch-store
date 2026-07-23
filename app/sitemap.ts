@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { products } from "@/lib/catalog/local-repository";
 import { articles } from "@/data/articles";
+export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://nicpouch.co.il";
   return [

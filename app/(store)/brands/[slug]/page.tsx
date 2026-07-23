@@ -2,6 +2,10 @@ import { notFound } from "next/navigation";
 import { ProductCard } from "@/components/product/product-card";
 import { products } from "@/lib/catalog/local-repository";
 
+export function generateStaticParams() {
+  return [...new Set(products.map((product) => product.brand.toLowerCase()))].map((slug) => ({ slug }));
+}
+
 export default async function BrandPage({ params }: { params: Promise<{ slug: string }> }) {
   const brand = (await params).slug.toUpperCase();
   const items = products.filter((product) => product.brand === brand);
