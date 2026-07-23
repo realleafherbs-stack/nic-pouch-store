@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { MessageCircle, PackageCheck, ShieldCheck, Truck } from "lucide-react";
 import { BrandShowcase } from "@/components/commerce/brand-showcase";
 import { HomeBlog } from "@/components/commerce/home-blog";
 import { QuickShop } from "@/components/commerce/quick-shop";
@@ -58,12 +57,6 @@ export default async function HomePage() {
         <div className="nois-visual">{nois.map((product) => product.images[0] && <img key={product.id} src={product.images[0]} alt={product.name} />)}</div>
       </section>
       <HomeBlog />
-      <section className="section icon-benefits"><div className="container trust-grid">
-        <div><Truck /><strong>משלוח חינם</strong><span>בקנייה מעל 199 ₪</span></div>
-        <div><PackageCheck /><strong>עד 3 ימי עסקים</strong><span>משלוח מהיר לכל הארץ</span></div>
-        <div><ShieldCheck /><strong>קנייה מאובטחת</strong><span>תשתית מוכנה למסוף נפרד</span></div>
-        <div><MessageCircle /><strong>שירות אמיתי</strong><span>זמינים גם ב‑WhatsApp</span></div>
-      </div></section>
     </>
   );
 }
