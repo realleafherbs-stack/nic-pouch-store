@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Search, ShoppingBag, UserRound } from "lucide-react";
 import { MobileNavigation } from "./mobile-navigation";
+import { DesktopHeaderActions } from "./desktop-header-actions";
 
 export function SiteHeader() {
   return (
@@ -15,13 +15,9 @@ export function SiteHeader() {
             <img src="/figma/nic-pouch-logo.jpg" alt="NIC POUCH" />
           </Link>
           <nav aria-label="ניווט ראשי">
-            <Link href="/shop">מוצרים</Link><Link href="/shop">מותגים</Link><Link href="/blog">בלוג</Link><Link href="/shop">מבצעים</Link>
+            <Link href="/">דף הבית</Link><Link href="/shop">כל המוצרים</Link><Link href="/#brands">מותגים</Link><Link href="/blog">המדריכים שלנו</Link><Link href="/shipping">משלוחים</Link>
           </nav>
-          <div className="header-actions">
-            <Link href="/shop" aria-label="חיפוש"><Search /></Link>
-            <Link href="/checkout" aria-label="חשבון"><UserRound /></Link>
-            <Link href="/cart" aria-label="סל קניות"><ShoppingBag /></Link>
-          </div>
+          <DesktopHeaderActions />
         </div>
       </header>
     </>
