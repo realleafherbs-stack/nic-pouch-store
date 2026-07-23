@@ -78,8 +78,9 @@ export function MobileNavigation() {
             <header><strong>תפריט</strong><button className="icon-button" aria-label="סגירת תפריט" onClick={closeMenu}><X /></button></header>
             <nav>
               <Link href="/shop" onClick={closeMenu}>כל המוצרים</Link>
-              <Link href="/#brands" onClick={closeMenu}>מותגים מובילים</Link>
-              <Link href="/blog" onClick={closeMenu}>המדריכים שלנו</Link>
+              <Link href="/#brands" onClick={closeMenu}>מותגים</Link>
+              <Link href="/blog" onClick={closeMenu}>מדריכים</Link>
+              <Link href="/#deals" onClick={closeMenu}>מבצעים</Link>
               <Link href="/shipping" onClick={closeMenu}>משלוחים</Link>
               <Link href="/accessibility" onClick={closeMenu}>נגישות</Link>
             </nav>

@@ -29,13 +29,13 @@ export default async function HomePage() {
         </div>
       </section>
       <div id="quick-shop"><QuickShop products={products} /></div>
-      <section className="section">
+      <section className="section" id="brands">
         <div className="container">
           <div className="section-heading"><div><p className="eyebrow">לבחירה מהירה</p><h2>המותגים המובילים</h2></div><Link className="text-link" href="/shop">לכל המותגים</Link></div>
           <BrandShowcase products={products} />
         </div>
       </section>
-      <section className="section section-alt">
+      <section className="section section-alt" id="deals">
         <div className="container">
           <div className="section-heading"><div><p className="eyebrow">נבחרו בשבילכם</p><h2>הפופולריים עכשיו</h2></div><Link className="text-link" href="/shop">צפו בכל הקטלוג</Link></div>
           <div className="product-grid">{featured.map((product) => <ProductCard product={product} key={product.id} />)}</div>

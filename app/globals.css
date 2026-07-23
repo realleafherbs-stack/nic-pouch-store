@@ -47,7 +47,19 @@ button,.button { cursor:pointer; border:0; }
 .container { width:min(1200px,calc(100% - 40px)); margin-inline:auto; }
 .skip-link { position:fixed; z-index:100; top:-100px; right:20px; padding:12px 20px; background:white; }
 .skip-link:focus { top:20px; }
-.announcement { min-height:40px; display:flex; gap:48px; align-items:center; justify-content:center; background:#050505; color:#fff; font-size:14px; letter-spacing:.02em; }
+.announcement { height:40px; overflow:hidden; display:flex; align-items:center; background:#050505; color:#fff; font-size:14px; letter-spacing:.02em; }
+.announcement-track { width:max-content; display:flex; direction:ltr; animation:announcement-marquee 24s linear infinite; will-change:transform; }
+.announcement-group { display:flex; align-items:center; flex-shrink:0; direction:rtl; }
+.announcement-group span { display:flex; align-items:center; white-space:nowrap; }
+.announcement-group span:after { content:"•"; margin-inline:38px; color:#dfff3f; font-size:12px; }
+@keyframes announcement-marquee {
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
+}
+@media (prefers-reduced-motion:reduce) {
+  .announcement-track { width:100%; justify-content:center; animation:none; }
+  .announcement-group[aria-hidden="true"] { display:none; }
+}
 .site-header { position:sticky; top:0; z-index:40; background:rgba(248,248,245,.94); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
 .header-inner { height:92px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; }
 .logo { direction:ltr; justify-self:start; font-size:22px; letter-spacing:.08em; font-weight:700; }
@@ -571,7 +583,9 @@ nav a:hover { opacity:.55; }
 .age-card button { width:100%; min-height:52px; color:white; background:#111; margin:18px 0; }
 .age-card a { display:block; text-decoration:underline; }
 @media (max-width:850px) {
-  .announcement span:nth-child(n+2), nav { display:none; }
+  nav { display:none; }
+  .announcement { height:34px; font-size:12px; }
+  .announcement-group span:after { margin-inline:24px; }
   .header-inner { display:none; }
   .mobile-header { height:64px; display:grid; grid-template-columns:44px 1fr 44px; align-items:center; padding-inline:14px; }
   .mobile-logo { justify-self:center; width:142px; height:54px; overflow:hidden; }
