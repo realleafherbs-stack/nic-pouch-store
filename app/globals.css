@@ -82,12 +82,15 @@ nav a:hover { opacity:.55; }
 .hero p { font-size:18px; line-height:1.65; color:#333; }
 .hero .actions { justify-content:center; }
 .hero-editorial { min-height:680px; background:#050505 url("/generated/home-hero-nois-desktop.webp") left center/cover no-repeat; isolation:isolate; }
-.hero-editorial:before { background:linear-gradient(90deg,transparent 0 48%,rgba(5,5,5,.7) 64%,#050505 100%); }
-.hero-editorial .hero-grid { min-height:680px; grid-template-columns:.88fr 1.12fr; }
-.hero-editorial .hero-copy { position:relative; z-index:3; grid-column:2; max-width:570px; justify-self:start; text-align:right; color:#f5f3ec; }
+.hero-editorial:before { background:linear-gradient(90deg,transparent 0 48%,rgba(5,5,5,.76) 67%,#050505 100%); }
+.hero-editorial .hero-grid { min-height:680px; grid-template-columns:1.08fr .92fr; }
+.hero-editorial .hero-copy { position:relative; z-index:3; grid-column:1; width:min(100%,520px); justify-self:end; text-align:right; color:#f5f3ec; }
 .hero-editorial .hero-copy .eyebrow,.hero-editorial .hero-copy p { color:#c8c6bd; }
-.hero-editorial .hero-copy h1 { font-size:clamp(58px,6.5vw,96px); letter-spacing:-.07em; }
-.hero-editorial .hero-copy .actions { justify-content:flex-start; }
+.hero-editorial .hero-copy .eyebrow { margin-bottom:16px; }
+.hero-editorial .hero-copy h1 { max-width:510px; font-size:clamp(56px,4.7vw,76px); line-height:.96; letter-spacing:-.06em; }
+.hero-editorial .hero-copy > p:not(.eyebrow) { max-width:485px; margin:22px 0 0; font-size:17px; line-height:1.65; }
+.hero-editorial .hero-copy .actions { justify-content:flex-start; gap:10px; margin-top:28px; }
+.hero-editorial .hero-copy .button { min-width:154px; min-height:54px; }
 .hero-editorial .button { color:#111; background:#dfff3f; }
 .hero-editorial .button.secondary { color:#f5f3ec; background:transparent; border-color:#64635d; }
 .hero-word { position:absolute; z-index:1; left:-1vw; bottom:-.16em; color:rgba(17,17,15,.085); font-size:clamp(150px,26vw,430px); font-weight:900; letter-spacing:-.1em; line-height:.8; direction:ltr; }
@@ -630,7 +633,7 @@ nav a:hover { opacity:.55; }
   .hero-editorial { min-height:820px; background-image:url("/generated/home-hero-nois-mobile.webp"); background-position:center bottom; background-size:cover; }
   .hero-editorial:before { background:linear-gradient(180deg,rgba(5,5,5,.96) 0,rgba(5,5,5,.82) 31%,transparent 50%); }
   .hero-editorial .hero-grid { min-height:820px; grid-template-columns:1fr; grid-template-rows:auto 1fr; align-items:start; padding-block:34px 20px; }
-  .hero-editorial .hero-copy { grid-column:1; grid-row:1; max-width:520px; justify-self:start; text-align:right; }
+  .hero-editorial .hero-copy { grid-column:1; grid-row:1; width:auto; max-width:520px; justify-self:start; text-align:right; }
   .hero-editorial .hero-copy h1 { max-width:520px; font-size:clamp(43px,12.5vw,66px); line-height:.98; }
   .hero-editorial .hero-copy p { max-width:440px; margin-bottom:0; font-size:16px; }
   .hero-editorial .hero-copy .actions { justify-content:flex-start; margin-top:20px; }
