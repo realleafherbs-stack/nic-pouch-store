@@ -34,11 +34,12 @@ export function ProductCard({ product }: { product: Product }) {
           {product.packSize > 1 && <span>מארז {product.packSize}</span>}
         </div>
         <div className="card-quantity" aria-label={`בחירת כמות עבור ${product.name}`}>
-          {([1, 5, 10] as const).map((quantity) => <button key={quantity} className={selectedQuantity === quantity ? "active" : ""} onClick={() => setSelectedQuantity(quantity)} aria-pressed={selectedQuantity === quantity}>{quantity}</button>)}
+          <span>כמות</span>
+          <div>{([1, 5, 10] as const).map((quantity) => <button key={quantity} className={selectedQuantity === quantity ? "active" : ""} onClick={() => setSelectedQuantity(quantity)} aria-pressed={selectedQuantity === quantity}>{quantity}</button>)}</div>
         </div>
         <div className="price-row">
-          <strong>{(product.retailPrice * selectedQuantity).toFixed(2)} ₪</strong>
-          <button disabled={product.stock <= 0} className={added ? "card-add added" : "card-add"} onClick={addProduct} aria-label={product.stock <= 0 ? `${product.name} אזל מהמלאי` : `הוספת ${selectedQuantity} יחידות של ${product.name} לעגלה`}>{product.stock <= 0 ? null : added ? <Check /> : <Plus />}<span>{product.stock <= 0 ? "אזל" : added ? "נוסף" : `הוספת ${selectedQuantity}`}</span></button>
+          <div className="card-price"><small>{selectedQuantity > 1 ? `${product.retailPrice.toFixed(2)} ₪ ליח׳` : "מחיר"}</small><strong><bdi>₪ {(product.retailPrice * selectedQuantity).toFixed(2)}</bdi></strong></div>
+          <button disabled={product.stock <= 0} className={added ? "card-add added" : "card-add"} onClick={addProduct} aria-label={product.stock <= 0 ? `${product.name} אזל מהמלאי` : `הוספת ${selectedQuantity} יחידות של ${product.name} לעגלה`}>{product.stock <= 0 ? null : added ? <Check /> : <Plus />}<span>{product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף" : "הוספה לעגלה"}</span></button>
         </div>
       </div>
     </article>

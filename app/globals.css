@@ -163,24 +163,29 @@ nav a:hover { opacity:.55; }
 .brand-killa { background:#ebe9e4; }
 .brand-cuba { background:#dfe6ee; }
 .product-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-.product-card { background:white; border:1px solid var(--line); min-width:0; }
+.product-card { height:100%; display:flex; flex-direction:column; background:white; border:1px solid var(--line); min-width:0; }
 .product-image { position:relative; display:grid; place-items:center; min-height:300px; overflow:hidden; background:#faf9f6; }
 .product-image img { width:94%; height:270px; object-fit:contain; mix-blend-mode:multiply; transition:.35s; }
 .product-card:hover img { transform:scale(1.06) rotate(-2deg); }
 .strength-pill { position:absolute; z-index:2; top:14px; right:14px; padding:5px 9px; background:#111; color:white; font-size:12px; }
 .can-placeholder { display:grid; place-items:center; width:180px; aspect-ratio:1; border-radius:50%; background:#111; color:white; font-weight:900; font-size:24px; }
-.product-copy { padding:20px; }
+.product-copy { flex:1; display:flex; flex-direction:column; padding:20px; }
 .product-copy h3 { font-size:20px; min-height:54px; margin:0 0 10px; }
 .product-meta { display:flex; gap:10px; color:var(--muted); font-size:13px; }
-.price-row { display:flex; justify-content:space-between; align-items:center; margin-top:22px; }
-.price-row strong { font-size:22px; }
+.price-row { display:grid; gap:12px; margin-top:16px; padding-top:16px; border-top:1px solid #e4e1da; }
+.card-price { min-height:30px; display:flex; align-items:end; justify-content:space-between; gap:12px; }
+.card-price small { color:var(--muted); font-size:12px; }
+.price-row strong { white-space:nowrap; font-size:22px; line-height:1; letter-spacing:-.025em; }
 .mini-button { padding:9px 14px; color:white; background:#111; font-size:13px; }
-.card-add { min-width:92px; min-height:44px; display:flex; align-items:center; justify-content:center; gap:6px; padding:0 13px; color:white; background:#111; font-size:13px; font-weight:700; }
+.card-add { width:100%; min-height:48px; display:flex; align-items:center; justify-content:center; gap:8px; padding:0 16px; color:white; background:#111; font-size:13px; font-weight:800; }
 .card-add.added { color:#154f26; background:#dff3e4; }
 .card-add:disabled,.quick-add:disabled { cursor:not-allowed; color:#777; background:#e5e3dd; }
 .card-add svg { width:16px; }
-.card-quantity { display:flex; gap:5px; margin-top:12px; }
-.card-quantity button { min-width:36px; height:32px; padding:0 8px; border:1px solid #d4d0c7; background:white; color:#5b5954; font-size:12px; font-weight:800; }
+.card-quantity { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:auto; padding-top:18px; }
+.card-quantity > span { color:var(--muted); font-size:12px; font-weight:700; }
+.card-quantity > div { display:grid; grid-template-columns:repeat(3,40px); }
+.card-quantity button { min-width:40px; height:38px; padding:0; border:1px solid #d4d0c7; border-left:0; background:white; color:#5b5954; font-size:12px; font-weight:800; }
+.card-quantity button:last-child { border-left:1px solid #d4d0c7; }
 .card-quantity button.active { border-color:#111; background:#111; color:white; }
 .finder { display:grid; grid-template-columns:.9fr 1.1fr; gap:40px; align-items:center; }
 .finder h2,.nois h2 { font-size:clamp(42px,6vw,82px); margin:0 0 20px; line-height:.98; }
@@ -651,11 +656,17 @@ nav a:hover { opacity:.55; }
   .product-image img { width:96%; height:175px; }
   .product-copy { padding:14px; }
   .product-copy h3 { font-size:16px; min-height:44px; }
-  .price-row { align-items:flex-end; }
+  .price-row { gap:10px; margin-top:12px; padding-top:12px; }
+  .card-price { align-items:center; }
+  .card-price small { font-size:10px; }
   .price-row strong { font-size:18px; }
   .mini-button { display:none; }
-  .card-add { min-width:44px; width:44px; padding:0; }
-  .card-add span { display:none; }
+  .card-add { width:100%; min-height:44px; padding:0 8px; font-size:12px; }
+  .card-add svg { width:15px; }
+  .card-quantity { display:block; padding-top:14px; }
+  .card-quantity > span { display:block; margin-bottom:7px; }
+  .card-quantity > div { grid-template-columns:repeat(3,1fr); }
+  .card-quantity button { min-width:0; width:100%; }
   .nois-copy { padding:45px 25px; }
   .trust-grid { grid-template-columns:repeat(2,1fr); }
   .editorial-grid { grid-template-columns:1fr; grid-template-rows:auto; min-height:0; }
