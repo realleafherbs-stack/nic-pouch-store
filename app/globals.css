@@ -45,6 +45,22 @@ nav a:hover { opacity:.55; }
 .brands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
 .brand-tile { min-height:135px; display:grid; place-items:center; padding:20px; background:white; border:1px solid var(--line); font-weight:800; font-size:22px; letter-spacing:.04em; transition:.25s; }
 .brand-tile:hover { background:#111; color:white; transform:translateY(-3px); }
+.brand-showcase { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(260px,1fr); gap:14px; overflow-x:auto; padding:4px 2px 18px; scroll-snap-type:x mandatory; }
+.brand-card { position:relative; min-height:330px; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; padding:26px 24px 0; border:1px solid rgba(0,0,0,.09); scroll-snap-align:start; transition:transform .3s ease,box-shadow .3s ease; }
+.brand-card:hover { transform:translateY(-6px); box-shadow:0 22px 45px rgba(0,0,0,.12); }
+.brand-card-copy { position:relative; z-index:2; text-align:center; }
+.brand-logo-word { display:block; font-family:Arial Black,Arial,sans-serif; font-size:34px; font-weight:900; letter-spacing:-.06em; line-height:1; }
+.brand-pablo .brand-logo-word,.brand-killa .brand-logo-word { font-style:italic; transform:skew(-7deg); }
+.brand-card-copy p { min-height:44px; margin:12px auto 15px; color:rgba(0,0,0,.62); font-size:14px; line-height:1.5; }
+.brand-card-cta { display:inline-block; padding-bottom:4px; border-bottom:1px solid currentColor; font-size:13px; font-weight:700; }
+.brand-card-product { height:185px; display:grid; place-items:end center; margin-top:8px; }
+.brand-card-product img { width:95%; height:190px; object-fit:contain; filter:drop-shadow(0 17px 12px rgba(0,0,0,.2)); transition:transform .35s ease; }
+.brand-card:hover .brand-card-product img { transform:scale(1.07) translateY(-4px); }
+.brand-nois { background:#e9ff70; }
+.brand-hqd { background:#dff1f4; }
+.brand-pablo { background:#f2e6dd; }
+.brand-killa { background:#ebe9e4; }
+.brand-cuba { background:#dfe6ee; }
 .product-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
 .product-card { background:white; border:1px solid var(--line); min-width:0; }
 .product-image { position:relative; display:grid; place-items:center; min-height:280px; overflow:hidden; background:#eeeae2; }
@@ -190,6 +206,8 @@ nav a:hover { opacity:.55; }
   .hero-cans img:nth-child(2) { width:180px; }
   .section { padding-block:60px; }
   .brands { grid-template-columns:repeat(3,1fr); }
+  .brand-showcase { grid-auto-columns:78%; margin-left:-14px; padding-left:14px; }
+  .brand-card { min-height:315px; }
   .brand-tile { min-height:95px; font-size:16px; }
   .product-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
   .product-image { min-height:180px; }

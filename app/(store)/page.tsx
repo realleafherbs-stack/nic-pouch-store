@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { BrandShowcase } from "@/components/commerce/brand-showcase";
 import { ProductCard } from "@/components/product/product-card";
-import { getBrands, products } from "@/lib/catalog/local-repository";
+import { products } from "@/lib/catalog/local-repository";
 
 export default async function HomePage() {
   const noisProducts = products.filter((product) => product.brand === "NOIS");
@@ -22,7 +23,7 @@ export default async function HomePage() {
       <section className="section">
         <div className="container">
           <div className="section-heading"><div><p className="eyebrow">לבחירה מהירה</p><h2>המותגים המובילים</h2></div><Link className="text-link" href="/shop">לכל המותגים</Link></div>
-          <div className="brands">{getBrands().slice(0, 6).map((brand) => <Link key={brand} className="brand-tile" href={`/shop?brand=${brand}`}>{brand}</Link>)}</div>
+          <BrandShowcase products={products} />
         </div>
       </section>
       <section className="section section-alt">
