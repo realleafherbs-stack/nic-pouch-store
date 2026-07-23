@@ -5,6 +5,6 @@ import { CartProvider } from "@/components/commerce/cart-provider";
 it("renders the store identity", async () => {
   render(<CartProvider>{await HomePage()}</CartProvider>);
   expect(
-    screen.getByRole("heading", { name: "מוצאים את הפאוץ׳ שלך." })
+    screen.getByRole("heading", { name: "כל עולם הפאוצ׳ים במקום אחד." })
   ).toBeVisible();
 });

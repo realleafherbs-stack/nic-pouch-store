@@ -10,21 +10,15 @@ export default async function HomePage() {
   const otherProducts = products.filter((product) => product.brand !== "NOIS" && product.packSize === 1);
   const featured = [noisProducts[0], otherProducts[0], otherProducts[17], noisProducts[1], otherProducts[19], otherProducts[3]].filter(Boolean);
   const nois = products.filter((product) => product.brand === "NOIS").slice(0, 2);
-  const heroProducts = [noisProducts[0], otherProducts[0], otherProducts[17]].filter(Boolean);
   return (
     <>
       <section className="hero hero-editorial">
-        <div className="hero-word" aria-hidden="true">POUCH</div>
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">כל המותגים. בחירה אחת מדויקת.</p>
-            <h1>מוצאים את<br />הפאוץ׳ שלך.</h1>
-            <p>{products.length} מוצרים, עוצמות וטעמים — מסודרים כדי שתגיעו לבחירה הנכונה מהר.</p>
-            <div className="actions"><Link className="button" href="#quick-shop">התאמה מהירה</Link><Link className="button secondary" href="/shop">לכל החנות</Link></div>
-          </div>
-          <div className="hero-product-stage" aria-label="מוצרים נבחרים">
-            {heroProducts.map((product, index) => product.images[0] && <img key={product.id} className={`hero-can hero-can-${index + 1}`} src={product.images[0]} alt={product.name} />)}
-            <span>18+</span>
+            <p className="eyebrow">כל המותגים. כל הטעמים. כל החוזקים.</p>
+            <h1>כל עולם הפאוצ׳ים<br />במקום אחד.</h1>
+            <p>מבחר רחב של פאוצ׳י ניקוטין, מסודר לבחירה פשוטה והזמנה מהירה עד אליך.</p>
+            <div className="actions"><Link className="button" href="#quick-shop">להתחיל לבחור</Link><Link className="button secondary" href="/shop">לכל המוצרים</Link></div>
           </div>
         </div>
       </section>
