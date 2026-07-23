@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MessageCircle, PackageCheck, ShieldCheck, Truck } from "lucide-react";
 import { BrandShowcase } from "@/components/commerce/brand-showcase";
 import { HomeBlog } from "@/components/commerce/home-blog";
+import { QuickShop } from "@/components/commerce/quick-shop";
 import { ProductCard } from "@/components/product/product-card";
 import { products } from "@/lib/catalog/local-repository";
 
@@ -10,18 +11,25 @@ export default async function HomePage() {
   const otherProducts = products.filter((product) => product.brand !== "NOIS" && product.packSize === 1);
   const featured = [noisProducts[0], otherProducts[0], otherProducts[17], noisProducts[1], otherProducts[19], otherProducts[3], noisProducts[2], otherProducts[12]].filter(Boolean);
   const nois = products.filter((product) => product.brand === "NOIS").slice(0, 2);
+  const heroProducts = [noisProducts[0], otherProducts[0], otherProducts[17]].filter(Boolean);
   return (
     <>
-      <section className="hero">
+      <section className="hero hero-editorial">
+        <div className="hero-word" aria-hidden="true">POUCH</div>
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">ברוכים הבאים</p>
-            <h1>15% הנחה<br />ברכישה ראשונה</h1>
-            <p>על המוצרים המובילים</p>
-            <div className="actions"><Link className="button" href="/shop">לקנייה עכשיו</Link></div>
+            <p className="eyebrow">כל המותגים. בחירה אחת מדויקת.</p>
+            <h1>מוצאים את<br />הפאוץ׳ שלך.</h1>
+            <p>58 מוצרים, עוצמות וטעמים — מסודרים כדי שתגיעו לבחירה הנכונה מהר.</p>
+            <div className="actions"><Link className="button" href="#quick-shop">התאמה מהירה</Link><Link className="button secondary" href="/shop">לכל החנות</Link></div>
+          </div>
+          <div className="hero-product-stage" aria-label="מוצרים נבחרים">
+            {heroProducts.map((product, index) => product.images[0] && <img key={product.id} className={`hero-can hero-can-${index + 1}`} src={product.images[0]} alt={product.name} />)}
+            <span>18+</span>
           </div>
         </div>
       </section>
+      <div id="quick-shop"><QuickShop products={products} /></div>
       <section className="section">
         <div className="container">
           <div className="section-heading"><div><p className="eyebrow">לבחירה מהירה</p><h2>המותגים המובילים</h2></div><Link className="text-link" href="/shop">לכל המותגים</Link></div>

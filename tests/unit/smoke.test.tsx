@@ -5,6 +5,6 @@ import { CartProvider } from "@/components/commerce/cart-provider";
 it("renders the store identity", async () => {
   render(<CartProvider>{await HomePage()}</CartProvider>);
   expect(
-    screen.getByRole("heading", { name: "15% הנחה ברכישה ראשונה" })
+    screen.getByRole("heading", { name: "מוצאים את הפאוץ׳ שלך." })
   ).toBeVisible();
 });
