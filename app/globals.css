@@ -90,6 +90,27 @@ nav a:hover { opacity:.55; }
 .trust-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:30px; text-align:center; }
 .trust-grid div { padding:30px; border-top:1px solid var(--line); }
 .trust-grid strong { display:block; font-size:20px; margin-bottom:8px; }
+.icon-benefits { background:#f8f8f5; }
+.trust-grid svg { width:34px; height:34px; margin:0 auto 18px; stroke-width:1.35; }
+.home-blog { background:#11110f; color:#f5f3ec; }
+.home-blog .eyebrow { color:#b8b5ab; }
+.home-blog .text-link { color:#f5f3ec; }
+.editorial-grid { display:grid; grid-template-columns:1.3fr .85fr; grid-template-rows:1fr 1fr; gap:14px; min-height:590px; }
+.editorial-card { position:relative; min-height:280px; display:grid; overflow:hidden; color:#111; background:#e8e0d2; }
+.editorial-card-1 { grid-row:1 / 3; background:#dff0ed; }
+.editorial-card-2 { background:#e8e0d2; }
+.editorial-card-3 { background:#d9ef67; }
+.editorial-art { position:absolute; inset:0; display:grid; place-items:center; opacity:.16; transform:rotate(-8deg) scale(1.1); transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .3s; }
+.editorial-art svg { width:58%; height:58%; stroke-width:.55; }
+.editorial-card:hover .editorial-art { transform:rotate(-3deg) scale(1.18); opacity:.22; }
+.editorial-copy { position:relative; z-index:2; align-self:end; padding:clamp(26px,4vw,52px); background:linear-gradient(180deg,transparent,rgba(255,255,255,.92) 48%); }
+.editorial-copy > span { font-size:12px; font-weight:700; letter-spacing:.06em; }
+.editorial-copy h3 { max-width:620px; margin:8px 0 10px; font-size:clamp(26px,3.2vw,48px); line-height:1.04; letter-spacing:-.035em; }
+.editorial-card:not(.editorial-card-1) .editorial-copy h3 { font-size:28px; }
+.editorial-copy p { max-width:540px; margin:0 0 18px; line-height:1.55; color:#45443f; }
+.editorial-copy strong { display:flex; align-items:center; gap:8px; font-size:14px; }
+.editorial-copy strong svg { width:17px; transition:transform .25s; }
+.editorial-card:hover .editorial-copy strong svg { transform:translateX(-5px); }
 .site-footer { padding-top:70px; background:#080808; color:#ddd; }
 .footer-grid { display:grid; grid-template-columns:2fr repeat(3,1fr); gap:60px; padding-bottom:60px; }
 .footer-grid > div { display:flex; flex-direction:column; gap:12px; }
@@ -219,6 +240,9 @@ nav a:hover { opacity:.55; }
   .mini-button { display:none; }
   .nois-copy { padding:45px 25px; }
   .trust-grid { grid-template-columns:repeat(2,1fr); }
+  .editorial-grid { grid-template-columns:1fr; grid-template-rows:auto; min-height:0; }
+  .editorial-card-1 { grid-row:auto; min-height:430px; }
+  .editorial-card-2,.editorial-card-3 { min-height:300px; }
   .footer-grid { grid-template-columns:1fr 1fr; gap:35px; }
   .shop-layout { grid-template-columns:1fr; }
   .filters { display:grid; grid-template-columns:1fr 1fr; }
