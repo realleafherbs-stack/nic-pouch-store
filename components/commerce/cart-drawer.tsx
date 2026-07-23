@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 import { useCart } from "@/components/commerce/cart-provider";
+import { linePrice, unitPriceForQuantity } from "@/lib/catalog/pricing";
 
 export function CartDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { state, totals, dispatch } = useCart();
@@ -71,7 +72,8 @@ export function CartDrawer({ open, onClose }: { open: boolean; onClose: () => vo
                     </div>
                   </div>
                   <div className="drawer-line-end">
-                    <strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong>
+                    <strong>{linePrice(product, quantity).toFixed(2)} ₪</strong>
+                    <small>{unitPriceForQuantity(product, quantity).toFixed(2)} ₪ ליח׳</small>
                     <button aria-label={`הסרת ${product.name || "מוצר"} מהעגלה`} onClick={() => dispatch({ type: "remove", productId: product.id })}><Trash2 /></button>
                   </div>
                 </article>

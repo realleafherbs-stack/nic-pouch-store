@@ -4,10 +4,10 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Check, Plus, SlidersHorizontal } from "lucide-react";
 import type { Product, StrengthLevel } from "@/lib/catalog/model";
+import { linePrice, PURCHASE_QUANTITIES, type PurchaseQuantity, unitPriceForQuantity } from "@/lib/catalog/pricing";
 import { useCart } from "@/components/commerce/cart-provider";
 
 type FinderMode = "popular" | "flavor" | "strength" | "brand";
-type Quantity = 1 | 5 | 10;
 
 const modes: { id: FinderMode; label: string }[] = [
   { id: "popular", label: "נמכרים" },
@@ -121,7 +121,7 @@ export function QuickShop({ products }: { products: Product[] }) {
 }
 
 function QuickProduct({ product, index }: { product: Product; index: number }) {
-  const [quantity, setQuantity] = useState<Quantity>(1);
+  const [quantity, setQuantity] = useState<PurchaseQuantity>(1);
   const [added, setAdded] = useState(false);
   const { dispatch } = useCart();
 
@@ -145,13 +145,13 @@ function QuickProduct({ product, index }: { product: Product; index: number }) {
       </div>
       <div className="quick-product-buy">
         <div className="quick-quantity" aria-label="כמות">
-          {([1, 5, 10] as const).map((amount) => (
+          {PURCHASE_QUANTITIES.map((amount) => (
             <button key={amount} onClick={() => setQuantity(amount)} className={quantity === amount ? "active" : ""} aria-pressed={quantity === amount}>
               {amount}
             </button>
           ))}
         </div>
-        <div className="quick-price"><strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong><small>{product.retailPrice.toFixed(2)} ₪ ליח׳</small></div>
+        <div className="quick-price"><strong>{linePrice(product, quantity).toFixed(2)} ₪</strong><small>{unitPriceForQuantity(product, quantity).toFixed(2)} ₪ ליח׳</small></div>
         <button disabled={product.stock <= 0} className={added ? "quick-add added" : "quick-add"} onClick={add}>
           {product.stock <= 0 ? null : added ? <Check /> : <Plus />}<span>{product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : "הוספה"}</span>
         </button>

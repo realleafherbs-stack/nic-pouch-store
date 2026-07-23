@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, LockKeyhole, ShoppingBag } from "lucide-react";
 import { useCart } from "./cart-provider";
+import { linePrice, unitPriceForQuantity } from "@/lib/catalog/pricing";
 
 export function CheckoutClient() {
   const { state, totals } = useCart();
@@ -33,7 +34,7 @@ export function CheckoutClient() {
           <button className="button checkout-submit" type="submit"><LockKeyhole /> שמירת הזמנה — {totals.total.toFixed(2)} ₪</button>
           <div className="warning"><strong>חשוב:</strong> בשלב זה לא מתבצע חיוב. התשלום יופעל רק לאחר חיבור מסוף הסליקה הייעודי.</div>
         </form>
-        <aside className="checkout-summary"><h2>ההזמנה שלכם</h2>{state.lines.map(({ product, quantity }) => <div className="checkout-line" key={product.id}><span>{quantity}×</span>{product.images?.[0] && <img src={product.images[0]} alt="" />}<div><strong>{product.flavor || product.name}</strong><small>{product.brand}</small></div><b>{(product.retailPrice * quantity).toFixed(2)} ₪</b></div>)}<dl><div><dt>מוצרים</dt><dd>{totals.subtotal.toFixed(2)} ₪</dd></div><div><dt>משלוח</dt><dd>{totals.shipping ? `${totals.shipping.toFixed(2)} ₪` : "חינם"}</dd></div><div><dt>סה״כ</dt><dd>{totals.total.toFixed(2)} ₪</dd></div></dl></aside>
+        <aside className="checkout-summary"><h2>ההזמנה שלכם</h2>{state.lines.map(({ product, quantity }) => <div className="checkout-line" key={product.id}><span>{quantity}×</span>{product.images?.[0] && <img src={product.images[0]} alt="" />}<div><strong>{product.flavor || product.name}</strong><small>{product.brand} · {unitPriceForQuantity(product, quantity).toFixed(2)} ₪ ליח׳</small></div><b>{linePrice(product, quantity).toFixed(2)} ₪</b></div>)}<dl><div><dt>מוצרים</dt><dd>{totals.subtotal.toFixed(2)} ₪</dd></div><div><dt>משלוח</dt><dd>{totals.shipping ? `${totals.shipping.toFixed(2)} ₪` : "חינם"}</dd></div><div><dt>סה״כ</dt><dd>{totals.total.toFixed(2)} ₪</dd></div></dl></aside>
       </div>
     </main>
   );

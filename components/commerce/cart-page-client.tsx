@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Minus, Plus, ShoppingBag, Trash2, Truck } from "lucide-react";
 import { useCart } from "./cart-provider";
+import { linePrice, unitPriceForQuantity } from "@/lib/catalog/pricing";
 
 export function CartPageClient() {
   const { state, totals, dispatch } = useCart();
@@ -26,7 +27,7 @@ export function CartPageClient() {
                   <button aria-label={`הגדלת כמות של ${product.name}`} onClick={() => dispatch({ type: "setQuantity", productId: product.id, quantity: quantity + 1 })}><Plus /></button>
                 </div>
               </div>
-              <div className="cart-line-total"><strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong><button aria-label={`הסרת ${product.name} מהעגלה`} onClick={() => dispatch({ type: "remove", productId: product.id })}><Trash2 /></button></div>
+              <div className="cart-line-total"><small>{unitPriceForQuantity(product, quantity).toFixed(2)} ₪ ליח׳</small><strong>{linePrice(product, quantity).toFixed(2)} ₪</strong><button aria-label={`הסרת ${product.name} מהעגלה`} onClick={() => dispatch({ type: "remove", productId: product.id })}><Trash2 /></button></div>
             </article>
           ))}
           <Link className="continue-shopping" href="/shop">המשך בקניות ←</Link>

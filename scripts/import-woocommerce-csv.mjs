@@ -31,6 +31,7 @@ const products = data
       sku, name, brand, flavor, nicotineMg,
       strengthLevel: nicotineMg === null ? null : nicotineMg <= 8 ? "mild" : nicotineMg <= 16 ? "medium" : nicotineMg <= 30 ? "strong" : "extra-strong",
       retailPrice: existing?.retailPrice ?? Number((unit * (packSize === 1 ? 1 : packSize * .9)).toFixed(1)),
+      ...(existing?.priceTiers?.length ? { priceTiers: existing.priceTiers } : {}),
       sourcePrice: Number(row["מחיר רגיל"] || row["מחיר מבצע"] || 0),
       stock: Number(row["מלאי"] || (row["במלאי?"] === "1" ? 50 : 0)), active: true, packSize,
       images: existing?.images?.length

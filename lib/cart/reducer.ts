@@ -1,4 +1,5 @@
 import type { CartAction, CartState } from "@/lib/cart/types";
+import { linePrice } from "@/lib/catalog/pricing";
 
 const FREE_SHIPPING_THRESHOLD = 199;
 const SHIPPING_COST = 29;
@@ -45,7 +46,7 @@ export function cartReducer(state: CartState, action: CartAction): CartState {
 export function cartTotals(state: CartState) {
   const itemCount = state.lines.reduce((count, line) => count + line.quantity, 0);
   const subtotal = state.lines.reduce(
-    (sum, line) => sum + line.product.retailPrice * line.quantity,
+    (sum, line) => sum + linePrice(line.product, line.quantity),
     0,
   );
   const shipping = subtotal > 0 && subtotal < FREE_SHIPPING_THRESHOLD ? SHIPPING_COST : 0;

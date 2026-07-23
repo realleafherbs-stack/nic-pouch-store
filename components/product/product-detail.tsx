@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, CircleGauge, Minus, PackageCheck, Plus, ShieldCheck, ShoppingBag, Sparkles, Truck, ZoomIn } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
+import { linePrice, PURCHASE_QUANTITIES, unitPriceForQuantity } from "@/lib/catalog/pricing";
 import { ProductCard } from "./product-card";
 import { useCart } from "@/components/commerce/cart-provider";
 
@@ -65,7 +66,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
           <div className="pd-purchase-box">
             <div className="pd-pack-choice">
               <span>בחרו כמות</span>
-              <div>{([1, 5, 10] as const).map((amount) => <button key={amount} className={quantity === amount ? "active" : ""} onClick={() => setQuantity(amount)} aria-pressed={quantity === amount}><strong>{amount}</strong><small>{amount === 1 ? "יחידה" : "יחידות"}</small></button>)}</div>
+              <div>{PURCHASE_QUANTITIES.map((amount) => <button key={amount} className={quantity === amount ? "active" : ""} onClick={() => setQuantity(amount)} aria-pressed={quantity === amount}><strong>{amount}</strong><small>{unitPriceForQuantity(product, amount).toFixed(2)} ₪ ליח׳</small></button>)}</div>
             </div>
             <div className="pd-purchase-row">
               <label>כמות</label>
@@ -75,7 +76,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
                 <button onClick={() => setQuantity((value) => value + 1)} aria-label="הגדלת כמות"><Plus /></button>
               </div>
             </div>
-            <p className="pd-purchase-total"><span>סה״כ</span><strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong></p>
+            <p className="pd-purchase-total"><span>סה״כ · {unitPriceForQuantity(product, quantity).toFixed(2)} ₪ ליח׳</span><strong>{linePrice(product, quantity).toFixed(2)} ₪</strong></p>
             <button disabled={product.stock <= 0} className="pd-add" onClick={addToCart}><ShoppingBag /> {product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : `הוסף לעגלה · ${quantity}`}</button>
             <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
           </div>
@@ -84,7 +85,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
       </section>
 
       <div className="pd-mobile-purchase" aria-label="רכישה מהירה">
-        <div><small>{product.brand} · {quantity} {quantity === 1 ? "יחידה" : "יחידות"}</small><strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong></div>
+        <div><small>{product.brand} · {quantity} {quantity === 1 ? "יחידה" : "יחידות"} · {unitPriceForQuantity(product, quantity).toFixed(2)} ₪ ליח׳</small><strong>{linePrice(product, quantity).toFixed(2)} ₪</strong></div>
         <button disabled={product.stock <= 0} onClick={addToCart}><ShoppingBag /> {product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : `הוספה לעגלה · ${quantity}`}</button>
       </div>
 

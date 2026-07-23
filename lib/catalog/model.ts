@@ -1,5 +1,10 @@
 export type StrengthLevel = "mild" | "medium" | "strong" | "extra-strong";
 
+export interface PriceTier {
+  minQuantity: number;
+  unitPrice: number;
+}
+
 export interface Product {
   id: string;
   slug: string;
@@ -10,6 +15,7 @@ export interface Product {
   nicotineMg: number | null;
   strengthLevel: StrengthLevel | null;
   retailPrice: number;
+  priceTiers?: PriceTier[];
   sourcePrice: number;
   stock: number;
   active: boolean;
