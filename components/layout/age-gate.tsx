@@ -11,12 +11,12 @@ export function AgeGate() {
   return (
     <div className="age-backdrop" role="dialog" aria-modal="true" aria-labelledby="age-title">
       <div className="age-card">
+        <div className="age-mark" aria-hidden="true">18<span>+</span></div>
         <div className="logo"><span>NIC</span> POUCH</div>
-        <p className="eyebrow">כניסה לבגירים בלבד</p>
-        <h2 id="age-title">האם גילך מעל 18?</h2>
-        <p>האתר כולל מוצרי ניקוטין, חומר ממכר שאינו מיועד לקטינים.</p>
-        <button onClick={() => { localStorage.setItem("nic-age", "confirmed"); setOpen(false); }}>כן, אני מעל גיל 18</button>
-        <a href="https://www.google.com">לא, יציאה מהאתר</a>
+        <h2 id="age-title">האתר מיועד למבוגרים בלבד</h2>
+        <p>המוצרים באתר מכילים ניקוטין — חומר ממכר.<br />הכניסה מותרת לבני 18 ומעלה בלבד.</p>
+        <button onClick={() => { localStorage.setItem("nic-age", "confirmed"); setOpen(false); }}>אני בן 18 ומעלה — כניסה</button>
+        <a href="https://www.google.com">יציאה</a>
       </div>
     </div>
   );

@@ -205,6 +205,8 @@ nav a:hover { opacity:.55; }
 .age-backdrop { position:fixed; inset:0; z-index:100; display:grid; place-items:center; padding:20px; background:rgba(0,0,0,.82); backdrop-filter:blur(12px); }
 .age-card { width:min(460px,100%); padding:48px; text-align:center; background:#f7f7f2; }
 .age-card .logo { display:inline-block; margin-bottom:35px; }
+.age-mark { width:94px; height:94px; display:grid; place-items:center; margin:0 auto 22px; border:2px solid #111; border-radius:50%; font-size:44px; font-weight:900; line-height:1; }
+.age-mark span { position:absolute; margin:0 62px 50px 0; padding:2px 5px; background:#f7f7f2; font-size:22px; }
 .age-card h2 { font-size:38px; margin:8px; }
 .age-card button { width:100%; min-height:52px; color:white; background:#111; margin:18px 0; }
 .age-card a { display:block; text-decoration:underline; }
