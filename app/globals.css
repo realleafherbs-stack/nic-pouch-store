@@ -163,6 +163,17 @@ nav a:hover { opacity:.55; }
 .brand-killa { background:#ebe9e4; }
 .brand-cuba { background:#dfe6ee; }
 .product-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.popular-products-grid { grid-template-columns:repeat(6,minmax(0,1fr)); gap:10px; }
+.popular-products-grid .product-image { min-height:210px; }
+.popular-products-grid .product-image img { height:190px; }
+.popular-products-grid .product-copy { padding:16px 14px; }
+.popular-products-grid .product-copy h3 { min-height:48px; font-size:17px; }
+.popular-products-grid .card-quantity { display:block; }
+.popular-products-grid .card-quantity > span { display:block; margin-bottom:7px; }
+.popular-products-grid .card-quantity > div { grid-template-columns:repeat(3,1fr); }
+.popular-products-grid .card-quantity button { min-width:0; width:100%; }
+.popular-products-grid .card-price { align-items:center; flex-wrap:wrap; }
+.popular-products-grid .price-row strong { font-size:18px; }
 .product-card { height:100%; display:flex; flex-direction:column; background:white; border:1px solid var(--line); min-width:0; }
 .product-image { position:relative; display:grid; place-items:center; min-height:300px; overflow:hidden; background:#faf9f6; }
 .product-image img { width:94%; height:270px; object-fit:contain; mix-blend-mode:multiply; transition:.35s; }
@@ -651,6 +662,9 @@ nav a:hover { opacity:.55; }
   .brand-card { min-height:315px; }
   .brand-tile { min-height:95px; font-size:16px; }
   .product-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+  .popular-products-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .popular-products-grid .product-image { min-height:180px; }
+  .popular-products-grid .product-image img { height:175px; }
   .product-image { min-height:180px; }
   .product-image img { width:96%; height:175px; }
   .product-copy { padding:14px; }

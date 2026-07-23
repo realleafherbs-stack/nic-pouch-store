@@ -8,7 +8,7 @@ import { products } from "@/lib/catalog/local-repository";
 export default async function HomePage() {
   const noisProducts = products.filter((product) => product.brand === "NOIS");
   const otherProducts = products.filter((product) => product.brand !== "NOIS" && product.packSize === 1);
-  const featured = [noisProducts[0], otherProducts[0], otherProducts[17], noisProducts[1], otherProducts[19], otherProducts[3], noisProducts[2], otherProducts[12]].filter(Boolean);
+  const featured = [noisProducts[0], otherProducts[0], otherProducts[17], noisProducts[1], otherProducts[19], otherProducts[3]].filter(Boolean);
   const nois = products.filter((product) => product.brand === "NOIS").slice(0, 2);
   const heroProducts = [noisProducts[0], otherProducts[0], otherProducts[17]].filter(Boolean);
   return (
@@ -38,7 +38,7 @@ export default async function HomePage() {
       <section className="section section-alt" id="deals">
         <div className="container">
           <div className="section-heading"><div><p className="eyebrow">נבחרו בשבילכם</p><h2>הפופולריים עכשיו</h2></div><Link className="text-link" href="/shop">צפו בכל הקטלוג</Link></div>
-          <div className="product-grid">{featured.map((product) => <ProductCard product={product} key={product.id} />)}</div>
+          <div className="product-grid popular-products-grid">{featured.map((product) => <ProductCard product={product} key={product.id} />)}</div>
         </div>
       </section>
       <section className="section section-dark">
