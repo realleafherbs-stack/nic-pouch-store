@@ -17,7 +17,7 @@ export function DesktopHeaderActions() {
           <ShoppingCart />
           {totals.itemCount > 0 && <b>{totals.itemCount}</b>}
         </button>
-        <Link href="/shop" aria-label="חיפוש"><Search /></Link>
+        <Link href="/shop?search=open" aria-label="חיפוש"><Search /></Link>
         <Link href="/shop" aria-label="מוצרים שאהבתי"><Heart /></Link>
       </div>
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />

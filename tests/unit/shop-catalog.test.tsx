@@ -1,4 +1,5 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { vi } from "vitest";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { ShopCatalog } from "@/components/commerce/shop-catalog";
 import type { Product } from "@/lib/catalog/model";
@@ -38,4 +39,13 @@ it("opens with a brand filter from the URL", async () => {
   expect(screen.getByRole("link", { name: "פירות יער" })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: "NOIS" })).toBeInTheDocument();
   window.history.replaceState({}, "", "/shop");
+});
+
+it("opens and focuses mobile search when the search navigation is activated", async () => {
+  window.matchMedia = vi.fn().mockReturnValue({ matches: true }) as unknown as typeof window.matchMedia;
+  render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
+  act(() => window.dispatchEvent(new Event("open-catalog-search")));
+  const dialog = await screen.findByRole("dialog", { name: "סינון ומיון" });
+  const searchInput = dialog.querySelector<HTMLInputElement>('input[aria-label="חיפוש"]');
+  await waitFor(() => expect(searchInput).toHaveFocus());
 });

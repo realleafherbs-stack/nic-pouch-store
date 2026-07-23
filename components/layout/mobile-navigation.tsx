@@ -29,6 +29,14 @@ export function MobileNavigation() {
     setCartOpen(true);
   }
 
+  function openSearch() {
+    if (window.location.pathname === "/shop") {
+      window.dispatchEvent(new Event("open-catalog-search"));
+      return;
+    }
+    window.location.assign("/shop?search=open");
+  }
+
   useEffect(() => {
     function closeOnEscape(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -92,7 +100,7 @@ export function MobileNavigation() {
       <nav className="mobile-bottom-nav" aria-label="ניווט מהיר">
         <Link href="/"><Home /><span>בית</span></Link>
         <Link href="/shop"><Store /><span>חנות</span></Link>
-        <Link href="/shop"><Search /><span>חיפוש</span></Link>
+        <button onClick={openSearch}><Search /><span>חיפוש</span></button>
         <button onClick={openCart}><span className="bottom-cart-icon"><ShoppingBag />{totals.itemCount > 0 && <b>{totals.itemCount}</b>}</span><span>עגלה</span></button>
       </nav>
 

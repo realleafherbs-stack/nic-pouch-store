@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { CircleGauge, SlidersHorizontal, X } from "lucide-react";
 import type { Product, StrengthLevel } from "@/lib/catalog/model";
@@ -31,6 +31,8 @@ export function ShopCatalog({ products }: { products: Product[] }) {
   const [flavor, setFlavor] = useState("");
   const [sort, setSort] = useState("");
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const focusSearchWhenReady = useRef(false);
   const brands = useMemo(() => [...new Set(products.map((product) => product.brand))], [products]);
 
   useEffect(() => {
@@ -41,7 +43,35 @@ export function ShopCatalog({ products }: { products: Product[] }) {
     if (strengthOptions.some((option) => option.value === requestedStrength)) setStrength(requestedStrength as StrengthLevel);
     if (requestedBrand && brands.includes(requestedBrand)) setBrand(requestedBrand);
     if (requestedFlavor && flavorFilters.some((option) => option.id === requestedFlavor)) setFlavor(requestedFlavor);
+    if (params.get("search") === "open") revealSearch();
   }, [brands]);
+
+  useEffect(() => {
+    function handleOpenSearch() {
+      revealSearch();
+    }
+    window.addEventListener("open-catalog-search", handleOpenSearch);
+    return () => window.removeEventListener("open-catalog-search", handleOpenSearch);
+  }, []);
+
+  useEffect(() => {
+    if (!filtersOpen || !focusSearchWhenReady.current) return;
+    requestAnimationFrame(() => {
+      searchInputRef.current?.focus();
+      focusSearchWhenReady.current = false;
+    });
+  }, [filtersOpen]);
+
+  function revealSearch() {
+    focusSearchWhenReady.current = true;
+    if (window.matchMedia("(max-width: 850px)").matches) {
+      setFiltersOpen(true);
+      return;
+    }
+    searchInputRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    searchInputRef.current?.focus();
+    focusSearchWhenReady.current = false;
+  }
 
   function changeStrength(value: string) {
     setStrength(value);
@@ -76,7 +106,7 @@ export function ShopCatalog({ products }: { products: Product[] }) {
 
   const controls = (
     <>
-      <label><span>חיפוש</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="טעם, מוצר או מותג" aria-label="חיפוש" /></label>
+      <label><span>חיפוש</span><input ref={searchInputRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="טעם, מוצר או מותג" aria-label="חיפוש" /></label>
       <label><span>מותג</span><select value={brand} onChange={(event) => setBrand(event.target.value)} aria-label="מותג"><option value="">כל המותגים</option>{brands.map((item) => <option key={item}>{item}</option>)}</select></label>
       <label><span>עוצמה</span><select value={strength} onChange={(event) => changeStrength(event.target.value)} aria-label="עוצמה"><option value="">כל העוצמות</option>{strengthOptions.map((item) => <option value={item.value} key={item.value}>{item.label}</option>)}</select></label>
       <label><span>מיון</span><select value={sort} onChange={(event) => setSort(event.target.value)} aria-label="מיון"><option value="">מומלצים</option><option value="price-asc">מחיר: נמוך לגבוה</option><option value="price-desc">מחיר: גבוה לנמוך</option></select></label>
