@@ -1,4 +1,5 @@
+import { CheckoutClient } from "@/components/commerce/checkout-client";
 export const metadata = { title: "השלמת הזמנה", robots: { index: false, follow: false } };
 export default function CheckoutPage() {
-  return <div className="container article"><p className="eyebrow">צ׳קאאוט מאובטח</p><h1>השלמת הזמנה</h1><form className="filters" style={{ maxWidth: 600 }}><input aria-label="שם מלא" placeholder="שם מלא" required /><input aria-label="טלפון" placeholder="טלפון" required /><input type="email" aria-label="אימייל" placeholder="אימייל" required /><input aria-label="כתובת" placeholder="כתובת למשלוח" required /><label><input type="checkbox" required /> אני מאשר/ת שגילי מעל 18 וקראתי את התקנון</label><button className="button">שמירת הזמנה</button></form><div className="warning" style={{ marginTop: 24 }}>החיוב יופעל לאחר חיבור מסוף HYP ייעודי לאתר. כרגע לא נשלחים פרטי תשלום.</div></div>;
+  return <CheckoutClient />;
 }
