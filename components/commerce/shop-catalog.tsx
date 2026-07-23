@@ -18,19 +18,30 @@ const strengthGuides: Record<StrengthLevel, { range: string; title: string; desc
   strong: { range: "17–30 מ״ג", title: "עוצמה חזקה", description: "מוצרים בעלי ריכוז גבוה, המיועדים למשתמשי ניקוטין מנוסים בלבד." },
   "extra-strong": { range: "31+ מ״ג", title: "עוצמה חזקה מאוד", description: "הרמה הגבוהה ביותר בקטלוג. מיועדת למשתמשים מנוסים שמכירים היטב את הסבילות האישית שלהם." },
 };
+const flavorFilters = [
+  { id: "mint", terms: ["מנט", "mint", "spearmint"] },
+  { id: "ice", terms: ["אייס", "ice", "קפוא"] },
+  { id: "fruit", terms: ["פטל", "מנגו", "אבטיח", "ענב", "לימון", "דובדבן", "berry", "grape", "mango", "lemon"] },
+];
 
 export function ShopCatalog({ products }: { products: Product[] }) {
   const [query, setQuery] = useState("");
   const [brand, setBrand] = useState("");
   const [strength, setStrength] = useState("");
+  const [flavor, setFlavor] = useState("");
   const [sort, setSort] = useState("");
   const [filtersOpen, setFiltersOpen] = useState(false);
   const brands = useMemo(() => [...new Set(products.map((product) => product.brand))], [products]);
 
   useEffect(() => {
-    const requested = new URLSearchParams(window.location.search).get("strength");
-    if (strengthOptions.some((option) => option.value === requested)) setStrength(requested as StrengthLevel);
-  }, []);
+    const params = new URLSearchParams(window.location.search);
+    const requestedStrength = params.get("strength");
+    const requestedBrand = params.get("brand");
+    const requestedFlavor = params.get("flavor");
+    if (strengthOptions.some((option) => option.value === requestedStrength)) setStrength(requestedStrength as StrengthLevel);
+    if (requestedBrand && brands.includes(requestedBrand)) setBrand(requestedBrand);
+    if (requestedFlavor && flavorFilters.some((option) => option.id === requestedFlavor)) setFlavor(requestedFlavor);
+  }, [brands]);
 
   function changeStrength(value: string) {
     setStrength(value);
@@ -46,17 +57,19 @@ export function ShopCatalog({ products }: { products: Product[] }) {
       const searchable = `${product.name} ${product.brand} ${product.flavor || ""}`.toLowerCase();
       return (!normalized || searchable.includes(normalized)) &&
         (!brand || product.brand === brand) &&
-        (!strength || product.strengthLevel === strength);
+        (!strength || product.strengthLevel === strength) &&
+        (!flavor || flavorFilters.find((option) => option.id === flavor)?.terms.some((term) => searchable.includes(term)));
     });
     if (sort === "price-asc") result.sort((a, b) => a.retailPrice - b.retailPrice);
     if (sort === "price-desc") result.sort((a, b) => b.retailPrice - a.retailPrice);
     return result;
-  }, [products, query, brand, strength, sort]);
+  }, [products, query, brand, strength, flavor, sort]);
 
-  const activeFilters = [brand, strength, query].filter(Boolean).length;
+  const activeFilters = [brand, strength, flavor, query].filter(Boolean).length;
   function resetFilters() {
     setQuery("");
     setBrand("");
+    setFlavor("");
     changeStrength("");
     setSort("");
   }
@@ -87,6 +100,7 @@ export function ShopCatalog({ products }: { products: Product[] }) {
         {activeFilters > 0 && <div className="active-filter-chips">
           {query && <button onClick={() => setQuery("")}>חיפוש: {query} <X /></button>}
           {brand && <button onClick={() => setBrand("")}>{brand} <X /></button>}
+          {flavor && <button onClick={() => setFlavor("")}>טעם מסונן <X /></button>}
           {strength && <button onClick={() => changeStrength("")}>עוצמה: {strengthOptions.find((item) => item.value === strength)?.label} <X /></button>}
         </div>}
         {visible.length ? <div className="product-grid">{visible.map((product) => <ProductCard key={product.id} product={product} />)}</div> : <div className="empty-results"><h2>לא מצאנו מוצרים</h2><p>נסו להסיר מסנן או לחפש טעם אחר.</p><button className="button" onClick={resetFilters}>הצגת כל המוצרים</button></div>}

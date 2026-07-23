@@ -30,3 +30,12 @@ it("opens with a strength filter and explanation from the URL", async () => {
   expect(screen.getAllByTestId("product-card")).toHaveLength(1);
   window.history.replaceState({}, "", "/shop");
 });
+
+it("opens with a brand filter from the URL", async () => {
+  window.history.replaceState({}, "", "/shop?brand=NOIS");
+  render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
+  await waitFor(() => expect(screen.getAllByTestId("product-card")).toHaveLength(1));
+  expect(screen.getByRole("link", { name: "פירות יער" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "NOIS" })).toBeInTheDocument();
+  window.history.replaceState({}, "", "/shop");
+});

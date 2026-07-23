@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { ArrowLeft, Check, Plus, SlidersHorizontal } from "lucide-react";
 import type { Product, StrengthLevel } from "@/lib/catalog/model";
 import { useCart } from "@/components/commerce/cart-provider";
@@ -39,7 +40,7 @@ export function QuickShop({ products }: { products: Product[] }) {
     return [];
   }, [mode, products]);
 
-  const matches = useMemo(() => {
+  const filteredProducts = useMemo(() => {
     const singleUnits = products.filter((product) => product.active && product.packSize === 1);
     let result = singleUnits;
     if (mode === "brand" && filter) result = singleUnits.filter((product) => product.brand === filter);
@@ -51,10 +52,24 @@ export function QuickShop({ products }: { products: Product[] }) {
     if (mode === "popular") {
       const nois = singleUnits.filter((product) => product.brand === "NOIS");
       const others = singleUnits.filter((product) => product.brand !== "NOIS");
-      result = [nois[0], others[0], others[8], nois[1], ...others].filter(Boolean);
+      result = [...new Map(
+        [nois[0], others[0], others[8], nois[1], ...others]
+          .filter((product): product is Product => Boolean(product))
+          .map((product) => [product.id, product]),
+      ).values()];
     }
-    return result.slice(0, 3);
+    return result;
   }, [filter, mode, products]);
+  const matches = filteredProducts.slice(0, 3);
+
+  const allProductsHref = useMemo(() => {
+    const params = new URLSearchParams();
+    if (mode === "brand" && filter) params.set("brand", filter);
+    if (mode === "strength" && filter) params.set("strength", filter);
+    if (mode === "flavor" && filter) params.set("flavor", filter);
+    const query = params.toString();
+    return query ? `/shop?${query}` : "/shop";
+  }, [filter, mode]);
 
   function changeMode(nextMode: FinderMode) {
     setMode(nextMode);
@@ -96,9 +111,9 @@ export function QuickShop({ products }: { products: Product[] }) {
             {matches.map((product, index) => <QuickProduct key={product.id} product={product} index={index + 1} />)}
           </div>
 
-          <a className="quick-shop-all" href="/shop">
-            לכל {products.length} המוצרים <ArrowLeft aria-hidden="true" />
-          </a>
+          <Link className="quick-shop-all" href={allProductsHref}>
+            לכל {filteredProducts.length} המוצרים{filter ? " בסינון הזה" : ""} <ArrowLeft aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>
