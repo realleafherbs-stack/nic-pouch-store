@@ -1,17 +1,42 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 import { useCart } from "@/components/commerce/cart-provider";
 
 export function CartDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { state, totals, dispatch } = useCart();
+  const drawerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const drawer = drawerRef.current;
+    const focusable = drawer?.querySelectorAll<HTMLElement>("a[href],button:not([disabled])");
+    focusable?.[0]?.focus();
+
+    function trapFocus(event: KeyboardEvent) {
+      if (event.key !== "Tab" || !focusable?.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+    drawer?.addEventListener("keydown", trapFocus);
+    return () => drawer?.removeEventListener("keydown", trapFocus);
+  }, [open]);
+
   if (!open) return null;
 
   return (
     <div className="drawer-layer">
       <button className="drawer-scrim" aria-label="סגירת עגלה" onClick={onClose} />
-      <aside className="cart-drawer" role="dialog" aria-modal="true" aria-label="עגלה מהירה">
+      <aside ref={drawerRef} className="cart-drawer" role="dialog" aria-modal="true" aria-label="עגלה מהירה">
         <header>
           <div><ShoppingBag /><strong>העגלה שלי</strong><span>{totals.itemCount} פריטים</span></div>
           <button className="icon-button" aria-label="סגירת עגלה" onClick={onClose}><X /></button>
