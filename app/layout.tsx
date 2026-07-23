@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { AgeGate } from "@/components/layout/age-gate";
+import { CartProvider } from "@/components/commerce/cart-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,11 +16,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="he" dir="rtl">
       <body>
-        <a className="skip-link" href="#main">דלגו לתוכן</a>
-        <SiteHeader />
-        <main id="main">{children}</main>
-        <SiteFooter />
-        <AgeGate />
+        <CartProvider>
+          <a className="skip-link" href="#main">דלגו לתוכן</a>
+          <SiteHeader />
+          <main id="main">{children}</main>
+          <SiteFooter />
+          <AgeGate />
+        </CartProvider>
       </body>
     </html>
   );
