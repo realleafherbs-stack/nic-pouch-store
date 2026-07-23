@@ -13,6 +13,6 @@ const product: Product = {
 it("adds the selected quantity to the shared cart", () => {
   render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
   fireEvent.click(screen.getByRole("button", { name: "הגדלת כמות" }));
-  fireEvent.click(screen.getByRole("button", { name: /הוסף לסל/ }));
+  fireEvent.click(screen.getByRole("button", { name: /הוסף לעגלה/ }));
   expect(screen.getAllByText("נוסף לעגלה").length).toBeGreaterThan(0);
 });

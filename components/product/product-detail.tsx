@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Check, Heart, Layers3, Minus, Plus, Share2, ShieldCheck, ShoppingBag, Sparkles } from "lucide-react";
+import { CircleGauge, Minus, PackageCheck, Plus, ShieldCheck, ShoppingBag, Sparkles, Truck, ZoomIn } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
 import { ProductCard } from "./product-card";
 import { useCart } from "@/components/commerce/cart-provider";
@@ -24,9 +24,13 @@ export function ProductDetail({ product, related }: { product: Product; related:
 
   return (
     <>
+      <nav className="pd-breadcrumbs container" aria-label="פירורי לחם">
+        <Link href="/">דף הבית</Link><span>/</span><Link href="/shop">חנות</Link><span>/</span><Link href={`/brands/${product.brand.toLowerCase()}`}>{product.brand}</Link><span>/</span><b>{product.flavor || product.name}</b>
+      </nav>
       <section className="pd-main container">
         <div className="pd-gallery">
           <div className="pd-image-stage">
+            <ZoomIn className="pd-zoom" aria-hidden="true" />
             {activeImage ? <img src={activeImage} alt={product.name} /> : <span className="can-placeholder">{product.brand}</span>}
           </div>
           {images.length > 0 && (
@@ -41,25 +45,30 @@ export function ProductDetail({ product, related }: { product: Product; related:
         </div>
 
         <div className="pd-summary">
-          <p className="pd-brand">{product.brand}</p>
+          <div className="pd-kicker"><span>פופולרי</span><p className="pd-brand">{product.brand}</p></div>
           <h1>{product.flavor || product.name}</h1>
           <p className="pd-reviews">☆ ☆ ☆ ☆ ☆ <span>אין חוות דעת עדיין</span></p>
           <div className="pd-price-stock"><strong>{product.retailPrice.toFixed(2)} ₪</strong><span>● במלאי</span></div>
-          <ul className="pd-highlights">
-            <li><Check /> {product.nicotineMg ? `${product.nicotineMg} מ״ג ניקוטין` : "נתוני מוצר מאומתים"}</li>
-            <li><Check /> עוצמה {product.strengthLevel ? strengthLabels[product.strengthLevel] : "לפי סימון היצרן"}</li>
-            <li><Check /> {product.flavor || "טעם כמפורט על האריזה"}</li>
-            <li><Check /> מיועד לבגירים בלבד</li>
-          </ul>
-          <div className="pd-quantity" aria-label="בחירת כמות">
-            <button onClick={() => setQuantity((value) => value + 1)} aria-label="הגדלת כמות"><Plus /></button>
-            <span>{quantity}</span>
-            <button onClick={() => setQuantity((value) => Math.max(1, value - 1))} aria-label="הקטנת כמות"><Minus /></button>
+          <div className="pd-offer"><strong>משלוח חינם בקנייה מעל 199 ₪</strong><span>מומלץ לשלב טעמים ועוצמות במשלוח אחד</span></div>
+          <div className="pd-quick-facts">
+            <div><CircleGauge /><strong>{product.nicotineMg ? `${product.nicotineMg} מ״ג` : "מסומן"}</strong><span>ניקוטין</span></div>
+            <div><Sparkles /><strong>{product.flavor || "מקורי"}</strong><span>טעם</span></div>
+            <div><ShieldCheck /><strong>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "לפי היצרן"}</strong><span>עוצמה</span></div>
+            <div><PackageCheck /><strong>{product.packSize > 1 ? `${product.packSize} יח׳` : "יחידה"}</strong><span>אריזה</span></div>
           </div>
-          <button className="pd-add" onClick={addToCart}><ShoppingBag /> {added ? "נוסף לסל" : "הוסף לסל"}</button>
-          <Link className="pd-buy" href="/cart">קנה עכשיו</Link>
-          <div className="pd-secondary"><button><Heart /> שמור למועדפים</button><button><Share2 /> שתף</button></div>
-          <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים בלבד.</div>
+          <div className="pd-purchase-box">
+            <div className="pd-purchase-row">
+              <label>כמות</label>
+              <div className="pd-quantity" aria-label="בחירת כמות">
+                <button onClick={() => setQuantity((value) => Math.max(1, value - 1))} aria-label="הקטנת כמות"><Minus /></button>
+                <span>{quantity}</span>
+                <button onClick={() => setQuantity((value) => value + 1)} aria-label="הגדלת כמות"><Plus /></button>
+              </div>
+            </div>
+            <button className="pd-add" onClick={addToCart}><ShoppingBag /> {added ? "נוסף לעגלה" : "הוסף לעגלה"}</button>
+            <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
+          </div>
+          <div className="pd-service-line"><span><Truck />משלוח מהיר</span><span><ShieldCheck />אריזה מקורית</span><span><PackageCheck />איסוף בטוח</span></div>
         </div>
       </section>
 
@@ -68,51 +77,21 @@ export function ProductDetail({ product, related }: { product: Product; related:
         <button onClick={addToCart}><ShoppingBag /> {added ? "נוסף לעגלה" : "הוספה לעגלה"}</button>
       </div>
 
-      <section className="pd-benefits">
-        <div className="container">
-          <div><Layers3 /><strong>מבחר עוצמות</strong><p>סימון ברור של רמת הניקוטין כדי לבחור בצורה מודעת.</p></div>
-          <div><Sparkles /><strong>מגוון טעמים</strong><p>טעמי מנטה, פירות וקירור ממותגים מובילים.</p></div>
-          <div><ShieldCheck /><strong>מוצר סגור ומקורי</strong><p>נשלח באריזת היצרן ובהתאם לזמינות המלאי.</p></div>
-          <div><ShoppingBag /><strong>משלוח מהיר</strong><p>עד 3 ימי עסקים וחינם בקנייה מעל 199 ₪.</p></div>
+      <section className="pd-lower container">
+        <div className="pd-feature-cards">
+          <div><CircleGauge /><strong>עוצמה ברורה</strong><p>{product.nicotineMg ? `${product.nicotineMg} מ״ג לפי סימון המוצר` : "בהתאם לסימון היצרן"}</p></div>
+          <div><Sparkles /><strong>טעם מובחן</strong><p>{product.flavor || "הטעם מופיע על גבי האריזה"}</p></div>
+          <div><PackageCheck /><strong>אריזה מקורית</strong><p>מוצר סגור ממותג {product.brand}</p></div>
+          <div><Truck /><strong>משלוח מהיר</strong><p>חינם בקנייה מעל 199 ₪</p></div>
         </div>
-      </section>
-
-      <section className="pd-why container">
-        <div className="pd-brand-visual">
-          <div>{activeImage ? <img src={activeImage} alt={product.name} /> : null}</div>
-          <aside><strong>{product.brand}</strong><span>NICOTINE POUCHES</span></aside>
+        <div className="pd-accordions">
+          <details open><summary>מפרט מוצר</summary><dl><div><dt>מותג</dt><dd>{product.brand}</dd></div><div><dt>טעם</dt><dd>{product.flavor || "לא צוין"}</dd></div><div><dt>ניקוטין</dt><dd>{product.nicotineMg ? `${product.nicotineMg} מ״ג` : "לא צוין"}</dd></div><div><dt>עוצמה</dt><dd>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "לא צוינה"}</dd></div><div><dt>אריזה</dt><dd>{product.packSize > 1 ? `מארז ${product.packSize}` : "יחידה"}</dd></div><div><dt>מק״ט</dt><dd>{product.sku}</dd></div></dl></details>
+          <details><summary>על המוצר</summary><p>{product.name} הוא מוצר של {product.brand}{product.flavor ? ` בטעם ${product.flavor}` : ""}. הנתונים בדף מבוססים על הקטלוג וסימון המוצר.</p></details>
+          <details><summary>שימוש ואחסון</summary><p>יש לשמור במקום קריר ויבש, באריזה סגורה והרחק מהישג ידם של ילדים ובעלי חיים.</p></details>
+          <details><summary>משלוחים והחזרות</summary><p>אספקה רגילה עד 3 ימי עסקים, בהתאם ליישוב ולחברת המשלוחים. משלוח חינם בקנייה מעל 199 ₪.</p></details>
+          <details><summary>אזהרות ושאלות נפוצות</summary><p>ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים המשתמשים בניקוטין בלבד ואינו מיועד לקטינים.</p></details>
         </div>
-        <div>
-          <h2>למה לבחור ב‑{product.name}?</h2>
-          <p>{product.name} הוא מוצר של {product.brand}{product.flavor ? ` בטעם ${product.flavor}` : ""}. בדף זה מוצגים רק הנתונים שנמסרו בקטלוג או מופיעים בשם המוצר, כדי לאפשר בחירה ברורה ללא השלמת מידע שאינו מאומת.</p>
-          <ul className="pd-checks">
-            <li><Check /><span><strong>עוצמה ברורה</strong><small>{product.nicotineMg ? `${product.nicotineMg} מ״ג לפי סימון המוצר` : "לפי סימון היצרן"}</small></span></li>
-            <li><Check /><span><strong>אריזה מקורית</strong><small>{product.packSize > 1 ? `מארז ${product.packSize} יחידות` : "יחידה אחת"}</small></span></li>
-            <li><Check /><span><strong>מלאי זמין</strong><small>הזמנה מהירה ומשלוח לכל הארץ</small></span></li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="pd-info container">
-        <div className="pd-tabs"><button className="active">מפרט מוצר</button><button>שימוש ואחסון</button><button>משלוחים</button></div>
-        <div className="pd-specs">
-          <h2>פרטי מוצר</h2>
-          <dl>
-            <div><dt>מותג</dt><dd>{product.brand}</dd></div>
-            <div><dt>טעם</dt><dd>{product.flavor || "לא צוין"}</dd></div>
-            <div><dt>ניקוטין</dt><dd>{product.nicotineMg ? `${product.nicotineMg} מ״ג` : "לא צוין"}</dd></div>
-            <div><dt>עוצמה</dt><dd>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "לא צוינה"}</dd></div>
-            <div><dt>אריזה</dt><dd>{product.packSize > 1 ? `מארז ${product.packSize}` : "יחידה"}</dd></div>
-            <div><dt>מק״ט</dt><dd>{product.sku}</dd></div>
-          </dl>
-        </div>
-      </section>
-
-      <section className="pd-faq container">
-        <h2>שאלות ותשובות</h2>
-        <details><summary>למי המוצר מיועד?</summary><p>לבגירים המשתמשים בניקוטין בלבד. אינו מיועד לקטינים או למי שאינו משתמש בניקוטין.</p></details>
-        <details><summary>איך שומרים את המוצר?</summary><p>במקום קריר ויבש, באריזה סגורה והרחק מהישג ידם של ילדים ובעלי חיים.</p></details>
-        <details><summary>תוך כמה זמן המשלוח מגיע?</summary><p>זמן האספקה הרגיל הוא עד 3 ימי עסקים, בהתאם ליישוב ולחברת המשלוחים.</p></details>
+        <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים בלבד.</div>
       </section>
 
       {related.length > 0 && <section className="section section-alt"><div className="container"><div className="section-heading"><h2>לקוחות התעניינו גם</h2></div><div className="product-grid">{related.map((item) => <ProductCard key={item.id} product={item} />)}</div></div></section>}
