@@ -59,6 +59,7 @@ nav a:hover { opacity:.55; }
 .header-actions { justify-self:end; display:flex; gap:12px; direction:ltr; }
 .header-actions a,.header-actions button { position:relative; width:48px; height:48px; display:grid; place-items:center; padding:0; background:transparent; color:#111; }
 .header-actions svg { width:25px; height:25px; stroke-width:1.8; }
+.header-cart-button { order:-10; }
 .header-cart-button b { position:absolute; top:0; right:0; min-width:19px; height:19px; display:grid; place-items:center; padding:0 4px; border-radius:50%; background:#111; color:white; font-size:10px; }
 .hero { min-height:600px; display:grid; align-items:center; position:relative; overflow:hidden; background:url("/figma/home-hero.png") center/cover no-repeat; }
 .hero:before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(255,255,255,.12) 42%,rgba(255,255,255,.82) 72%,rgba(255,255,255,.92)); }
