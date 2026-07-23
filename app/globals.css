@@ -672,7 +672,8 @@ nav a:hover { opacity:.55; }
   .pd-mobile-purchase div { display:grid; }
   .pd-mobile-purchase small { color:#777; font-size:11px; letter-spacing:.08em; }
   .pd-mobile-purchase strong { font-size:20px; white-space:nowrap; }
-  .pd-mobile-purchase button { min-height:48px; display:flex; align-items:center; justify-content:center; gap:8px; padding:0 22px; border-radius:10px; background:#111; color:white; font-weight:800; }
+.pd-mobile-purchase button { min-height:48px; display:flex; align-items:center; justify-content:center; gap:8px; padding:0 22px; border-radius:10px; background:#111; color:white; font-weight:800; }
+.pd-add:disabled,.pd-mobile-purchase button:disabled { cursor:not-allowed; color:#777; background:#e5e3dd; }
   .pd-mobile-purchase svg { width:19px; }
   .cart-page { padding-block:28px 100px; }
   .cart-page h1 { font-size:42px; }

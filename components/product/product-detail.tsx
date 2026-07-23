@@ -18,6 +18,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
   const relatedRef = useRef<HTMLDivElement>(null);
 
   function addToCart() {
+    if (product.stock <= 0) return;
     dispatch({ type: "add", product, quantity });
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1800);
@@ -53,7 +54,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
           <div className="pd-kicker"><span>פופולרי</span><p className="pd-brand">{product.brand}</p></div>
           <h1>{product.flavor || product.name}</h1>
           <p className="pd-reviews">☆ ☆ ☆ ☆ ☆ <span>אין חוות דעת עדיין</span></p>
-          <div className="pd-price-stock"><strong>{product.retailPrice.toFixed(2)} ₪</strong><span>● במלאי</span></div>
+          <div className="pd-price-stock"><strong>{product.retailPrice.toFixed(2)} ₪</strong><span>{product.stock > 0 ? "● במלאי" : "אזל מהמלאי"}</span></div>
           <div className="pd-offer"><strong>משלוח חינם בקנייה מעל 199 ₪</strong><span>מומלץ לשלב טעמים ועוצמות במשלוח אחד</span></div>
           <div className="pd-quick-facts">
             <div><CircleGauge /><strong>{product.nicotineMg ? `${product.nicotineMg} מ״ג` : "מסומן"}</strong><span>ניקוטין</span></div>
@@ -75,7 +76,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
               </div>
             </div>
             <p className="pd-purchase-total"><span>סה״כ</span><strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong></p>
-            <button className="pd-add" onClick={addToCart}><ShoppingBag /> {added ? "נוסף לעגלה" : "הוסף לעגלה"}</button>
+            <button disabled={product.stock <= 0} className="pd-add" onClick={addToCart}><ShoppingBag /> {product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : `הוסף לעגלה · ${quantity}`}</button>
             <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
           </div>
           <div className="pd-service-line"><span><Truck />משלוח מהיר</span><span><ShieldCheck />אריזה מקורית</span><span><PackageCheck />איסוף בטוח</span></div>
@@ -83,8 +84,8 @@ export function ProductDetail({ product, related }: { product: Product; related:
       </section>
 
       <div className="pd-mobile-purchase" aria-label="רכישה מהירה">
-        <div><small>{product.brand}</small><strong>{product.retailPrice.toFixed(2)} ₪</strong></div>
-        <button onClick={addToCart}><ShoppingBag /> {added ? "נוסף לעגלה" : "הוספה לעגלה"}</button>
+        <div><small>{product.brand} · {quantity} {quantity === 1 ? "יחידה" : "יחידות"}</small><strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong></div>
+        <button disabled={product.stock <= 0} onClick={addToCart}><ShoppingBag /> {product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : `הוספה לעגלה · ${quantity}`}</button>
       </div>
 
       <section className="pd-lower container">
