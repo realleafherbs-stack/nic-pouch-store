@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Search, ShoppingBag, UserRound } from "lucide-react";
+import { MobileNavigation } from "./mobile-navigation";
 
 export function SiteHeader() {
   return (
@@ -8,6 +9,7 @@ export function SiteHeader() {
         <span>משלוח חינם מעל 199 ₪</span><span>אספקה עד 3 ימי עסקים</span><span>מגוון מותגים מובילים</span>
       </div>
       <header className="site-header">
+        <MobileNavigation />
         <div className="container header-inner">
           <Link href="/" className="figma-logo" aria-label="NIC POUCH — דף הבית">
             <img src="/figma/nic-pouch-logo.jpg" alt="NIC POUCH" />
