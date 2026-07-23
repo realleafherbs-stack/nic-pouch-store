@@ -360,7 +360,6 @@ nav a:hover { opacity:.55; }
 .pd-faq details { border-bottom:1px solid #ddd; padding:20px 0; }
 .pd-faq summary { font-size:19px; font-weight:700; cursor:pointer; }
 .pd-faq p { color:#666; line-height:1.7; }
-.pd-mobile-purchase { display:none; }
 .cart-empty-page { min-height:58vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding-block:70px; }
 .cart-empty-page > svg { width:58px; height:58px; margin-bottom:20px; }
 .cart-empty-page h1,.cart-page h1 { font-size:clamp(40px,6vw,72px); margin:6px 0; }
@@ -708,13 +707,7 @@ nav a:hover { opacity:.55; }
   .pd-price-stock { margin:20px 0; }
   .pd-price-stock strong { font-size:30px; }
   .pd-benefits .container { grid-template-columns:1fr 1fr; }
-  .pd-mobile-purchase { position:fixed; z-index:48; inset-inline:0; bottom:calc(64px + env(safe-area-inset-bottom)); display:flex; align-items:center; justify-content:space-between; gap:14px; padding:10px 16px; background:rgba(255,255,255,.97); border-top:1px solid var(--line); box-shadow:0 -8px 24px rgba(0,0,0,.08); backdrop-filter:blur(12px); }
-  .pd-mobile-purchase div { display:grid; }
-  .pd-mobile-purchase small { color:#777; font-size:11px; letter-spacing:.08em; }
-  .pd-mobile-purchase strong { font-size:20px; white-space:nowrap; }
-.pd-mobile-purchase button { min-height:48px; display:flex; align-items:center; justify-content:center; gap:8px; padding:0 22px; border-radius:10px; background:#111; color:white; font-weight:800; }
-.pd-add:disabled,.pd-mobile-purchase button:disabled { cursor:not-allowed; color:#777; background:#e5e3dd; }
-  .pd-mobile-purchase svg { width:19px; }
+  .pd-add:disabled { cursor:not-allowed; color:#777; background:#e5e3dd; }
   .cart-page { padding-block:28px 100px; }
   .cart-page h1 { font-size:42px; }
   .cart-layout { grid-template-columns:1fr; gap:28px; }
@@ -795,8 +788,6 @@ nav a:hover { opacity:.55; }
   .pd-feature-cards svg { width:31px; height:31px; }
   .pd-accordions summary { min-height:56px; padding-inline:14px; }
   .pd-accordions dl { grid-template-columns:1fr; }
-  .pd-mobile-purchase { padding-block:8px; }
-  .pd-mobile-purchase button { min-width:174px; border-radius:6px; }
   .pd-related { padding-block:48px 70px; }
   .pd-related .section-heading { align-items:end; }
   .pd-related .section-heading h2 { font-size:34px; }
@@ -806,7 +797,6 @@ nav a:hover { opacity:.55; }
   .pd-quick-facts { grid-template-columns:1fr 1fr; }
   .pd-quick-facts > div:nth-child(2) { border-left:0; }
   .pd-quick-facts > div:nth-child(-n+2) { border-bottom:1px solid #ece9e2; }
-  .pd-mobile-purchase button { min-width:150px; padding-inline:14px; }
 }
 @media (max-width:850px) {
   .footer-trust { grid-template-columns:1fr 1fr; }

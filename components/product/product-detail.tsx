@@ -84,11 +84,6 @@ export function ProductDetail({ product, related }: { product: Product; related:
         </div>
       </section>
 
-      <div className="pd-mobile-purchase" aria-label="רכישה מהירה">
-        <div><small>{product.brand} · {quantity} {quantity === 1 ? "יחידה" : "יחידות"} · {unitPriceForQuantity(product, quantity).toFixed(2)} ₪ ליח׳</small><strong>{linePrice(product, quantity).toFixed(2)} ₪</strong></div>
-        <button disabled={product.stock <= 0} onClick={addToCart}><ShoppingBag /> {product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : `הוספה לעגלה · ${quantity}`}</button>
-      </div>
-
       <section className="pd-lower container">
         <div className="pd-feature-cards">
           <div><CircleGauge /><strong>עוצמה ברורה</strong><p>{product.nicotineMg ? `${product.nicotineMg} מ״ג לפי סימון המוצר` : "בהתאם לסימון היצרן"}</p></div>

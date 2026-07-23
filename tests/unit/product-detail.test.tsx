@@ -13,8 +13,7 @@ const product: Product = {
 it("adds the selected quantity to the shared cart", () => {
   render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
   fireEvent.click(screen.getByRole("button", { name: "הגדלת כמות" }));
-  expect(screen.getByLabelText("רכישה מהירה")).toHaveTextContent("2 יחידות");
-  expect(screen.getByLabelText("רכישה מהירה")).toHaveTextContent("59.80 ₪");
-  fireEvent.click(screen.getByRole("button", { name: /הוסף לעגלה/ }));
-  expect(screen.getAllByText("נוסף לעגלה").length).toBeGreaterThan(0);
+  expect(screen.getByText("59.80 ₪")).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: /הוסף לעגלה · 2/ }));
+  expect(screen.getByText("נוסף לעגלה")).toBeInTheDocument();
 });
