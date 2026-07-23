@@ -115,8 +115,8 @@ nav a:hover { opacity:.55; }
   .hero-grid,.finder,.nois,.product-page { grid-template-columns:1fr; }
   .hero-grid { gap:10px; padding-block:55px; }
   .figma-logo { width:145px; height:54px; }
-  .hero { min-height:600px; background-position:62% center; }
-  .hero:before { background:linear-gradient(180deg,rgba(255,255,255,.88) 0 38%,rgba(255,255,255,.05) 68%); }
+  .hero { min-height:680px; background-image:url("/figma/home-hero-mobile-v2.png"); background-position:center 61%; }
+  .hero:before { background:linear-gradient(180deg,rgba(255,255,255,.9) 0 31%,rgba(255,255,255,.12) 49%,transparent 66%); }
   .hero-grid { min-height:600px; align-items:start; padding-top:48px; }
   .hero-copy { grid-column:1; max-width:330px; }
   .hero h1 { font-size:46px; }
