@@ -62,6 +62,10 @@ export function ProductDetail({ product, related }: { product: Product; related:
             <div><PackageCheck /><strong>{product.packSize > 1 ? `${product.packSize} יח׳` : "יחידה"}</strong><span>אריזה</span></div>
           </div>
           <div className="pd-purchase-box">
+            <div className="pd-pack-choice">
+              <span>בחרו כמות</span>
+              <div>{([1, 5, 10] as const).map((amount) => <button key={amount} className={quantity === amount ? "active" : ""} onClick={() => setQuantity(amount)} aria-pressed={quantity === amount}><strong>{amount}</strong><small>{amount === 1 ? "יחידה" : "יחידות"}</small></button>)}</div>
+            </div>
             <div className="pd-purchase-row">
               <label>כמות</label>
               <div className="pd-quantity" aria-label="בחירת כמות">
@@ -70,6 +74,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
                 <button onClick={() => setQuantity((value) => value + 1)} aria-label="הגדלת כמות"><Plus /></button>
               </div>
             </div>
+            <p className="pd-purchase-total"><span>סה״כ</span><strong>{(product.retailPrice * quantity).toFixed(2)} ₪</strong></p>
             <button className="pd-add" onClick={addToCart}><ShoppingBag /> {added ? "נוסף לעגלה" : "הוסף לעגלה"}</button>
             <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
           </div>

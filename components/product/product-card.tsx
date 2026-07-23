@@ -10,10 +10,11 @@ const strengthLabels = { mild: "עדין", medium: "בינוני", strong: "חז
 
 export function ProductCard({ product }: { product: Product }) {
   const [added, setAdded] = useState(false);
+  const [selectedQuantity, setSelectedQuantity] = useState<1 | 5 | 10>(1);
   const { dispatch } = useCart();
 
   function addProduct() {
-    dispatch({ type: "add", product, quantity: 1 });
+    dispatch({ type: "add", product, quantity: selectedQuantity });
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1600);
   }
@@ -31,9 +32,12 @@ export function ProductCard({ product }: { product: Product }) {
           <span>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "עוצמה לא צוינה"}</span>
           {product.packSize > 1 && <span>מארז {product.packSize}</span>}
         </div>
+        <div className="card-quantity" aria-label={`בחירת כמות עבור ${product.name}`}>
+          {([1, 5, 10] as const).map((quantity) => <button key={quantity} className={selectedQuantity === quantity ? "active" : ""} onClick={() => setSelectedQuantity(quantity)} aria-pressed={selectedQuantity === quantity}>{quantity}</button>)}
+        </div>
         <div className="price-row">
-          <strong>{product.retailPrice.toFixed(2)} ₪</strong>
-          <button className={added ? "card-add added" : "card-add"} onClick={addProduct} aria-label={`הוספת ${product.name} לעגלה`}>{added ? <Check /> : <Plus />}<span>{added ? "נוסף" : "הוספה"}</span></button>
+          <strong>{(product.retailPrice * selectedQuantity).toFixed(2)} ₪</strong>
+          <button className={added ? "card-add added" : "card-add"} onClick={addProduct} aria-label={`הוספת ${selectedQuantity} יחידות של ${product.name} לעגלה`}>{added ? <Check /> : <Plus />}<span>{added ? "נוסף" : `הוספת ${selectedQuantity}`}</span></button>
         </div>
       </div>
     </article>

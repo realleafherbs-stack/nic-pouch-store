@@ -114,6 +114,9 @@ nav a:hover { opacity:.55; }
 .card-add { min-width:92px; min-height:44px; display:flex; align-items:center; justify-content:center; gap:6px; padding:0 13px; color:white; background:#111; font-size:13px; font-weight:700; }
 .card-add.added { color:#154f26; background:#dff3e4; }
 .card-add svg { width:16px; }
+.card-quantity { display:flex; gap:5px; margin-top:12px; }
+.card-quantity button { min-width:36px; height:32px; padding:0 8px; border:1px solid #d4d0c7; background:white; color:#5b5954; font-size:12px; font-weight:800; }
+.card-quantity button.active { border-color:#111; background:#111; color:white; }
 .finder { display:grid; grid-template-columns:.9fr 1.1fr; gap:40px; align-items:center; }
 .finder h2,.nois h2 { font-size:clamp(42px,6vw,82px); margin:0 0 20px; line-height:.98; }
 .strength-list { display:grid; gap:10px; }
@@ -354,10 +357,19 @@ nav a:hover { opacity:.55; }
 .pd-quick-facts strong { font-size:14px; }
 .pd-quick-facts span { margin-top:3px; color:#77746d; font-size:11px; }
 .pd-purchase-box { padding:18px; border:1px solid #e2dfd8; border-radius:10px; }
+.pd-pack-choice { margin-bottom:16px; }
+.pd-pack-choice > span { display:block; margin-bottom:8px; font-size:13px; font-weight:800; }
+.pd-pack-choice > div { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.pd-pack-choice button { min-height:58px; display:flex; align-items:center; justify-content:center; gap:6px; border:1px solid #d5d1c8; border-radius:7px; background:white; }
+.pd-pack-choice button strong { font-size:20px; }
+.pd-pack-choice button small { color:#77736c; }
+.pd-pack-choice button.active { border:2px solid #111; background:#f3f1eb; }
 .pd-purchase-row { display:flex; align-items:center; gap:18px; }
 .pd-purchase-row label { font-weight:700; }
 .pd-quantity { width:150px; height:48px; margin:0; border-radius:8px; }
 .pd-quantity button { min-width:46px; }
+.pd-purchase-total { display:flex; justify-content:space-between; margin:14px 0 2px; padding-top:13px; border-top:1px solid #e5e1d9; }
+.pd-purchase-total strong { font-size:21px; }
 .pd-add,.pd-buy { min-height:52px; border-radius:6px; font-weight:800; }
 .pd-add { background:#080808; }
 .pd-buy { border:1px solid #bbb; }

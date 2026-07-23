@@ -17,6 +17,8 @@ it("filters products by search and brand", () => {
 
 it("adds a product directly from its card", () => {
   render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
-  fireEvent.click(screen.getByRole("button", { name: "הוספת HQD מנטה לעגלה" }));
+  const quantityGroups = screen.getAllByLabelText("בחירת כמות עבור HQD מנטה");
+  fireEvent.click(quantityGroups[0].querySelectorAll("button")[1]);
+  fireEvent.click(screen.getByRole("button", { name: "הוספת 5 יחידות של HQD מנטה לעגלה" }));
   expect(screen.getByText("נוסף")).toBeInTheDocument();
 });
