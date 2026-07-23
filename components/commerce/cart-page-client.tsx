@@ -8,7 +8,7 @@ export function CartPageClient() {
   const { state, totals, dispatch } = useCart();
 
   if (!state.lines.length) {
-    return <main className="container cart-empty-page"><ShoppingBag /><p className="eyebrow">הקנייה שלכם</p><h1>העגלה עדיין ריקה</h1><p>58 מוצרים, מותגים מובילים ומגוון עוצמות מחכים בחנות.</p><Link className="button" href="/shop">לכל המוצרים</Link></main>;
+    return <main className="container cart-empty-page"><ShoppingBag /><p className="eyebrow">הקנייה שלכם</p><h1>העגלה עדיין ריקה</h1><p>מותגים מובילים ומגוון עוצמות מחכים לכם בחנות.</p><Link className="button" href="/shop">לכל המוצרים</Link></main>;
   }
 
   return (

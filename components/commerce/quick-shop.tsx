@@ -97,7 +97,7 @@ export function QuickShop({ products }: { products: Product[] }) {
           </div>
 
           <a className="quick-shop-all" href="/shop">
-            לכל 58 המוצרים <ArrowLeft aria-hidden="true" />
+            לכל {products.length} המוצרים <ArrowLeft aria-hidden="true" />
           </a>
         </div>
       </div>
