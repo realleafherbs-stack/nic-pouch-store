@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:sites": "opennextjs-cloudflare build",
     "lint": "eslint .",
     "test": "vitest run",
     "test:e2e": "playwright test",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
+    "@opennextjs/cloudflare": "^1.20.2",
     "@playwright/test": "^1.51.1",
     "@tailwindcss/postcss": "^4.1.17",
     "@testing-library/jest-dom": "^6.6.3",
@@ -34,6 +36,7 @@
     "tailwindcss": "^4.1.17",
     "typescript": "^5.7.3",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.0.7"
+    "vitest": "^3.0.7",
+    "wrangler": "^4.113.0"
   }
 }
