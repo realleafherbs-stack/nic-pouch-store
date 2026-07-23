@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 
@@ -18,6 +18,7 @@ it("closes the menu with Escape and restores focus", async () => {
   fireEvent.click(trigger);
   fireEvent.keyDown(window, { key: "Escape" });
   expect(screen.queryByRole("dialog", { name: "תפריט ראשי" })).not.toBeInTheDocument();
+  await waitFor(() => expect(trigger).toHaveFocus());
 });
 
 it("opens an empty cart drawer", () => {

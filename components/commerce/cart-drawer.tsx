@@ -12,14 +12,18 @@ export function CartDrawer({ open, onClose }: { open: boolean; onClose: () => vo
   useEffect(() => {
     if (!open) return;
     const drawer = drawerRef.current;
-    const focusable = drawer?.querySelectorAll<HTMLElement>("a[href],button:not([disabled])");
-    focusable?.[0]?.focus();
+    drawer?.querySelector<HTMLElement>("a[href],button:not([disabled])")?.focus();
 
     function trapFocus(event: KeyboardEvent) {
+      const focusable = drawer?.querySelectorAll<HTMLElement>("a[href],button:not([disabled])");
       if (event.key !== "Tab" || !focusable?.length) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
+      const focusOutside = !drawer?.contains(document.activeElement);
+      if (focusOutside) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
         last.focus();
       } else if (!event.shiftKey && document.activeElement === last) {
@@ -27,8 +31,8 @@ export function CartDrawer({ open, onClose }: { open: boolean; onClose: () => vo
         first.focus();
       }
     }
-    drawer?.addEventListener("keydown", trapFocus);
-    return () => drawer?.removeEventListener("keydown", trapFocus);
+    document.addEventListener("keydown", trapFocus);
+    return () => document.removeEventListener("keydown", trapFocus);
   }, [open]);
 
   if (!open) return null;

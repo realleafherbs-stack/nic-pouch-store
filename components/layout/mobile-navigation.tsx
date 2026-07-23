@@ -11,7 +11,7 @@ export function MobileNavigation() {
   const [cartOpen, setCartOpen] = useState(false);
   const { totals } = useCart();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
-  const cartButtonRef = useRef<HTMLButtonElement>(null);
+  const cartOpenerRef = useRef<HTMLButtonElement | null>(null);
   const menuRef = useRef<HTMLElement>(null);
 
   function closeMenu() {
@@ -21,7 +21,12 @@ export function MobileNavigation() {
 
   function closeCart() {
     setCartOpen(false);
-    requestAnimationFrame(() => cartButtonRef.current?.focus());
+    requestAnimationFrame(() => cartOpenerRef.current?.focus());
+  }
+
+  function openCart(event: React.MouseEvent<HTMLButtonElement>) {
+    cartOpenerRef.current = event.currentTarget;
+    setCartOpen(true);
   }
 
   useEffect(() => {
@@ -61,7 +66,7 @@ export function MobileNavigation() {
       <div className="mobile-header">
         <button ref={menuButtonRef} className="icon-button" aria-label="פתיחת תפריט" onClick={() => setMenuOpen(true)}><Menu /></button>
         <Link href="/" className="mobile-logo" aria-label="NIC POUCH — דף הבית"><img src="/figma/nic-pouch-logo.jpg" alt="NIC POUCH" /></Link>
-        <button ref={cartButtonRef} className="icon-button cart-trigger" aria-label={`פתיחת עגלה, ${totals.itemCount} פריטים`} onClick={() => setCartOpen(true)}>
+        <button className="icon-button cart-trigger" aria-label={`פתיחת עגלה, ${totals.itemCount} פריטים`} onClick={openCart}>
           <ShoppingBag />{totals.itemCount > 0 && <span>{totals.itemCount}</span>}
         </button>
       </div>
@@ -87,7 +92,7 @@ export function MobileNavigation() {
         <Link href="/"><Home /><span>בית</span></Link>
         <Link href="/shop"><Store /><span>חנות</span></Link>
         <Link href="/shop"><Search /><span>חיפוש</span></Link>
-        <button onClick={() => setCartOpen(true)}><span className="bottom-cart-icon"><ShoppingBag />{totals.itemCount > 0 && <b>{totals.itemCount}</b>}</span><span>עגלה</span></button>
+        <button onClick={openCart}><span className="bottom-cart-icon"><ShoppingBag />{totals.itemCount > 0 && <b>{totals.itemCount}</b>}</span><span>עגלה</span></button>
       </nav>
 
       <CartDrawer open={cartOpen} onClose={closeCart} />
