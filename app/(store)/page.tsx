@@ -6,20 +6,16 @@ export default async function HomePage() {
   const noisProducts = products.filter((product) => product.brand === "NOIS");
   const otherProducts = products.filter((product) => product.brand !== "NOIS" && product.packSize === 1);
   const featured = [noisProducts[0], otherProducts[0], otherProducts[17], noisProducts[1], otherProducts[19], otherProducts[3], noisProducts[2], otherProducts[12]].filter(Boolean);
-  const hero = noisProducts.slice(0, 3);
   const nois = products.filter((product) => product.brand === "NOIS").slice(0, 2);
   return (
     <>
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">הבחירה שלך. בדרך שלך.</p>
-            <h1>כל מותגי הפאוצ׳ים במקום אחד</h1>
-            <p>מבחר רחב של טעמים ועוצמות, מידע ברור לפני הקנייה ומשלוח מהיר עד הבית.</p>
-            <div className="actions"><Link className="button" href="/shop">לכל המוצרים</Link><Link className="button secondary" href="/blog/nicotine-pouch-guide">איך בוחרים?</Link></div>
-          </div>
-          <div className="hero-cans">
-            {hero.map((product) => product.images[0] && <img key={product.id} src={product.images[0]} alt="" />)}
+            <p className="eyebrow">ברוכים הבאים</p>
+            <h1>15% הנחה<br />ברכישה ראשונה</h1>
+            <p>על המוצרים המובילים</p>
+            <div className="actions"><Link className="button" href="/shop">לקנייה עכשיו</Link></div>
           </div>
         </div>
       </section>

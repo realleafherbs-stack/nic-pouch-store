@@ -9,9 +9,11 @@ export function SiteHeader() {
       </div>
       <header className="site-header">
         <div className="container header-inner">
-          <Link href="/" className="logo" aria-label="NIC POUCH — דף הבית"><span>NIC</span> POUCH</Link>
+          <Link href="/" className="figma-logo" aria-label="NIC POUCH — דף הבית">
+            <img src="/figma/nic-pouch-logo.jpg" alt="NIC POUCH" />
+          </Link>
           <nav aria-label="ניווט ראשי">
-            <Link href="/shop">כל המוצרים</Link><Link href="/brands/nois">NOIS</Link><Link href="/blog">המדריך לפאוצ׳ים</Link><Link href="/shipping">משלוחים</Link>
+            <Link href="/shop">מוצרים</Link><Link href="/shop">מותגים</Link><Link href="/blog">בלוג</Link><Link href="/shop">מבצעים</Link>
           </nav>
           <div className="header-actions">
             <Link href="/shop" aria-label="חיפוש"><Search /></Link>
