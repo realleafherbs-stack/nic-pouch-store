@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
-import { CircleGauge, Minus, PackageCheck, Plus, ShieldCheck, ShoppingBag, Sparkles, Truck, ZoomIn } from "lucide-react";
+import { ChevronLeft, ChevronRight, CircleGauge, Minus, PackageCheck, Plus, ShieldCheck, ShoppingBag, Sparkles, Truck, ZoomIn } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
 import { ProductCard } from "./product-card";
 import { useCart } from "@/components/commerce/cart-provider";
@@ -15,11 +15,16 @@ export function ProductDetail({ product, related }: { product: Product; related:
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   const { dispatch } = useCart();
+  const relatedRef = useRef<HTMLDivElement>(null);
 
   function addToCart() {
     dispatch({ type: "add", product, quantity });
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1800);
+  }
+
+  function scrollRelated(direction: 1 | -1) {
+    relatedRef.current?.scrollBy({ left: direction * relatedRef.current.clientWidth * 0.78, behavior: "smooth" });
   }
 
   return (
@@ -94,7 +99,20 @@ export function ProductDetail({ product, related }: { product: Product; related:
         <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים בלבד.</div>
       </section>
 
-      {related.length > 0 && <section className="section section-alt"><div className="container"><div className="section-heading"><h2>לקוחות התעניינו גם</h2></div><div className="product-grid">{related.map((item) => <ProductCard key={item.id} product={item} />)}</div></div></section>}
+      {related.length > 0 && (
+        <section className="section section-alt pd-related">
+          <div className="container">
+            <div className="section-heading">
+              <div><p className="eyebrow">עוד מהחנות</p><h2>לקוחות התעניינו גם</h2></div>
+              <div className="carousel-controls" aria-label="ניווט בין מוצרים">
+                <button onClick={() => scrollRelated(1)} aria-label="מוצרים קודמים"><ChevronRight /></button>
+                <button onClick={() => scrollRelated(-1)} aria-label="מוצרים הבאים"><ChevronLeft /></button>
+              </div>
+            </div>
+            <div ref={relatedRef} className="product-carousel">{related.map((item) => <ProductCard key={item.id} product={item} />)}</div>
+          </div>
+        </section>
+      )}
     </>
   );
 }
