@@ -19,4 +19,14 @@ describe("catalog import", () => {
     expect(product.sourcePrice).toBe(16);
     expect(product.retailPrice).toBe(29.9);
   });
+
+  it("does not import multipacks as separate storefront products", () => {
+    const products = importCatalogRows([
+      { מזהה: "1", שם: "פאוץ' ניקוטין CUBA וויט צ'רי 16 מ\"ג", פורסם: "1", קטגוריות: "פאוצ' ניקוטין", "מחיר רגיל": "18", "במלאי?": "1", תמונות: "", 'מק"ט': "CUBA-1" },
+      { מזהה: "2", שם: "פאוץ' ניקוטין CUBA וויט צ'רי 16 מ\"ג - מארז 10 יח'", פורסם: "1", קטגוריות: "פאוצ' ניקוטין", "מחיר רגיל": "180", "במלאי?": "1", תמונות: "", 'מק"ט': "CUBA-10" }
+    ]);
+
+    expect(products).toHaveLength(1);
+    expect(products[0]).toMatchObject({ sku: "CUBA-1", packSize: 1 });
+  });
 });

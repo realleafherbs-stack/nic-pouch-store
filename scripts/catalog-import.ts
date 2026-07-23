@@ -39,6 +39,7 @@ export function importCatalogRows(rows: CsvRow[]): Product[] {
   return rows
     .filter((row) => row["פורסם"] === "1")
     .filter((row) => /פאוצ|טבק הרחה/i.test(row["קטגוריות"] ?? ""))
+    .filter((row) => !/מארז\s*\d+\s*יח?/i.test(row["שם"] ?? ""))
     .map((row) => {
       const name = row["שם"].trim();
       const categories = row["קטגוריות"] ?? "";

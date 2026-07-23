@@ -1,7 +1,10 @@
 import catalog from "@/data/catalog.generated.json";
 import type { CatalogQuery, Product } from "./model";
 
-export const products = catalog as Product[];
+const importedProducts = catalog as Product[];
+
+// Multipacks are purchase quantities, not separate storefront products.
+export const products = importedProducts.filter((product) => product.packSize === 1);
 
 export function listProducts(query: CatalogQuery = {}) {
   let result = [...products];

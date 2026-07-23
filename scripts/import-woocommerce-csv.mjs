@@ -14,6 +14,7 @@ const brands = ["HQD", "PABLO", "KILLA", "CUBA", "NOIS", "QWEET", "ZYN", "VELO"]
 const slugify = (value) => value.normalize("NFKD").replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "").toLowerCase();
 const products = data
   .filter((row) => /פאוצ|טבק הרחה/i.test(`${row["שם"] || ""} ${row["קטגוריות"] || ""}`))
+  .filter((row) => !/מארז\s*\d+\s*יח?/i.test(row["שם"] || ""))
   .map((row) => {
     const name = row["שם"].trim();
     const haystack = `${name} ${row["קטגוריות"]}`.toUpperCase();
