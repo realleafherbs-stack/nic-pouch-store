@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Check, Heart, Layers3, Minus, Plus, Share2, ShieldCheck, ShoppingBag, Sparkles } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
 import { ProductCard } from "./product-card";
+import { useCart } from "@/components/commerce/cart-provider";
 
 const strengthLabels = { mild: "עדין", medium: "בינוני", strong: "חזק", "extra-strong": "חזק מאוד" };
 
@@ -13,14 +14,12 @@ export function ProductDetail({ product, related }: { product: Product; related:
   const [activeImage, setActiveImage] = useState(images[0] ?? "");
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
+  const { dispatch } = useCart();
 
   function addToCart() {
-    const current = JSON.parse(localStorage.getItem("nic-cart") || "[]") as Array<{ id: string; quantity: number }>;
-    const existing = current.find((line) => line.id === product.id);
-    if (existing) existing.quantity += quantity;
-    else current.push({ id: product.id, quantity });
-    localStorage.setItem("nic-cart", JSON.stringify(current));
+    dispatch({ type: "add", product, quantity });
     setAdded(true);
+    window.setTimeout(() => setAdded(false), 1800);
   }
 
   return (
@@ -63,6 +62,11 @@ export function ProductDetail({ product, related }: { product: Product; related:
           <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים בלבד.</div>
         </div>
       </section>
+
+      <div className="pd-mobile-purchase" aria-label="רכישה מהירה">
+        <div><small>{product.brand}</small><strong>{product.retailPrice.toFixed(2)} ₪</strong></div>
+        <button onClick={addToCart}><ShoppingBag /> {added ? "נוסף לעגלה" : "הוספה לעגלה"}</button>
+      </div>
 
       <section className="pd-benefits">
         <div className="container">

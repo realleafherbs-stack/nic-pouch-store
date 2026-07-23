@@ -254,6 +254,7 @@ nav a:hover { opacity:.55; }
 .pd-faq details { border-bottom:1px solid #ddd; padding:20px 0; }
 .pd-faq summary { font-size:19px; font-weight:700; cursor:pointer; }
 .pd-faq p { color:#666; line-height:1.7; }
+.pd-mobile-purchase { display:none; }
 .article { max-width:800px; padding-block:70px; }
 .article h1 { font-size:clamp(42px,6vw,74px); line-height:1.03; }
 .article h2 { margin-top:50px; font-size:30px; }
@@ -332,6 +333,17 @@ nav a:hover { opacity:.55; }
   .pd-brand-visual { min-height:320px; }
   .pd-tabs { justify-content:flex-start; gap:26px; overflow:auto; }
   .pd-specs dl { grid-template-columns:1fr; }
+  .pd-main { padding-bottom:28px; }
+  .pd-summary h1 { font-size:36px; }
+  .pd-price-stock { margin:20px 0; }
+  .pd-price-stock strong { font-size:30px; }
+  .pd-benefits .container { grid-template-columns:1fr 1fr; }
+  .pd-mobile-purchase { position:fixed; z-index:48; inset-inline:0; bottom:calc(64px + env(safe-area-inset-bottom)); display:flex; align-items:center; justify-content:space-between; gap:14px; padding:10px 16px; background:rgba(255,255,255,.97); border-top:1px solid var(--line); box-shadow:0 -8px 24px rgba(0,0,0,.08); backdrop-filter:blur(12px); }
+  .pd-mobile-purchase div { display:grid; }
+  .pd-mobile-purchase small { color:#777; font-size:11px; letter-spacing:.08em; }
+  .pd-mobile-purchase strong { font-size:20px; white-space:nowrap; }
+  .pd-mobile-purchase button { min-height:48px; display:flex; align-items:center; justify-content:center; gap:8px; padding:0 22px; border-radius:10px; background:#111; color:white; font-weight:800; }
+  .pd-mobile-purchase svg { width:19px; }
 }
 @media (max-width:480px) {
   .container { width:min(100% - 28px,1200px); }
