@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { SlidersHorizontal, X } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { CircleGauge, SlidersHorizontal, X } from "lucide-react";
 import type { Product, StrengthLevel } from "@/lib/catalog/model";
 import { ProductCard } from "@/components/product/product-card";
 
@@ -11,6 +12,12 @@ const strengthOptions: Array<{ value: StrengthLevel; label: string }> = [
   { value: "strong", label: "חזק" },
   { value: "extra-strong", label: "חזק מאוד" },
 ];
+const strengthGuides: Record<StrengthLevel, { range: string; title: string; description: string }> = {
+  mild: { range: "עד 8 מ״ג", title: "עוצמה עדינה", description: "העוצמה הנמוכה בקטלוג. אם אינכם בטוחים איזו רמה מתאימה לכם, מומלץ להתחיל נמוך ולבחון בהדרגה." },
+  medium: { range: "9–16 מ״ג", title: "עוצמה בינונית", description: "רמה מאוזנת למשתמשים שכבר מכירים מוצרי ניקוטין ומעדיפים נוכחות מורגשת אך לא מקסימלית." },
+  strong: { range: "17–30 מ״ג", title: "עוצמה חזקה", description: "מוצרים בעלי ריכוז גבוה, המיועדים למשתמשי ניקוטין מנוסים בלבד." },
+  "extra-strong": { range: "31+ מ״ג", title: "עוצמה חזקה מאוד", description: "הרמה הגבוהה ביותר בקטלוג. מיועדת למשתמשים מנוסים שמכירים היטב את הסבילות האישית שלהם." },
+};
 
 export function ShopCatalog({ products }: { products: Product[] }) {
   const [query, setQuery] = useState("");
@@ -19,6 +26,19 @@ export function ShopCatalog({ products }: { products: Product[] }) {
   const [sort, setSort] = useState("");
   const [filtersOpen, setFiltersOpen] = useState(false);
   const brands = useMemo(() => [...new Set(products.map((product) => product.brand))], [products]);
+
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get("strength");
+    if (strengthOptions.some((option) => option.value === requested)) setStrength(requested as StrengthLevel);
+  }, []);
+
+  function changeStrength(value: string) {
+    setStrength(value);
+    const url = new URL(window.location.href);
+    if (value) url.searchParams.set("strength", value);
+    else url.searchParams.delete("strength");
+    window.history.replaceState({}, "", `${url.pathname}${url.search}`);
+  }
 
   const visible = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -37,7 +57,7 @@ export function ShopCatalog({ products }: { products: Product[] }) {
   function resetFilters() {
     setQuery("");
     setBrand("");
-    setStrength("");
+    changeStrength("");
     setSort("");
   }
 
@@ -45,7 +65,7 @@ export function ShopCatalog({ products }: { products: Product[] }) {
     <>
       <label><span>חיפוש</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="טעם, מוצר או מותג" aria-label="חיפוש" /></label>
       <label><span>מותג</span><select value={brand} onChange={(event) => setBrand(event.target.value)} aria-label="מותג"><option value="">כל המותגים</option>{brands.map((item) => <option key={item}>{item}</option>)}</select></label>
-      <label><span>עוצמה</span><select value={strength} onChange={(event) => setStrength(event.target.value)} aria-label="עוצמה"><option value="">כל העוצמות</option>{strengthOptions.map((item) => <option value={item.value} key={item.value}>{item.label}</option>)}</select></label>
+      <label><span>עוצמה</span><select value={strength} onChange={(event) => changeStrength(event.target.value)} aria-label="עוצמה"><option value="">כל העוצמות</option>{strengthOptions.map((item) => <option value={item.value} key={item.value}>{item.label}</option>)}</select></label>
       <label><span>מיון</span><select value={sort} onChange={(event) => setSort(event.target.value)} aria-label="מיון"><option value="">מומלצים</option><option value="price-asc">מחיר: נמוך לגבוה</option><option value="price-desc">מחיר: גבוה לנמוך</option></select></label>
       {activeFilters > 0 && <button className="filter-reset" onClick={resetFilters}>ניקוי סינון</button>}
     </>
@@ -58,11 +78,16 @@ export function ShopCatalog({ products }: { products: Product[] }) {
       {filtersOpen && <div className="filter-sheet-layer"><button className="drawer-scrim" aria-label="סגירת סינון" onClick={() => setFiltersOpen(false)} /><aside className="filter-sheet" role="dialog" aria-modal="true" aria-label="סינון ומיון"><header><strong>סינון ומיון</strong><button className="icon-button" aria-label="סגירת סינון" onClick={() => setFiltersOpen(false)}><X /></button></header><div>{controls}</div><button className="button" onClick={() => setFiltersOpen(false)}>הצגת {visible.length} מוצרים</button></aside></div>}
 
       <div className="shop-results">
+        {strength && strengthGuides[strength as StrengthLevel] && <section className={`strength-explainer strength-${strength}`}>
+          <CircleGauge />
+          <div><p className="eyebrow">הסינון הפעיל</p><h2>{strengthGuides[strength as StrengthLevel].title}</h2><strong>{strengthGuides[strength as StrengthLevel].range}</strong><p>{strengthGuides[strength as StrengthLevel].description}</p></div>
+          <Link href="/blog/strength-guide">איך בוחרים עוצמה?</Link>
+        </section>}
         <div className="results-bar"><strong>{visible.length} מוצרים</strong><span>המחירים כוללים מע״מ</span></div>
         {activeFilters > 0 && <div className="active-filter-chips">
           {query && <button onClick={() => setQuery("")}>חיפוש: {query} <X /></button>}
           {brand && <button onClick={() => setBrand("")}>{brand} <X /></button>}
-          {strength && <button onClick={() => setStrength("")}>עוצמה: {strengthOptions.find((item) => item.value === strength)?.label} <X /></button>}
+          {strength && <button onClick={() => changeStrength("")}>עוצמה: {strengthOptions.find((item) => item.value === strength)?.label} <X /></button>}
         </div>}
         {visible.length ? <div className="product-grid">{visible.map((product) => <ProductCard key={product.id} product={product} />)}</div> : <div className="empty-results"><h2>לא מצאנו מוצרים</h2><p>נסו להסיר מסנן או לחפש טעם אחר.</p><button className="button" onClick={resetFilters}>הצגת כל המוצרים</button></div>}
       </div>

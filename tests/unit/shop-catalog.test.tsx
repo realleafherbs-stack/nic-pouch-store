@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { ShopCatalog } from "@/components/commerce/shop-catalog";
 import type { Product } from "@/lib/catalog/model";
@@ -21,4 +21,12 @@ it("adds a product directly from its card", () => {
   fireEvent.click(quantityGroups[0].querySelectorAll("button")[1]);
   fireEvent.click(screen.getByRole("button", { name: "הוספת 5 יחידות של HQD מנטה לעגלה" }));
   expect(screen.getByText("נוסף")).toBeInTheDocument();
+});
+
+it("opens with a strength filter and explanation from the URL", async () => {
+  window.history.replaceState({}, "", "/shop?strength=strong");
+  render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
+  await waitFor(() => expect(screen.getByText("עוצמה חזקה")).toBeInTheDocument());
+  expect(screen.getAllByTestId("product-card")).toHaveLength(1);
+  window.history.replaceState({}, "", "/shop");
 });

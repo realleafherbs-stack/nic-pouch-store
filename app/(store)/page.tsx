@@ -38,10 +38,10 @@ export default async function HomePage() {
         <div className="container finder">
           <div><p className="eyebrow">פשוט למצוא את מה שמתאים</p><h2>מה העוצמה שלך?</h2><p>בחרו לפי רמת הניקוטין שמופיעה על המוצר. אם אינכם בטוחים, התחילו בעוצמה נמוכה יותר.</p><Link className="button" href="/blog/nicotine-pouch-guide">למדריך המלא</Link></div>
           <div className="strength-list">
-            <div className="strength-row"><strong>עדין</strong><span className="strength-line"/><span>עד 8 מ״ג</span></div>
-            <div className="strength-row"><strong>בינוני</strong><span className="strength-line"/><span>9–16 מ״ג</span></div>
-            <div className="strength-row"><strong>חזק</strong><span className="strength-line"/><span>17–30 מ״ג</span></div>
-            <div className="strength-row"><strong>חזק מאוד</strong><span className="strength-line"/><span>31+ מ״ג</span></div>
+            <Link href="/shop?strength=mild" className="strength-row"><strong>עדין</strong><span className="strength-line"/><span>עד 8 מ״ג</span></Link>
+            <Link href="/shop?strength=medium" className="strength-row"><strong>בינוני</strong><span className="strength-line"/><span>9–16 מ״ג</span></Link>
+            <Link href="/shop?strength=strong" className="strength-row"><strong>חזק</strong><span className="strength-line"/><span>17–30 מ״ג</span></Link>
+            <Link href="/shop?strength=extra-strong" className="strength-row"><strong>חזק מאוד</strong><span className="strength-line"/><span>31+ מ״ג</span></Link>
           </div>
         </div>
       </section>
