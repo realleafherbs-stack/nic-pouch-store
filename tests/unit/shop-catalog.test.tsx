@@ -1,0 +1,22 @@
+import { fireEvent, render, screen } from "@testing-library/react";
+import { CartProvider } from "@/components/commerce/cart-provider";
+import { ShopCatalog } from "@/components/commerce/shop-catalog";
+import type { Product } from "@/lib/catalog/model";
+
+const products = [
+  { id: "1", slug: "mint", sku: "1", name: "HQD מנטה", brand: "HQD", flavor: "מנטה", nicotineMg: 15, strengthLevel: "medium", retailPrice: 29.9, sourcePrice: 0, stock: 1, active: true, packSize: 1, images: [], categories: [] },
+  { id: "2", slug: "berry", sku: "2", name: "NOIS פירות יער", brand: "NOIS", flavor: "פירות יער", nicotineMg: 25, strengthLevel: "strong", retailPrice: 39.9, sourcePrice: 0, stock: 1, active: true, packSize: 1, images: [], categories: [] },
+] as Product[];
+
+it("filters products by search and brand", () => {
+  render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
+  fireEvent.change(screen.getByLabelText("חיפוש"), { target: { value: "מנטה" } });
+  expect(screen.getAllByTestId("product-card")).toHaveLength(1);
+  expect(screen.getByRole("link", { name: "מנטה" })).toBeInTheDocument();
+});
+
+it("adds a product directly from its card", () => {
+  render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
+  fireEvent.click(screen.getByRole("button", { name: "הוספת HQD מנטה לעגלה" }));
+  expect(screen.getByText("נוסף")).toBeInTheDocument();
+});
