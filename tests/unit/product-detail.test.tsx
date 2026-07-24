@@ -15,5 +15,5 @@ it("adds the selected quantity to the shared cart", () => {
   fireEvent.click(screen.getByRole("button", { name: "הגדלת כמות" }));
   expect(screen.getByText("59.80 ₪")).toBeInTheDocument();
   fireEvent.click(screen.getByRole("button", { name: /הוסף לעגלה · 2/ }));
-  expect(screen.getByText("נוסף לעגלה")).toBeInTheDocument();
+  expect(screen.getByText("נוספו 2 יחידות")).toBeInTheDocument();
 });

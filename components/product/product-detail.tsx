@@ -2,28 +2,17 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, CircleGauge, Minus, PackageCheck, Plus, ShieldCheck, ShoppingBag, Sparkles, Truck, ZoomIn } from "lucide-react";
+import { ChevronLeft, ChevronRight, CircleGauge, PackageCheck, ShieldCheck, Sparkles, Truck, ZoomIn } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
-import { linePrice, PURCHASE_QUANTITIES, unitPriceForQuantity } from "@/lib/catalog/pricing";
 import { ProductCard } from "./product-card";
-import { useCart } from "@/components/commerce/cart-provider";
+import { ProductPurchasePanel } from "./product-purchase-panel";
 
 const strengthLabels = { mild: "עדין", medium: "בינוני", strong: "חזק", "extra-strong": "חזק מאוד" };
 
 export function ProductDetail({ product, related }: { product: Product; related: Product[] }) {
   const images = product.images.length ? product.images.slice(0, 4) : [];
   const [activeImage, setActiveImage] = useState(images[0] ?? "");
-  const [quantity, setQuantity] = useState(1);
-  const [added, setAdded] = useState(false);
-  const { dispatch } = useCart();
   const relatedRef = useRef<HTMLDivElement>(null);
-
-  function addToCart() {
-    if (product.stock <= 0) return;
-    dispatch({ type: "add", product, quantity });
-    setAdded(true);
-    window.setTimeout(() => setAdded(false), 1800);
-  }
 
   function scrollRelated(direction: 1 | -1) {
     relatedRef.current?.scrollBy({ left: direction * relatedRef.current.clientWidth * 0.78, behavior: "smooth" });
@@ -63,23 +52,8 @@ export function ProductDetail({ product, related }: { product: Product; related:
             <div><ShieldCheck /><strong>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "לפי היצרן"}</strong><span>עוצמה</span></div>
             <div><PackageCheck /><strong>{product.packSize > 1 ? `${product.packSize} יח׳` : "יחידה"}</strong><span>אריזה</span></div>
           </div>
-          <div className="pd-purchase-box">
-            <div className="pd-pack-choice">
-              <span>בחרו כמות</span>
-              <div>{PURCHASE_QUANTITIES.map((amount) => <button key={amount} className={quantity === amount ? "active" : ""} onClick={() => setQuantity(amount)} aria-pressed={quantity === amount}><strong>{amount}</strong><small>{unitPriceForQuantity(product, amount).toFixed(2)} ₪ ליח׳</small></button>)}</div>
-            </div>
-            <div className="pd-purchase-row">
-              <label>כמות</label>
-              <div className="pd-quantity" aria-label="בחירת כמות">
-                <button onClick={() => setQuantity((value) => Math.max(1, value - 1))} aria-label="הקטנת כמות"><Minus /></button>
-                <span>{quantity}</span>
-                <button onClick={() => setQuantity((value) => value + 1)} aria-label="הגדלת כמות"><Plus /></button>
-              </div>
-            </div>
-            <p className="pd-purchase-total"><span>סה״כ · {unitPriceForQuantity(product, quantity).toFixed(2)} ₪ ליח׳</span><strong>{linePrice(product, quantity).toFixed(2)} ₪</strong></p>
-            <button disabled={product.stock <= 0} className="pd-add" onClick={addToCart}><ShoppingBag /> {product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : `הוסף לעגלה · ${quantity}`}</button>
-            <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
-          </div>
+          <ProductPurchasePanel product={product} />
+          <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
           <div className="pd-service-line"><span><Truck />משלוח מהיר</span><span><ShieldCheck />אריזה מקורית</span><span><PackageCheck />איסוף בטוח</span></div>
         </div>
       </section>
