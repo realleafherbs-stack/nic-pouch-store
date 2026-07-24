@@ -25,7 +25,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
   }
 
   return (
-    <>
+    <div className={variant === "balanced" ? "pd-balanced" : undefined}>
       <nav className="pd-breadcrumbs container" aria-label="פירורי לחם">
         <Link href="/">דף הבית</Link><span>/</span><Link href="/shop">חנות</Link><span>/</span><Link href={`/brands/${product.brand.toLowerCase()}`}>{product.brand}</Link><span>/</span><b>{product.flavor || product.name}</b>
       </nav>
@@ -95,6 +95,6 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
           </div>
         </section>
       )}
-    </>
+    </div>
   );
 }
