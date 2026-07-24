@@ -9,7 +9,6 @@ export default async function HomePage() {
   const noisProducts = products.filter((product) => product.brand === "NOIS");
   const otherProducts = products.filter((product) => product.brand !== "NOIS" && product.packSize === 1);
   const featured = [noisProducts[0], otherProducts[0], otherProducts[17], noisProducts[1], otherProducts[19], otherProducts[3]].filter(Boolean);
-  const nois = products.filter((product) => product.brand === "NOIS").slice(0, 2);
   return (
     <>
       <section className="hero hero-editorial">
@@ -45,10 +44,6 @@ export default async function HomePage() {
             <Link href="/shop?strength=extra-strong" className="strength-row"><strong>חזק מאוד</strong><span className="strength-line"/><span>31+ מ״ג</span></Link>
           </div>
         </div>
-      </section>
-      <section className="nois">
-        <div className="nois-copy"><p className="eyebrow">המותג שלנו</p><h2>הכירו את NOIS</h2><p>פאוצ׳ים שפותחו כדי לתת לכם בחירה מדויקת: שלוש עוצמות, טעמים ברורים ואריזה שמספרת בדיוק מה יש בפנים.</p><Link className="button" href="/brands/nois">לכל מוצרי NOIS</Link></div>
-        <div className="nois-visual">{nois.map((product) => product.images[0] && <img key={product.id} src={product.images[0]} alt={product.name} />)}</div>
       </section>
       <HomeBlog />
     </>
