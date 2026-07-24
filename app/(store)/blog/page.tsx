@@ -8,7 +8,11 @@ const articleMeta = [
   { icon: Leaf, category: "שימוש אחראי", readTime: "5 דקות", tone: "sand" },
 ];
 
-export const metadata = { title: "מדריכים ומאמרים", description: "מידע ברור על פאוצ׳ים, טעמים ועוצמות." };
+export const metadata = {
+  title: "מדריכים על פאוצ׳י ניקוטין, עוצמות ושימוש",
+  description: "מדריכים ברורים לבחירת פאוצ׳ ניקוטין: איך לקרוא מ״ג, להשוות עוצמות, לבחור טעם ולהשתמש באופן אחראי.",
+  alternates: { canonical: "/blog" },
+};
 
 export default function BlogPage() {
   const featured = articles[0];

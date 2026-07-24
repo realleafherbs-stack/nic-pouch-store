@@ -5,5 +5,11 @@ import nextTs from "eslint-config-next/typescript";
 export default defineConfig([
   ...nextVitals,
   ...nextTs,
-  globalIgnores([".next/**", "data/catalog.generated.json"])
+  globalIgnores([
+    ".next/**",
+    ".open-next/**",
+    "dist/**",
+    "out/**",
+    "data/catalog.generated.json",
+  ])
 ]);

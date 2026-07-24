@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { CircleGauge, SlidersHorizontal, X } from "lucide-react";
 import type { Product, StrengthLevel } from "@/lib/catalog/model";
@@ -24,45 +24,32 @@ const flavorFilters = [
   { id: "fruit", terms: ["פטל", "מנגו", "אבטיח", "ענב", "לימון", "דובדבן", "berry", "grape", "mango", "lemon"] },
 ];
 
+function getSearchParam(name: string) {
+  if (typeof window === "undefined") return null;
+  return new URLSearchParams(window.location.search).get(name);
+}
+
 export function ShopCatalog({ products }: { products: Product[] }) {
   const [query, setQuery] = useState("");
-  const [brand, setBrand] = useState("");
-  const [strength, setStrength] = useState("");
-  const [flavor, setFlavor] = useState("");
+  const [brand, setBrand] = useState(() => {
+    const requested = getSearchParam("brand");
+    return requested && products.some((product) => product.brand === requested) ? requested : "";
+  });
+  const [strength, setStrength] = useState(() => {
+    const requested = getSearchParam("strength");
+    return strengthOptions.some((option) => option.value === requested) ? requested as StrengthLevel : "";
+  });
+  const [flavor, setFlavor] = useState(() => {
+    const requested = getSearchParam("flavor");
+    return requested && flavorFilters.some((option) => option.id === requested) ? requested : "";
+  });
   const [sort, setSort] = useState("");
   const [filtersOpen, setFiltersOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const focusSearchWhenReady = useRef(false);
   const brands = useMemo(() => [...new Set(products.map((product) => product.brand))], [products]);
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const requestedStrength = params.get("strength");
-    const requestedBrand = params.get("brand");
-    const requestedFlavor = params.get("flavor");
-    if (strengthOptions.some((option) => option.value === requestedStrength)) setStrength(requestedStrength as StrengthLevel);
-    if (requestedBrand && brands.includes(requestedBrand)) setBrand(requestedBrand);
-    if (requestedFlavor && flavorFilters.some((option) => option.id === requestedFlavor)) setFlavor(requestedFlavor);
-    if (params.get("search") === "open") revealSearch();
-  }, [brands]);
-
-  useEffect(() => {
-    function handleOpenSearch() {
-      revealSearch();
-    }
-    window.addEventListener("open-catalog-search", handleOpenSearch);
-    return () => window.removeEventListener("open-catalog-search", handleOpenSearch);
-  }, []);
-
-  useEffect(() => {
-    if (!filtersOpen || !focusSearchWhenReady.current) return;
-    requestAnimationFrame(() => {
-      searchInputRef.current?.focus();
-      focusSearchWhenReady.current = false;
-    });
-  }, [filtersOpen]);
-
-  function revealSearch() {
+  const revealSearch = useCallback(() => {
     focusSearchWhenReady.current = true;
     if (window.matchMedia("(max-width: 850px)").matches) {
       setFiltersOpen(true);
@@ -71,7 +58,29 @@ export function ShopCatalog({ products }: { products: Product[] }) {
     searchInputRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
     searchInputRef.current?.focus();
     focusSearchWhenReady.current = false;
-  }
+  }, []);
+
+  useEffect(() => {
+    if (getSearchParam("search") !== "open") return;
+    const timeout = window.setTimeout(revealSearch, 0);
+    return () => window.clearTimeout(timeout);
+  }, [revealSearch]);
+
+  useEffect(() => {
+    function handleOpenSearch() {
+      revealSearch();
+    }
+    window.addEventListener("open-catalog-search", handleOpenSearch);
+    return () => window.removeEventListener("open-catalog-search", handleOpenSearch);
+  }, [revealSearch]);
+
+  useEffect(() => {
+    if (!filtersOpen || !focusSearchWhenReady.current) return;
+    requestAnimationFrame(() => {
+      searchInputRef.current?.focus();
+      focusSearchWhenReady.current = false;
+    });
+  }, [filtersOpen]);
 
   function changeStrength(value: string) {
     setStrength(value);
