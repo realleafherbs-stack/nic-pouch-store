@@ -34,6 +34,16 @@ it("renders only catalog-backed product facts", () => {
   expect(screen.getByText("NOIS-CHERRY")).toBeInTheDocument();
 });
 
+it("keeps the existing layout unless the balanced variant is requested", () => {
+  const { rerender } = render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
+
+  expect(screen.queryByRole("heading", { name: "מידע חשוב לפני הרכישה" })).not.toBeInTheDocument();
+
+  rerender(<CartProvider><ProductDetail product={product} related={[]} variant="balanced" /></CartProvider>);
+
+  expect(screen.getByRole("heading", { name: "מידע חשוב לפני הרכישה" })).toBeInTheDocument();
+});
+
 it("does not fabricate popularity, reviews or ratings", () => {
   render(<CartProvider><ProductDetail product={balancedProduct} related={[]} variant="balanced" /></CartProvider>);
 
