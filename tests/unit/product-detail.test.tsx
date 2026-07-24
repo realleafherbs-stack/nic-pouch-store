@@ -40,6 +40,17 @@ it("does not fabricate popularity, reviews or ratings", () => {
   expect(screen.queryByText("פופולרי")).not.toBeInTheDocument();
   expect(screen.queryByText(/חוות דעת/)).not.toBeInTheDocument();
   expect(screen.queryByText(/☆/)).not.toBeInTheDocument();
+  expect(screen.queryByText(/מומלץ לשלב טעמים ועוצמות/)).not.toBeInTheDocument();
+  expect(screen.queryByText("משלוח מהיר")).not.toBeInTheDocument();
+  expect(screen.queryByText("אריזה מקורית")).not.toBeInTheDocument();
+  expect(screen.queryByText("איסוף בטוח")).not.toBeInTheDocument();
+});
+
+it("uses neutral related-products wording in the balanced variant", () => {
+  render(<CartProvider><ProductDetail product={balancedProduct} related={[product]} variant="balanced" /></CartProvider>);
+
+  expect(screen.getByRole("heading", { name: "מוצרים נוספים מהקטלוג" })).toBeInTheDocument();
+  expect(screen.queryByRole("heading", { name: "לקוחות התעניינו גם" })).not.toBeInTheDocument();
 });
 
 it("contains the approved warning, storage and FAQ information", () => {

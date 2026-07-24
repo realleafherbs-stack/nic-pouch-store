@@ -51,7 +51,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
           <h1>{product.flavor || product.name}</h1>
           {variant === "legacy" && <p className="pd-reviews">☆ ☆ ☆ ☆ ☆ <span>אין חוות דעת עדיין</span></p>}
           <div className="pd-price-stock"><strong>{product.retailPrice.toFixed(2)} ₪</strong><span>{product.stock > 0 ? "● במלאי" : "אזל מהמלאי"}</span></div>
-          <div className="pd-offer"><strong>משלוח חינם בקנייה מעל 199 ₪</strong><span>מומלץ לשלב טעמים ועוצמות במשלוח אחד</span></div>
+          <div className="pd-offer"><strong>משלוח חינם בקנייה מעל 199 ₪</strong>{variant === "legacy" && <span>מומלץ לשלב טעמים ועוצמות במשלוח אחד</span>}</div>
           {variant === "balanced" ? <ProductFacts product={product} /> : <div className="pd-quick-facts">
             <div><CircleGauge /><strong>{product.nicotineMg ? `${product.nicotineMg} מ״ג` : "מסומן"}</strong><span>ניקוטין</span></div>
             <div><Sparkles /><strong>{product.flavor || "מקורי"}</strong><span>טעם</span></div>
@@ -60,7 +60,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
           </div>}
           <ProductPurchasePanel product={product} />
           <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
-          <div className="pd-service-line"><span><Truck />משלוח מהיר</span><span><ShieldCheck />אריזה מקורית</span><span><PackageCheck />איסוף בטוח</span></div>
+          {variant === "legacy" && <div className="pd-service-line"><span><Truck />משלוח מהיר</span><span><ShieldCheck />אריזה מקורית</span><span><PackageCheck />איסוף בטוח</span></div>}
         </div>
       </section>
 
@@ -85,7 +85,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
         <section className="section section-alt pd-related">
           <div className="container">
             <div className="section-heading">
-              <div><p className="eyebrow">עוד מהחנות</p><h2>לקוחות התעניינו גם</h2></div>
+              <div><p className="eyebrow">עוד מהחנות</p><h2>{variant === "balanced" ? "מוצרים נוספים מהקטלוג" : "לקוחות התעניינו גם"}</h2></div>
               <div className="carousel-controls" aria-label="ניווט בין מוצרים">
                 <button onClick={() => scrollRelated(1)} aria-label="מוצרים קודמים"><ChevronRight /></button>
                 <button onClick={() => scrollRelated(-1)} aria-label="מוצרים הבאים"><ChevronLeft /></button>
