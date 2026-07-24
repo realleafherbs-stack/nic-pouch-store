@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Home, Menu, Search, ShoppingBag, Store, X } from "lucide-react";
 import { useCart } from "@/components/commerce/cart-provider";
 import { CartDrawer } from "@/components/commerce/cart-drawer";
+import { BrandLogo } from "@/components/layout/brand-logo";
 
 export function MobileNavigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,7 +74,7 @@ export function MobileNavigation() {
     <>
       <div className="mobile-header">
         <button ref={menuButtonRef} className="icon-button" aria-label="פתיחת תפריט" onClick={() => setMenuOpen(true)}><Menu /></button>
-        <Link href="/" className="mobile-logo" aria-label="NIC POUCH — דף הבית"><img src="/figma/nic-pouch-logo.jpg" alt="NIC POUCH" /></Link>
+        <Link href="/" className="mobile-logo" aria-label="NIC POUCH — דף הבית"><BrandLogo /></Link>
         <button className="icon-button cart-trigger" aria-label={`פתיחת עגלה, ${totals.itemCount} פריטים`} onClick={openCart}>
           <ShoppingBag />{totals.itemCount > 0 && <span>{totals.itemCount}</span>}
         </button>
