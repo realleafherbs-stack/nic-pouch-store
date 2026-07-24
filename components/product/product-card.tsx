@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Check, Plus } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
 import { linePrice, PURCHASE_QUANTITIES, type PurchaseQuantity, unitPriceForQuantity } from "@/lib/catalog/pricing";
 import { useCart } from "@/components/commerce/cart-provider";
@@ -10,15 +10,14 @@ import { useCart } from "@/components/commerce/cart-provider";
 const strengthLabels = { mild: "עדין", medium: "בינוני", strong: "חזק", "extra-strong": "חזק מאוד" };
 
 export function ProductCard({ product }: { product: Product }) {
-  const [added, setAdded] = useState(false);
   const [selectedQuantity, setSelectedQuantity] = useState<PurchaseQuantity>(1);
-  const { dispatch } = useCart();
+  const { state, dispatch } = useCart();
+  const cartQuantity = state.lines.find((line) => line.product.id === product.id)?.quantity ?? 0;
+  const displayedQuantity = cartQuantity || selectedQuantity;
 
   function addProduct() {
     if (product.stock <= 0) return;
     dispatch({ type: "add", product, quantity: selectedQuantity });
-    setAdded(true);
-    window.setTimeout(() => setAdded(false), 1600);
   }
 
   return (
@@ -34,13 +33,21 @@ export function ProductCard({ product }: { product: Product }) {
           <span>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "עוצמה לא צוינה"}</span>
           {product.packSize > 1 && <span>מארז {product.packSize}</span>}
         </div>
-        <div className="card-quantity" aria-label={`בחירת כמות עבור ${product.name}`}>
+        {cartQuantity === 0 && <div className="card-quantity" aria-label={`בחירת כמות עבור ${product.name}`}>
           <span>כמות</span>
           <div>{PURCHASE_QUANTITIES.map((quantity) => <button key={quantity} className={selectedQuantity === quantity ? "active" : ""} onClick={() => setSelectedQuantity(quantity)} aria-pressed={selectedQuantity === quantity}>{quantity}</button>)}</div>
-        </div>
+        </div>}
         <div className="price-row">
-          <div className="card-price"><small>{unitPriceForQuantity(product, selectedQuantity).toFixed(2)} ₪ ליח׳</small><strong><bdi>₪ {linePrice(product, selectedQuantity).toFixed(2)}</bdi></strong></div>
-          <button disabled={product.stock <= 0} className={added ? "card-add added" : "card-add"} onClick={addProduct} aria-label={product.stock <= 0 ? `${product.name} אזל מהמלאי` : `הוספת ${selectedQuantity} יחידות של ${product.name} לעגלה`}>{product.stock <= 0 ? null : added ? <Check /> : <Plus />}<span>{product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף" : "הוספה לעגלה"}</span></button>
+          <div className="card-price"><small>{unitPriceForQuantity(product, displayedQuantity).toFixed(2)} ₪ ליח׳</small><strong><bdi>₪ {linePrice(product, displayedQuantity).toFixed(2)}</bdi></strong></div>
+          {cartQuantity > 0 ? (
+            <div className="card-cart-controls" aria-label={`עדכון כמות של ${product.name}`}>
+              <button onClick={() => dispatch({ type: "setQuantity", productId: product.id, quantity: cartQuantity - 1 })} aria-label={`הפחתת יחידה של ${product.name}`}><Minus /></button>
+              <span><strong>{cartQuantity} בעגלה</strong><small>{unitPriceForQuantity(product, cartQuantity).toFixed(2)} ₪ ליח׳</small></span>
+              <button onClick={() => dispatch({ type: "add", product, quantity: 1 })} aria-label={`הוספת יחידה נוספת של ${product.name}`}><Plus /></button>
+            </div>
+          ) : (
+            <button disabled={product.stock <= 0} className="card-add" onClick={addProduct} aria-label={product.stock <= 0 ? `${product.name} אזל מהמלאי` : `הוספת ${selectedQuantity} יחידות של ${product.name} לעגלה`}>{product.stock > 0 && <Plus />}<span>{product.stock <= 0 ? "אזל מהמלאי" : "הוספה לעגלה"}</span></button>
+          )}
         </div>
       </div>
     </article>

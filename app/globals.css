@@ -196,6 +196,13 @@ nav a:hover { opacity:.55; }
 .card-add.added { color:#154f26; background:#dff3e4; }
 .card-add:disabled,.quick-add:disabled { cursor:not-allowed; color:#777; background:#e5e3dd; }
 .card-add svg { width:16px; }
+.card-cart-controls { width:100%; min-height:48px; display:grid; grid-template-columns:46px 1fr 46px; border:1px solid #111; background:white; }
+.card-cart-controls button { display:grid; place-items:center; padding:0; color:white; background:#111; }
+.card-cart-controls button:hover { background:#2c2c29; }
+.card-cart-controls button svg { width:16px; }
+.card-cart-controls > span { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; line-height:1.05; }
+.card-cart-controls > span strong { font-size:13px; }
+.card-cart-controls > span small { color:var(--muted); font-size:10px; }
 .card-quantity { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:auto; padding-top:18px; }
 .card-quantity > span { color:var(--muted); font-size:12px; font-weight:700; }
 .card-quantity > div { display:grid; grid-template-columns:repeat(3,40px); }

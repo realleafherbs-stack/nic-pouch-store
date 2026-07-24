@@ -1,5 +1,5 @@
 import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { vi } from "vitest";
+import { afterEach, vi } from "vitest";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { ShopCatalog } from "@/components/commerce/shop-catalog";
 import type { Product } from "@/lib/catalog/model";
@@ -8,6 +8,10 @@ const products = [
   { id: "1", slug: "mint", sku: "1", name: "HQD מנטה", brand: "HQD", flavor: "מנטה", nicotineMg: 15, strengthLevel: "medium", retailPrice: 29.9, sourcePrice: 0, stock: 1, active: true, packSize: 1, images: [], categories: [] },
   { id: "2", slug: "berry", sku: "2", name: "NOIS פירות יער", brand: "NOIS", flavor: "פירות יער", nicotineMg: 25, strengthLevel: "strong", retailPrice: 39.9, sourcePrice: 0, stock: 1, active: true, packSize: 1, images: [], categories: [] },
 ] as Product[];
+
+afterEach(() => {
+  window.localStorage.clear();
+});
 
 it("filters products by search and brand", () => {
   render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
@@ -21,7 +25,22 @@ it("adds a product directly from its card", () => {
   const quantityGroups = screen.getAllByLabelText("בחירת כמות עבור HQD מנטה");
   fireEvent.click(quantityGroups[0].querySelectorAll("button")[1]);
   fireEvent.click(screen.getByRole("button", { name: "הוספת 5 יחידות של HQD מנטה לעגלה" }));
-  expect(screen.getByText("נוסף")).toBeInTheDocument();
+  expect(screen.getByText("5 בעגלה")).toBeInTheDocument();
+});
+
+it("lets shoppers add single units after adding a quantity tier", () => {
+  render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
+  const quantityGroups = screen.getAllByLabelText("בחירת כמות עבור HQD מנטה");
+  fireEvent.click(quantityGroups[0].querySelectorAll("button")[2]);
+  fireEvent.click(screen.getByRole("button", { name: "הוספת 10 יחידות של HQD מנטה לעגלה" }));
+
+  expect(screen.getByText("10 בעגלה")).toBeInTheDocument();
+  expect(screen.getAllByText("27.90 ₪ ליח׳").length).toBeGreaterThan(0);
+
+  fireEvent.click(screen.getByRole("button", { name: "הוספת יחידה נוספת של HQD מנטה" }));
+
+  expect(screen.getByText("11 בעגלה")).toBeInTheDocument();
+  expect(screen.getAllByText("27.90 ₪ ליח׳").length).toBeGreaterThan(0);
 });
 
 it("opens with a strength filter and explanation from the URL", async () => {
