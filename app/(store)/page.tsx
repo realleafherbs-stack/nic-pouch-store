@@ -17,6 +17,7 @@ export default async function HomePage() {
           <div className="hero-copy">
             <p className="eyebrow">כל המותגים. כל הטעמים. כל החוזקים.</p>
             <h1>כל עולם הפאוצ׳ים<br />במקום אחד.</h1>
+            <p>לבחירה פשוטה והזמנה מהירה עד אליך.</p>
             <div className="actions"><Link className="button" href="#quick-shop">להתחיל לבחור</Link><Link className="button secondary" href="/shop">לכל המוצרים</Link></div>
           </div>
         </div>
