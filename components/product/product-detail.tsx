@@ -5,11 +5,17 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight, CircleGauge, PackageCheck, ShieldCheck, Sparkles, Truck, ZoomIn } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
 import { ProductCard } from "./product-card";
+import { ProductContent } from "./product-content";
+import { ProductFacts, strengthLabels } from "./product-facts";
 import { ProductPurchasePanel } from "./product-purchase-panel";
 
-const strengthLabels = { mild: "עדין", medium: "בינוני", strong: "חזק", "extra-strong": "חזק מאוד" };
+interface ProductDetailProps {
+  product: Product;
+  related: Product[];
+  variant?: "legacy" | "balanced";
+}
 
-export function ProductDetail({ product, related }: { product: Product; related: Product[] }) {
+export function ProductDetail({ product, related, variant = "legacy" }: ProductDetailProps) {
   const images = product.images.length ? product.images.slice(0, 4) : [];
   const [activeImage, setActiveImage] = useState(images[0] ?? "");
   const relatedRef = useRef<HTMLDivElement>(null);
@@ -41,24 +47,24 @@ export function ProductDetail({ product, related }: { product: Product; related:
         </div>
 
         <div className="pd-summary">
-          <div className="pd-kicker"><span>פופולרי</span><p className="pd-brand">{product.brand}</p></div>
+          {variant === "balanced" ? <p className="pd-brand">{product.brand}</p> : <div className="pd-kicker"><span>פופולרי</span><p className="pd-brand">{product.brand}</p></div>}
           <h1>{product.flavor || product.name}</h1>
-          <p className="pd-reviews">☆ ☆ ☆ ☆ ☆ <span>אין חוות דעת עדיין</span></p>
+          {variant === "legacy" && <p className="pd-reviews">☆ ☆ ☆ ☆ ☆ <span>אין חוות דעת עדיין</span></p>}
           <div className="pd-price-stock"><strong>{product.retailPrice.toFixed(2)} ₪</strong><span>{product.stock > 0 ? "● במלאי" : "אזל מהמלאי"}</span></div>
           <div className="pd-offer"><strong>משלוח חינם בקנייה מעל 199 ₪</strong><span>מומלץ לשלב טעמים ועוצמות במשלוח אחד</span></div>
-          <div className="pd-quick-facts">
+          {variant === "balanced" ? <ProductFacts product={product} /> : <div className="pd-quick-facts">
             <div><CircleGauge /><strong>{product.nicotineMg ? `${product.nicotineMg} מ״ג` : "מסומן"}</strong><span>ניקוטין</span></div>
             <div><Sparkles /><strong>{product.flavor || "מקורי"}</strong><span>טעם</span></div>
             <div><ShieldCheck /><strong>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "לפי היצרן"}</strong><span>עוצמה</span></div>
             <div><PackageCheck /><strong>{product.packSize > 1 ? `${product.packSize} יח׳` : "יחידה"}</strong><span>אריזה</span></div>
-          </div>
+          </div>}
           <ProductPurchasePanel product={product} />
           <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
           <div className="pd-service-line"><span><Truck />משלוח מהיר</span><span><ShieldCheck />אריזה מקורית</span><span><PackageCheck />איסוף בטוח</span></div>
         </div>
       </section>
 
-      <section className="pd-lower container">
+      {variant === "balanced" ? <ProductContent product={product} /> : <section className="pd-lower container">
         <div className="pd-feature-cards">
           <div><CircleGauge /><strong>עוצמה ברורה</strong><p>{product.nicotineMg ? `${product.nicotineMg} מ״ג לפי סימון המוצר` : "בהתאם לסימון היצרן"}</p></div>
           <div><Sparkles /><strong>טעם מובחן</strong><p>{product.flavor || "הטעם מופיע על גבי האריזה"}</p></div>
@@ -73,7 +79,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
           <details><summary>אזהרות ושאלות נפוצות</summary><p>ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים המשתמשים בניקוטין בלבד ואינו מיועד לקטינים.</p></details>
         </div>
         <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים בלבד.</div>
-      </section>
+      </section>}
 
       {related.length > 0 && (
         <section className="section section-alt pd-related">

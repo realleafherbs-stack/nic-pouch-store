@@ -10,10 +10,42 @@ const product: Product = {
   categories: ["פאוצ׳ים"],
 };
 
+const balancedProduct: Product = {
+  id: "nois-cherry", slug: "nois-cherry", sku: "NOIS-CHERRY",
+  name: "NOIS דובדבן אקסטרים", brand: "NOIS", flavor: "דובדבן אקסטרים",
+  nicotineMg: 50, strengthLevel: "extra-strong", retailPrice: 29,
+  sourcePrice: 20, stock: 20, active: true, packSize: 1,
+  images: ["/products/nois-cherry.webp"], categories: ["פאוצ׳ים"],
+};
+
 it("adds the selected quantity to the shared cart", () => {
   render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
   fireEvent.click(screen.getByRole("button", { name: "הגדלת כמות" }));
   expect(screen.getByText("59.80 ₪")).toBeInTheDocument();
   fireEvent.click(screen.getByRole("button", { name: /הוסף לעגלה · 2/ }));
   expect(screen.getByText("נוספו 2 יחידות")).toBeInTheDocument();
+});
+
+it("renders only catalog-backed product facts", () => {
+  render(<CartProvider><ProductDetail product={balancedProduct} related={[]} variant="balanced" /></CartProvider>);
+
+  expect(screen.getAllByText("50 מ״ג").length).toBeGreaterThan(0);
+  expect(screen.getAllByText("חזק מאוד").length).toBeGreaterThan(0);
+  expect(screen.getByText("NOIS-CHERRY")).toBeInTheDocument();
+});
+
+it("does not fabricate popularity, reviews or ratings", () => {
+  render(<CartProvider><ProductDetail product={balancedProduct} related={[]} variant="balanced" /></CartProvider>);
+
+  expect(screen.queryByText("פופולרי")).not.toBeInTheDocument();
+  expect(screen.queryByText(/חוות דעת/)).not.toBeInTheDocument();
+  expect(screen.queryByText(/☆/)).not.toBeInTheDocument();
+});
+
+it("contains the approved warning, storage and FAQ information", () => {
+  render(<CartProvider><ProductDetail product={balancedProduct} related={[]} variant="balanced" /></CartProvider>);
+
+  expect(screen.getByText(/ניקוטין הוא חומר ממכר/)).toBeInTheDocument();
+  expect(screen.getByText(/מקום קריר ויבש/, { selector: ".pd-information p" })).toBeInTheDocument();
+  expect(screen.getByText("מהי עוצמת המוצר?")).toBeInTheDocument();
 });
