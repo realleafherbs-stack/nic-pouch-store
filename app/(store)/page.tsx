@@ -15,7 +15,7 @@ export default async function HomePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">כל המותגים. כל הטעמים. כל החוזקים.</p>
-            <h1><span>מבחר ענק של סנוס</span><small>שקיקי ניקוטין ללא טבק</small></h1>
+            <h1><span>מבחר סנוס</span><small>שקיקי ניקוטין ללא טבק</small></h1>
             <p>בחירה קלה, הזמנה פשוטה ומשלוח מהיר.</p>
             <div className="actions"><Link className="button" href="#quick-shop">להתחיל לבחור</Link><Link className="button secondary" href="/shop">לכל המוצרים</Link></div>
           </div>

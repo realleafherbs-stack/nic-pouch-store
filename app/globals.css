@@ -638,9 +638,12 @@ nav a:hover { opacity:.55; }
   .hero-editorial:before { background:linear-gradient(180deg,rgba(5,5,5,.96) 0,rgba(5,5,5,.82) 31%,transparent 50%); }
   .hero-editorial .hero-grid { width:min(1200px,calc(100% - 40px)); min-height:820px; display:grid; grid-template-columns:1fr; grid-template-rows:auto 1fr; align-items:start; padding-block:34px 20px; }
   .hero-editorial .hero-copy { position:relative; top:auto; right:auto; grid-column:1; grid-row:1; width:auto; max-width:520px; justify-self:start; text-align:right; transform:none; }
-  .hero-editorial .hero-copy h1 { max-width:520px; font-size:clamp(43px,12.5vw,66px); line-height:.98; }
-  .hero-editorial .hero-copy p { max-width:440px; margin-bottom:0; font-size:16px; }
-  .hero-editorial .hero-copy .actions { justify-content:flex-start; margin-top:20px; }
+  .hero-editorial .hero-copy h1 { max-width:440px; font-size:clamp(36px,9.5vw,52px); line-height:1.02; letter-spacing:-.04em; }
+  .hero-editorial .hero-copy p { max-width:390px; margin-bottom:0; font-size:16px; line-height:1.5; }
+  .hero-editorial .hero-copy .eyebrow { margin-bottom:10px; font-size:11px; letter-spacing:.1em; }
+  .hero-editorial .hero-copy .actions { justify-content:flex-start; align-items:center; gap:18px; margin-top:18px; }
+  .hero-editorial .hero-copy .button { min-width:138px; min-height:46px; padding-inline:20px; }
+  .hero-editorial .hero-copy .button.secondary { min-width:auto; min-height:auto; padding:7px 0; border:0; border-bottom:1px solid currentColor; background:transparent; }
   .hero-product-stage { grid-column:1; grid-row:2; min-height:305px; }
   .hero-can { width:min(48vw,230px); }
   .hero-can-1 { transform:translate(0,28px) rotate(-7deg); }
@@ -959,6 +962,6 @@ nav a:hover { opacity:.55; }
   .site-utility-button{bottom:82px;width:46px;height:46px}
   .accessibility-trigger{left:12px}.cookie-trigger{right:12px}
   .utility-panel{bottom:136px;left:14px!important;right:14px!important;width:auto}
-  .hero-copy h1{font-size:clamp(38px,11vw,54px)}
-  .hero-copy h1 small{font-size:.58em}
+  .hero-copy h1{font-size:clamp(36px,9.5vw,52px)}
+  .hero-copy h1 small{margin-top:6px;font-size:.5em;line-height:1.25;font-weight:600;letter-spacing:-.02em}
 }
