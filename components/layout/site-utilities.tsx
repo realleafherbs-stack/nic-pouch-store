@@ -30,6 +30,7 @@ export function SiteUtilities() {
   function chooseCookies(value: "essential" | "all") {
     localStorage.setItem("nic-pouch-cookie-choice", value);
     setCookieChoice(value);
+    window.dispatchEvent(new Event("nic-pouch-cookie-consent"));
     setOpen(null);
   }
 
@@ -46,7 +47,7 @@ export function SiteUtilities() {
 
       {open === "cookies" && <section className="utility-panel cookie-panel" role="dialog" aria-modal="false" aria-label="הגדרות עוגיות">
         <header><h2>עוגיות ופרטיות</h2><button aria-label="סגירה" onClick={() => setOpen(null)}><X /></button></header>
-        <p>כרגע האתר משתמש באחסון חיוני בלבד להפעלת העגלה, אימות הגיל והעדפות הנגישות. כלי מדידה או פרסום עתידיים יופעלו רק בהתאם לבחירה שלכם.</p>
+        <p>האתר משתמש באחסון חיוני להפעלת העגלה, אימות הגיל והעדפות הנגישות. Google Analytics יופעל למדידה אנונימית רק לאחר בחירה ב״אישור הכול״. כלי פרסום אינם מופעלים.</p>
         <div className="utility-actions"><button onClick={() => chooseCookies("essential")}>חיוניות בלבד</button><button className="primary" onClick={() => chooseCookies("all")}>אישור הכול</button></div>
         {cookieChoice && <small>הבחירה הנוכחית נשמרה במכשיר הזה.</small>}
         <p><Link href="/privacy">למדיניות הפרטיות המלאה</Link></p>

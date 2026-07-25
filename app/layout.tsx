@@ -5,6 +5,7 @@ import { AgeGate } from "@/components/layout/age-gate";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SiteUtilities } from "@/components/layout/site-utilities";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import {
   absoluteUrl,
   defaultDescription,
@@ -63,6 +64,9 @@ export const metadata: Metadata = {
     images: [absoluteUrl("/generated/home-hero-nois-killa-desktop.webp")],
   },
   icons: { icon: "/figma/nic-pouch-logo.jpg", apple: "/figma/nic-pouch-logo.jpg" },
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -77,6 +81,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SiteFooter />
           <AgeGate />
           <SiteUtilities />
+          <GoogleAnalytics />
         </CartProvider>
       </body>
     </html>
