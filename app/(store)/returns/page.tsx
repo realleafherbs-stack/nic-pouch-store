@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "החזרות וביטולים", description: "מדיניות החזרות וביטול הזמנה באתר NIC POUCH.", alternates: { canonical: "/returns" } };
+export default function ReturnsPage() { return <main className="container article"><p className="eyebrow">שירות</p><h1>החזרות וביטולים</h1><p>בקשת ביטול או החזרה תטופל בהתאם לחוק הגנת הצרכן, לסוג המוצר ולמצבו.</p><h2>תנאים בסיסיים</h2><ul><li>המוצר יוחזר סגור, ללא שימוש ובאריזתו המקורית.</li><li>יש לפנות לשירות הלקוחות לפני שליחת מוצר חזרה.</li><li>לא ניתן להחזיר מוצר שנפתח או שנפגעה אטימותו, בכפוף לדין.</li><li>עלות ההחזרה והזיכוי ייקבעו לפי נסיבות הביטול והוראות הדין.</li></ul><p>לפנייה: WhatsApp ‏058-799-1094 או realleafherbs@gmail.com.</p></main>; }

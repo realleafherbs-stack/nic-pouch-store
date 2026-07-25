@@ -935,3 +935,30 @@ nav a:hover { opacity:.55; }
   .footer-trust svg { width:23px; height:23px; }
 }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
+
+.hero-copy h1 span,.hero-copy h1 small{display:block}
+.hero-copy h1 small{margin-top:8px;font-size:.62em;line-height:1.12;font-weight:700}
+.site-utility-button{position:fixed;z-index:85;bottom:22px;width:50px;height:50px;display:grid;place-items:center;border:0;border-radius:50%;box-shadow:0 7px 24px #0003;cursor:pointer}
+.accessibility-trigger{left:22px;background:#175fe8;color:#fff}
+.cookie-trigger{right:22px;background:#111;color:#fff}
+.site-utility-button svg{width:26px;height:26px}
+.utility-panel{position:fixed;z-index:90;bottom:82px;width:min(390px,calc(100% - 28px));padding:22px;border:1px solid #ddd7cc;background:#fff;box-shadow:0 18px 55px #0004}
+.utility-panel.accessibility-panel{left:22px}.utility-panel.cookie-panel{right:22px}
+.utility-panel header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.utility-panel header button{border:0;background:transparent;cursor:pointer}
+.utility-panel h2{font-size:24px}.utility-panel p{color:#5f5c56}
+.utility-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.utility-options button,.utility-actions button{min-height:44px;border:1px solid #111;background:#fff;font-weight:800;cursor:pointer}
+.utility-options button.active,.utility-actions .primary{background:#111;color:#fff}
+.utility-actions{display:flex;gap:8px;margin-top:16px}.utility-actions button{flex:1}
+.a11y-high-contrast{filter:contrast(1.25)}
+.a11y-underline-links a{text-decoration:underline!important;text-underline-offset:3px}
+.a11y-large-text{font-size:112%}
+.a11y-reduce-motion *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(max-width:850px){
+  .site-utility-button{bottom:82px;width:46px;height:46px}
+  .accessibility-trigger{left:12px}.cookie-trigger{right:12px}
+  .utility-panel{bottom:136px;left:14px!important;right:14px!important;width:auto}
+  .hero-copy h1{font-size:clamp(38px,11vw,54px)}
+  .hero-copy h1 small{font-size:.58em}
+}

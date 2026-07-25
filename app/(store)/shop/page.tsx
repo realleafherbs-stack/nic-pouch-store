@@ -3,12 +3,12 @@ import { ShopCatalog } from "@/components/commerce/shop-catalog";
 import { listProducts } from "@/lib/catalog/local-repository";
 
 export const metadata: Metadata = {
-  title: "פאוצ׳י ניקוטין – כל המותגים, הטעמים והעוצמות",
-  description: "השוו פאוצ׳י ניקוטין לפי מותג, טעם ועוצמה. מבחר NOIS, PABLO, KILLA, CUBA ו־HQD עם מחירים ברורים ומשלוח מהיר.",
+  title: "קניית סנוס ושקיקי ניקוטין אונליין",
+  description: "קנו סנוס ושקיקי ניקוטין ללא טבק לפי מותג, טעם, עוצמה וכמות. מבחר NOIS, PABLO, KILLA, CUBA ו־HQD ומשלוח מהיר.",
   alternates: { canonical: "/shop" },
   openGraph: {
-    title: "פאוצ׳י ניקוטין – כל המותגים במקום אחד",
-    description: "בחרו פאוצ׳ ניקוטין לפי מותג, טעם או עוצמה.",
+    title: "סנוס ושקיקי ניקוטין – כל המוצרים",
+    description: "בחרו שקיקי ניקוטין ללא טבק לפי מותג, טעם, עוצמה וכמות.",
     url: "/shop",
     images: [{ url: "/generated/shop-hero-fronts-only.png", alt: "מבחר פאוצ׳י ניקוטין בחנות NIC POUCH" }],
   },
@@ -20,7 +20,7 @@ export default function ShopPage() {
     <>
       <section className="shop-hero">
         <div className="container shop-hero-grid">
-          <div className="shop-hero-copy"><p className="eyebrow">כל המותגים. כל הטעמים. כל החוזקים.</p><h1>מצאו את הפאוצ׳ שמתאים לכם</h1><p>בחרו לפי מותג, טעם או עוצמה — במהירות ובדיוק.</p><div><span>לפי מותג</span><span>לפי טעם</span><span>לפי עוצמה</span></div></div>
+          <div className="shop-hero-copy"><p className="eyebrow">מצאו את הפאוץ׳ שמתאים לכם</p><h1>סנוס ושקיקי ניקוטין – כל המוצרים</h1><p>בחרו שקיקי ניקוטין ללא טבק לפי מותג, טעם, עוצמה וכמות. כל המוצרים מכילים ניקוטין ומיועדים למבוגרים בלבד.</p><div><span>לפי מותג</span><span>לפי טעם</span><span>לפי עוצמה</span></div></div>
         </div>
       </section>
       <div className="container"><ShopCatalog products={items} /></div>

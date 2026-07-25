@@ -19,7 +19,7 @@ export function BrandShowcase({ products }: { products: Product[] }) {
       {cards.map(({ brand, product }) => {
         const style = brandStyles[brand];
         return (
-          <Link href={`/shop?brand=${encodeURIComponent(brand)}`} className={`brand-card ${style.className}`} key={brand}>
+          <Link href={`/brands/${brand.toLowerCase()}`} className={`brand-card ${style.className}`} key={brand}>
             <div className="brand-card-copy">
               <span className="brand-logo-word" aria-label={`לוגו ${brand}`}>{brand}</span>
               <p>{style.tagline}</p>

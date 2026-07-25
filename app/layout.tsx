@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { AgeGate } from "@/components/layout/age-gate";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { JsonLd } from "@/components/seo/json-ld";
+import { SiteUtilities } from "@/components/layout/site-utilities";
 import {
   absoluteUrl,
   defaultDescription,
@@ -17,7 +18,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "NIC POUCH | פאוצ׳י ניקוטין ממותגים מובילים",
+    default: "סנוס ושקיקי ניקוטין ללא טבק | NIC POUCH",
     template: `%s | ${siteName}`,
   },
   description: defaultDescription,
@@ -27,6 +28,8 @@ export const metadata: Metadata = {
     "פאוצ׳ ניקוטין",
     "פאוצ׳ים",
     "שקיקי ניקוטין",
+    "סנוס",
+    "סנוס ללא טבק",
     "NOIS",
     "PABLO",
     "KILLA",
@@ -42,20 +45,20 @@ export const metadata: Metadata = {
     locale: "he_IL",
     url: siteUrl,
     siteName,
-    title: "NIC POUCH | פאוצ׳י ניקוטין ממותגים מובילים",
+    title: "סנוס ושקיקי ניקוטין ללא טבק | NIC POUCH",
     description: defaultDescription,
     images: [
       {
         url: absoluteUrl("/generated/home-hero-nois-killa-desktop.webp"),
         width: 1536,
         height: 1024,
-        alt: "מבחר פאוצ׳י ניקוטין ממותגים מובילים",
+        alt: "מבחר סנוס ושקיקי ניקוטין ללא טבק ממותגים מובילים",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NIC POUCH | פאוצ׳י ניקוטין ממותגים מובילים",
+    title: "סנוס ושקיקי ניקוטין ללא טבק | NIC POUCH",
     description: defaultDescription,
     images: [absoluteUrl("/generated/home-hero-nois-killa-desktop.webp")],
   },
@@ -73,6 +76,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <main id="main">{children}</main>
           <SiteFooter />
           <AgeGate />
+          <SiteUtilities />
         </CartProvider>
       </body>
     </html>

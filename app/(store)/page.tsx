@@ -15,7 +15,7 @@ export default async function HomePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">כל המותגים. כל הטעמים. כל החוזקים.</p>
-            <h1>מבחר ענק של סנוס<br />שקיקי ניקוטין ללא טבק</h1>
+            <h1><span>מבחר ענק של סנוס</span><small>שקיקי ניקוטין ללא טבק</small></h1>
             <p>בחירה קלה, הזמנה פשוטה ומשלוח מהיר.</p>
             <div className="actions"><Link className="button" href="#quick-shop">להתחיל לבחור</Link><Link className="button secondary" href="/shop">לכל המוצרים</Link></div>
           </div>
@@ -38,10 +38,10 @@ export default async function HomePage() {
         <div className="container finder">
           <div><p className="eyebrow">פשוט למצוא את מה שמתאים</p><h2>מה העוצמה שלך?</h2><p>בחרו לפי רמת הניקוטין שמופיעה על המוצר. אם אינכם בטוחים, התחילו בעוצמה נמוכה יותר.</p><Link className="button" href="/blog/nicotine-pouch-guide">למדריך המלא</Link></div>
           <div className="strength-list">
-            <Link href="/shop?strength=mild" className="strength-row"><strong>עדין</strong><span className="strength-line"/><span>עד 8 מ״ג</span></Link>
-            <Link href="/shop?strength=medium" className="strength-row"><strong>בינוני</strong><span className="strength-line"/><span>9–16 מ״ג</span></Link>
-            <Link href="/shop?strength=strong" className="strength-row"><strong>חזק</strong><span className="strength-line"/><span>17–30 מ״ג</span></Link>
-            <Link href="/shop?strength=extra-strong" className="strength-row"><strong>חזק מאוד</strong><span className="strength-line"/><span>31+ מ״ג</span></Link>
+            <Link href="/strength/mild" className="strength-row"><strong>עדין</strong><span className="strength-line"/><span>עד 8 מ״ג</span></Link>
+            <Link href="/strength/medium" className="strength-row"><strong>בינוני</strong><span className="strength-line"/><span>9–16 מ״ג</span></Link>
+            <Link href="/strength/strong" className="strength-row"><strong>חזק</strong><span className="strength-line"/><span>17–30 מ״ג</span></Link>
+            <Link href="/strength/extra-strong" className="strength-row"><strong>חזק מאוד</strong><span className="strength-line"/><span>31+ מ״ג</span></Link>
           </div>
         </div>
       </section>

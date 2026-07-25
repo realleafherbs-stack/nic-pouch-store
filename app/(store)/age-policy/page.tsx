@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "מדיניות אימות גיל", description: "מדיניות מכירה לבגירים ואימות גיל באתר NIC POUCH.", alternates: { canonical: "/age-policy" } };
+export default function AgePolicyPage() { return <main className="container article"><p className="eyebrow">18+ בלבד</p><h1>מדיניות אימות גיל</h1><p>המוצרים באתר מכילים ניקוטין ומיועדים לבגירים בני 18 ומעלה בלבד. הכניסה לאתר והרכישה מותנות באישור גיל.</p><h2>אימות והגבלות</h2><p>החברה רשאית לבקש פרטים או מסמך מתאים לצורך אימות גיל, וכן לבטל הזמנה כאשר קיים חשש שהרוכש אינו בגיר. אין לרכוש עבור קטין ואין למסור את המוצרים לקטינים.</p></main>; }

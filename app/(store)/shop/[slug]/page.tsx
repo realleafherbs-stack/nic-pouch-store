@@ -10,14 +10,15 @@ export function generateStaticParams() { return products.map(({ slug }) => ({ sl
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const product = getProduct(decodeURIComponent((await params).slug));
   if (!product) return {};
-  const description = `${product.name} מבית ${product.brand}, בעוצמה ${product.nicotineMg ? `${product.nicotineMg} מ״ג` : "המופיעה על האריזה"}. החל מ־${product.retailPrice.toFixed(2)} ₪ ומשלוח חינם מעל 199 ₪.`;
+  const seoName = `${product.name}${product.nicotineMg && !product.name.includes(`${product.nicotineMg}`) ? ` ${product.nicotineMg} מ״ג` : ""} – שקיקי ניקוטין ללא טבק`;
+  const description = `${seoName} מבית ${product.brand}, בעוצמה ${product.nicotineMg ? `${product.nicotineMg} מ״ג לפי סימון המוצר` : "המופיעה על האריזה"}. החל מ־${product.retailPrice.toFixed(2)} ₪.`;
   return {
-    title: product.name,
+    title: seoName,
     description,
     alternates: { canonical: `/shop/${product.slug}` },
     openGraph: {
       type: "website",
-      title: `${product.name} | ${siteName}`,
+      title: `${seoName} | ${siteName}`,
       description,
       url: `/shop/${product.slug}`,
       images: product.images.map((image) => ({
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} | ${siteName}`,
+      title: `${seoName} | ${siteName}`,
       description,
       images: product.images.map((image) => absoluteUrl(image)),
     },
@@ -41,11 +42,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const schema = {
     "@type": "Product",
     "@id": `${productUrl}#product`,
-    name: product.name,
-    description: `${product.name} מבית ${product.brand}. המחיר והזמינות מעודכנים בדף המוצר.`,
+    name: `${product.name} – שקיקי ניקוטין ללא טבק`,
+    description: `${product.name} מבית ${product.brand}, שקיקי ניקוטין ללא טבק. המחיר והזמינות מעודכנים בדף המוצר.`,
     image: product.images.map((image) => absoluteUrl(image)),
     sku: product.sku,
-    category: "פאוצ׳ ניקוטין",
+    category: "שקיקי ניקוטין ללא טבק",
+    audience: { "@type": "PeopleAudience", suggestedMinAge: 18 },
     brand: { "@type": "Brand", name: product.brand },
     manufacturer: { "@type": "Organization", name: product.brand },
     offers: {

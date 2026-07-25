@@ -14,7 +14,7 @@ export const siteUrl = normalizeUrl(
 export const siteName = "NIC POUCH";
 export const organizationName = "B2B MARKT LTD";
 export const defaultDescription =
-  "מבחר רחב של פאוצ׳י ניקוטין ממותגים מובילים, עם סינון לפי טעם ועוצמה ומשלוח מהיר בישראל.";
+  "מבחר ענק של סנוס ושקיקי ניקוטין ללא טבק ממותגים מובילים, במגוון טעמים וחוזקים, עם בחירה פשוטה ומשלוח מהיר בישראל.";
 
 export function absoluteUrl(path = "/") {
   return new URL(path, `${siteUrl}/`).toString();

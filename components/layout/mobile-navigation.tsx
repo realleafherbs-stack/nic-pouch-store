@@ -88,10 +88,13 @@ export function MobileNavigation() {
             <nav>
               <Link href="/shop" onClick={closeMenu}>כל המוצרים</Link>
               <Link href="/#brands" onClick={closeMenu}>מותגים</Link>
+              <Link href="/flavors/mint" onClick={closeMenu}>טעמים</Link>
+              <Link href="/strength/medium" onClick={closeMenu}>עוצמות</Link>
               <Link href="/blog" onClick={closeMenu}>מדריכים</Link>
               <Link href="/#deals" onClick={closeMenu}>מבצעים</Link>
               <Link href="/shipping" onClick={closeMenu}>משלוחים</Link>
               <Link href="/accessibility" onClick={closeMenu}>נגישות</Link>
+              <Link href="/contact" onClick={closeMenu}>צור קשר</Link>
             </nav>
             <div className="mobile-menu-note"><strong>18+</strong><p>המוצרים מכילים ניקוטין — חומר ממכר. מיועד לבגירים בלבד.</p></div>
           </aside>

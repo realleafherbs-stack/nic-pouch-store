@@ -23,7 +23,7 @@ export function SiteHeader() {
             <BrandLogo />
           </Link>
           <nav aria-label="ניווט ראשי">
-            <Link href="/shop">חנות</Link><Link href="/#brands">מותגים</Link><Link href="/blog">מדריכים</Link><Link href="/#deals">מבצעים</Link>
+            <Link href="/shop">חנות</Link><Link href="/#brands">מותגים</Link><Link href="/flavors/mint">טעמים</Link><Link href="/blog">מדריכים</Link><Link href="/#deals">מבצעים</Link>
           </nav>
           <DesktopHeaderActions />
         </div>
