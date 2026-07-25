@@ -1,28 +1,25 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, CircleGauge, PackageCheck, ShieldCheck, Sparkles, Truck, ZoomIn } from "lucide-react";
+import { CircleGauge, PackageCheck, ShieldCheck, Sparkles, Truck, ZoomIn } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
-import { ProductCard } from "./product-card";
+import type { ProductDetailVariant } from "@/lib/catalog/product-page-variant";
+import { LegacyProductPurchase } from "./legacy-product-purchase";
 import { ProductContent } from "./product-content";
 import { ProductFacts, strengthLabels } from "./product-facts";
 import { ProductPurchasePanel } from "./product-purchase-panel";
+import { RelatedProducts } from "./related-products";
 
 interface ProductDetailProps {
   product: Product;
   related: Product[];
-  variant?: "legacy" | "balanced";
+  variant?: ProductDetailVariant;
 }
 
 export function ProductDetail({ product, related, variant = "legacy" }: ProductDetailProps) {
   const images = product.images.length ? product.images.slice(0, 4) : [];
   const [activeImage, setActiveImage] = useState(images[0] ?? "");
-  const relatedRef = useRef<HTMLDivElement>(null);
-
-  function scrollRelated(direction: 1 | -1) {
-    relatedRef.current?.scrollBy({ left: direction * relatedRef.current.clientWidth * 0.78, behavior: "smooth" });
-  }
 
   return (
     <div className={variant === "balanced" ? "pd-balanced" : undefined}>
@@ -35,7 +32,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
             <ZoomIn className="pd-zoom" aria-hidden="true" />
             {activeImage ? <img src={activeImage} alt={product.name} /> : <span className="can-placeholder">{product.brand}</span>}
           </div>
-          {images.length > 0 && (
+          {images.length > 1 && (
             <div className="pd-thumbs" aria-label="תמונות המוצר">
               {images.map((image, index) => (
                 <button key={image} className={activeImage === image ? "active" : ""} onClick={() => setActiveImage(image)} aria-label={`הצגת תמונה ${index + 1} של ${product.name}`} aria-pressed={activeImage === image}>
@@ -58,8 +55,9 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
             <div><ShieldCheck /><strong>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "לפי היצרן"}</strong><span>עוצמה</span></div>
             <div><PackageCheck /><strong>{product.packSize > 1 ? `${product.packSize} יח׳` : "יחידה"}</strong><span>אריזה</span></div>
           </div>}
-          <ProductPurchasePanel product={product} />
-          <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
+          {variant === "balanced"
+            ? <ProductPurchasePanel product={product} />
+            : <LegacyProductPurchase product={product} />}
           {variant === "legacy" && <div className="pd-service-line"><span><Truck />משלוח מהיר</span><span><ShieldCheck />אריזה מקורית</span><span><PackageCheck />איסוף בטוח</span></div>}
         </div>
       </section>
@@ -81,20 +79,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
         <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים בלבד.</div>
       </section>}
 
-      {related.length > 0 && (
-        <section className="section section-alt pd-related">
-          <div className="container">
-            <div className="section-heading">
-              <div><p className="eyebrow">עוד מהחנות</p><h2>{variant === "balanced" ? "מוצרים נוספים מהקטלוג" : "לקוחות התעניינו גם"}</h2></div>
-              <div className="carousel-controls" aria-label="ניווט בין מוצרים">
-                <button onClick={() => scrollRelated(1)} aria-label="מוצרים קודמים"><ChevronRight /></button>
-                <button onClick={() => scrollRelated(-1)} aria-label="מוצרים הבאים"><ChevronLeft /></button>
-              </div>
-            </div>
-            <div ref={relatedRef} className="product-carousel">{related.map((item) => <ProductCard key={item.id} product={item} />)}</div>
-          </div>
-        </section>
-      )}
+      <RelatedProducts products={related} variant={variant} />
     </div>
   );
 }

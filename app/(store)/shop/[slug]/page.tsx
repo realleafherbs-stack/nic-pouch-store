@@ -3,9 +3,8 @@ import { notFound } from "next/navigation";
 import { ProductDetail } from "@/components/product/product-detail";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getProduct, products } from "@/lib/catalog/local-repository";
+import { productVariantForSlug } from "@/lib/catalog/product-page-variant";
 import { absoluteUrl, breadcrumbSchema, organizationName, siteName } from "@/lib/seo";
-
-const balancedSampleSlug = "nois-דובדבן-אקסטרים-43589";
 
 export function generateStaticParams() { return products.map(({ slug }) => ({ slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -65,7 +64,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     { name: product.brand, path: `/brands/${product.brand.toLowerCase()}` },
     { name: product.name, path: `/shop/${product.slug}` },
   ]);
-  const variant = product.slug === balancedSampleSlug ? "balanced" : "legacy";
+  const variant = productVariantForSlug(product.slug);
 
   return (
     <>

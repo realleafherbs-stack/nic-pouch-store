@@ -26,3 +26,10 @@ export function unitPriceForQuantity(product: Pick<Product, "retailPrice" | "pri
 export function linePrice(product: Pick<Product, "retailPrice" | "priceTiers">, quantity: number) {
   return unitPriceForQuantity(product, quantity) * quantity;
 }
+
+export function savingsForQuantity(product: Pick<Product, "retailPrice" | "priceTiers">, quantity: number) {
+  if (quantity <= 0) return 0;
+
+  const singleUnitTotal = unitPriceForQuantity(product, 1) * quantity;
+  return Math.max(singleUnitTotal - linePrice(product, quantity), 0);
+}
