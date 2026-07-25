@@ -846,6 +846,10 @@ nav a:hover { opacity:.55; }
   border:1px solid #e3dfd6;
   background:#fff;
 }
+.pd-balanced .pd-faq {
+  width:100%;
+  max-width:none;
+}
 .pd-balanced .pd-faq,
 .pd-balanced .warning {
   grid-column:1/-1;

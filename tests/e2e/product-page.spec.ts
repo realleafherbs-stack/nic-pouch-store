@@ -2,8 +2,6 @@ import { expect, test } from "@playwright/test";
 
 const samplePath = "/shop/nois-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-43589";
 
-test.use({ baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://127.0.0.1:3000" });
-
 test("balanced sample has no horizontal overflow on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(samplePath);
@@ -19,4 +17,12 @@ test("balanced sample keeps gallery and purchase summary above the fold on deskt
   const purchase = page.locator(".pd-balanced .pd-purchase-box");
   await expect(gallery).toBeVisible();
   await expect(purchase).toBeVisible();
+
+  const viewportHeight = await page.evaluate(() => window.innerHeight);
+  const galleryBox = await gallery.boundingBox();
+  const purchaseBox = await purchase.boundingBox();
+  expect(galleryBox).not.toBeNull();
+  expect(purchaseBox).not.toBeNull();
+  expect(galleryBox!.y + galleryBox!.height).toBeLessThanOrEqual(viewportHeight);
+  expect(purchaseBox!.y + purchaseBox!.height).toBeLessThanOrEqual(viewportHeight);
 });
