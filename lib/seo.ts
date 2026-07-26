@@ -6,9 +6,7 @@ function normalizeUrl(value: string) {
 }
 
 export const siteUrl = normalizeUrl(
-  process.env.NEXT_PUBLIC_SITE_URL ??
-    process.env.VERCEL_PROJECT_PRODUCTION_URL ??
-    fallbackSiteUrl,
+  process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl,
 );
 
 export const siteName = "NIC POUCH";
