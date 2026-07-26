@@ -1,4 +1,4 @@
-const fallbackSiteUrl = "https://nic-pouch-store.realleafherbs.chatgpt.site";
+const fallbackSiteUrl = "https://nicpouch.co.il";
 
 function normalizeUrl(value: string) {
   const withProtocol = /^https?:\/\//.test(value) ? value : `https://${value}`;
@@ -15,6 +15,15 @@ export const siteName = "NIC POUCH";
 export const organizationName = "B2B MARKT LTD";
 export const defaultDescription =
   "מבחר ענק של סנוס ושקיקי ניקוטין ללא טבק ממותגים מובילים, במגוון טעמים וחוזקים, עם בחירה פשוטה ומשלוח מהיר בישראל.";
+
+export const defaultKeywords = [
+  "סנוס",
+  "שקיקי ניקוטין",
+  "פאוצ׳ ניקוטין",
+  "פאוצ׳ים ניקוטין",
+  "סנוס ללא טבק",
+  "סנוס בישראל",
+];
 
 export function absoluteUrl(path = "/") {
   return new URL(path, `${siteUrl}/`).toString();

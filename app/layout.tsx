@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import {
   absoluteUrl,
   defaultDescription,
+  defaultKeywords,
   organizationSchema,
   siteName,
   siteUrl,
@@ -26,11 +27,7 @@ export const metadata: Metadata = {
   applicationName: siteName,
   alternates: { canonical: "/" },
   keywords: [
-    "פאוצ׳ ניקוטין",
-    "פאוצ׳ים",
-    "שקיקי ניקוטין",
-    "סנוס",
-    "סנוס ללא טבק",
+    ...defaultKeywords,
     "NOIS",
     "PABLO",
     "KILLA",

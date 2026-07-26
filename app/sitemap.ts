@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/"), priority: 1, changeFrequency: "weekly", lastModified: now },
     { url: absoluteUrl("/shop"), priority: .9, changeFrequency: "daily", lastModified: now },
     { url: absoluteUrl("/blog"), priority: .7, changeFrequency: "weekly", lastModified: now },
+    { url: absoluteUrl("/snus"), priority: .8, changeFrequency: "monthly", lastModified: now },
     { url: absoluteUrl("/shipping"), priority: .4, changeFrequency: "monthly", lastModified: now },
     { url: absoluteUrl("/accessibility"), priority: .3, changeFrequency: "yearly", lastModified: now },
     { url: absoluteUrl("/privacy"), priority: .2, changeFrequency: "yearly", lastModified: now },

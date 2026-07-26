@@ -13,7 +13,7 @@ export function SiteFooter() {
       </div>
       <div className="container footer-grid">
         <div className="footer-brand"><BrandLogo className="footer-logo" /><p>הבית הישראלי למותגי פאוצ׳ים מובילים. בחירה ברורה, מידע אמין ושירות אישי.</p><strong>18+ בלבד</strong></div>
-        <div className="footer-links"><h3>חנות</h3><Link href="/shop">כל המוצרים</Link><Link href="/blog">המדריכים</Link><Link href="/faq">שאלות נפוצות</Link><Link href="/authenticity">מקוריות המוצרים</Link></div>
+        <div className="footer-links"><h3>חנות</h3><Link href="/shop">כל המוצרים</Link><Link href="/snus">מה זה סנוס?</Link><Link href="/blog">המדריכים</Link><Link href="/faq">שאלות נפוצות</Link><Link href="/authenticity">מקוריות המוצרים</Link></div>
         <div className="footer-links"><h3>שירות ומידע</h3><Link href="/about">אודות</Link><Link href="/contact">צור קשר</Link><Link href="/shipping">משלוחים</Link><Link href="/returns">החזרות וביטולים</Link><Link href="/age-policy">אימות גיל</Link><Link href="/nicotine-information">אזהרות ניקוטין</Link><Link href="/terms">תקנון ותנאי שימוש</Link><Link href="/privacy">מדיניות פרטיות</Link><Link href="/accessibility">הצהרת נגישות</Link></div>
         <div className="footer-contact"><h3>דברו איתנו</h3><a className="footer-whatsapp" href="https://wa.me/972587991094"><MessageCircle />058-799-1094</a><p>ב׳–ה׳ 09:00–17:00</p><small>מענה מהיר ב־WhatsApp</small></div>
       </div>

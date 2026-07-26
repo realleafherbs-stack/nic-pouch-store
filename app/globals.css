@@ -592,6 +592,10 @@ nav a:hover { opacity:.55; }
 .article-scale span:nth-child(3) { background:#eba26e; }
 .article-scale span:nth-child(4) { background:#df6658; }
 .article-scale small { display:block; margin-top:3px; font-weight:500; }
+.article-related { display:grid; gap:0; margin-top:48px; border-top:1px solid #d8d5cc; }
+.article-related > strong { padding:18px 0 10px; font-size:14px; }
+.article-related a { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:15px 0; border-bottom:1px solid #d8d5cc; font-weight:750; }
+.article-related svg { width:18px; }
 .article-shop-cta { display:flex; justify-content:space-between; align-items:center; gap:24px; margin-top:55px; padding:30px; background:#dff0ed; }
 .article-shop-cta p { margin:4px 0 0; font-size:15px!important; }
 .article-shop-cta .button { gap:8px; white-space:nowrap; }

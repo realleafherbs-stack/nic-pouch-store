@@ -1,18 +1,11 @@
 import Link from "next/link";
 import type { Product } from "@/lib/catalog/model";
-import { linePrice, PURCHASE_QUANTITIES, unitPriceForQuantity } from "@/lib/catalog/pricing";
+import { productFaq } from "@/lib/catalog/product-seo";
 import { strengthLabels } from "./product-facts";
 
 export function ProductContent({ product }: { product: Product }) {
   const strength = product.strengthLevel ? strengthLabels[product.strengthLevel] : "לפי סימון היצרן";
-  const priceOptions = PURCHASE_QUANTITIES.map((quantity) => ({
-    quantity,
-    unitPrice: unitPriceForQuantity(product, quantity),
-    total: linePrice(product, quantity),
-  }));
-  const strengthQuestion = product.nicotineMg
-    ? `מה משמעות ${product.nicotineMg} מ״ג במוצר?`
-    : "מה משמעות רמת העוצמה במוצר?";
+  const faq = productFaq(product);
 
   return (
     <section className="pd-content container" aria-label="מידע על המוצר">
@@ -41,10 +34,12 @@ export function ProductContent({ product }: { product: Product }) {
       <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים בלבד.</div>
       <div className="pd-faq">
         <h2>שאלות נפוצות</h2>
-        <details><summary>{strengthQuestion}</summary><p>{product.nicotineMg ? `${product.nicotineMg} מ״ג הם נתון הניקוטין לפי סימון המוצר. ` : ""}בסולם האתר רמת המוצר היא {strength}, והיא מיועדת למשתמשי ניקוטין מנוסים בלבד.</p></details>
-        <details><summary>כמה עולה יחידה בקנייה של 1, 5 או 10?</summary><p className="pd-faq-pricing">{priceOptions.map(({ quantity, unitPrice, total }) => <span key={quantity}>{quantity} יח׳: {unitPrice.toFixed(2)} ₪ ליחידה, {total.toFixed(2)} ₪ בסך הכול.</span>)}</p></details>
-        <details><summary>תוך כמה זמן המשלוח מגיע?</summary><p>אספקה רגילה עד 3 ימי עסקים, בכפוף ליישוב ולחברת המשלוחים.</p></details>
-        <details><summary>כיצד שומרים את המוצר?</summary><p>במקום קריר ויבש והרחק מילדים ובעלי חיים.</p></details>
+        {faq.map((item) => (
+          <details key={item.question}>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
       </div>
     </section>
   );

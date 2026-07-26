@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Clock3, ShieldAlert } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
 import { articles } from "@/data/articles";
-import { absoluteUrl, breadcrumbSchema, siteName, siteUrl } from "@/lib/seo";
+import { absoluteUrl, breadcrumbSchema, defaultKeywords, siteName, siteUrl } from "@/lib/seo";
 
 export function generateStaticParams() { return articles.map(({ slug }) => ({ slug })); }
 
@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: article.title,
     description: article.excerpt,
+    keywords: [article.primaryKeyword, ...defaultKeywords],
     alternates: { canonical: `/blog/${article.slug}` },
     openGraph: {
       type: "article",
@@ -53,6 +54,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     inLanguage: "he-IL",
     author: { "@type": "Organization", name: siteName, url: siteUrl },
     publisher: { "@id": `${siteUrl}/#organization` },
+    keywords: [article.primaryKeyword, ...defaultKeywords].join(", "),
+    wordCount: article.sections.reduce(
+      (total, section) =>
+        total + section.paragraphs.join(" ").split(/\s+/).filter(Boolean).length,
+      0,
+    ),
+  };
+  const faqSchema = {
+    "@type": "FAQPage",
+    mainEntity: article.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
   const breadcrumbs = breadcrumbSchema([
     { name: "דף הבית", path: "/" },
@@ -61,19 +76,30 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   ]);
   return (
     <>
-      <JsonLd data={[schema, breadcrumbs]} />
-      <header className="article-hero"><div className="container"><Link href="/blog">המגזין /</Link><p className="eyebrow">מדריך NIC POUCH</p><h1>{article.title}</h1><p>{article.excerpt}</p><div><span><Clock3 />5 דקות קריאה</span><span>עודכן {article.updated}</span></div></div></header>
+      <JsonLd data={[schema, faqSchema, breadcrumbs]} />
+      <header className="article-hero"><div className="container"><Link href="/blog">המגזין /</Link><p className="eyebrow">מדריך NIC POUCH</p><h1>{article.title}</h1><p>{article.excerpt}</p><div><span><Clock3 />{article.readTime}</span><span>עודכן {article.updated}</span></div></div></header>
       <div className="container article-layout">
-        <aside className="article-toc"><strong>במדריך הזה</strong><a href="#before">לפני שמתחילים</a><a href="#strength">איך קוראים עוצמה?</a><a href="#flavor">בחירת טעם</a><a href="#sources">מקורות</a></aside>
+        <aside className="article-toc"><strong>במדריך הזה</strong>{article.sections.map((section) => <a href={`#${section.id}`} key={section.id}>{section.title}</a>)}<a href="#questions">שאלות נפוצות</a><a href="#sources">מקורות</a></aside>
         <article className="article article-designed">
-          <p className="article-lead">{article.excerpt} כאן ריכזנו את הדברים החשובים בשפה פשוטה, כדי שתוכלו להשוות בין המוצרים בלי לנחש.</p>
+          <p className="article-lead">{article.excerpt} המידע מבוסס על קטלוג המוצרים, סימון האריזות והנחיות האתר.</p>
           <div className="article-warning"><ShieldAlert /><p><strong>18+ בלבד</strong> פאוצ׳ים מכילים ניקוטין — חומר ממכר. הם מיועדים לבגירים שכבר משתמשים בניקוטין ואינם אמצעי גמילה.</p></div>
-          <h2 id="before">לפני שמתחילים</h2><p>פאוצ׳ים מגיעים במגוון מותגים, טעמים ורמות ניקוטין. לפני שבוחרים, חשוב לבדוק את הנתונים שמופיעים על האריזה ואת רמת העוצמה המוצגת בדף המוצר.</p>
-          <h2 id="strength">איך קוראים את העוצמה?</h2><p>בדף המוצר אנחנו מציגים את כמות הניקוטין רק כאשר היא מופיעה בשם או במידע שסופק על המוצר. ככל שהמספר גבוה יותר, כך העוצמה עשויה להיות מורגשת יותר. כשאין מידע מאומת, איננו משלימים אותו בעצמנו.</p>
-          <div className="article-scale"><span>עדין<small>עד 8 מ״ג</small></span><span>בינוני<small>9–16 מ״ג</small></span><span>חזק<small>17–30 מ״ג</small></span><span>חזק מאוד<small>31+ מ״ג</small></span></div>
-          <h2 id="flavor">בחירת טעם</h2><p>אפשר להתחיל ממשפחות טעם מוכרות: מנטה וקירור, פירות, פירות טרופיים או טעמים מתוקים. הסינון בחנות מאפשר לצמצם את הבחירה לפי מותג ועוצמה.</p>
+          {article.sections.map((section) => (
+            <section key={section.id}>
+              <h2 id={section.id}>{section.title}</h2>
+              {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {section.id === "strength" && <div className="article-scale"><span>עדין<small>עד 8 מ״ג</small></span><span>בינוני<small>9–16 מ״ג</small></span><span>חזק<small>17–30 מ״ג</small></span><span>חזק מאוד<small>31+ מ״ג</small></span></div>}
+            </section>
+          ))}
+          <h2 id="questions">שאלות נפוצות</h2>
+          <div className="pd-faq">
+            {article.faq.map((item) => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}
+          </div>
           <h2 id="sources">מקורות ושקיפות</h2><ul><li>נתוני היצרן והמידע המופיע על אריזת המוצר</li><li>קטלוג המוצרים המאושר של החברה</li><li>הנחיות השירות והמשלוחים של B2B MARKT LTD</li></ul>
-          <div className="article-shop-cta"><div><strong>מצאתם את העוצמה שלכם?</strong><p>עברו לחנות וסננו לפי מותג, טעם ועוצמה.</p></div><Link className="button" href="/shop">למוצרים <ArrowLeft /></Link></div>
+          <nav className="article-related" aria-label="המשך קריאה וקנייה">
+            <strong>השלב הבא</strong>
+            {article.relatedLinks.map((item) => <Link href={item.href} key={item.href}>{item.label} <ArrowLeft /></Link>)}
+          </nav>
+          <div className="article-shop-cta"><div><strong>מוכנים להשוות מוצרים?</strong><p>עברו לחנות וסננו לפי מותג, טעם ועוצמה.</p></div><Link className="button" href="/shop">למוצרים <ArrowLeft /></Link></div>
         </article>
       </div>
     </>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowLeft, BookOpenText, Clock3, Gauge, Leaf, Search } from "lucide-react";
 import { articles } from "@/data/articles";
+import { JsonLd } from "@/components/seo/json-ld";
+import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
 
 const articleMeta = [
   { icon: BookOpenText, category: "מדריך מקיף", readTime: "6 דקות", tone: "mint" },
@@ -9,16 +11,32 @@ const articleMeta = [
 ];
 
 export const metadata = {
-  title: "מדריכים על פאוצ׳י ניקוטין, עוצמות ושימוש",
-  description: "מדריכים ברורים לבחירת פאוצ׳ ניקוטין: איך לקרוא מ״ג, להשוות עוצמות, לבחור טעם ולהשתמש באופן אחראי.",
+  title: "מדריכים על סנוס ושקיקי ניקוטין ללא טבק",
+  description: "מדריכים ברורים על סנוס ושקיקי ניקוטין ללא טבק: בחירת מוצר, עוצמות מ״ג, טעמים ושימוש אחראי.",
   alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
   const featured = articles[0];
   const FeaturedIcon = articleMeta[0].icon;
+  const itemList = {
+    "@type": "ItemList",
+    name: "מדריכי NIC POUCH",
+    numberOfItems: articles.length,
+    itemListElement: articles.map((article, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: article.title,
+      url: absoluteUrl(`/blog/${article.slug}`),
+    })),
+  };
+  const breadcrumbs = breadcrumbSchema([
+    { name: "דף הבית", path: "/" },
+    { name: "מדריכים", path: "/blog" },
+  ]);
   return (
     <>
+      <JsonLd data={[itemList, breadcrumbs]} />
       <section className="blog-hero">
         <div className="container blog-hero-grid">
           <div><p className="eyebrow">ידע לפני קנייה</p><h1>המגזין של<br />NIC POUCH</h1><p>מדריכים ברורים שיעזרו להבין עוצמות, לקרוא אריזות ולבחור מוצר בצורה אחראית.</p></div>
