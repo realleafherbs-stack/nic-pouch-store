@@ -16,8 +16,8 @@ export function SiteHeader() {
           ))}
         </div>
       </div>
-      <header className="site-header">
-        <MobileNavigation />
+      <MobileNavigation />
+      <header className="site-header desktop-site-header">
         <div className="container header-inner">
           <Link href="/" className="figma-logo" aria-label="NIC POUCH — דף הבית">
             <BrandLogo />

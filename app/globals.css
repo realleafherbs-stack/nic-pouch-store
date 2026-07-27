@@ -613,7 +613,8 @@ nav a:hover { opacity:.55; }
   .announcement { height:34px; font-size:12px; }
   .announcement-group span:after { margin-inline:24px; }
   .header-inner { display:none; }
-  .mobile-header { height:64px; display:grid; grid-template-columns:44px 1fr 44px; align-items:center; padding-inline:14px; }
+  .desktop-site-header { display:none; }
+  .mobile-header { position:sticky; z-index:40; top:0; height:64px; display:grid; grid-template-columns:44px 1fr 44px; align-items:center; padding-inline:14px; border-bottom:1px solid var(--line); background:rgba(248,248,245,.96); backdrop-filter:blur(16px); }
   .mobile-logo { justify-self:center; width:142px; height:54px; overflow:hidden; }
   .mobile-logo .brand-logo img { transform:scale(1.22); }
   .cart-trigger { position:relative; }
