@@ -852,7 +852,7 @@ nav a:hover { opacity:.55; }
   .guide-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .guide-store-cta .container { min-height:260px; align-items:flex-start; flex-direction:column; justify-content:center; }
   .guide-article-hero-grid { min-height:0; grid-template-columns:1fr; gap:32px; padding-block:44px; }
-  .guide-article-hero-copy nav { margin-bottom:26px; }
+  .guide-article-hero-copy nav { display:flex; margin-bottom:26px; }
   .guide-article-hero-copy h1 { font-size:clamp(46px,10vw,68px); }
   .guide-article-hero-copy > p:not(.guide-kicker) { font-size:17px; }
   .guide-article-hero-media { min-height:300px; }
@@ -875,6 +875,7 @@ nav a:hover { opacity:.55; }
   .guide-strength-scale span:nth-child(-n+2) { border-bottom:1px solid var(--guide-line); }
   .guide-article-shop-cta { align-items:flex-start; flex-direction:column; }
   .guide-article-shop-cta .button { width:100%; }
+  .guide-next { display:block; }
   .guide-related .guide-card-compact .guide-card-link { min-height:130px; }
 }
 @media (max-width:480px) {

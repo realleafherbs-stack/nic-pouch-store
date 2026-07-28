@@ -40,7 +40,7 @@ export default function BlogPage() {
             <p>מדריכים ברורים על טעמים, עוצמות ושימוש נכון.</p>
           </div>
           <div className="guide-index-hero-art" aria-hidden="true">
-            <GuideVisual category="beginner" />
+            <GuideVisual category="beginner" showLabel={false} />
             <span>NIC<br />GUIDE</span>
           </div>
         </div>

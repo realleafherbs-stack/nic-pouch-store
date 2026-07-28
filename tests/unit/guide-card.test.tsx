@@ -1,9 +1,16 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { GuideCard } from "@/components/guides/guide-card";
+import { GuideVisual } from "@/components/guides/guide-visual";
 import { articles } from "@/data/articles";
 
 describe("GuideCard", () => {
+  it("can render the index artwork without a guide number", () => {
+    render(<GuideVisual category="beginner" showLabel={false} />);
+
+    expect(screen.getByTestId("guide-visual-beginner")).not.toHaveTextContent("01");
+  });
+
   it.each(["featured", "standard", "compact"] as const)(
     "renders the %s variant as one descriptive article link",
     (variant) => {
