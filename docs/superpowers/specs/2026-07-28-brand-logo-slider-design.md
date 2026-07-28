@@ -2,7 +2,7 @@
 
 ## Goal
 
-Replace the current light brand-card grid with a premium, compact brand rail that
+Replace the current light brand-card grid with a premium, compact logo rail that
 matches the approved black NIC POUCH visual language and makes every brand an
 obvious route into its catalog.
 
@@ -10,10 +10,8 @@ obvious route into its catalog.
 
 - Dark charcoal section, not pure black, with a restrained NIC POUCH lime accent.
 - Five unique brands only: NOIS, HQD, PABLO, KILLA, CUBA.
-- Each card uses the brand name as a bold wordmark treatment and one real product
-  image already present in the current catalog.
+- Each card uses only the brand name as a bold wordmark treatment.
 - No duplicate brand cards and no invented packaging, logos, or products.
-- The product image remains secondary to the brand identity.
 - Cards use fine borders and flat tonal separation instead of generic shadows or
   glass effects.
 
@@ -22,17 +20,15 @@ obvious route into its catalog.
 1. Section eyebrow: `כל המותגים במקום אחד`
 2. Section heading: `המותגים המובילים`
 3. Brand wordmark
-4. One short brand descriptor
-5. Compact action: `למוצרי המותג`
-6. Representative catalog product
 
-Long marketing paragraphs are intentionally excluded from the cards.
+Product images, marketing descriptions, and visible CTA buttons are intentionally
+excluded from the cards.
 
 ## Desktop behavior
 
 - One horizontal row of five cards inside the existing homepage content width.
 - All five brands remain visible at common desktop widths.
-- A card lifts slightly and its product image scales subtly on hover.
+- A card lifts slightly and its wordmark gains contrast on hover.
 - The whole card is a link to `/brands/{brand}`.
 - Keyboard focus receives a visible lime outline.
 
@@ -59,11 +55,10 @@ section.
 
 ## Data and linking
 
-- Product images are selected from the existing `products` prop by exact brand.
-- Missing brands are omitted safely rather than showing placeholders.
+- Brand availability is derived from the existing `products` prop by exact brand.
+- Missing brands are omitted safely.
 - Every card links to the existing brand landing page.
 - Accessible names include both the brand and the destination.
-- Product images use meaningful alt text and do not replace the visible wordmark.
 
 ## Implementation boundary
 
