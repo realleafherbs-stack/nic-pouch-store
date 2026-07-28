@@ -1,14 +1,73 @@
-export const articles = [
+export type GuideCategory = "beginner" | "strength" | "flavors-brands" | "use-storage";
+
+export interface GuideSection {
+  id: string;
+  title: string;
+  paragraphs: string[];
+}
+
+export interface GuideFaq {
+  question: string;
+  answer: string;
+}
+
+export interface Guide {
+  slug: string;
+  number: string;
+  title: string;
+  excerpt: string;
+  primaryKeyword: string;
+  category: GuideCategory;
+  readingTime: number;
+  readTime: string;
+  publishedAt: string;
+  updatedAt?: string;
+  published: string;
+  modified: string;
+  updated: string;
+  featured?: boolean;
+  image?: { src: string; alt: string };
+  takeaways: string[];
+  sections: GuideSection[];
+  faq: GuideFaq[];
+  sources: string[];
+  relatedGuideSlugs: string[];
+  relatedProductIds?: string[];
+  relatedLinks: { label: string; href: string }[];
+}
+
+export const guideCategoryLabels: Record<GuideCategory, string> = {
+  beginner: "מתחילים כאן",
+  strength: "עוצמות",
+  "flavors-brands": "טעמים ומותגים",
+  "use-storage": "שימוש ואחסון",
+};
+
+export const articles: Guide[] = [
   {
     slug: "nicotine-pouch-guide",
+    number: "01",
     title: "איך לבחור סנוס ושקיקי ניקוטין ללא טבק?",
     excerpt: "מדריך מעשי להשוואת מותגים, טעמים ועוצמות ולהבנת הנתונים שמופיעים על אריזת שקיקי ניקוטין.",
     primaryKeyword: "איך לבחור שקיקי ניקוטין",
+    category: "beginner",
+    readingTime: 6,
     readTime: "6 דקות",
     updated: "23.07.2026",
+    publishedAt: "2026-07-23",
+    updatedAt: "2026-07-26",
     published: "2026-07-23",
     modified: "2026-07-26",
-    image: "/generated/guide-choosing.png",
+    featured: true,
+    image: {
+      src: "/generated/guide-choosing.png",
+      alt: "איור מדריך להשוואת שקיקי ניקוטין לפי מותג, טעם ועוצמה",
+    },
+    takeaways: [
+      "להבדיל בין סנוס מסורתי לבין שקיקי ניקוטין ללא טבק.",
+      "לקרוא נכון את סימון העוצמה והניקוטין על האריזה.",
+      "להשוות מותגים וטעמים בלי להסתמך רק על צבע האריזה.",
+    ],
     sections: [
       {
         id: "before",
@@ -40,6 +99,11 @@ export const articles = [
       { question: "מה חשוב לבדוק לפני שקונים?", answer: "בדקו את כמות הניקוטין, רמת העוצמה, הטעם, המותג והזמינות. הנתונים בדפי המוצר מבוססים על הקטלוג וסימון האריזה." },
       { question: "איזו עוצמה מתאימה למתחילים?", answer: "אם אינכם בטוחים, בחרו עוצמה נמוכה יותר. ניקוטין הוא חומר ממכר והמוצרים מיועדים לבגירים שכבר משתמשים בניקוטין." },
     ],
+    sources: [
+      "נתוני היצרן והמידע המופיע על אריזת המוצר",
+      "קטלוג המוצרים המאושר של B2B MARKT LTD",
+    ],
+    relatedGuideSlugs: ["strength-guide", "how-to-use"],
     relatedLinks: [
       { label: "לכל שקיקי הניקוטין", href: "/shop" },
       { label: "לבחירה לפי עוצמה", href: "/strength/medium" },
@@ -48,14 +112,23 @@ export const articles = [
   },
   {
     slug: "strength-guide",
+    number: "02",
     title: "מה אומר מספר המ״ג בסנוס ובשקיקי ניקוטין?",
     excerpt: "הסבר ברור על מספר המ״ג, ההבדל בין עוצמה עדינה, בינונית, חזקה וחזקה מאוד ואיך משווים נכון בין מוצרים.",
     primaryKeyword: "עוצמות שקיקי ניקוטין",
+    category: "strength",
+    readingTime: 5,
     readTime: "5 דקות",
     updated: "23.07.2026",
+    publishedAt: "2026-07-23",
+    updatedAt: "2026-07-26",
     published: "2026-07-23",
     modified: "2026-07-26",
-    image: "/generated/guide-mg.png",
+    takeaways: [
+      "להבין מה מספר המ״ג מציין ומה הוא אינו מציין.",
+      "להשוות רק נתונים שנמדדו באותה יחידה.",
+      "להכיר את ארבע רמות העוצמה המשמשות לסינון באתר.",
+    ],
     sections: [
       {
         id: "before",
@@ -87,6 +160,11 @@ export const articles = [
       { question: "מה נחשב שקיק ניקוטין חזק?", answer: "בסולם האתר 17–30 מ״ג מוגדר חזק ו־31 מ״ג ומעלה חזק מאוד." },
       { question: "האם טעם מנטה הוא בהכרח חזק?", answer: "לא. הטעם והעוצמה הם נתונים נפרדים. יש לבדוק את מספר המ״ג בדף המוצר ועל האריזה." },
     ],
+    sources: [
+      "סימון הניקוטין ויחידת המדידה שמפרסם היצרן",
+      "סולם העוצמות האחיד המשמש לסינון באתר NIC POUCH",
+    ],
+    relatedGuideSlugs: ["nicotine-pouch-guide", "how-to-use"],
     relatedLinks: [
       { label: "מוצרים בעוצמה בינונית", href: "/strength/medium" },
       { label: "מוצרים חזקים", href: "/strength/strong" },
@@ -95,14 +173,27 @@ export const articles = [
   },
   {
     slug: "how-to-use",
+    number: "03",
     title: "איך משתמשים בשקיקי ניקוטין ללא טבק?",
     excerpt: "מדריך לשימוש אחראי בשקיקי ניקוטין, קריאת הוראות היצרן, אחסון נכון והשלכה בטוחה.",
     primaryKeyword: "איך משתמשים בשקיקי ניקוטין",
+    category: "use-storage",
+    readingTime: 5,
     readTime: "5 דקות",
     updated: "23.07.2026",
+    publishedAt: "2026-07-23",
+    updatedAt: "2026-07-26",
     published: "2026-07-23",
     modified: "2026-07-26",
-    image: "/generated/guide-how-to-use.png",
+    image: {
+      src: "/generated/guide-how-to-use.png",
+      alt: "איור מדריך לשימוש ולאחסון אחראי של שקיקי ניקוטין",
+    },
+    takeaways: [
+      "מה לבדוק על האריזה לפני השימוש.",
+      "איך לפעול בהתאם להוראות היצרן ולהקשיב לגוף.",
+      "איך לאחסן ולהשליך שקיקים באופן אחראי.",
+    ],
     sections: [
       {
         id: "before",
@@ -134,10 +225,25 @@ export const articles = [
       { question: "כיצד מאחסנים את האריזה?", answer: "במקום קריר ויבש, באריזה סגורה והרחק מילדים, בעלי חיים, חום ולחות." },
       { question: "מה עושים עם שקיק משומש?", answer: "משליכים לפח סגור ובהתאם להוראות שמופיעות על האריזה. אין להשאיר שקיקים משומשים בהישג ידם של ילדים או בעלי חיים." },
     ],
+    sources: [
+      "הוראות השימוש והאזהרות שמפרסם היצרן",
+      "כללי האחסון והשירות של NIC POUCH",
+    ],
+    relatedGuideSlugs: ["nicotine-pouch-guide", "strength-guide"],
     relatedLinks: [
       { label: "הצהרת אזהרות ניקוטין", href: "/nicotine-information" },
       { label: "מדריך לבחירת מוצר", href: "/blog/nicotine-pouch-guide" },
       { label: "לכל המוצרים", href: "/shop" },
     ],
   }
-] as const;
+];
+
+export function guideBySlug(slug: string) {
+  return articles.find((guide) => guide.slug === slug) ?? null;
+}
+
+export function relatedGuidesFor(guide: Guide) {
+  return guide.relatedGuideSlugs
+    .map((slug) => guideBySlug(slug))
+    .filter((related): related is Guide => related !== null);
+}
