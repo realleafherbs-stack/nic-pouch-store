@@ -1,64 +1,72 @@
 import Link from "next/link";
-import { ArrowLeft, BookOpenText, Clock3, Gauge, Leaf, Search } from "lucide-react";
-import { articles } from "@/data/articles";
+import { GuideIndex } from "@/components/guides/guide-index";
+import { GuideVisual } from "@/components/guides/guide-visual";
 import { JsonLd } from "@/components/seo/json-ld";
+import { articles } from "@/data/articles";
 import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
 
-const articleMeta = [
-  { icon: BookOpenText, category: "מדריך מקיף", readTime: "6 דקות", tone: "mint" },
-  { icon: Gauge, category: "עוצמות", readTime: "4 דקות", tone: "lime" },
-  { icon: Leaf, category: "שימוש אחראי", readTime: "5 דקות", tone: "sand" },
-];
-
 export const metadata = {
-  title: "מדריכים על סנוס ושקיקי ניקוטין ללא טבק",
-  description: "מדריכים ברורים על סנוס ושקיקי ניקוטין ללא טבק: בחירת מוצר, עוצמות מ״ג, טעמים ושימוש אחראי.",
+  title: "NIC GUIDE — מדריכים על סנוס ושקיקי ניקוטין",
+  description:
+    "מדריכי NIC GUIDE על סנוס ושקיקי ניקוטין ללא טבק: עוצמות מ״ג, טעמים, מותגים ושימוש אחראי.",
   alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
-  const featured = articles[0];
-  const FeaturedIcon = articleMeta[0].icon;
   const itemList = {
     "@type": "ItemList",
-    name: "מדריכי NIC POUCH",
+    name: "NIC GUIDE",
     numberOfItems: articles.length,
-    itemListElement: articles.map((article, index) => ({
+    itemListElement: articles.map((guide, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      name: article.title,
-      url: absoluteUrl(`/blog/${article.slug}`),
+      name: guide.title,
+      url: absoluteUrl(`/blog/${guide.slug}`),
     })),
   };
   const breadcrumbs = breadcrumbSchema([
     { name: "דף הבית", path: "/" },
-    { name: "מדריכים", path: "/blog" },
+    { name: "NIC GUIDE", path: "/blog" },
   ]);
+
   return (
     <>
       <JsonLd data={[itemList, breadcrumbs]} />
-      <section className="blog-hero">
-        <div className="container blog-hero-grid">
-          <div><p className="eyebrow">ידע לפני קנייה</p><h1>המגזין של<br />NIC POUCH</h1><p>מדריכים ברורים שיעזרו להבין עוצמות, לקרוא אריזות ולבחור מוצר בצורה אחראית.</p></div>
-          <div className="blog-hero-art" aria-hidden="true"><FeaturedIcon /><span>READ<br />BEFORE<br />YOU PICK</span></div>
+      <header className="guide-index-hero">
+        <div className="container guide-index-hero-grid">
+          <div className="guide-index-hero-copy">
+            <p className="guide-kicker">NIC GUIDE / INDEX</p>
+            <h1>לדעת לפני שבוחרים</h1>
+            <p>מדריכים ברורים על טעמים, עוצמות ושימוש נכון.</p>
+          </div>
+          <div className="guide-index-hero-art" aria-hidden="true">
+            <GuideVisual category="beginner" />
+            <span>NIC<br />GUIDE</span>
+          </div>
         </div>
-      </section>
+      </header>
 
-      <main className="container blog-index">
-        <Link className="blog-featured" href={`/blog/${featured.slug}`}>
-          <div className="blog-featured-art"><FeaturedIcon /><span>01</span></div>
-          <div className="blog-featured-copy"><p className="eyebrow">הכתבה המומלצת</p><h2>{featured.title}</h2><p>{featured.excerpt}</p><div><span><Clock3 />6 דקות קריאה</span><strong>לקריאה <ArrowLeft /></strong></div></div>
-        </Link>
+      <main className="guide-index-page">
+        <section className="container guide-index-content" aria-labelledby="guide-index-title">
+          <div className="guide-index-heading">
+            <div>
+              <p className="guide-kicker">לבחור נושא ולהעמיק</p>
+              <h2 id="guide-index-title">המדריכים שלנו</h2>
+            </div>
+            <p>מידע שימושי, ברור ואחראי — בלי להעמיס ובלי לנחש.</p>
+          </div>
+          <GuideIndex guides={articles} />
+        </section>
 
-        <div className="blog-heading"><div><p className="eyebrow">להעמיק ולבחור נכון</p><h2>כל המדריכים</h2></div><Link href="/shop"><Search /> מצאו מוצר בחנות</Link></div>
-        <div className="blog-card-grid">
-          {articles.map((article, index) => {
-            const meta = articleMeta[index];
-            const Icon = meta.icon;
-            return <Link className={`blog-card blog-card-${meta.tone}`} href={`/blog/${article.slug}`} key={article.slug}><div className="blog-card-art"><Icon /><b>0{index + 1}</b></div><div className="blog-card-copy"><span>{meta.category} · {meta.readTime}</span><h3>{article.title}</h3><p>{article.excerpt}</p><strong>לקריאה <ArrowLeft /></strong></div></Link>;
-          })}
-        </div>
-        <section className="blog-cta"><div><p className="eyebrow">מוכנים לבחור?</p><h2>עברו מהידע למוצר שמתאים לכם</h2></div><Link className="button" href="/shop">לכל המוצרים</Link></section>
+        <section className="guide-store-cta">
+          <div className="container">
+            <div>
+              <p className="guide-kicker">מהידע לבחירה</p>
+              <h2>מוכנים לבחור?</h2>
+            </div>
+            <Link className="button" href="/shop">לכל המוצרים</Link>
+          </div>
+        </section>
       </main>
     </>
   );
