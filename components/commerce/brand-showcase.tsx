@@ -1,32 +1,33 @@
 import Link from "next/link";
 import type { Product } from "@/lib/catalog/model";
 
-const brandStyles: Record<string, { tagline: string; className: string }> = {
-  NOIS: { tagline: "המותג שלנו. שלוש עוצמות, בחירה מדויקת.", className: "brand-nois" },
-  HQD: { tagline: "טעמים בהירים וקירור מאוזן.", className: "brand-hqd" },
-  PABLO: { tagline: "אופי נועז ועוצמות לחובבי החזק.", className: "brand-pablo" },
-  KILLA: { tagline: "טעמי פרי ומנטה במראה אייקוני.", className: "brand-killa" },
-  CUBA: { tagline: "קווים נקיים וטעמים קלאסיים.", className: "brand-cuba" }
+const brandStyles: Record<string, { className: string }> = {
+  NOIS: { className: "brand-nois" },
+  HQD: { className: "brand-hqd" },
+  PABLO: { className: "brand-pablo" },
+  KILLA: { className: "brand-killa" },
+  CUBA: { className: "brand-cuba" }
 };
 
 export function BrandShowcase({ products }: { products: Product[] }) {
   const cards = Object.keys(brandStyles)
-    .map((brand) => ({ brand, product: products.find((item) => item.brand === brand) }))
-    .filter((item): item is { brand: string; product: Product } => Boolean(item.product));
+    .filter((brand) => products.some((item) => item.brand === brand));
 
   return (
     <div className="brand-showcase" aria-label="מותגים מובילים">
-      {cards.map(({ brand, product }) => {
+      {cards.map((brand) => {
         const style = brandStyles[brand];
         return (
-          <Link href={`/brands/${brand.toLowerCase()}`} className={`brand-card ${style.className}`} key={brand}>
-            <div className="brand-card-copy">
-              <span className="brand-logo-word" aria-label={`לוגו ${brand}`}>{brand}</span>
-              <p>{style.tagline}</p>
-              <span className="brand-card-cta">לצפייה במוצרים</span>
-            </div>
-            <div className="brand-card-product">
-              {product.images[0] && <img src={product.images[0]} alt={`מוצר מייצג של ${brand}`} />}
+          <Link
+            href={`/brands/${brand.toLowerCase()}`}
+            className={`brand-card ${style.className}`}
+            aria-label={`לכל מוצרי ${brand}`}
+            key={brand}
+          >
+            <span className="brand-logo-word" aria-hidden="true">{brand}</span>
+            <div className="brand-card-cta">
+              <span>למוצרים</span>
+              <span aria-hidden="true">←</span>
             </div>
           </Link>
         );

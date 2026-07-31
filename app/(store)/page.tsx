@@ -22,9 +22,9 @@ export default async function HomePage() {
         </div>
       </section>
       <div id="quick-shop"><QuickShop products={products} /></div>
-      <section className="section" id="brands">
+      <section className="section brand-section" id="brands">
         <div className="container">
-          <div className="section-heading"><div><p className="eyebrow">לבחירה מהירה</p><h2>המותגים המובילים</h2></div><Link className="text-link" href="/shop">לכל המותגים</Link></div>
+          <div className="section-heading brand-section-heading"><div><p className="eyebrow">כל המותגים במקום אחד</p><h2>המותגים המובילים</h2></div><Link className="text-link" href="/shop">לכל המוצרים</Link></div>
           <BrandShowcase products={products} />
         </div>
       </section>
