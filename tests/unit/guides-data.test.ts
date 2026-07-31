@@ -48,9 +48,10 @@ describe("NIC GUIDE content model", () => {
     ]);
   });
 
-  it("allows a guide to use the visual system when no raster image is supplied", () => {
-    const guideWithoutImage = articles.find((guide) => guide.slug === "strength-guide");
-
-    expect(guideWithoutImage?.image).toBeUndefined();
+  it("uses only original catalog assets for guide social images", () => {
+    for (const guide of articles) {
+      expect(guide.image?.src).toMatch(/^\/products\/.+-commerce\.webp$/);
+      expect(guide.image?.alt).toContain("הקטלוג הרשמי");
+    }
   });
 });

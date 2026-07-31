@@ -15,18 +15,12 @@ export function GuideCard({
   guide: Guide;
   variant?: GuideCardVariant;
 }) {
-  const showImage = variant !== "compact" && guide.image;
-
   return (
     <article className={`guide-card guide-card-${variant}`}>
       <Link className="guide-card-link" href={`/blog/${guide.slug}`}>
         {variant !== "compact" && (
           <div className="guide-card-media">
-            {showImage ? (
-              <img src={showImage.src} alt={showImage.alt} loading="lazy" />
-            ) : (
-              <GuideVisual category={guide.category} />
-            )}
+            <GuideVisual category={guide.category} guideSlug={guide.slug} showLabel={false} />
             <b className="guide-card-number" aria-hidden="true">{guide.number}</b>
           </div>
         )}

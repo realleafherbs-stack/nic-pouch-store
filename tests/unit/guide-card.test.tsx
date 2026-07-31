@@ -24,20 +24,18 @@ describe("GuideCard", () => {
     },
   );
 
-  it("uses the category visual when a guide has no raster image", () => {
+  it("uses original catalog product images for each guide visual", () => {
     render(<GuideCard guide={articles[1]} variant="standard" />);
 
     expect(screen.getByTestId("guide-visual-strength")).toBeVisible();
-    expect(screen.queryByRole("img")).not.toBeInTheDocument();
+    expect(screen.getByTestId("guide-visual-strength").querySelectorAll("img")).toHaveLength(3);
   });
 
-  it("uses a faithful image and alt text when one is available", () => {
+  it("composes the choosing guide from faithful catalog images", () => {
     render(<GuideCard guide={articles[0]} variant="featured" />);
 
-    expect(
-      screen.getByRole("img", {
-        name: "איור מדריך להשוואת שקיקי ניקוטין לפי מותג, טעם ועוצמה",
-      }),
-    ).toHaveAttribute("src", "/generated/guide-choosing.png");
+    const visual = screen.getByTestId("guide-visual-beginner");
+    expect(visual.querySelectorAll("img")).toHaveLength(4);
+    expect(visual.querySelector("img")).toHaveAttribute("src", "/products/6923742003716-1-commerce.webp");
   });
 });

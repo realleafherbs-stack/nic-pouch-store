@@ -149,11 +149,7 @@ export default async function ArticlePage({
             </div>
           </div>
           <div className="guide-article-hero-media">
-            {guide.image ? (
-              <img src={guide.image.src} alt={guide.image.alt} />
-            ) : (
-              <GuideVisual category={guide.category} />
-            )}
+            <GuideVisual category={guide.category} guideSlug={guide.slug} showLabel={false} />
             <b aria-hidden="true">{guide.number}</b>
           </div>
         </div>
