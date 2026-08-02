@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: siteName, url: siteUrl }],
   creator: siteName,
-  publisher: "B2B MARKT LTD",
+  publisher: siteName,
   formatDetection: { address: false, email: false, telephone: false },
   openGraph: {
     type: "website",

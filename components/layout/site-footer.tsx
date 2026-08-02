@@ -18,7 +18,7 @@ export function SiteFooter() {
         <div className="footer-contact"><h3>דברו איתנו</h3><a className="footer-whatsapp" href="https://wa.me/972587991094"><MessageCircle />058-799-1094</a><p>ב׳–ה׳ 09:00–17:00</p><small>מענה מהיר ב־WhatsApp</small></div>
       </div>
       <div className="container legal-line">
-        <span>© 2026 B2B MARKT LTD · המרכבה 25, חולון</span>
+        <span>© 2026 NIC POUCH · המרכבה 25, חולון</span>
         <span>ניקוטין הוא חומר ממכר · מיועד לבגירים בלבד</span>
       </div>
     </footer>

@@ -10,7 +10,7 @@ export const siteUrl = normalizeUrl(
 );
 
 export const siteName = "NIC POUCH";
-export const organizationName = "B2B MARKT LTD";
+export const organizationName = "NIC POUCH";
 export const defaultDescription =
   "מבחר ענק של סנוס ושקיקי ניקוטין ללא טבק ממותגים מובילים, במגוון טעמים וחוזקים, עם בחירה פשוטה ומשלוח מהיר בישראל.";
 

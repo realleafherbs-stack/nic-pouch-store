@@ -101,7 +101,7 @@ export const articles: Guide[] = [
     ],
     sources: [
       "נתוני היצרן והמידע המופיע על אריזת המוצר",
-      "קטלוג המוצרים המאושר של B2B MARKT LTD",
+      "קטלוג המוצרים המאושר של NIC POUCH",
     ],
     relatedGuideSlugs: ["strength-guide", "how-to-use"],
     relatedLinks: [
