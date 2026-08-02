@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק",
     description: "הסבר ברור על המונח סנוס ועל המוצרים ללא טבק שנמכרים באתר.",
     url: "/snus",
-    images: [{ url: absoluteUrl("/generated/guide-choosing.png"), alt: "מדריך לסנוס ושקיקי ניקוטין ללא טבק" }],
+    images: [{ url: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg"), alt: "מדריך לסנוס ושקיקי ניקוטין ללא טבק" }],
   },
 };
 
@@ -44,7 +44,7 @@ export default function SnusPage() {
     mainEntityOfPage: articleUrl,
     headline: "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק",
     description: "הסבר על סנוס מסורתי ועל שקיקי הניקוטין ללא טבק שנמכרים באתר.",
-    image: absoluteUrl("/generated/guide-choosing.png"),
+    image: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg"),
     datePublished: "2026-07-26",
     dateModified: "2026-07-26",
     inLanguage: "he-IL",

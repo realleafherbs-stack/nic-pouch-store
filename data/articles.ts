@@ -60,8 +60,8 @@ export const articles: Guide[] = [
     modified: "2026-07-26",
     featured: true,
     image: {
-      src: "/products/6923742003716-1-commerce.webp",
-      alt: "אריזת שקיקי ניקוטין HQD מהקטלוג הרשמי",
+      src: "/generated/guide-choosing-editorial-v3.jpg",
+      alt: "צילום אווירה של השוואת טעמים ועוצמות לפני בחירה",
     },
     takeaways: [
       "להבדיל בין סנוס מסורתי לבין שקיקי ניקוטין ללא טבק.",
@@ -125,8 +125,8 @@ export const articles: Guide[] = [
     published: "2026-07-23",
     modified: "2026-07-26",
     image: {
-      src: "/products/4742024720767-1-commerce.webp",
-      alt: "אריזת NOIS בעוצמת 8 מ״ג מהקטלוג הרשמי",
+      src: "/generated/guide-strength-editorial-v3.jpg",
+      alt: "צילום אווירה של ארבע רמות עוצמה וכלי מדידה",
     },
     takeaways: [
       "להבין מה מספר המ״ג מציין ומה הוא אינו מציין.",
@@ -190,8 +190,8 @@ export const articles: Guide[] = [
     published: "2026-07-23",
     modified: "2026-07-26",
     image: {
-      src: "/products/4742024720019-1-commerce.webp",
-      alt: "אריזת שקיקי ניקוטין NOIS מנטה מהקטלוג הרשמי",
+      src: "/generated/guide-storage-editorial-v3.jpg",
+      alt: "צילום אווירה של אחסון נעול והשלכה אחראית",
     },
     takeaways: [
       "מה לבדוק על האריזה לפני השימוש.",

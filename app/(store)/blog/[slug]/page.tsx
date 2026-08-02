@@ -10,7 +10,6 @@ import {
   GuideTakeaways,
 } from "@/components/guides/guide-article-blocks";
 import { GuideCard } from "@/components/guides/guide-card";
-import { GuideProductRail } from "@/components/guides/guide-product-rail";
 import { GuideToc } from "@/components/guides/guide-toc";
 import { GuideVisual } from "@/components/guides/guide-visual";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -20,8 +19,6 @@ import {
   guideCategoryLabels,
   relatedGuidesFor,
 } from "@/data/articles";
-import { products } from "@/lib/catalog/local-repository";
-import type { Product } from "@/lib/catalog/model";
 import {
   absoluteUrl,
   breadcrumbSchema,
@@ -89,9 +86,6 @@ export default async function ArticlePage({
   const guideIndex = articles.findIndex((item) => item.slug === guide.slug);
   const nextGuide = articles[(guideIndex + 1) % articles.length];
   const relatedGuides = relatedGuidesFor(guide);
-  const relatedProducts = (guide.relatedProductIds ?? [])
-    .map((id) => products.find((product) => product.id === id))
-    .filter((product): product is Product => Boolean(product));
   const articleUrl = absoluteUrl(`/blog/${guide.slug}`);
   const articleSchema = {
     "@type": "BlogPosting",
@@ -174,7 +168,6 @@ export default async function ArticlePage({
             </section>
           ))}
 
-          <GuideProductRail products={relatedProducts} />
           <GuideFAQ items={guide.faq} />
           <GuideSources items={guide.sources} />
 

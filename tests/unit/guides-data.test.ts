@@ -48,10 +48,11 @@ describe("NIC GUIDE content model", () => {
     ]);
   });
 
-  it("uses only original catalog assets for guide social images", () => {
+  it("uses product-free editorial assets for guide social images", () => {
     for (const guide of articles) {
-      expect(guide.image?.src).toMatch(/^\/products\/.+-commerce\.webp$/);
-      expect(guide.image?.alt).toContain("הקטלוג הרשמי");
+      expect(guide.image?.src).toMatch(/^\/generated\/guide-.+-editorial-v3\.jpg$/);
+      expect(guide.image?.src).not.toContain("/products/");
+      expect(guide.image?.alt).toContain("צילום אווירה");
     }
   });
 });

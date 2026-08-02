@@ -7,28 +7,10 @@ const visualLabels: Record<GuideCategory, string> = {
   "use-storage": "USE",
 };
 
-const guideProductVisuals: Record<string, { images: string[]; className: string }> = {
-  "nicotine-pouch-guide": {
-    className: "guide-product-visual-choosing",
-    images: [
-      "/products/6923742003716-1-commerce.webp",
-      "/products/5740031401029-1-commerce.webp",
-      "/products/5744000761954-1-commerce.webp",
-      "/products/4742024720569-1-commerce.webp",
-    ],
-  },
-  "strength-guide": {
-    className: "guide-product-visual-strength",
-    images: [
-      "/products/4742024720767-1-commerce.webp",
-      "/products/6923742003716-1-commerce.webp",
-      "/products/4742024720569-1-commerce.webp",
-    ],
-  },
-  "how-to-use": {
-    className: "guide-product-visual-use",
-    images: ["/products/4742024720019-1-commerce.webp"],
-  },
+const guideEditorialVisuals: Record<string, string> = {
+  "nicotine-pouch-guide": "/generated/guide-choosing-editorial-v3.jpg",
+  "strength-guide": "/generated/guide-strength-editorial-v3.jpg",
+  "how-to-use": "/generated/guide-storage-editorial-v3.jpg",
 };
 
 export function GuideVisual({
@@ -42,31 +24,16 @@ export function GuideVisual({
   number?: string;
   showLabel?: boolean;
 }) {
-  const productVisual = guideSlug ? guideProductVisuals[guideSlug] : undefined;
+  const editorialVisual = guideSlug ? guideEditorialVisuals[guideSlug] : undefined;
 
-  if (productVisual) {
+  if (editorialVisual) {
     return (
       <div
-        className={`guide-visual guide-product-visual ${productVisual.className}`}
+        className="guide-visual guide-editorial-visual"
         data-testid={`guide-visual-${category}`}
         aria-hidden="true"
       >
-        <span className="guide-product-grid" />
-        <div className="guide-product-stage">
-          {productVisual.images.map((src, index) => (
-            <img src={src} alt="" key={src} className={`guide-product-image guide-product-image-${index + 1}`} />
-          ))}
-          {guideSlug === "strength-guide" && (
-            <span className="guide-mg-scale">
-              <i>8</i><i>15</i><i>50</i>
-            </span>
-          )}
-          {guideSlug === "how-to-use" && (
-            <span className="guide-pouch-set">
-              <i /><i /><i />
-            </span>
-          )}
-        </div>
+        <img src={editorialVisual} alt="" className="guide-editorial-image" />
         {showLabel && <b>{number ?? visualLabels[category]}</b>}
       </div>
     );

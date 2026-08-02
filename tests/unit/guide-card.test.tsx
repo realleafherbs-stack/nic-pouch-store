@@ -24,18 +24,21 @@ describe("GuideCard", () => {
     },
   );
 
-  it("uses original catalog product images for each guide visual", () => {
+  it("uses one product-free editorial image for each guide visual", () => {
     render(<GuideCard guide={articles[1]} variant="standard" />);
 
-    expect(screen.getByTestId("guide-visual-strength")).toBeVisible();
-    expect(screen.getByTestId("guide-visual-strength").querySelectorAll("img")).toHaveLength(3);
+    const visual = screen.getByTestId("guide-visual-strength");
+    expect(visual).toBeVisible();
+    expect(visual.querySelectorAll("img")).toHaveLength(1);
+    expect(visual.querySelector("img")).toHaveAttribute("src", "/generated/guide-strength-editorial-v3.jpg");
   });
 
-  it("composes the choosing guide from faithful catalog images", () => {
+  it("keeps commercial product packaging out of the choosing guide", () => {
     render(<GuideCard guide={articles[0]} variant="featured" />);
 
     const visual = screen.getByTestId("guide-visual-beginner");
-    expect(visual.querySelectorAll("img")).toHaveLength(4);
-    expect(visual.querySelector("img")).toHaveAttribute("src", "/products/6923742003716-1-commerce.webp");
+    expect(visual.querySelectorAll("img")).toHaveLength(1);
+    expect(visual.querySelector("img")).toHaveAttribute("src", "/generated/guide-choosing-editorial-v3.jpg");
+    expect(visual.innerHTML).not.toMatch(/NOIS|\/products\//i);
   });
 });
