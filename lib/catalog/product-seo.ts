@@ -13,6 +13,7 @@ export function productStrengthLabel(product: Product) {
 }
 
 export function productSeoTitle(product: Product) {
+  if (product.metaTitle?.trim()) return product.metaTitle.trim();
   const strength = product.nicotineMg ? `${product.nicotineMg} מ״ג` : "";
   const nameWithStrength = strength && !product.name.includes(strength)
     ? `${product.name} ${strength}`
@@ -21,6 +22,7 @@ export function productSeoTitle(product: Product) {
 }
 
 export function productSeoDescription(product: Product) {
+  if (product.metaDescription?.trim()) return product.metaDescription.trim();
   const flavor = product.flavor ? `בטעם ${product.flavor}` : "לפי סימון האריזה";
   const nicotine = product.nicotineMg
     ? `${product.nicotineMg} מ״ג ובעוצמה ${productStrengthLabel(product)}`

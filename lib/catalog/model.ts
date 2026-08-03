@@ -22,6 +22,14 @@ export interface Product {
   packSize: number;
   images: string[];
   categories: string[];
+  description?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  ogImage?: string;
+  focusKeyword?: string;
+  canonicalUrl?: string;
+  indexable?: boolean;
+  gtin?: string;
 }
 
 export interface CatalogQuery {

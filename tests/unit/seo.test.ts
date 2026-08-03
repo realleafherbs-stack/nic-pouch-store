@@ -28,6 +28,17 @@ describe("SEO foundations", () => {
     });
   });
 
+  it("prefers approved CRM metadata when it exists", () => {
+    const product = {
+      ...products[0],
+      metaTitle: "כותרת SEO מאושרת מה־CRM",
+      metaDescription: "תיאור SEO מאושר מה־CRM שנכתב במיוחד עבור עמוד המוצר.",
+    };
+
+    expect(productSeoTitle(product)).toBe(product.metaTitle);
+    expect(productSeoDescription(product)).toBe(product.metaDescription);
+  });
+
   it("keeps every article unique, useful and schema-ready", () => {
     expect(new Set(articles.map((article) => article.title)).size).toBe(articles.length);
     expect(new Set(articles.map((article) => article.excerpt)).size).toBe(articles.length);

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:sites": "next build && node scripts/build-sites-static.mjs",
+    "sync:crm": "node --env-file-if-exists=.env.local scripts/sync-crm-catalog.mjs",
+    "build:sites": "pnpm sync:crm && next build && node scripts/build-sites-static.mjs",
     "lint": "eslint .",
     "test": "vitest run",
     "test:e2e": "playwright test",

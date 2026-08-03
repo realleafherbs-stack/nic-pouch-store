@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return {};
   const seoName = productSeoTitle(product);
   const description = productSeoDescription(product);
+  const socialImages = product.ogImage ? [product.ogImage] : product.images;
   return {
     title: seoName,
     description,
@@ -25,13 +26,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       `סנוס ${product.brand}`,
       ...defaultKeywords,
     ].filter(Boolean),
-    alternates: { canonical: `/shop/${product.slug}` },
+    alternates: { canonical: product.canonicalUrl ?? `/shop/${product.slug}` },
+    robots: product.indexable === false ? { index: false, follow: false } : undefined,
     openGraph: {
       type: "website",
       title: `${seoName} | ${siteName}`,
       description,
       url: `/shop/${product.slug}`,
-      images: product.images.map((image) => ({
+      images: socialImages.map((image) => ({
         url: absoluteUrl(image),
         alt: `${product.name} – תמונת מוצר`,
       })),
@@ -40,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${seoName} | ${siteName}`,
       description,
-      images: product.images.map((image) => absoluteUrl(image)),
+      images: socialImages.map((image) => absoluteUrl(image)),
     },
   };
 }
@@ -54,10 +56,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     "@type": "Product",
     "@id": `${productUrl}#product`,
     name: `${product.name} – שקיקי ניקוטין ללא טבק`,
-    description: `${product.name} מבית ${product.brand}, שקיקי ניקוטין ללא טבק. המחיר והזמינות מעודכנים בדף המוצר.`,
+    description: product.description ?? product.metaDescription ?? `${product.name} מבית ${product.brand}, שקיקי ניקוטין ללא טבק. המחיר והזמינות מעודכנים בדף המוצר.`,
     image: product.images.map((image) => absoluteUrl(image)),
     sku: product.sku,
-    ...(product.sku.replace(/\D/g, "").length === 13 ? { gtin13: product.sku.replace(/\D/g, "") } : {}),
+    ...((product.gtin ?? product.sku).replace(/\D/g, "").length === 13 ? { gtin13: (product.gtin ?? product.sku).replace(/\D/g, "") } : {}),
     category: "שקיקי ניקוטין ללא טבק",
     audience: { "@type": "PeopleAudience", suggestedMinAge: 18 },
     brand: { "@type": "Brand", name: product.brand },
