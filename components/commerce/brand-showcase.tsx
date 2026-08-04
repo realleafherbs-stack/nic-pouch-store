@@ -7,7 +7,11 @@ export function BrandShowcase({ products }: { products: Product[] }) {
   const availableBrands = new Set(products.map((product) => product.brand));
 
   return (
-    <nav className="brand-showcase" aria-label="מותגים מובילים">
+    <nav
+      className="brand-showcase"
+      aria-label="מותגים מובילים"
+      data-display="logos-only"
+    >
       {brandOrder
         .filter((brand) => availableBrands.has(brand))
         .map((brand) => (
