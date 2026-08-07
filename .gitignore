@@ -1,0 +1,12 @@
+.next/
+.open-next/
+out/
+dist/
+node_modules/
+.pnpm-store/
+playwright-report/
+test-results/
+.DS_Store
+.vercel
+.worktrees/
+.env.local

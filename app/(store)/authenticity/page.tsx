@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "מקוריות המוצרים", description: "מידע על אריזות, מקוריות וסימון מוצרי NIC POUCH.", alternates: { canonical: "/authenticity" } };
+export default function AuthenticityPage() { return <main className="container article"><p className="eyebrow">שקיפות</p><h1>מקוריות המוצרים</h1><p>המוצרים נמכרים באריזות היצרן הסגורות ובהתאם למלאי הקיים. תמונות האתר נועדו לזהות את המוצר, אך ייתכנו שינויי אריזה מצד היצרן.</p><h2>מה לבדוק בקבלת המשלוח</h2><ul><li>שהאריזה סגורה ולא נפגעה.</li><li>ששם המותג והטעם תואמים להזמנה.</li><li>שהאזהרות וסימון העוצמה מופיעים על האריזה.</li></ul><p>במקרה של אי־התאמה, אין לפתוח את המוצר ויש לפנות לשירות הלקוחות.</p></main>; }

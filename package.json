@@ -1,0 +1,45 @@
+{
+  "name": "nic-pouch-storefront",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "sync:crm": "node --env-file-if-exists=.env.local scripts/sync-crm-catalog.mjs",
+    "build:sites": "pnpm sync:crm && next build && node scripts/build-sites-static.mjs",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "import:catalog": "node scripts/import-woocommerce-csv.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "next": "16.2.0",
+    "papaparse": "^5.5.3",
+    "react": "19.2.1",
+    "react-dom": "19.2.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@opennextjs/cloudflare": "^1.20.2",
+    "@playwright/test": "^1.51.1",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^22.13.4",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "16.2.0",
+    "jsdom": "^26.0.0",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.7.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.7",
+    "wrangler": "^4.113.0"
+  },
+  "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee"
+}

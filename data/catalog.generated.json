@@ -1,0 +1,1267 @@
+[
+  {
+    "id": "20322",
+    "slug": "hqd-15mg-20322",
+    "sku": "6923742003716",
+    "name": "פאוץ' ניקוטין HQD מנטה 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  מנטה",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 109,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003716-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20323",
+    "slug": "hqd-25mg-20323",
+    "sku": "6923742003778",
+    "name": "פאוץ' ניקוטין HQD לימונדה כחולה 25 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  לימונדה כחולה",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 112,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003778-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20324",
+    "slug": "hqd-15mg-20324",
+    "sku": "6923742003785",
+    "name": "פאוץ' ניקוטין HQD לימונדה כחולה 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  לימונדה כחולה",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003785-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20325",
+    "slug": "hqd-15mg-20325",
+    "sku": "6923742003822",
+    "name": "פאוץ' ניקוטין HQD מנגו 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  מנגו",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003822-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20326",
+    "slug": "hqd-15mg-20326",
+    "sku": "6923742003792",
+    "name": "פאוץ' ניקוטין HQD פסיפלורה מתוקה 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  פסיפלורה מתוקה",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 105,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003792-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20327",
+    "slug": "hqd-25mg-20327",
+    "sku": "6923742003723",
+    "name": "פאוץ' ניקוטין HQD מנטה 25 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  מנטה",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 1,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003723-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20328",
+    "slug": "hqd-25mg-20328",
+    "sku": "6923742003761",
+    "name": "פאוץ' ניקוטין HQD בריזה טרופית 25 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  בריזה טרופית",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 59,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003761-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20329",
+    "slug": "hqd-15mg-20329",
+    "sku": "6923742003754",
+    "name": "פאוץ' ניקוטין HQD בריזה טרופית 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  בריזה טרופית",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 2,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003754-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20330",
+    "slug": "hqd-25mg-20330",
+    "sku": "6923742003808",
+    "name": "פאוץ' ניקוטין HQD פסיפלורה מתוקה 25 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  פסיפלורה מתוקה",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 126,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003808-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "20331",
+    "slug": "hqd-25mg-20331",
+    "sku": "6923742003815",
+    "name": "פאוץ' ניקוטין HQD מנגו 25 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  מנגו",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 94,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003815-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31646",
+    "slug": "hqd-25mg-31646",
+    "sku": "6923742004157",
+    "name": "פאוץ' ניקוטין HQD באבל גאם 25 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  באבל גאם",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742004157-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31647",
+    "slug": "hqd-25mg-31647",
+    "sku": "6923742003730",
+    "name": "פאוץ' ניקוטין HQD לימון מנטה 25 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  לימון מנטה",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 190,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742003730-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31912",
+    "slug": "hqd-12mg-31912",
+    "sku": "6923742010554",
+    "name": "פאוץ' ניקוטין HQD מנטה 12מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  מנטה",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010554-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31914",
+    "slug": "hqd-12mg-31914",
+    "sku": "6923742010561",
+    "name": "פאוצ ניקוטין HQD בריזה טרופית 12 מ\"ג",
+    "brand": "HQD",
+    "flavor": "בריזה טרופית",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010561-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31916",
+    "slug": "hqd-12mg-31916",
+    "sku": "6923742010578",
+    "name": "פאוצ ניקוטין HQD לימונדה כחולה 12 מ\"ג",
+    "brand": "HQD",
+    "flavor": "לימונדה כחולה",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010578-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31918",
+    "slug": "hqd-12mg-31918",
+    "sku": "6923742010585",
+    "name": "פאוצ ניקוטין HQD פסיפלורה מתוקה 12 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פסיפלורה מתוקה",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010585-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31920",
+    "slug": "hqd-12mg-31920",
+    "sku": "6923742010592",
+    "name": "פאוצ ניקוטין HQD מנגו 12 מ\"ג",
+    "brand": "HQD",
+    "flavor": "מנגו",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010592-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31924",
+    "slug": "hqd-12mg-31924",
+    "sku": "6923742010615",
+    "name": "פאוצ ניקוטין HQD אוכמניות 12 מ\"ג",
+    "brand": "HQD",
+    "flavor": "אוכמניות",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010615-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31926",
+    "slug": "hqd-12mg-31926",
+    "sku": "6923742010622",
+    "name": "פאוץ' ניקוטין HQD פטל שחור 12 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  פטל שחור",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010622-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31928",
+    "slug": "hqd-12mg-31928",
+    "sku": "6923742010639",
+    "name": "פאוצ ניקוטין HQD דובדבן 12 מ\"ג",
+    "brand": "HQD",
+    "flavor": "דובדבן",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010639-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31930",
+    "slug": "hqd-6mg-31930",
+    "sku": "6937105495278",
+    "name": "פאוצ ניקוטין HQD אוכמניות 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "אוכמניות",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6937105495278-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31932",
+    "slug": "hqd-6mg-31932",
+    "sku": "6937105495285",
+    "name": "פאוץ' ניקוטין HQD פטל שחור 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  פטל שחור",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6937105495285-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31934",
+    "slug": "hqd-6mg-31934",
+    "sku": "6937105495322",
+    "name": "פאוץ' ניקוטין HQD מנטה 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  מנטה",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6937105495322-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31936",
+    "slug": "hqd-6mg-31936",
+    "sku": "6937105495346",
+    "name": "פאוצ ניקוטין HQD פסיפלורה מתוקה 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פסיפלורה מתוקה",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6937105495346-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31938",
+    "slug": "hqd-6mg-31938",
+    "sku": "6937105495353",
+    "name": "פאוצ ניקוטין HQD מנגו 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "מנגו",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6937105495353-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31940",
+    "slug": "hqd-6mg-31940",
+    "sku": "6937105495384",
+    "name": "פאוצ ניקוטין HQD דובדבן 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "דובדבן",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6937105495384-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31950",
+    "slug": "hqd-12mg-31950",
+    "sku": "6923742010608",
+    "name": "פאוץ' ניקוטין HQD באבל גאם 12מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  באבל גאם",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010608-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31951",
+    "slug": "hqd-6mg-31951",
+    "sku": "6923742010479",
+    "name": "פאוצ ניקוטין HQD לימונדה כחולה 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "לימונדה כחולה",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010479-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31952",
+    "slug": "hqd-6mg-31952",
+    "sku": "6923742010493",
+    "name": "פאוץ' ניקוטין HQD באבל גאם 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  באבל גאם",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010493-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31953",
+    "slug": "hqd-6mg-31953",
+    "sku": "6923742010486",
+    "name": "פאוצ ניקוטין HQD בריזה טרופית 6 מ\"ג",
+    "brand": "HQD",
+    "flavor": "בריזה טרופית",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 29.9,
+    "sourcePrice": 18,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742010486-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "31956",
+    "slug": "hqd-15mg-31956",
+    "sku": "6923742008391",
+    "name": "פאוצ ניקוטין HQD דובדבן 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "דובדבן",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742008391-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "32779",
+    "slug": "hqd-15mg-32779",
+    "sku": "6937105496145",
+    "name": "פאוץ' ניקוטין HQD פטל שחור 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  פטל שחור",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6937105496145-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "32787",
+    "slug": "hqd-15mg-32787",
+    "sku": "6937105495995",
+    "name": "פאוצ ניקוטין HQD אוכמניות 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "אוכמניות",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6937105495995-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "32788",
+    "slug": "hqd-15mg-32788",
+    "sku": "6923742004140",
+    "name": "פאוץ' ניקוטין HQD באבל גאם 15 מ\"ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  באבל גאם",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 29.9,
+    "sourcePrice": 16,
+    "stock": 3,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/6923742004140-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > HQD",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39264",
+    "slug": "pablo-50mg-39264",
+    "sku": "5744000761954",
+    "name": "פאוצ' ניקוטין PABLO קיווי 50 מ\"ג",
+    "brand": "PABLO",
+    "flavor": "קיווי",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 18,
+    "stock": 165,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5744000761954-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Pablo",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39265",
+    "slug": "pablo-50mg-39265",
+    "sku": "5744000761633",
+    "name": "פאוצ' ניקוטין PABLO מנגו אייס 50 מ\"ג",
+    "brand": "PABLO",
+    "flavor": "מנגו אייס",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 18,
+    "stock": 195,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5744000761633-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Pablo",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39266",
+    "slug": "pablo-50mg-39266",
+    "sku": "5740031400480",
+    "name": "פאוצ' ניקוטין PABLO פטל כחול 50 מ\"ג",
+    "brand": "PABLO",
+    "flavor": "פטל כחול",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 18,
+    "stock": 169,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5740031400480-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Pablo",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39267",
+    "slug": "pablo-50mg-39267",
+    "sku": "5740031400572",
+    "name": "פאוצ' ניקוטין PABLO טרופיקל פאנצ' 50 מ\"ג",
+    "brand": "PABLO",
+    "flavor": "טרופיקל פאנצ'",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 18,
+    "stock": 205,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5740031400572-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Pablo",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39268",
+    "slug": "killa-16mg-39268",
+    "sku": "5740031401029",
+    "name": "פאוצ' ניקוטין KILLA מנטה 16 מ\"ג",
+    "brand": "KILLA",
+    "flavor": "מנטה",
+    "nicotineMg": 16,
+    "strengthLevel": "medium",
+    "retailPrice": 34.9,
+    "sourcePrice": 18,
+    "stock": 380,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5740031401029-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Killa",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39269",
+    "slug": "pablo-50mg-39269",
+    "sku": "5744000761626",
+    "name": "פאוצ' ניקוטין PABLO ענבים אייס 50 מ\"ג",
+    "brand": "PABLO",
+    "flavor": "ענבים אייס",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 18,
+    "stock": 173,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5744000761626-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Pablo",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39270",
+    "slug": "killa-16mg-39270",
+    "sku": "5744000761336",
+    "name": "פאוצ' ניקוטין KILLA מנגו אייס 16 מ\"ג",
+    "brand": "KILLA",
+    "flavor": "מנגו אייס",
+    "nicotineMg": 16,
+    "strengthLevel": "medium",
+    "retailPrice": 34.9,
+    "sourcePrice": 18,
+    "stock": 125,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5744000761336-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Killa",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39271",
+    "slug": "pablo-50mg-39271",
+    "sku": "5740031400695",
+    "name": "פאוצ' ניקוטין PABLO מנטה 50 מ\"ג",
+    "brand": "PABLO",
+    "flavor": "מנטה",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 18,
+    "stock": 240,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5740031400695-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Pablo",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39273",
+    "slug": "killa-16mg-39273",
+    "sku": "5744000760148",
+    "name": "פאוצ' ניקוטין KILLA אבטיח 16 מ\"ג",
+    "brand": "KILLA",
+    "flavor": "אבטיח",
+    "nicotineMg": 16,
+    "strengthLevel": "medium",
+    "retailPrice": 34.9,
+    "sourcePrice": 18,
+    "stock": 315,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5744000760148-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Killa",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39274",
+    "slug": "killa-16mg-39274",
+    "sku": "5740031400909",
+    "name": "פאוצ' ניקוטין KILLA לימונדה 16 מ\"ג",
+    "brand": "KILLA",
+    "flavor": "לימונדה",
+    "nicotineMg": 16,
+    "strengthLevel": "medium",
+    "retailPrice": 34.9,
+    "sourcePrice": 18,
+    "stock": 84,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5740031400909-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Killa",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39275",
+    "slug": "killa-16mg-39275",
+    "sku": "5744000760094",
+    "name": "פאוצ' ניקוטין KILLA אוכמניות 16 מ\"ג",
+    "brand": "KILLA",
+    "flavor": "אוכמניות",
+    "nicotineMg": 16,
+    "strengthLevel": "medium",
+    "retailPrice": 34.9,
+    "sourcePrice": 18,
+    "stock": 95,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5744000760094-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Killa",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39276",
+    "slug": "killa-16mg-39276",
+    "sku": "5744000760131",
+    "name": "פאוצ' ניקוטין KILLA נענע 16 מ\"ג",
+    "brand": "KILLA",
+    "flavor": "נענע",
+    "nicotineMg": 16,
+    "strengthLevel": "medium",
+    "retailPrice": 34.9,
+    "sourcePrice": 18,
+    "stock": 115,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5744000760131-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Killa",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "39307",
+    "slug": "pablo-50mg-39307",
+    "sku": "5744000761978",
+    "name": "פאוצ' ניקוטין PABLO פסיפלורה 50 מ\"ג",
+    "brand": "PABLO",
+    "flavor": "פסיפלורה",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 18,
+    "stock": 79,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/5744000761978-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Pablo",
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה"
+    ]
+  },
+  {
+    "id": "43589",
+    "slug": "nois-50mg-43589",
+    "sku": "4742024720569",
+    "name": "נויס דובדבן אקסטרים 50 מ\"ג 27 יח'",
+    "brand": "NOIS",
+    "flavor": "דובדבן אקסטרים",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 15,
+    "stock": 656,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/4742024720569-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Nois"
+    ]
+  },
+  {
+    "id": "45583",
+    "slug": "nois-25mg-45583",
+    "sku": "4742024720019",
+    "name": "נויס מנטה 25 מ\"ג 22 יח'",
+    "brand": "NOIS",
+    "flavor": "מנטה",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 34.9,
+    "sourcePrice": 15,
+    "stock": 190,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/4742024720019-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה",
+      "כללי",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Nois"
+    ]
+  },
+  {
+    "id": "45584",
+    "slug": "nois-25mg-45584",
+    "sku": "4742024720347",
+    "name": "נויס ענבים קרח 25 מ\"ג 22 יח'",
+    "brand": "NOIS",
+    "flavor": "ענבים קרח",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 34.9,
+    "sourcePrice": 15,
+    "stock": 209,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/4742024720347-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Nois"
+    ]
+  },
+  {
+    "id": "45585",
+    "slug": "nois-50mg-45585",
+    "sku": "4742024720378",
+    "name": "נויס ענבים אקסטרים 50 מ\"ג 27 יח'",
+    "brand": "NOIS",
+    "flavor": "ענבים אקסטרים",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 15,
+    "stock": 944,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/4742024720378-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Nois"
+    ]
+  },
+  {
+    "id": "45586",
+    "slug": "nois-8mg-45586",
+    "sku": "4742024720767",
+    "name": "נויס דובדבן קרח 8 מ\"ג 30 יח'",
+    "brand": "NOIS",
+    "flavor": "דובדבן קרח",
+    "nicotineMg": 8,
+    "strengthLevel": "mild",
+    "retailPrice": 34.9,
+    "sourcePrice": 15,
+    "stock": 252,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/4742024720767-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Nois"
+    ]
+  },
+  {
+    "id": "45587",
+    "slug": "nois-25mg-45587",
+    "sku": "4742024720552",
+    "name": "נויס דובדבן קרח 25 מ\"ג 22 יח'",
+    "brand": "NOIS",
+    "flavor": "דובדבן קרח",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 34.9,
+    "sourcePrice": 15,
+    "stock": 275,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/4742024720552-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Nois"
+    ]
+  },
+  {
+    "id": "45588",
+    "slug": "nois-50mg-45588",
+    "sku": "4742024720293",
+    "name": "נויס מנטה אקסטרים 50 מ\"ג 27 יח'",
+    "brand": "NOIS",
+    "flavor": "מנטה אקסטרים",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 39.9,
+    "sourcePrice": 15,
+    "stock": 530,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/4742024720293-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Nois"
+    ]
+  },
+  {
+    "id": "45589",
+    "slug": "nois-8mg-45589",
+    "sku": "4742024720125",
+    "name": "נויס מנטה 8 מ\"ג 30 יח'",
+    "brand": "NOIS",
+    "flavor": "מנטה",
+    "nicotineMg": 8,
+    "strengthLevel": "mild",
+    "retailPrice": 34.9,
+    "sourcePrice": 15,
+    "stock": 295,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "/products/4742024720125-1-commerce.webp"
+    ],
+    "categories": [
+      "עולם העישון",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה",
+      "עולם העישון > פאוצ' ניקוטין / טבק הרחה > Nois"
+    ]
+  }
+]
