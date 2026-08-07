@@ -48,7 +48,6 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
           <h1>{product.flavor || product.name}</h1>
           {variant === "legacy" && <p className="pd-reviews">☆ ☆ ☆ ☆ ☆ <span>אין חוות דעת עדיין</span></p>}
           <div className="pd-price-stock"><strong>{product.retailPrice.toFixed(2)} ₪</strong><span>{product.stock > 0 ? "● במלאי" : "אזל מהמלאי"}</span></div>
-          <div className="pd-offer"><strong>משלוח חינם בקנייה מעל 199 ₪</strong>{variant === "legacy" && <span>מומלץ לשלב טעמים ועוצמות במשלוח אחד</span>}</div>
           {variant === "balanced" ? <ProductFacts product={product} /> : <div className="pd-quick-facts">
             <div><CircleGauge /><strong>{product.nicotineMg ? `${product.nicotineMg} מ״ג` : "מסומן"}</strong><span>ניקוטין</span></div>
             <div><Sparkles /><strong>{product.flavor || "מקורי"}</strong><span>טעם</span></div>
