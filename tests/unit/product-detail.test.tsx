@@ -33,6 +33,13 @@ it("retains the legacy purchase UI and feedback outside the balanced variant", (
   expect(screen.getByText("נוסף לעגלה")).toBeInTheDocument();
 });
 
+it("omits the promotional delivery recommendation from legacy product pages", () => {
+  render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
+
+  expect(screen.queryByText("משלוח חינם בקנייה מעל 199 ₪")).not.toBeInTheDocument();
+  expect(screen.queryByText("מומלץ לשלב טעמים ועוצמות במשלוח אחד")).not.toBeInTheDocument();
+});
+
 it("renders only catalog-backed product facts", () => {
   render(<CartProvider><ProductDetail product={balancedProduct} related={[]} variant="balanced" /></CartProvider>);
 
