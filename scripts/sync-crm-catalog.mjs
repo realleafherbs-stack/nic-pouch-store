@@ -22,7 +22,10 @@ const currentCatalog = JSON.parse(await readFile(catalogPath, "utf8"));
 let crmRecords;
 
 try {
-  const response = await fetch(`${apiBaseUrl}/${encodeURIComponent(siteSlug)}/products`, {
+  // The CRM's /products response is CDN-cached (s-maxage=60, stale-while-
+  // revalidate=300) for storefront runtime reads, but a build-time sync must
+  // see the current state, not a stale edge copy — bust it with a query param.
+  const response = await fetch(`${apiBaseUrl}/${encodeURIComponent(siteSlug)}/products?t=${Date.now()}`, {
     headers: { "x-api-key": apiKey, accept: "application/json" },
     signal: AbortSignal.timeout(20_000),
   });

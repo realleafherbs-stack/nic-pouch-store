@@ -25,6 +25,11 @@ export function getProduct(slug: string) {
   return products.find((product) => product.slug === slug) ?? null;
 }
 
+export function getProductsByIds(ids: string[]) {
+  const byId = new Map(products.map((product) => [product.id, product]));
+  return ids.map((id) => byId.get(id)).filter((product): product is Product => Boolean(product));
+}
+
 export function getBrands() {
   return [...new Set(products.map((product) => product.brand))];
 }

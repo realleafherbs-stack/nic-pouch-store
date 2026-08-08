@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductDetail } from "@/components/product/product-detail";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getProduct, products } from "@/lib/catalog/local-repository";
+import { getProduct, getProductsByIds, products } from "@/lib/catalog/local-repository";
 import { productVariantForSlug } from "@/lib/catalog/product-page-variant";
 import { productFaq, productSeoDescription, productSeoTitle, productStrengthLabel } from "@/lib/catalog/product-seo";
 import { absoluteUrl, breadcrumbSchema, defaultKeywords, organizationName, siteName } from "@/lib/seo";
@@ -49,7 +49,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const product = getProduct(decodeURIComponent((await params).slug));
   if (!product) notFound();
-  const related = products.filter((item) => item.id !== product.id && (item.brand === product.brand || item.strengthLevel === product.strengthLevel)).slice(0, 4);
+  const curatedRelated = product.relatedProductIds?.length
+    ? getProductsByIds(product.relatedProductIds).filter((item) => item.id !== product.id)
+    : [];
+  const sameBrand = products.filter((item) => item.id !== product.id && item.brand === product.brand);
+  const sameStrengthOtherBrand = products.filter(
+    (item) => item.id !== product.id && item.brand !== product.brand && item.strengthLevel === product.strengthLevel,
+  );
+  const related = curatedRelated.length
+    ? curatedRelated.slice(0, 4)
+    : [...sameBrand, ...sameStrengthOtherBrand].slice(0, 4);
   const productUrl = absoluteUrl(`/shop/${product.slug}`);
   const faq = productFaq(product);
   const schema = {

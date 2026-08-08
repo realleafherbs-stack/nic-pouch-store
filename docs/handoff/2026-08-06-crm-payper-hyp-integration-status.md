@@ -39,6 +39,14 @@ worked exactly as designed and correctly skipped it, so product count is still 0
 the Payper account still needs to point the real nic-pouch categories at this webhook — the
 connection itself now works, the content doesn't match yet.
 
+Verified directly against Payper's `get_inventories` API (using xvape's existing credentials, same
+account) that this isn't a data problem: real, active stock exists in both configured categories —
+dozens of active items under `טבק הרחה/לעיסה` (HQD, PABLO, KILLA, CUBA, QWEET, שמעק) and several
+NOIS-branded snus specifically under `סנוס NOIS` with substantial stock (e.g. 442, 751, 301 units).
+The category names on the Site record match exactly. The only gap is Payper's push rule not yet
+targeting nic-pouch's webhook for these categories — purely external/account-config, not a code or
+data issue.
+
 Originally confirmed via a read-only Prisma query against the production CRM DB:
 - `nic-pouch` **is** already registered as a Site in the CRM (created 2026-07-24), with
   `payperCategories` already set: `סנוס NOIS`, `טבק הרחה/לעיסה`.

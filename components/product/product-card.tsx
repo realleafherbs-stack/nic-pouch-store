@@ -23,6 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="product-card" data-testid="product-card">
       <Link href={`/shop/${product.slug}`} className="product-image">
+        {product.badge && <span className="product-badge">{product.badge}</span>}
         {product.nicotineMg && <span className="strength-pill">{product.nicotineMg} מ״ג</span>}
         {product.images[0] ? <img src={product.images[0]} alt={product.name} loading="lazy" /> : <span className="can-placeholder">{product.brand}</span>}
       </Link>

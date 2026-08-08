@@ -11,5 +11,5 @@ it("requires a cart and renders a checkout summary", () => {
   expect(screen.getByText("אין מוצרים לתשלום")).toBeInTheDocument();
   fireEvent.click(screen.getByText("seed"));
   expect(screen.getByText("ההזמנה שלכם")).toBeInTheDocument();
-  expect(screen.getByRole("button", { name: /שמירת הזמנה/ })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /לתשלום מאובטח/ })).toBeInTheDocument();
 });

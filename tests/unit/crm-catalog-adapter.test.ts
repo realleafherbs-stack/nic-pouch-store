@@ -56,7 +56,7 @@ describe("CRM catalog adapter", () => {
 
     expect(products).toEqual([expect.objectContaining({
       id: "crm-1",
-      slug: "nois-cherry-ice",
+      slug: "nois-cherry-ice-crm-1",
       sku: "729000000001",
       brand: "NOIS",
       flavor: "דובדבן אקסטרים",
@@ -128,6 +128,16 @@ describe("CRM catalog adapter", () => {
 
     const selected = selectCatalogForSync(currentCatalog, incoming);
     expect(selected).toHaveLength(1);
-    expect(selected[0]).toEqual(expect.objectContaining({ id: "crm-2", slug: "pablo-kiwi" }));
+    expect(selected[0]).toEqual(expect.objectContaining({ id: "crm-2", slug: "pablo-kiwi-crm-2" }));
+  });
+
+  it("keeps slugs unique for products that share a brand and nicotine mg but differ only in flavor", () => {
+    const products = mapCrmProducts([
+      { id: "hqd-a", handle: "פאוץ ניקוטין HQD דובדבן 6 מג", name: 'פאוץ\' ניקוטין HQD דובדבן 6 מ"ג', price: 15.25, attributes: { packSize: 1 } },
+      { id: "hqd-b", handle: "פאוץ ניקוטין HQD מנטה 6 מג", name: 'פאוץ\' ניקוטין HQD מנטה 6 מ"ג', price: 15.25, attributes: { packSize: 1 } },
+    ]);
+
+    expect(products).toHaveLength(2);
+    expect(products[0].slug).not.toEqual(products[1].slug);
   });
 });

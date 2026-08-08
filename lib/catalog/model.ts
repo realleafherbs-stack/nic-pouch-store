@@ -5,6 +5,21 @@ export interface PriceTier {
   unitPrice: number;
 }
 
+export interface ProductFeature {
+  title: string;
+  subtitle?: string;
+}
+
+export interface ProductSpec {
+  label: string;
+  value: string;
+}
+
+export interface ProductFaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface Product {
   id: string;
   slug: string;
@@ -30,6 +45,19 @@ export interface Product {
   canonicalUrl?: string;
   indexable?: boolean;
   gtin?: string;
+  relatedProductIds?: string[];
+  badge?: string;
+  cardFeatures?: string[];
+  features?: ProductFeature[];
+  specs?: ProductSpec[];
+  inTheBox?: string[];
+  usageInstructions?: string[];
+  warrantyInfo?: string[];
+  faq?: ProductFaqItem[];
+  videoUrl?: string;
+  soldCount?: string;
+  rating?: number;
+  reviewCount?: number;
 }
 
 export interface CatalogQuery {

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import type { Product } from "@/lib/catalog/model";
 import { productFaq } from "@/lib/catalog/product-seo";
+import { resolveVideoEmbed } from "@/lib/catalog/video-embed";
 import { strengthLabels } from "./product-facts";
 
 export function ProductContent({ product }: { product: Product }) {
   const strength = product.strengthLevel ? strengthLabels[product.strengthLevel] : "לפי סימון היצרן";
-  const faq = productFaq(product);
+  const faq = [...productFaq(product), ...(product.faq ?? [])];
 
   return (
     <section className="pd-content container" aria-label="מידע על המוצר">
@@ -17,15 +18,58 @@ export function ProductContent({ product }: { product: Product }) {
           <div><dt>ניקוטין</dt><dd>{product.nicotineMg ? `${product.nicotineMg} מ״ג` : "לפי האריזה"}</dd></div>
           <div><dt>עוצמה</dt><dd>{strength}</dd></div>
           <div><dt>מק״ט</dt><dd>{product.sku}</dd></div>
+          {product.specs?.map((spec) => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
         </dl>
       </div>
+
+      {(product.cardFeatures?.length || product.features?.length) ? (
+        <div className="pd-specification">
+          <h2>תכונות נוספות</h2>
+          <ul>
+            {product.cardFeatures?.map((feature) => <li key={feature}>{feature}</li>)}
+            {product.features?.map((feature) => (
+              <li key={feature.title}>{feature.subtitle ? `${feature.title} — ${feature.subtitle}` : feature.title}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+
+      {(() => {
+        const video = resolveVideoEmbed(product.videoUrl);
+        if (!video) return null;
+        return (
+          <div className="pd-video">
+            {video.kind === "youtube" ? (
+              <iframe src={video.url} title={`סרטון על ${product.name}`} allowFullScreen loading="lazy" />
+            ) : (
+              // eslint-disable-next-line jsx-a11y/media-has-caption
+              <video src={video.url} controls />
+            )}
+          </div>
+        );
+      })()}
+
       <div className="pd-information">
         <h2>מידע חשוב לפני הרכישה</h2>
-        <p>{product.name} הוא מוצר של {product.brand}. נתוני הטעם, העוצמה והניקוטין בדף מבוססים על הקטלוג וסימון האריזה.</p>
+        <p>{product.description || <>{product.name} הוא מוצר של {product.brand}. נתוני הטעם, העוצמה והניקוטין בדף מבוססים על הקטלוג וסימון האריזה.</>}</p>
         <h3>הסבר על העוצמה</h3>
         <p>{product.nicotineMg ? `${product.nicotineMg} מ״ג נמצאים` : "המוצר נמצא"} ברמת {strength} לפי סולם האתר. מוצר ברמה זו מיועד למשתמשי ניקוטין מנוסים בלבד.</p>
+        {product.inTheBox?.length ? (
+          <>
+            <h3>מה בקופסה</h3>
+            <ul>{product.inTheBox.map((item) => <li key={item}>{item}</li>)}</ul>
+          </>
+        ) : null}
         <h3>שימוש ואחסון</h3>
-        <p>יש לשמור במקום קריר ויבש והרחק מהישג ידם של ילדים ובעלי חיים.</p>
+        {product.usageInstructions?.length
+          ? <ul>{product.usageInstructions.map((item) => <li key={item}>{item}</li>)}</ul>
+          : <p>יש לשמור במקום קריר ויבש והרחק מהישג ידם של ילדים ובעלי חיים.</p>}
+        {product.warrantyInfo?.length ? (
+          <>
+            <h3>אחריות ושירות</h3>
+            <ul>{product.warrantyInfo.map((item) => <li key={item}>{item}</li>)}</ul>
+          </>
+        ) : null}
         <h3>משלוחים והחזרות</h3>
         <p>אספקה רגילה עד 3 ימי עסקים, בהתאם ליישוב ולחברת המשלוחים. משלוח חינם בקנייה מעל 199 ₪.</p>
         <p>ביטול עסקה והחזרת מוצר מתבצעים בהתאם לדין ולתנאי האתר. לפרטים המלאים ראו <Link href="/terms">תקנון והחזרות</Link>.</p>
