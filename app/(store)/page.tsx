@@ -6,9 +6,14 @@ import { ProductCard } from "@/components/product/product-card";
 import { products } from "@/lib/catalog/local-repository";
 
 export default async function HomePage() {
-  const noisProducts = products.filter((product) => product.brand === "NOIS");
-  const otherProducts = products.filter((product) => product.brand !== "NOIS" && product.packSize === 1);
-  const featured = [noisProducts[0], otherProducts[0], otherProducts[17], noisProducts[1], otherProducts[19], otherProducts[3]].filter(Boolean);
+  // Only pick products that actually have a photo — a fixed array position
+  // (e.g. otherProducts[17]) made sense against the old fixed mock catalog,
+  // but the CRM-synced catalog's order and composition can change on every
+  // sync, so a hardcoded index can silently land on an image-less product.
+  const hasImage = (product: { images: string[] }) => product.images.length > 0;
+  const noisProducts = products.filter((product) => product.brand === "NOIS" && hasImage(product));
+  const otherProducts = products.filter((product) => product.brand !== "NOIS" && product.packSize === 1 && hasImage(product));
+  const featured = [noisProducts[0], otherProducts[0], otherProducts[1], noisProducts[1], otherProducts[2], otherProducts[3]].filter(Boolean);
   return (
     <>
       <section className="hero hero-editorial">

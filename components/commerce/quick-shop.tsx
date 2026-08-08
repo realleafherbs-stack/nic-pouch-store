@@ -50,10 +50,14 @@ export function QuickShop({ products }: { products: Product[] }) {
       result = singleUnits.filter((product) => selected?.terms.some((term) => `${product.flavor} ${product.name}`.toLowerCase().includes(term)));
     }
     if (mode === "popular") {
-      const nois = singleUnits.filter((product) => product.brand === "NOIS");
-      const others = singleUnits.filter((product) => product.brand !== "NOIS");
+      // Only the first 3 of this list ever get shown (see `matches` below),
+      // so restricting "popular" to products with a real photo costs nothing
+      // and avoids a hardcoded array position landing on an image-less item.
+      const withImages = singleUnits.filter((product) => product.images.length > 0);
+      const nois = withImages.filter((product) => product.brand === "NOIS");
+      const others = withImages.filter((product) => product.brand !== "NOIS");
       result = [...new Map(
-        [nois[0], others[0], others[8], nois[1], ...others]
+        [nois[0], others[0], others[1], nois[1], ...others]
           .filter((product): product is Product => Boolean(product))
           .map((product) => [product.id, product]),
       ).values()];

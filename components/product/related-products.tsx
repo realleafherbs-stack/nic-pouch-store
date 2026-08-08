@@ -32,8 +32,8 @@ export function RelatedProducts({ products, variant }: RelatedProductsProps) {
             <h2>{variant === "balanced" ? "מוצרים נוספים מהקטלוג" : "לקוחות התעניינו גם"}</h2>
           </div>
           <div className="carousel-controls" aria-label="ניווט בין מוצרים">
-            <button type="button" onClick={() => scroll(1)} aria-label="מוצרים קודמים"><ChevronRight /></button>
-            <button type="button" onClick={() => scroll(-1)} aria-label="מוצרים הבאים"><ChevronLeft /></button>
+            <button type="button" onClick={() => scroll(1)} aria-label="מוצרים קודמים"><ChevronLeft /></button>
+            <button type="button" onClick={() => scroll(-1)} aria-label="מוצרים הבאים"><ChevronRight /></button>
           </div>
         </div>
         <div ref={carouselRef} className="product-carousel" data-testid="related-products-carousel">
