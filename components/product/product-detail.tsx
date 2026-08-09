@@ -10,6 +10,7 @@ import { LegacyProductPurchase } from "./legacy-product-purchase";
 import { ProductContent } from "./product-content";
 import { ProductFacts, strengthLabels } from "./product-facts";
 import { ProductPurchasePanel } from "./product-purchase-panel";
+import { ProductReviews } from "./product-reviews";
 import { RelatedProducts } from "./related-products";
 
 interface ProductDetailProps {
@@ -141,6 +142,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
         <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצר מיועד לבגירים בלבד.</div>
       </section>}
 
+      <ProductReviews product={product} />
       <RelatedProducts products={related} variant={variant} />
     </div>
   );

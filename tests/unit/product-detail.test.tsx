@@ -60,16 +60,18 @@ it("keeps the existing layout unless the balanced variant is requested", () => {
   expect(screen.getByRole("group", { name: "בחרו כמות" })).toBeInTheDocument();
 });
 
-it("does not fabricate popularity, reviews or ratings", () => {
+it("does not fabricate popularity or canned copy, but shows the real reviews section", () => {
   render(<CartProvider><ProductDetail product={balancedProduct} related={[]} variant="balanced" /></CartProvider>);
 
   expect(screen.queryByText("פופולרי")).not.toBeInTheDocument();
-  expect(screen.queryByText(/חוות דעת/)).not.toBeInTheDocument();
-  expect(screen.queryByText(/☆/)).not.toBeInTheDocument();
   expect(screen.queryByText(/מומלץ לשלב טעמים ועוצמות/)).not.toBeInTheDocument();
   expect(screen.queryByText("משלוח מהיר")).not.toBeInTheDocument();
   expect(screen.queryByText("אריזה מקורית")).not.toBeInTheDocument();
   expect(screen.queryByText("איסוף בטוח")).not.toBeInTheDocument();
+  // Reviews are real now (CRM-backed, user-submittable) — this is intentional,
+  // not fabricated content, unlike the claims checked above.
+  expect(screen.getByRole("heading", { name: /^חוות דעת/ })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /שליחת חוות דעת/ })).toBeInTheDocument();
 });
 
 it("uses neutral related-products wording in the balanced variant", () => {

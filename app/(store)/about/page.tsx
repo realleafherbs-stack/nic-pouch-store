@@ -1,3 +1,30 @@
 import type { Metadata } from "next";
+import { Sparkles } from "lucide-react";
+import { InfoChecklist } from "@/components/info/info-checklist";
+import { InfoHero } from "@/components/info/info-hero";
+import { InfoSection } from "@/components/info/info-section";
+
 export const metadata: Metadata = { title: "אודות NIC POUCH", description: "מי עומד מאחורי NIC POUCH, כיצד נבחר המידע באתר ומהי מחויבותנו לשירות ולשקיפות.", alternates: { canonical: "/about" } };
-export default function AboutPage() { return <main className="container article"><p className="eyebrow">אודות</p><h1>אודות NIC POUCH</h1><p>NIC POUCH היא חנות ישראלית המתמחה בשקיקי ניקוטין ללא טבק ממותגים מובילים, ופועלת מהמרכבה 25, חולון.</p><h2>מה חשוב לנו</h2><ul><li>מידע ברור המבוסס על הקטלוג וסימון היצרן.</li><li>מחירים וזמינות המוצגים לפני ההזמנה.</li><li>שירות אישי ומשלוח מהיר לכל הארץ.</li><li>מכירה לבגירים בלבד והצגת אזהרות ניקוטין באופן בולט.</li></ul><p>המונח „סנוס” נפוץ בישראל גם עבור שקיקי ניקוטין. סנוס מסורתי מכיל טבק, ואילו המוצרים באתר הם ללא טבק, אלא אם צוין אחרת.</p></main>; }
+
+export default function AboutPage() {
+  return (
+    <main className="container info-page">
+      <InfoHero
+        eyebrow="אודות"
+        title="אודות NIC POUCH"
+        lede="NIC POUCH היא חנות ישראלית המתמחה בשקיקי ניקוטין ללא טבק ממותגים מובילים, ופועלת מהמרכבה 25, חולון."
+      />
+      <InfoSection icon={Sparkles} title="מה חשוב לנו">
+        <InfoChecklist
+          items={[
+            "מידע ברור המבוסס על הקטלוג וסימון היצרן.",
+            "מחירים וזמינות המוצגים לפני ההזמנה.",
+            "שירות אישי ומשלוח מהיר לכל הארץ.",
+            "מכירה לבגירים בלבד והצגת אזהרות ניקוטין באופן בולט.",
+          ]}
+        />
+        <p style={{ marginTop: 16 }}>המונח „סנוס” נפוץ בישראל גם עבור שקיקי ניקוטין. סנוס מסורתי מכיל טבק, ואילו המוצרים באתר הם ללא טבק, אלא אם צוין אחרת.</p>
+      </InfoSection>
+    </main>
+  );
+}
