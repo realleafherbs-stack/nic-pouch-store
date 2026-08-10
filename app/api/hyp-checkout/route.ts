@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getProductsByIds } from "@/lib/catalog/local-repository";
 import { linePrice, unitPriceForQuantity } from "@/lib/catalog/pricing";
 import { siteUrl } from "@/lib/seo";
+import { signOrderToken } from "@/lib/orders";
 
 // Matches lib/cart/reducer.ts's cartTotals() exactly — the free-shipping
 // threshold shown to the customer in the cart must match what's actually
@@ -165,38 +166,30 @@ export async function POST(req: NextRequest) {
 
   const fullAddress = `${customer.street}, ${customer.apartment}`;
 
-  // Save the order in the CRM before sending the customer to pay — required,
-  // not best-effort. A successful Hyp payment with no matching CRM order
-  // would have no way to ever be confirmed or invoiced, since the confirm
-  // step requires this record to already exist.
-  try {
-    const orderRes = await fetch(`${apiBaseUrl}/${encodeURIComponent(siteSlug)}/orders`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "x-api-key": apiKey },
-      body: JSON.stringify({
-        id: orderId,
-        total: amount,
-        shipping,
-        discount,
-        coupon: appliedCoupon,
-        customer: { ...customer, address: fullAddress },
-        items: pricedItems.map(({ product, quantity }) => ({
-          id: product.id,
-          name: product.name,
-          price: unitPriceForQuantity(product, quantity),
-          qty: quantity,
-        })),
-      }),
-      signal: AbortSignal.timeout(10_000),
-    });
-    if (!orderRes.ok) {
-      console.error("CRM order creation failed:", orderRes.status, await orderRes.text());
-      return NextResponse.json({ error: "לא ניתן לשמור את ההזמנה. נסו שוב." }, { status: 502 });
-    }
-  } catch (err) {
-    console.error("CRM order creation request failed:", err);
-    return NextResponse.json({ error: "לא ניתן לשמור את ההזמנה. נסו שוב." }, { status: 502 });
-  }
+  // Nothing is written to the CRM here. Writing the order before payment
+  // completes is what left "pending" orders stuck forever whenever the
+  // customer's browser never made it back to /payment/success (closed tab,
+  // dropped connection, etc.) — there was no second, reliable trigger to ever
+  // finish or clean those up. Instead, the full order data is signed into a
+  // token and threaded through Hyp's own redirect; the order is created
+  // already-paid, in one shot, only once Hyp actually sends the customer
+  // back (and verifyHypRedirect() there confirms it's a real payment, not
+  // just a guessed order id). If that never happens, nothing was ever
+  // written — nothing to get stuck.
+  const orderToken = signOrderToken({
+    id: orderId,
+    total: amount,
+    shipping,
+    discount,
+    coupon: appliedCoupon,
+    customer: { ...customer, address: fullAddress },
+    items: pricedItems.map(({ product, quantity }) => ({
+      id: product.id,
+      name: product.name,
+      price: unitPriceForQuantity(product, quantity),
+      qty: quantity,
+    })),
+  });
 
   const params = new URLSearchParams({
     action: "APISign",
@@ -214,7 +207,7 @@ export async function POST(req: NextRequest) {
     Pritim: "True",
     Tash: "1",
     heshDesc: paymentItems.join(""),
-    SuccessUrl: `${siteUrl}/payment/success`,
+    SuccessUrl: `${siteUrl}/payment/success?t=${encodeURIComponent(orderToken)}`,
     ErrorUrl: `${siteUrl}/payment/failure`,
   });
   if (customer.firstName) params.set("ClientName", transliterateName(customer.firstName));

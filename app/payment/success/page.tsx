@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { verifyHypRedirect } from "@/lib/hyp";
-import { confirmOrderServerSide } from "@/lib/orders";
+import { finalizeOrderFromToken } from "@/lib/orders";
 import { SuccessClient } from "./success-client";
 
 export default async function PaymentSuccessPage({
@@ -14,17 +14,18 @@ export default async function PaymentSuccessPage({
     if (typeof v === "string") rawParams[k] = v;
   }
 
-  // Confirm the order server-side so it fires regardless of client JS. Hyp
-  // Pay only redirects the browser here — there is no server-to-server
-  // callback — so this is the primary confirmation point. Never trust the
-  // redirect on its own: verify it against Hyp's own transaction record
-  // first, or anyone landing on this URL with a guessed/observed Order id
-  // could mark it paid without ever paying. Retries internally;
-  // SuccessClient also confirms client-side as a backup in case this whole
-  // request never completes (e.g. the browser closed mid-redirect).
+  // Creates and confirms the order server-side so it fires regardless of
+  // client JS. Hyp Pay only redirects the browser here — there is no
+  // server-to-server callback — so this is the primary point where a paid
+  // order is actually written to the CRM. Never trust the redirect on its
+  // own: verify it against Hyp's own transaction record first, or anyone
+  // landing on this URL with a guessed/observed Order id could conjure up an
+  // order without ever paying. SuccessClient also retries client-side as a
+  // backup in case this whole request never completes (e.g. the browser
+  // closed mid-redirect).
   const { valid, orderId } = await verifyHypRedirect(rawParams);
-  if (valid && orderId) {
-    await confirmOrderServerSide(orderId);
+  if (valid && orderId && rawParams.t) {
+    await finalizeOrderFromToken(rawParams.t, orderId);
   }
 
   return (
