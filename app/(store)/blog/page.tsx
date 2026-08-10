@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { BlogPostCard } from "@/components/commerce/blog-post-card";
 import { GuideIndex } from "@/components/guides/guide-index";
 import { GuideVisual } from "@/components/guides/guide-visual";
 import { JsonLd } from "@/components/seo/json-ld";
 import { articles } from "@/data/articles";
+import { getBlogs } from "@/lib/blog";
 import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata = {
@@ -12,7 +14,8 @@ export const metadata = {
   alternates: { canonical: "/blog" },
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getBlogs();
   const itemList = {
     "@type": "ItemList",
     name: "NIC GUIDE",
@@ -57,6 +60,20 @@ export default function BlogPage() {
           </div>
           <GuideIndex guides={articles} />
         </section>
+
+        {posts.length > 0 && (
+          <section className="container blog-posts-section" aria-labelledby="blog-posts-title">
+            <div className="guide-index-heading">
+              <div>
+                <p className="guide-kicker">מהבלוג</p>
+                <h2 id="blog-posts-title">עדכונים ותוכן נוסף</h2>
+              </div>
+            </div>
+            <div className="blog-posts-grid">
+              {posts.map((post) => <BlogPostCard post={post} key={post.id} />)}
+            </div>
+          </section>
+        )}
 
         <section className="guide-store-cta">
           <div className="container">

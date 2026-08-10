@@ -79,7 +79,7 @@ export function CheckoutClient() {
             phone: form.get("phone"),
             street: form.get("street"),
             city: form.get("city"),
-            postalCode: form.get("postalCode") || undefined,
+            apartment: form.get("apartment"),
             notes: form.get("notes") || undefined,
           },
         }),
@@ -113,7 +113,7 @@ export function CheckoutClient() {
           <fieldset><legend>משלוח</legend><div className="checkout-grid">
             <label className="wide"><span>רחוב ומספר</span><input name="street" autoComplete="street-address" required /></label>
             <label><span>עיר</span><input name="city" autoComplete="address-level2" required /></label>
-            <label><span>מיקוד</span><input name="postalCode" inputMode="numeric" autoComplete="postal-code" /></label>
+            <label><span>מספר בית/דירה</span><input name="apartment" autoComplete="address-line2" required /></label>
             <label className="wide"><span>הערות לשליח</span><textarea name="notes" rows={3} /></label>
           </div></fieldset>
           <label className="checkout-consent"><input type="checkbox" required /><span>אני מאשר/ת שגילי מעל 18, קראתי את <Link href="/terms">התקנון</Link> ואת <Link href="/privacy">מדיניות הפרטיות</Link>.</span></label>

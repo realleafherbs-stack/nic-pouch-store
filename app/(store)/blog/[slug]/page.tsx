@@ -19,6 +19,7 @@ import {
   guideCategoryLabels,
   relatedGuidesFor,
 } from "@/data/articles";
+import { getBlog } from "@/lib/blog";
 import {
   absoluteUrl,
   breadcrumbSchema,
@@ -26,6 +27,12 @@ import {
   siteName,
   siteUrl,
 } from "@/lib/seo";
+
+function formatPostDate(value: string | null) {
+  if (!value) return null;
+  const date = new Date(value);
+  return `${String(date.getDate()).padStart(2, "0")}.${String(date.getMonth() + 1).padStart(2, "0")}.${date.getFullYear()}`;
+}
 
 function formatGuideDate(value: string) {
   const [year, month, day] = value.split("-");
@@ -43,7 +50,25 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const guide = guideBySlug(slug);
-  if (!guide) return {};
+  if (!guide) {
+    const post = await getBlog(slug);
+    if (!post) return {};
+    return {
+      title: post.metaTitle ?? post.title,
+      description: post.metaDescription ?? undefined,
+      alternates: { canonical: `/blog/${post.slug}` },
+      openGraph: {
+        type: "article",
+        locale: "he_IL",
+        url: `/blog/${post.slug}`,
+        title: post.metaTitle ?? post.title,
+        description: post.metaDescription ?? undefined,
+        publishedTime: post.publishedAt ?? undefined,
+        authors: [siteName],
+        images: post.ogImage ? [{ url: absoluteUrl(post.ogImage) }] : undefined,
+      },
+    };
+  }
 
   const socialImage = guide.image
     ? [{ url: absoluteUrl(guide.image.src), alt: guide.image.alt }]
@@ -81,7 +106,72 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params;
   const guide = guideBySlug(slug);
-  if (!guide) notFound();
+
+  if (!guide) {
+    const post = await getBlog(slug);
+    if (!post) notFound();
+
+    const postUrl = absoluteUrl(`/blog/${post.slug}`);
+    const postSchema = {
+      "@type": "BlogPosting",
+      "@id": `${postUrl}#article`,
+      mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+      headline: post.title,
+      ...(post.ogImage ? { image: [absoluteUrl(post.ogImage)] } : {}),
+      datePublished: post.publishedAt ?? undefined,
+      inLanguage: "he-IL",
+      author: { "@type": "Organization", name: siteName, url: siteUrl },
+      publisher: { "@id": `${siteUrl}/#organization` },
+    };
+    const postBreadcrumbs = breadcrumbSchema([
+      { name: "דף הבית", path: "/" },
+      { name: "NIC GUIDE", path: "/blog" },
+      { name: post.title, path: `/blog/${post.slug}` },
+    ]);
+    const postDate = formatPostDate(post.publishedAt);
+
+    return (
+      <div className="guide-article-page">
+        <JsonLd data={[postSchema, postBreadcrumbs]} />
+        <header className="guide-article-hero">
+          <div className="container guide-article-hero-grid">
+            <div className="guide-article-hero-copy">
+              <nav aria-label="פירורי לחם">
+                <Link href="/">דף הבית</Link><span>/</span>
+                <Link href="/blog">NIC GUIDE</Link><span>/</span>
+                <span aria-current="page">{post.title}</span>
+              </nav>
+              <p className="guide-kicker">מהבלוג</p>
+              <h1>{post.title}</h1>
+              {post.metaDescription && <p>{post.metaDescription}</p>}
+              <div className="guide-article-meta">
+                {postDate && <time dateTime={post.publishedAt ?? undefined}>פורסם {postDate}</time>}
+              </div>
+            </div>
+            {post.featuredImage && (
+              <div className="guide-article-hero-media">
+                <img src={post.featuredImage} alt="" />
+              </div>
+            )}
+          </div>
+        </header>
+
+        <div className="container blog-post-shell">
+          <article className="guide-article blog-post-article" dangerouslySetInnerHTML={{ __html: post.body }} />
+        </div>
+
+        <section className="guide-store-cta">
+          <div className="container">
+            <div>
+              <p className="guide-kicker">מוכנים לבחור?</p>
+              <h2>השוו לפי מותג, טעם ועוצמה</h2>
+            </div>
+            <Link className="button" href="/shop">לכל המוצרים</Link>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   const guideIndex = articles.findIndex((item) => item.slug === guide.slug);
   const nextGuide = articles[(guideIndex + 1) % articles.length];

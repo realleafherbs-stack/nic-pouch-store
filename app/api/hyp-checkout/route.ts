@@ -21,7 +21,7 @@ interface CheckoutCustomer {
   phone: string;
   street: string;
   city: string;
-  postalCode?: string;
+  apartment: string;
   notes?: string;
 }
 
@@ -100,7 +100,8 @@ export async function POST(req: NextRequest) {
     !isNonEmptyString(customer.email) ||
     !isNonEmptyString(customer.phone) ||
     !isNonEmptyString(customer.street) ||
-    !isNonEmptyString(customer.city)
+    !isNonEmptyString(customer.city) ||
+    !isNonEmptyString(customer.apartment)
   ) {
     return NextResponse.json({ error: "Missing required customer details" }, { status: 400 });
   }
@@ -162,7 +163,7 @@ export async function POST(req: NextRequest) {
     paymentItems.push(createHypLine("משלוח", 1, shipping));
   }
 
-  const fullAddress = `${customer.street}${customer.postalCode ? `, ${customer.postalCode}` : ""}`;
+  const fullAddress = `${customer.street}, ${customer.apartment}`;
 
   // Save the order in the CRM before sending the customer to pay — required,
   // not best-effort. A successful Hyp payment with no matching CRM order
