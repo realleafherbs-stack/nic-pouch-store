@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { verifyHypRedirect } from "@/lib/hyp";
-import { finalizeOrderFromToken } from "@/lib/orders";
+import { finalizeOrder } from "@/lib/orders";
 import { SuccessClient } from "./success-client";
 
 export default async function PaymentSuccessPage({
@@ -24,8 +24,8 @@ export default async function PaymentSuccessPage({
   // backup in case this whole request never completes (e.g. the browser
   // closed mid-redirect).
   const { valid, orderId } = await verifyHypRedirect(rawParams);
-  if (valid && orderId && rawParams.t) {
-    await finalizeOrderFromToken(rawParams.t, orderId);
+  if (valid && orderId) {
+    await finalizeOrder(orderId);
   }
 
   return (

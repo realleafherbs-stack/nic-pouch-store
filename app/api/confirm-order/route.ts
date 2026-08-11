@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyHypRedirect } from "@/lib/hyp";
-import { finalizeOrderFromToken } from "@/lib/orders";
+import { finalizeOrder } from "@/lib/orders";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
@@ -14,10 +14,10 @@ export async function POST(req: NextRequest) {
   // the CRM, or this endpoint would let anyone conjure up an order just by
   // knowing (or guessing) its id.
   const { valid, orderId } = await verifyHypRedirect(rawParams);
-  if (!valid || !orderId || !rawParams.t) {
+  if (!valid || !orderId) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
-  const ok = await finalizeOrderFromToken(rawParams.t, orderId);
+  const ok = await finalizeOrder(orderId);
   return NextResponse.json({ ok });
 }

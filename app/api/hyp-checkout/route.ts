@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getProductsByIds } from "@/lib/catalog/local-repository";
 import { linePrice, unitPriceForQuantity } from "@/lib/catalog/pricing";
 import { siteUrl } from "@/lib/seo";
-import { signOrderToken } from "@/lib/orders";
+import { stageCheckoutIntent } from "@/lib/orders";
 
 // Matches lib/cart/reducer.ts's cartTotals() exactly — the free-shipping
 // threshold shown to the customer in the cart must match what's actually
@@ -166,18 +166,17 @@ export async function POST(req: NextRequest) {
 
   const fullAddress = `${customer.street}, ${customer.apartment}`;
 
-  // Nothing is written to the CRM here. Writing the order before payment
-  // completes is what left "pending" orders stuck forever whenever the
-  // customer's browser never made it back to /payment/success (closed tab,
-  // dropped connection, etc.) — there was no second, reliable trigger to ever
-  // finish or clean those up. Instead, the full order data is signed into a
-  // token and threaded through Hyp's own redirect; the order is created
-  // already-paid, in one shot, only once Hyp actually sends the customer
-  // back (and verifyHypRedirect() there confirms it's a real payment, not
-  // just a guessed order id). If that never happens, nothing was ever
-  // written — nothing to get stuck.
-  const orderToken = signOrderToken({
-    id: orderId,
+  // Staged in the CRM as a CheckoutIntent, not an Order — required, not
+  // best-effort, same reasoning as the old pre-payment order write: a
+  // successful Hyp payment with nothing staged would have no way to ever
+  // become a real order. But unlike an Order, an intent that's never
+  // consumed (customer abandons, browser never returns) is just an
+  // unconsumed row, never a stuck "pending" order in the CRM's Orders UI.
+  // It's turned into a real, already-paid order in one shot only once Hyp
+  // actually sends the customer back to /payment/success with this same
+  // order id (and verifyHypRedirect() there confirms it's a real payment,
+  // not just a guessed order id).
+  const staged = await stageCheckoutIntent(orderId, {
     total: amount,
     shipping,
     discount,
@@ -190,6 +189,9 @@ export async function POST(req: NextRequest) {
       qty: quantity,
     })),
   });
+  if (!staged) {
+    return NextResponse.json({ error: "לא ניתן לשמור את ההזמנה. נסו שוב." }, { status: 502 });
+  }
 
   const params = new URLSearchParams({
     action: "APISign",
@@ -207,7 +209,7 @@ export async function POST(req: NextRequest) {
     Pritim: "True",
     Tash: "1",
     heshDesc: paymentItems.join(""),
-    SuccessUrl: `${siteUrl}/payment/success?t=${encodeURIComponent(orderToken)}`,
+    SuccessUrl: `${siteUrl}/payment/success`,
     ErrorUrl: `${siteUrl}/payment/failure`,
   });
   if (customer.firstName) params.set("ClientName", transliterateName(customer.firstName));
