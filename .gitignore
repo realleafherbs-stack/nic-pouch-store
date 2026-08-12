@@ -10,3 +10,6 @@ test-results/
 .vercel
 .worktrees/
 .env.local
+
+.vercel
+.env*

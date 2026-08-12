@@ -40,14 +40,12 @@ function sanitizeHypItemDescription(value: string) {
   return value.replace(/[~[\]]/g, " ").replace(/\s+/g, " ").trim();
 }
 
-function createHypLine(description: string, qty: number, price: number) {
-  return `[0~${sanitizeHypItemDescription(description)}~${qty}~${formatHypAmount(price)}]`;
-}
-
-// Hyp's ClientName/ClientLName come back garbled for non-ASCII input no
-// matter the encoding used — their SIGN action percent-encodes them but the
-// hosted page never decodes it back. Plain ASCII sidesteps the bug; this is
-// a consistent, readable transliteration, not a "correct" romanization.
+// Any non-ASCII text sent to Hyp's hosted page — ClientName/ClientLName,
+// and the Pritim item breakdown built by createHypLine below — comes back
+// garbled no matter the encoding used — their SIGN action percent-encodes
+// it but the hosted page never decodes it back. Plain ASCII sidesteps the
+// bug; this is a consistent, readable transliteration, not a "correct"
+// romanization.
 const HEBREW_TRANSLITERATION: Record<string, string> = {
   "א": "", "ב": "b", "ג": "g", "ד": "d", "ה": "h", "ו": "o", "ז": "z",
   "ח": "ch", "ט": "t", "י": "y", "כ": "k", "ך": "ch", "ל": "l", "מ": "m",
@@ -58,6 +56,10 @@ const HEBREW_TRANSLITERATION: Record<string, string> = {
 function transliterateName(value: string) {
   const transliterated = value.split("").map((ch) => HEBREW_TRANSLITERATION[ch] ?? ch).join("");
   return transliterated.charAt(0).toUpperCase() + transliterated.slice(1);
+}
+
+function createHypLine(description: string, qty: number, price: number) {
+  return `[0~${sanitizeHypItemDescription(transliterateName(description))}~${qty}~${formatHypAmount(price)}]`;
 }
 
 function isNonEmptyString(value: unknown): value is string {
