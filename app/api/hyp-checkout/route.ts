@@ -208,6 +208,7 @@ export async function POST(req: NextRequest) {
     PageLang: "HEB",
     sendemail: "True",
     MoreData: "True",
+    tmp: process.env.HYP_TEMPLATE ?? "5",
     Pritim: "True",
     Tash: "1",
     heshDesc: paymentItems.join(""),
