@@ -1,6 +1,7 @@
-import { describe, expect, it } from "vitest";
+import { beforeAll, describe, expect, it } from "vitest";
 import { articles } from "@/data/articles";
-import { products } from "@/lib/catalog/local-repository";
+import { getAllProducts } from "@/lib/catalog/local-repository";
+import type { Product } from "@/lib/catalog/model";
 import {
   productFaq,
   productSeoDescription,
@@ -9,6 +10,15 @@ import {
 import { siteUrl } from "@/lib/seo";
 
 describe("SEO foundations", () => {
+  let products: Product[];
+
+  // No CRM_* env vars in the test environment, so this resolves from the
+  // checked-in fallback catalog (lib/catalog/local-repository.ts's
+  // fetchLiveProducts) — same fixed dataset these tests always ran against.
+  beforeAll(async () => {
+    products = await getAllProducts();
+  });
+
   it("uses the custom production domain", () => {
     expect(siteUrl).toBe("https://nicpouch.co.il");
   });

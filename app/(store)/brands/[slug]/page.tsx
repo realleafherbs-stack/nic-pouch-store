@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductCard } from "@/components/product/product-card";
 import { JsonLd } from "@/components/seo/json-ld";
-import { products } from "@/lib/catalog/local-repository";
+import { getAllProducts } from "@/lib/catalog/local-repository";
 import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const products = await getAllProducts();
   return [...new Set(products.map((product) => product.brand.toLowerCase()))].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const brand = (await params).slug.toUpperCase();
+  const products = await getAllProducts();
   const items = products.filter((product) => product.brand === brand);
   if (!items.length) return {};
   const primary = brand === "HQD" ? `שקיקי ניקוטין ${brand}` : `סנוס ${brand} ושקיקי ניקוטין ${brand}`;
@@ -30,6 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BrandPage({ params }: { params: Promise<{ slug: string }> }) {
   const brand = (await params).slug.toUpperCase();
+  const products = await getAllProducts();
   const items = products.filter((product) => product.brand === brand);
   if (!items.length) notFound();
   const itemList = {

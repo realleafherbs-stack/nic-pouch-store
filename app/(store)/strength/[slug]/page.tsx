@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ProductCard } from "@/components/product/product-card";
 import { JsonLd } from "@/components/seo/json-ld";
-import { products } from "@/lib/catalog/local-repository";
+import { getAllProducts } from "@/lib/catalog/local-repository";
 import { strengthCategories } from "@/lib/catalog/seo-categories";
 import type { StrengthLevel } from "@/lib/catalog/model";
 import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
@@ -19,6 +19,7 @@ export default async function StrengthPage({ params }: { params: Promise<{ slug:
   const slug = (await params).slug as StrengthLevel;
   const category = strengthCategories[slug];
   if (!category) notFound();
+  const products = await getAllProducts();
   const items = products.filter((product) => product.strengthLevel === slug);
   const breadcrumbs = breadcrumbSchema([{ name: "דף הבית", path: "/" }, { name: "חנות", path: "/shop" }, { name: category.title, path: `/strength/${slug}` }]);
   const list = { "@type": "ItemList", name: category.title, numberOfItems: items.length, itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name, url: absoluteUrl(`/shop/${item.slug}`) })) };

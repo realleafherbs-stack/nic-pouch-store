@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
-import { getBrands, products } from "@/lib/catalog/local-repository";
+import { getAllProducts, getBrands } from "@/lib/catalog/local-repository";
 import { articles } from "@/data/articles";
 import { absoluteUrl } from "@/lib/seo";
 import { flavorCategories, strengthCategories } from "@/lib/catalog/seo-categories";
 export const dynamic = "force-static";
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const [products, brands] = await Promise.all([getAllProducts(), getBrands()]);
   return [
     { url: absoluteUrl("/"), priority: 1, changeFrequency: "weekly", lastModified: now },
     { url: absoluteUrl("/shop"), priority: .9, changeFrequency: "daily", lastModified: now },
@@ -33,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       lastModified: now,
     })),
-    ...getBrands().map((brand) => ({
+    ...brands.map((brand) => ({
       url: absoluteUrl(`/brands/${brand.toLowerCase()}`),
       priority: .7,
       changeFrequency: "weekly" as const,

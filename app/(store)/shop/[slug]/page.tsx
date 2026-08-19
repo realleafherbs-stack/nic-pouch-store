@@ -2,14 +2,17 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductDetail } from "@/components/product/product-detail";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getProduct, getProductsByIds, products } from "@/lib/catalog/local-repository";
+import { getAllProducts, getProduct, getProductsByIds } from "@/lib/catalog/local-repository";
 import { productVariantForSlug } from "@/lib/catalog/product-page-variant";
 import { productFaq, productSeoDescription, productSeoTitle, productStrengthLabel } from "@/lib/catalog/product-seo";
 import { absoluteUrl, breadcrumbSchema, defaultKeywords, organizationName, siteName } from "@/lib/seo";
 
-export function generateStaticParams() { return products.map(({ slug }) => ({ slug })); }
+export async function generateStaticParams() {
+  const products = await getAllProducts();
+  return products.map(({ slug }) => ({ slug }));
+}
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const product = getProduct(decodeURIComponent((await params).slug));
+  const product = await getProduct(decodeURIComponent((await params).slug));
   if (!product) return {};
   const seoName = productSeoTitle(product);
   const description = productSeoDescription(product);
@@ -47,11 +50,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const product = getProduct(decodeURIComponent((await params).slug));
+  const product = await getProduct(decodeURIComponent((await params).slug));
   if (!product) notFound();
   const curatedRelated = product.relatedProductIds?.length
-    ? getProductsByIds(product.relatedProductIds).filter((item) => item.id !== product.id)
+    ? (await getProductsByIds(product.relatedProductIds)).filter((item) => item.id !== product.id)
     : [];
+  const products = await getAllProducts();
   const sameBrand = products.filter((item) => item.id !== product.id && item.brand === product.brand);
   const sameStrengthOtherBrand = products.filter(
     (item) => item.id !== product.id && item.brand !== product.brand && item.strengthLevel === product.strengthLevel,

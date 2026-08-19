@@ -3,9 +3,10 @@ import { BrandShowcase } from "@/components/commerce/brand-showcase";
 import { HomeBlog } from "@/components/commerce/home-blog";
 import { QuickShop } from "@/components/commerce/quick-shop";
 import { ProductCard } from "@/components/product/product-card";
-import { products } from "@/lib/catalog/local-repository";
+import { getAllProducts } from "@/lib/catalog/local-repository";
 
 export default async function HomePage() {
+  const products = await getAllProducts();
   // Only pick products that actually have a photo — a fixed array position
   // (e.g. otherProducts[17]) made sense against the old fixed mock catalog,
   // but the CRM-synced catalog's order and composition can change on every

@@ -112,7 +112,7 @@ export async function POST(req: NextRequest) {
   // Prices always come from the current catalog, never from the client —
   // this catalog has quantity-tier pricing (buy 5/10 discounts), so a naive
   // client-supplied total could easily be wrong even without tampering.
-  const products = getProductsByIds(items.map((item) => item.productId));
+  const products = await getProductsByIds(items.map((item) => item.productId));
   if (products.length !== items.length) {
     return NextResponse.json({ error: "One or more products could not be found" }, { status: 400 });
   }

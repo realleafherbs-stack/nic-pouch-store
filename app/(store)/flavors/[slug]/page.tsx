@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ProductCard } from "@/components/product/product-card";
 import { JsonLd } from "@/components/seo/json-ld";
-import { products } from "@/lib/catalog/local-repository";
+import { getAllProducts } from "@/lib/catalog/local-repository";
 import { flavorCategories, productsForFlavor } from "@/lib/catalog/seo-categories";
 import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
 
@@ -19,6 +19,7 @@ export default async function FlavorPage({ params }: { params: Promise<{ slug: s
   const slug = (await params).slug as FlavorSlug;
   const category = flavorCategories[slug];
   if (!category) notFound();
+  const products = await getAllProducts();
   const items = productsForFlavor(products, slug);
   const breadcrumbs = breadcrumbSchema([{ name: "דף הבית", path: "/" }, { name: "חנות", path: "/shop" }, { name: category.title, path: `/flavors/${slug}` }]);
   const list = { "@type": "ItemList", name: category.title, numberOfItems: items.length, itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name, url: absoluteUrl(`/shop/${item.slug}`) })) };

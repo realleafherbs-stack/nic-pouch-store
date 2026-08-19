@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ShopPage() {
-  const items = listProducts();
+export default async function ShopPage() {
+  const items = await listProducts();
   return (
     <>
       <section className="shop-hero">

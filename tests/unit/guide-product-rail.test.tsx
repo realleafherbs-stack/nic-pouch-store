@@ -2,9 +2,10 @@ import { render, screen } from "@testing-library/react";
 import { expect, it } from "vitest";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { GuideProductRail } from "@/components/guides/guide-product-rail";
-import { products } from "@/lib/catalog/local-repository";
+import { getAllProducts } from "@/lib/catalog/local-repository";
 
-it("reuses the existing commerce product card for guide recommendations", () => {
+it("reuses the existing commerce product card for guide recommendations", async () => {
+  const products = await getAllProducts();
   render(
     <CartProvider>
       <GuideProductRail products={products.slice(0, 2)} />
