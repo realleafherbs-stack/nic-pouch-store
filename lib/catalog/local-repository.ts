@@ -20,7 +20,13 @@ async function fetchLiveProducts(): Promise<Product[]> {
   try {
     const res = await fetch(`${apiBaseUrl}/${encodeURIComponent(siteSlug)}/products`, {
       headers: { "x-api-key": apiKey, accept: "application/json" },
-      next: { revalidate: 60 },
+      // Tagged so the CRM's on-demand revalidate call (POST /api/revalidate)
+      // can expire this specific fetch's cache immediately via
+      // revalidateTag("products", { expire: 0 }) — revalidatePath alone
+      // marks the *page* stale but does not force this fetch's own 60s
+      // Data Cache entry to refresh early, so an agent edit would otherwise
+      // still wait out the full 60s regardless of the on-demand call.
+      next: { revalidate: 60, tags: ["products"] },
       signal: AbortSignal.timeout(10_000),
     });
     if (!res.ok) return fallbackProducts;
