@@ -28,6 +28,20 @@ it("adds a product directly from its card", () => {
   expect(screen.getByText("5 בעגלה")).toBeInTheDocument();
 });
 
+it("replaces a failed product image with a bounded brand fallback", () => {
+  const brokenImageProduct = {
+    ...products[0],
+    images: ["https://payper.example.com/should-now-apply.jpg"],
+  } as Product;
+
+  render(<CartProvider><ShopCatalog products={[brokenImageProduct]} /></CartProvider>);
+  const image = screen.getByRole("img", { name: "HQD מנטה" });
+  fireEvent.error(image);
+
+  expect(screen.queryByRole("img", { name: "HQD מנטה" })).not.toBeInTheDocument();
+  expect(screen.getByTestId("product-image-fallback")).toHaveTextContent("HQD");
+});
+
 it("lets shoppers add single units after adding a quantity tier", () => {
   render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
   const quantityGroups = screen.getAllByLabelText("בחירת כמות עבור HQD מנטה");
