@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/commerce/contact-form";
+import { getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "צור קשר", description: "יצירת קשר עם שירות הלקוחות של NIC POUCH.", alternates: { canonical: "/contact" } };
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = await getPageSeo("contact");
+  return {
+    title: seo.metaTitle || "צור קשר",
+    description: seo.metaDescription || "יצירת קשר עם שירות הלקוחות של NIC POUCH.",
+    alternates: { canonical: "/contact" },
+  };
+}
 
 export default function ContactPage() {
   return (

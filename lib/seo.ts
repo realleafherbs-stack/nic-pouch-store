@@ -61,6 +61,59 @@ export const websiteSchema = {
   publisher: { "@id": `${siteUrl}/#organization` },
 };
 
+export interface SiteSeo {
+  metaTitle: string | null;
+  metaDescription: string | null;
+  ogImage: string | null;
+}
+
+export interface PageSeo {
+  metaTitle: string | null;
+  metaDescription: string | null;
+  ogImage: string | null;
+}
+
+const CRM_URL = process.env.CRM_API_BASE_URL;
+const CRM_API_KEY = process.env.CRM_API_KEY;
+const CRM_SITE_SLUG = process.env.CRM_SITE_SLUG;
+
+function isJson(res: Response) {
+  return (res.headers.get("content-type") ?? "").includes("application/json");
+}
+
+// CRM-driven overrides, layered over the hardcoded defaults above — every
+// caller falls back to the existing static value when the CRM has nothing
+// set, so this is purely additive and never regresses SEO if unused.
+export async function getSiteSeo(): Promise<Partial<SiteSeo>> {
+  if (!CRM_URL || !CRM_API_KEY || !CRM_SITE_SLUG) return {};
+  try {
+    const res = await fetch(`${CRM_URL}/${CRM_SITE_SLUG}/seo`, {
+      headers: { "x-api-key": CRM_API_KEY },
+      next: { revalidate: 60 },
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok || !isJson(res)) return {};
+    return await res.json();
+  } catch {
+    return {};
+  }
+}
+
+export async function getPageSeo(page: string): Promise<Partial<PageSeo>> {
+  if (!CRM_URL || !CRM_API_KEY || !CRM_SITE_SLUG) return {};
+  try {
+    const res = await fetch(`${CRM_URL}/${CRM_SITE_SLUG}/seo/pages/${encodeURIComponent(page)}`, {
+      headers: { "x-api-key": CRM_API_KEY },
+      next: { revalidate: 60 },
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok || !isJson(res)) return {};
+    return await res.json();
+  } catch {
+    return {};
+  }
+}
+
 export function breadcrumbSchema(items: Array<{ name: string; path: string }>) {
   return {
     "@type": "BreadcrumbList",

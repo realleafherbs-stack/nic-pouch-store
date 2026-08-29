@@ -121,6 +121,12 @@ export async function POST(req: NextRequest) {
     return { product, quantity: item.quantity };
   });
 
+  for (const { product, quantity } of pricedItems) {
+    if (quantity > product.stock) {
+      return NextResponse.json({ error: `Insufficient stock: ${product.name}` }, { status: 400 });
+    }
+  }
+
   const itemsTotal = pricedItems.reduce((sum, { product, quantity }) => sum + linePrice(product, quantity), 0);
 
   let discount = 0;

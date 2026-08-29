@@ -5,14 +5,16 @@ import { GuideVisual } from "@/components/guides/guide-visual";
 import { JsonLd } from "@/components/seo/json-ld";
 import { articles } from "@/data/articles";
 import { getBlogs } from "@/lib/blog";
-import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
+import { absoluteUrl, breadcrumbSchema, getPageSeo } from "@/lib/seo";
 
-export const metadata = {
-  title: "NIC GUIDE — מדריכים על סנוס ושקיקי ניקוטין",
-  description:
-    "מדריכי NIC GUIDE על סנוס ושקיקי ניקוטין ללא טבק: עוצמות מ״ג, טעמים, מותגים ושימוש אחראי.",
-  alternates: { canonical: "/blog" },
-};
+export async function generateMetadata() {
+  const seo = await getPageSeo("blog");
+  return {
+    title: seo.metaTitle || "NIC GUIDE — מדריכים על סנוס ושקיקי ניקוטין",
+    description: seo.metaDescription || "מדריכי NIC GUIDE על סנוס ושקיקי ניקוטין ללא טבק: עוצמות מ״ג, טעמים, מותגים ושימוש אחראי.",
+    alternates: { canonical: "/blog" },
+  };
+}
 
 export default async function BlogPage() {
   const posts = await getBlogs();

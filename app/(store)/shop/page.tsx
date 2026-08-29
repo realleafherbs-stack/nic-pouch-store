@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import { ShopCatalog } from "@/components/commerce/shop-catalog";
 import { listProducts } from "@/lib/catalog/local-repository";
+import { getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "קניית סנוס ושקיקי ניקוטין אונליין",
-  description: "קנו סנוס ושקיקי ניקוטין ללא טבק לפי מותג, טעם, עוצמה וכמות. מבחר NOIS, PABLO, KILLA, CUBA ו־HQD ומשלוח מהיר.",
-  alternates: { canonical: "/shop" },
-  openGraph: {
-    title: "סנוס ושקיקי ניקוטין – כל המוצרים",
-    description: "בחרו שקיקי ניקוטין ללא טבק לפי מותג, טעם, עוצמה וכמות.",
-    url: "/shop",
-    images: [{ url: "/generated/shop-hero-fronts-only.png", alt: "מבחר פאוצ׳י ניקוטין בחנות NIC POUCH" }],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = await getPageSeo("shop");
+  const title = seo.metaTitle || "קניית סנוס ושקיקי ניקוטין אונליין";
+  const description = seo.metaDescription || "קנו סנוס ושקיקי ניקוטין ללא טבק לפי מותג, טעם, עוצמה וכמות. מבחר NOIS, PABLO, KILLA, CUBA ו־HQD ומשלוח מהיר.";
+  return {
+    title,
+    description,
+    alternates: { canonical: "/shop" },
+    openGraph: {
+      title: seo.metaTitle || "סנוס ושקיקי ניקוטין – כל המוצרים",
+      description: seo.metaDescription || "בחרו שקיקי ניקוטין ללא טבק לפי מותג, טעם, עוצמה וכמות.",
+      url: "/shop",
+      images: [{ url: seo.ogImage || "/generated/shop-hero-fronts-only.png", alt: "מבחר פאוצ׳י ניקוטין בחנות NIC POUCH" }],
+    },
+  };
+}
 
 export default async function ShopPage() {
   const items = await listProducts();

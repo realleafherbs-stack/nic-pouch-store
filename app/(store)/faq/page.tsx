@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
 import { InfoHero } from "@/components/info/info-hero";
+import { getPageSeo } from "@/lib/seo";
 
 const questions = [
   ["מה ההבדל בין סנוס לשקיקי ניקוטין?", "סנוס מסורתי מכיל טבק. המוצרים באתר הם שקיקי ניקוטין ללא טבק, אלא אם צוין אחרת."],
@@ -9,7 +10,14 @@ const questions = [
   ["איך בוחרים חוזק?", "בודקים את כמות הניקוטין ואת סימון היצרן. כשלא בטוחים, מתחילים בעוצמה נמוכה יותר."],
 ];
 
-export const metadata: Metadata = { title: "שאלות נפוצות על סנוס ושקיקי ניקוטין", description: "תשובות על מוצרים ללא טבק, חוזק, משלוחים, שימוש ואחסון.", alternates: { canonical: "/faq" } };
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = await getPageSeo("faq");
+  return {
+    title: seo.metaTitle || "שאלות נפוצות על סנוס ושקיקי ניקוטין",
+    description: seo.metaDescription || "תשובות על מוצרים ללא טבק, חוזק, משלוחים, שימוש ואחסון.",
+    alternates: { canonical: "/faq" },
+  };
+}
 
 export default function FaqPage() {
   const schema = { "@type": "FAQPage", mainEntity: questions.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) };

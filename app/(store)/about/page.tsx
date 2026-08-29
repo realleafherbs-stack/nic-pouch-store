@@ -3,8 +3,16 @@ import { Sparkles } from "lucide-react";
 import { InfoChecklist } from "@/components/info/info-checklist";
 import { InfoHero } from "@/components/info/info-hero";
 import { InfoSection } from "@/components/info/info-section";
+import { getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "אודות NIC POUCH", description: "מי עומד מאחורי NIC POUCH, כיצד נבחר המידע באתר ומהי מחויבותנו לשירות ולשקיפות.", alternates: { canonical: "/about" } };
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = await getPageSeo("about");
+  return {
+    title: seo.metaTitle || "אודות NIC POUCH",
+    description: seo.metaDescription || "מי עומד מאחורי NIC POUCH, כיצד נבחר המידע באתר ומהי מחויבותנו לשירות ולשקיפות.",
+    alternates: { canonical: "/about" },
+  };
+}
 
 export default function AboutPage() {
   return (
