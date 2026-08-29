@@ -5,7 +5,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-בלוברי-25-מג",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-25-%D7%9E%D7%92",
     "destination": "/shop/nois-25-4li3vqh6",
     "statusCode": 301
   },
@@ -15,12 +15,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/killa-נענע-39276",
+    "source": "/shop/killa-%D7%A0%D7%A2%D7%A0%D7%A2-39276",
     "destination": "/shop/killa-16-vrkr3nm1",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-killa-נענע-16-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-killa-%D7%A0%D7%A2%D7%A0%D7%A2-16-%D7%9E%D7%92",
     "destination": "/shop/killa-16-vrkr3nm1",
     "statusCode": 301
   },
@@ -30,7 +30,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-וויט-בלוברי-16-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%99%D7%98-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-16-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-16-1-v7hrd4le",
     "statusCode": 301
   },
@@ -40,12 +40,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-בריזה-טרופית-31914",
+    "source": "/shop/hqd-%D7%91%D7%A8%D7%99%D7%96%D7%94-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%AA-31914",
     "destination": "/shop/hqd-12-w83lsoza",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-בריזה-טרופית-12-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%A8%D7%99%D7%96%D7%94-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%AA-12-%D7%9E%D7%92",
     "destination": "/shop/hqd-12-w83lsoza",
     "statusCode": 301
   },
@@ -55,12 +55,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-מנטה-31934",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%98%D7%94-31934",
     "destination": "/shop/hqd-6-flgo2s17",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-מנטה-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%98%D7%94-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-flgo2s17",
     "statusCode": 301
   },
@@ -70,12 +70,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-דובדבן-31940",
+    "source": "/shop/hqd-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-31940",
     "destination": "/shop/hqd-6-785svbns",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-דובדבן-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-785svbns",
     "statusCode": 301
   },
@@ -85,12 +85,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-אוכמניות-31924",
+    "source": "/shop/hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-31924",
     "destination": "/shop/hqd-12-7d6kdzf0",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-אוכמניות-12-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-12-%D7%9E%D7%92",
     "destination": "/shop/hqd-12-7d6kdzf0",
     "statusCode": 301
   },
@@ -100,12 +100,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פסיפלורה-מתוקה-31918",
+    "source": "/shop/hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-31918",
     "destination": "/shop/hqd-12-61rd99sx",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-פסיפלורה-מתוקה-12-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-12-%D7%9E%D7%92",
     "destination": "/shop/hqd-12-61rd99sx",
     "statusCode": 301
   },
@@ -115,12 +115,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-לימונדה-כחולה-31951",
+    "source": "/shop/hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-31951",
     "destination": "/shop/hqd-6-8dmddldn",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-לימונדה-כחולה-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-8dmddldn",
     "statusCode": 301
   },
@@ -130,12 +130,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-אוכמניות-32787",
+    "source": "/shop/hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-32787",
     "destination": "/shop/hqd-15-v3ucbozj",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-אוכמניות-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-v3ucbozj",
     "statusCode": 301
   },
@@ -145,7 +145,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-אוכמניות-25-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-25-%D7%9E%D7%92",
     "destination": "/shop/hqd-25-a53z8dfc",
     "statusCode": 301
   },
@@ -160,7 +160,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-בלוברי-אקסטרים-50-מג",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92",
     "destination": "/shop/nois-50-zrcoow46",
     "statusCode": 301
   },
@@ -170,7 +170,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-בלאק-בלוברי-43-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-43-1-p0nr5y67",
     "statusCode": 301
   },
@@ -180,7 +180,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-בלאק-דאבל-פרש-43-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%93%D7%90%D7%91%D7%9C-%D7%A4%D7%A8%D7%A9-43-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-43-1-p8oycge8",
     "statusCode": 301
   },
@@ -190,7 +190,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-bit-קולד-מינט-30-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-bit-%D7%A7%D7%95%D7%9C%D7%93-%D7%9E%D7%99%D7%A0%D7%98-30-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/bit-30-1-um4wph4d",
     "statusCode": 301
   },
@@ -200,7 +200,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-בלאק-קולד-דריי-43-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%A7%D7%95%D7%9C%D7%93-%D7%93%D7%A8%D7%99%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-43-1-zbx4sx45",
     "statusCode": 301
   },
@@ -210,7 +210,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-וויט-גרייפ-16-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%99%D7%98-%D7%92%D7%A8%D7%99%D7%99%D7%A4-16-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-16-1-aq1qql0y",
     "statusCode": 301
   },
@@ -220,12 +220,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-מנטה-20327",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%98%D7%94-20327",
     "destination": "/shop/hqd-25-93h3utk6",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-מנטה-25-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%98%D7%94-25-%D7%9E%D7%92",
     "destination": "/shop/hqd-25-93h3utk6",
     "statusCode": 301
   },
@@ -235,12 +235,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/killa-אבטיח-39273",
+    "source": "/shop/killa-%D7%90%D7%91%D7%98%D7%99%D7%97-39273",
     "destination": "/shop/killa-16-p603ix4w",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-killa-אבטיח-16-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-killa-%D7%90%D7%91%D7%98%D7%99%D7%97-16-%D7%9E%D7%92",
     "destination": "/shop/killa-16-p603ix4w",
     "statusCode": 301
   },
@@ -250,12 +250,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-פטל-כחול-39266",
+    "source": "/shop/pablo-%D7%A4%D7%98%D7%9C-%D7%9B%D7%97%D7%95%D7%9C-39266",
     "destination": "/shop/pablo-50-yts47il6",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-pablo-פטל-כחול-50-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%A4%D7%98%D7%9C-%D7%9B%D7%97%D7%95%D7%9C-50-%D7%9E%D7%92",
     "destination": "/shop/pablo-50-yts47il6",
     "statusCode": 301
   },
@@ -265,12 +265,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-מנטה-31912",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%98%D7%94-31912",
     "destination": "/shop/hqd-12-akfqbt31",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-מנטה-12מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%98%D7%94-12%D7%9E%D7%92",
     "destination": "/shop/hqd-12-akfqbt31",
     "statusCode": 301
   },
@@ -280,7 +280,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-rabbit-בד-אפל-50-מג-1-יח-1",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%91%D7%93-%D7%90%D7%A4%D7%9C-50-%D7%9E%D7%92-1-%D7%99%D7%97-1",
     "destination": "/shop/rabbit-50-1-1-jkhsl05x",
     "statusCode": 301
   },
@@ -290,12 +290,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-פסיפלורה-מתוקה-20330",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-20330",
     "destination": "/shop/hqd-25-ntumae94",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-פסיפלורה-מתוקה-25-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-25-%D7%9E%D7%92",
     "destination": "/shop/hqd-25-ntumae94",
     "statusCode": 301
   },
@@ -305,7 +305,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-rabbit-קולה-50-מג-1-יח-1",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%A7%D7%95%D7%9C%D7%94-50-%D7%9E%D7%92-1-%D7%99%D7%97-1",
     "destination": "/shop/rabbit-50-1-1-iy6lg0jp",
     "statusCode": 301
   },
@@ -320,12 +320,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-ענבים-קרח-45584",
+    "source": "/shop/nois-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%A7%D7%A8%D7%97-45584",
     "destination": "/shop/nois-25-22-yhu3mbvc",
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-ענבים-קרח-25-מג-22-יח",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%A7%D7%A8%D7%97-25-%D7%9E%D7%92-22-%D7%99%D7%97",
     "destination": "/shop/nois-25-22-yhu3mbvc",
     "statusCode": 301
   },
@@ -340,12 +340,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-מנטה-45583",
+    "source": "/shop/nois-%D7%9E%D7%A0%D7%98%D7%94-45583",
     "destination": "/shop/nois-25-22-uq5h9vep",
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-מנטה-25-מג-22-יח",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%9E%D7%A0%D7%98%D7%94-25-%D7%9E%D7%92-22-%D7%99%D7%97",
     "destination": "/shop/nois-25-22-uq5h9vep",
     "statusCode": 301
   },
@@ -360,12 +360,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-מנטה-45589",
+    "source": "/shop/nois-%D7%9E%D7%A0%D7%98%D7%94-45589",
     "destination": "/shop/nois-8-30-dzqfaxtg",
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-מנטה-8-מג-30-יח",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%9E%D7%A0%D7%98%D7%94-8-%D7%9E%D7%92-30-%D7%99%D7%97",
     "destination": "/shop/nois-8-30-dzqfaxtg",
     "statusCode": 301
   },
@@ -375,7 +375,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-rabbit-בלו-אייס-26-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%91%D7%9C%D7%95-%D7%90%D7%99%D7%99%D7%A1-26-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/rabbit-26-1-o051h9y9",
     "statusCode": 301
   },
@@ -385,12 +385,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/killa-מנטה-39268",
+    "source": "/shop/killa-%D7%9E%D7%A0%D7%98%D7%94-39268",
     "destination": "/shop/killa-16-gv45iinc",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-killa-מנטה-16-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-killa-%D7%9E%D7%A0%D7%98%D7%94-16-%D7%9E%D7%92",
     "destination": "/shop/killa-16-gv45iinc",
     "statusCode": 301
   },
@@ -400,12 +400,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-מנגו-20325",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%92%D7%95-20325",
     "destination": "/shop/hqd-15-w7nfqxfj",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-מנגו-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%92%D7%95-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-w7nfqxfj",
     "statusCode": 301
   },
@@ -415,7 +415,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-ווטרמלון-16-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%98%D7%A8%D7%9E%D7%9C%D7%95%D7%9F-16-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-16-1-7dt94ytb",
     "statusCode": 301
   },
@@ -425,12 +425,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-באבל-גאם-31952",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-31952",
     "destination": "/shop/hqd-6-uis3iji7",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-באבל-גאם-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-uis3iji7",
     "statusCode": 301
   },
@@ -440,12 +440,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פסיפלורה-מתוקה-31936",
+    "source": "/shop/hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-31936",
     "destination": "/shop/hqd-6-57kx2elx",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-פסיפלורה-מתוקה-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-57kx2elx",
     "statusCode": 301
   },
@@ -460,12 +460,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-דובדבן-קרח-45587",
+    "source": "/shop/nois-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%A7%D7%A8%D7%97-45587",
     "destination": "/shop/nois-25-22-1zopqi99",
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-דובדבן-קרח-25-מג-22-יח",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%A7%D7%A8%D7%97-25-%D7%9E%D7%92-22-%D7%99%D7%97",
     "destination": "/shop/nois-25-22-1zopqi99",
     "statusCode": 301
   },
@@ -480,12 +480,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-ענבים-אקסטרים-45585",
+    "source": "/shop/nois-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-45585",
     "destination": "/shop/nois-50-27-gx51u3g5",
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-ענבים-אקסטרים-50-מג-27-יח",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92-27-%D7%99%D7%97",
     "destination": "/shop/nois-50-27-gx51u3g5",
     "statusCode": 301
   },
@@ -500,7 +500,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-מנטה-אקסטרים-50-מג",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%9E%D7%A0%D7%98%D7%94-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92",
     "destination": "/shop/nois-50-0um3cots",
     "statusCode": 301
   },
@@ -510,12 +510,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-מנגו-31920",
+    "source": "/shop/hqd-%D7%9E%D7%A0%D7%92%D7%95-31920",
     "destination": "/shop/hqd-12-12h4zjhs",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-מנגו-12-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%92%D7%95-12-%D7%9E%D7%92",
     "destination": "/shop/hqd-12-12h4zjhs",
     "statusCode": 301
   },
@@ -525,7 +525,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-וויט-קולד-דריי-16-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%99%D7%98-%D7%A7%D7%95%D7%9C%D7%93-%D7%93%D7%A8%D7%99%D7%99-16-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-16-1-7k10r269",
     "statusCode": 301
   },
@@ -540,12 +540,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-דובדבן-אקסטרים-43589",
+    "source": "/shop/nois-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-43589",
     "destination": "/shop/nois-50-27-48z2x37b",
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-דובדבן-אקסטרים-50-מג-27-יח",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92-27-%D7%99%D7%97",
     "destination": "/shop/nois-50-27-48z2x37b",
     "statusCode": 301
   },
@@ -555,7 +555,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-וויט-צרי-16-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%99%D7%98-%D7%A6%D7%A8%D7%99-16-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-16-1-oeu2kmz2",
     "statusCode": 301
   },
@@ -570,7 +570,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-קול-חזק-35-מל",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%A7%D7%95%D7%9C-%D7%97%D7%96%D7%A7-35-%D7%9E%D7%9C",
     "destination": "/shop/nois-35-yt5cq20r",
     "statusCode": 301
   },
@@ -580,12 +580,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-באבל-גאם-31950",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-31950",
     "destination": "/shop/hqd-12-e2tbhxun",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-באבל-גאם-12מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-12%D7%9E%D7%92",
     "destination": "/shop/hqd-12-e2tbhxun",
     "statusCode": 301
   },
@@ -595,12 +595,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-בריזה-טרופית-31953",
+    "source": "/shop/hqd-%D7%91%D7%A8%D7%99%D7%96%D7%94-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%AA-31953",
     "destination": "/shop/hqd-6-1klyk74b",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-בריזה-טרופית-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%A8%D7%99%D7%96%D7%94-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%AA-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-1klyk74b",
     "statusCode": 301
   },
@@ -610,12 +610,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-פטל-שחור-31926",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-31926",
     "destination": "/shop/hqd-12-g6ahevm1",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-פטל-שחור-12-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-12-%D7%9E%D7%92",
     "destination": "/shop/hqd-12-g6ahevm1",
     "statusCode": 301
   },
@@ -625,12 +625,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-אוכמניות-31930",
+    "source": "/shop/hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-31930",
     "destination": "/shop/hqd-6-699ei1rt",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-אוכמניות-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-699ei1rt",
     "statusCode": 301
   },
@@ -640,12 +640,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-פסיפלורה-39307",
+    "source": "/shop/pablo-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-39307",
     "destination": "/shop/pablo-50-zjbi2hjc",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-pablo-פסיפלורה-50-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-50-%D7%9E%D7%92",
     "destination": "/shop/pablo-50-zjbi2hjc",
     "statusCode": 301
   },
@@ -660,12 +660,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-דובדבן-קרח-45586",
+    "source": "/shop/nois-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%A7%D7%A8%D7%97-45586",
     "destination": "/shop/nois-8-30-y9bezbpw",
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-דובדבן-קרח-8-מג-30-יח",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%A7%D7%A8%D7%97-8-%D7%9E%D7%92-30-%D7%99%D7%97",
     "destination": "/shop/nois-8-30-y9bezbpw",
     "statusCode": 301
   },
@@ -675,12 +675,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-מנטה-39271",
+    "source": "/shop/pablo-%D7%9E%D7%A0%D7%98%D7%94-39271",
     "destination": "/shop/pablo-50-1lcxnzqx",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-pablo-מנטה-50-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%9E%D7%A0%D7%98%D7%94-50-%D7%9E%D7%92",
     "destination": "/shop/pablo-50-1lcxnzqx",
     "statusCode": 301
   },
@@ -690,12 +690,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/killa-מנגו-אייס-39270",
+    "source": "/shop/killa-%D7%9E%D7%A0%D7%92%D7%95-%D7%90%D7%99%D7%99%D7%A1-39270",
     "destination": "/shop/killa-16-9surkqdp",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-killa-מנגו-אייס-16-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-killa-%D7%9E%D7%A0%D7%92%D7%95-%D7%90%D7%99%D7%99%D7%A1-16-%D7%9E%D7%92",
     "destination": "/shop/killa-16-9surkqdp",
     "statusCode": 301
   },
@@ -705,12 +705,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/killa-אוכמניות-39275",
+    "source": "/shop/killa-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-39275",
     "destination": "/shop/killa-16-wfcwffqb",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-killa-אוכמניות-16-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-killa-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-16-%D7%9E%D7%92",
     "destination": "/shop/killa-16-wfcwffqb",
     "statusCode": 301
   },
@@ -720,7 +720,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-בלאק-צרי-43-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%A6%D7%A8%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-43-1-d5g4zwc8",
     "statusCode": 301
   },
@@ -730,7 +730,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-בלאק-ווטרמלון-43-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%95%D7%95%D7%98%D7%A8%D7%9E%D7%9C%D7%95%D7%9F-43-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-43-1-nr60z4fz",
     "statusCode": 301
   },
@@ -740,7 +740,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-rabbit-בלוברי-26-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-26-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/rabbit-26-1-bdikfkz0",
     "statusCode": 301
   },
@@ -750,7 +750,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-rabbit-פפרמינט-50-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%A4%D7%A4%D7%A8%D7%9E%D7%99%D7%A0%D7%98-50-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/rabbit-50-1-ri6s4gfi",
     "statusCode": 301
   },
@@ -760,12 +760,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-בריזה-טרופית-20328",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%A8%D7%99%D7%96%D7%94-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%AA-20328",
     "destination": "/shop/hqd-25-24perz32",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-בריזה-טרופית-25-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%A8%D7%99%D7%96%D7%94-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%AA-25-%D7%9E%D7%92",
     "destination": "/shop/hqd-25-24perz32",
     "statusCode": 301
   },
@@ -775,12 +775,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-באבל-גאם-32788",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-32788",
     "destination": "/shop/hqd-15-zgo7hsfe",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-באבל-גאם-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-zgo7hsfe",
     "statusCode": 301
   },
@@ -790,12 +790,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-פטל-שחור-32779",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-32779",
     "destination": "/shop/hqd-15-z92obsbm",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-פטל-שחור-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-z92obsbm",
     "statusCode": 301
   },
@@ -805,12 +805,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-מנגו-20331",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%92%D7%95-20331",
     "destination": "/shop/hqd-25-se9wvvtj",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-מנגו-25-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%92%D7%95-25-%D7%9E%D7%92",
     "destination": "/shop/hqd-25-se9wvvtj",
     "statusCode": 301
   },
@@ -820,12 +820,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-בריזה-טרופית-20329",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%A8%D7%99%D7%96%D7%94-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%AA-20329",
     "destination": "/shop/hqd-15-vlpnx8uh",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-בריזה-טרופית-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%A8%D7%99%D7%96%D7%94-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%AA-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-vlpnx8uh",
     "statusCode": 301
   },
@@ -835,12 +835,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-פסיפלורה-מתוקה-20326",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-20326",
     "destination": "/shop/hqd-15-y6jozgmi",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-פסיפלורה-מתוקה-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-y6jozgmi",
     "statusCode": 301
   },
@@ -850,12 +850,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-מנטה-20322",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%98%D7%94-20322",
     "destination": "/shop/hqd-15-efg6diea",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-מנטה-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%98%D7%94-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-efg6diea",
     "statusCode": 301
   },
@@ -865,12 +865,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-לימונדה-כחולה-31916",
+    "source": "/shop/hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-31916",
     "destination": "/shop/hqd-12-pg08v08w",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-לימונדה-כחולה-12-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-12-%D7%9E%D7%92",
     "destination": "/shop/hqd-12-pg08v08w",
     "statusCode": 301
   },
@@ -885,12 +885,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-מנטה-אקסטרים-45588",
+    "source": "/shop/nois-%D7%9E%D7%A0%D7%98%D7%94-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-45588",
     "destination": "/shop/nois-50-27-qe4rq0lz",
     "statusCode": 301
   },
   {
-    "source": "/shop/נויס-מנטה-אקסטרים-50-מג-27-יח",
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%9E%D7%A0%D7%98%D7%94-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92-27-%D7%99%D7%97",
     "destination": "/shop/nois-50-27-qe4rq0lz",
     "statusCode": 301
   },
@@ -900,12 +900,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-ענבים-אייס-39269",
+    "source": "/shop/pablo-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%99%D7%99%D7%A1-39269",
     "destination": "/shop/pablo-50-nuk55997",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-pablo-ענבים-אייס-50-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%99%D7%99%D7%A1-50-%D7%9E%D7%92",
     "destination": "/shop/pablo-50-nuk55997",
     "statusCode": 301
   },
@@ -915,12 +915,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/killa-לימונדה-39274",
+    "source": "/shop/killa-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-39274",
     "destination": "/shop/killa-16-u05bqriw",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-killa-לימונדה-16-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-killa-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-16-%D7%9E%D7%92",
     "destination": "/shop/killa-16-u05bqriw",
     "statusCode": 301
   },
@@ -930,12 +930,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-קיווי-39264",
+    "source": "/shop/pablo-%D7%A7%D7%99%D7%95%D7%95%D7%99-39264",
     "destination": "/shop/pablo-50-oqley7mr",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-pablo-קיווי-50-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%A7%D7%99%D7%95%D7%95%D7%99-50-%D7%9E%D7%92",
     "destination": "/shop/pablo-50-oqley7mr",
     "statusCode": 301
   },
@@ -945,12 +945,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-טרופיקל-פאנצ-39267",
+    "source": "/shop/pablo-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%A7%D7%9C-%D7%A4%D7%90%D7%A0%D7%A6-39267",
     "destination": "/shop/pablo-50-k218igbc",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-pablo-טרופיקל-פאנצ-50-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%A7%D7%9C-%D7%A4%D7%90%D7%A0%D7%A6-50-%D7%9E%D7%92",
     "destination": "/shop/pablo-50-k218igbc",
     "statusCode": 301
   },
@@ -960,12 +960,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-פטל-שחור-31932",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-31932",
     "destination": "/shop/hqd-6-vdc0mid9",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-פטל-שחור-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-vdc0mid9",
     "statusCode": 301
   },
@@ -975,7 +975,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-וויט-דאבל-פרש-16-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%99%D7%98-%D7%93%D7%90%D7%91%D7%9C-%D7%A4%D7%A8%D7%A9-16-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-16-1-hutut9mm",
     "statusCode": 301
   },
@@ -985,12 +985,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-דובדבן-31928",
+    "source": "/shop/hqd-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-31928",
     "destination": "/shop/hqd-12-xl5xu2f6",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-דובדבן-12-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-12-%D7%9E%D7%92",
     "destination": "/shop/hqd-12-xl5xu2f6",
     "statusCode": 301
   },
@@ -1000,12 +1000,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-מנגו-31938",
+    "source": "/shop/hqd-%D7%9E%D7%A0%D7%92%D7%95-31938",
     "destination": "/shop/hqd-6-r3xwdpvv",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-מנגו-6-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%92%D7%95-6-%D7%9E%D7%92",
     "destination": "/shop/hqd-6-r3xwdpvv",
     "statusCode": 301
   },
@@ -1015,12 +1015,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-דובדבן-31956",
+    "source": "/shop/hqd-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-31956",
     "destination": "/shop/hqd-15-kkume4oq",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-hqd-דובדבן-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-kkume4oq",
     "statusCode": 301
   },
@@ -1030,12 +1030,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-מנגו-אייס-39265",
+    "source": "/shop/pablo-%D7%9E%D7%A0%D7%92%D7%95-%D7%90%D7%99%D7%99%D7%A1-39265",
     "destination": "/shop/pablo-50-yindnwn4",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-pablo-מנגו-אייס-50-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%9E%D7%A0%D7%92%D7%95-%D7%90%D7%99%D7%99%D7%A1-50-%D7%9E%D7%92",
     "destination": "/shop/pablo-50-yindnwn4",
     "statusCode": 301
   },
@@ -1045,7 +1045,7 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוצ-ניקוטין-cuba-בלאק-גרייפ-43-מג-1-יח",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%92%D7%A8%D7%99%D7%99%D7%A4-43-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-43-1-8q8odcjx",
     "statusCode": 301
   },
@@ -1055,12 +1055,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-לימונדה-כחולה-20324",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-20324",
     "destination": "/shop/hqd-15-4dclyj1y",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-לימונדה-כחולה-15-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-15-%D7%9E%D7%92",
     "destination": "/shop/hqd-15-4dclyj1y",
     "statusCode": 301
   },
@@ -1070,12 +1070,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-באבל-גאם-31646",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-31646",
     "destination": "/shop/hqd-25-ehxmiwqm",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-באבל-גאם-25-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-25-%D7%9E%D7%92",
     "destination": "/shop/hqd-25-ehxmiwqm",
     "statusCode": 301
   },
@@ -1085,12 +1085,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-לימון-מנטה-31647",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9C%D7%99%D7%9E%D7%95%D7%9F-%D7%9E%D7%A0%D7%98%D7%94-31647",
     "destination": "/shop/hqd-25-c8jklxjp",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-לימון-מנטה-25-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%9F-%D7%9E%D7%A0%D7%98%D7%94-25-%D7%9E%D7%92",
     "destination": "/shop/hqd-25-c8jklxjp",
     "statusCode": 301
   },
@@ -1100,12 +1100,12 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-פאוץ-ניקוטין-לימונדה-כחולה-20323",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-20323",
     "destination": "/shop/hqd-25-811xaamf",
     "statusCode": 301
   },
   {
-    "source": "/shop/פאוץ-ניקוטין-hqd-לימונדה-כחולה-25-מג",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-25-%D7%9E%D7%92",
     "destination": "/shop/hqd-25-811xaamf",
     "statusCode": 301
   },

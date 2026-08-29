@@ -35,6 +35,17 @@ describe("product redirects", () => {
     }]);
   });
 
+  it("percent-encodes non-ASCII legacy paths for Vercel's exact-match engine", () => {
+    expect(buildProductRedirects([{
+      slug: "nois-blueberry-25",
+      legacySlugs: ["נויס-בלוברי-25-מג"],
+    }])).toEqual([{
+      source: "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-25-%D7%9E%D7%92",
+      destination: "/shop/nois-blueberry-25",
+      statusCode: 301,
+    }]);
+  });
+
   it("prepares canonical CRM updates only when the saved URL is stale", () => {
     expect(buildCanonicalUpdates([
       { id: "one", handle: "new-handle", canonicalUrl: "https://nicpouch.co.il/shop/old" },
