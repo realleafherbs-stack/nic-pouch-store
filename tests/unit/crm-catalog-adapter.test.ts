@@ -34,6 +34,10 @@ describe("CRM catalog adapter", () => {
       gtin: "729000000001",
       stockQuantity: 12,
       description: "תיאור מוצר מאושר מה־CRM",
+      features: ["ללא טבק", "50 מ״ג לפי סימון האריזה"],
+      cardFeatures: ["50 מ״ג", "דובדבן אקסטרים"],
+      usageInstructions: "יש לפעול לפי הוראות היצרן ולשמור הרחק מילדים.",
+      warrantyInfo: "החזרות בהתאם לתקנון האתר.",
       metaTitle: "NOIS דובדבן אקסטרים | שקיקי ניקוטין",
       metaDescription: "תיאור מטא ייחודי ומאושר למוצר.",
       ogImage: "https://cdn.example.com/nois-og.webp",
@@ -69,11 +73,15 @@ describe("CRM catalog adapter", () => {
       images: ["https://cdn.example.com/nois-front.webp", "https://cdn.example.com/nois-side.webp"],
       categories: ["סנוס NOIS"],
       description: "תיאור מוצר מאושר מה־CRM",
+      features: [{ title: "ללא טבק" }, { title: "50 מ״ג לפי סימון האריזה" }],
+      cardFeatures: ["50 מ״ג", "דובדבן אקסטרים"],
+      usageInstructions: ["יש לפעול לפי הוראות היצרן ולשמור הרחק מילדים."],
+      warrantyInfo: ["החזרות בהתאם לתקנון האתר."],
       metaTitle: "NOIS דובדבן אקסטרים | שקיקי ניקוטין",
       metaDescription: "תיאור מטא ייחודי ומאושר למוצר.",
       ogImage: "https://cdn.example.com/nois-og.webp",
       focusKeyword: "שקיקי ניקוטין NOIS",
-      canonicalUrl: "/shop/nois-cherry-ice",
+      canonicalUrl: "/shop/nois-cherry-ice-crm-1",
       indexable: false,
       gtin: "729000000001",
     })]);
@@ -138,6 +146,40 @@ describe("CRM catalog adapter", () => {
     ]);
 
     expect(products).toHaveLength(2);
+    expect(products[0].slug).toBe("hqd-6-hqd-a");
     expect(products[0].slug).not.toEqual(products[1].slug);
+  });
+
+  it("moves an old canonical slug into legacy redirects and canonicalizes the current handle", () => {
+    const [product] = mapCrmProducts([{
+      id: "crm-slug",
+      handle: "nois-blueberry-extreme-50-mg",
+      name: "NOIS Blueberry Extreme 50 mg",
+      price: 30,
+      canonicalUrl: "https://nicpouch.co.il/shop/50-zrcoow46",
+      attributes: { packSize: 1 },
+    }]);
+
+    expect(product.canonicalUrl).toBe("/shop/nois-blueberry-extreme-50-mg-crm-slug");
+    expect(product.legacySlugs).toEqual(["50-zrcoow46"]);
+  });
+
+  it("preserves known legacy redirects after the CRM canonical has been corrected", () => {
+    const selected = selectCatalogForSync([{
+      ...currentCatalog[0],
+      slug: "old-readable-handle",
+      sku: "7290000000999",
+      legacySlugs: ["old-opaque-handle"],
+    }], [{
+      id: "crm-updated",
+      handle: "new-readable-handle",
+      name: "NOIS Updated",
+      price: 30,
+      payperSku: "7290000000999",
+      canonicalUrl: "https://nicpouch.co.il/shop/new-readable-handle",
+      attributes: { packSize: 1 },
+    }]);
+
+    expect(selected[0].legacySlugs).toEqual(["old-opaque-handle", "new-readable-handle", "old-readable-handle"]);
   });
 });

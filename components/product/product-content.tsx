@@ -7,6 +7,12 @@ import { strengthLabels } from "./product-facts";
 export function ProductContent({ product }: { product: Product }) {
   const strength = product.strengthLevel ? strengthLabels[product.strengthLevel] : "לפי סימון היצרן";
   const faq = [...productFaq(product), ...(product.faq ?? [])];
+  const usageInstructions = Array.isArray(product.usageInstructions)
+    ? product.usageInstructions
+    : product.usageInstructions ? [product.usageInstructions] : [];
+  const warrantyInfo = Array.isArray(product.warrantyInfo)
+    ? product.warrantyInfo
+    : product.warrantyInfo ? [product.warrantyInfo] : [];
 
   return (
     <section className="pd-content container" aria-label="מידע על המוצר">
@@ -27,9 +33,10 @@ export function ProductContent({ product }: { product: Product }) {
           <h2>תכונות נוספות</h2>
           <ul>
             {product.cardFeatures?.map((feature) => <li key={feature}>{feature}</li>)}
-            {product.features?.map((feature) => (
-              <li key={feature.title}>{feature.subtitle ? `${feature.title} — ${feature.subtitle}` : feature.title}</li>
-            ))}
+            {product.features?.map((feature) => {
+              const normalized = typeof feature === "string" ? { title: feature } : feature;
+              return <li key={normalized.title}>{normalized.subtitle ? `${normalized.title} — ${normalized.subtitle}` : normalized.title}</li>;
+            })}
           </ul>
         </div>
       ) : null}
@@ -61,13 +68,13 @@ export function ProductContent({ product }: { product: Product }) {
           </>
         ) : null}
         <h3>שימוש ואחסון</h3>
-        {product.usageInstructions?.length
-          ? <ul>{product.usageInstructions.map((item) => <li key={item}>{item}</li>)}</ul>
+        {usageInstructions.length
+          ? <ul>{usageInstructions.map((item) => <li key={item}>{item}</li>)}</ul>
           : <p>יש לשמור במקום קריר ויבש והרחק מהישג ידם של ילדים ובעלי חיים.</p>}
-        {product.warrantyInfo?.length ? (
+        {warrantyInfo.length ? (
           <>
             <h3>אחריות ושירות</h3>
-            <ul>{product.warrantyInfo.map((item) => <li key={item}>{item}</li>)}</ul>
+            <ul>{warrantyInfo.map((item) => <li key={item}>{item}</li>)}</ul>
           </>
         ) : null}
         <h3>משלוחים והחזרות</h3>

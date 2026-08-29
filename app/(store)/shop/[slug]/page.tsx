@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       `סנוס ${product.brand}`,
       ...defaultKeywords,
     ].filter(Boolean),
-    alternates: { canonical: product.canonicalUrl ?? `/shop/${product.slug}` },
+    alternates: { canonical: `/shop/${product.slug}` },
     robots: product.indexable === false ? { index: false, follow: false } : undefined,
     openGraph: {
       type: "website",

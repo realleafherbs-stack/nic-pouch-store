@@ -99,6 +99,25 @@ it("contains the complete approved strength, policy, guide and four-FAQ content"
   expect(screen.queryByText(/באריזה סגורה/)).not.toBeInTheDocument();
 });
 
+it("renders the approved CRM product copy instead of generic placeholders", () => {
+  const enrichedProduct: Product = {
+    ...balancedProduct,
+    description: "תיאור ייחודי ומאומת שנכתב למוצר הזה.",
+    features: ["ללא טבק", "טעם דובדבן לפי סימון האריזה"],
+    usageInstructions: "הוראות שימוש ואחסון ייחודיות שאושרו ב־CRM.",
+    warrantyInfo: "מדיניות ההחזרה המאושרת למוצר.",
+  };
+
+  render(<CartProvider><ProductDetail product={enrichedProduct} related={[]} variant="balanced" /></CartProvider>);
+
+  expect(screen.getByText(enrichedProduct.description!)).toBeInTheDocument();
+  expect(screen.getByText(enrichedProduct.usageInstructions!)).toBeInTheDocument();
+  expect(screen.getByText(/מדיניות ההחזרה המאושרת למוצר/)).toBeInTheDocument();
+  for (const feature of enrichedProduct.features!) {
+    expect(screen.getByText(feature)).toBeInTheDocument();
+  }
+});
+
 it("omits thumbnails when the product has only one image", () => {
   render(<CartProvider><ProductDetail product={balancedProduct} related={[]} variant="balanced" /></CartProvider>);
 

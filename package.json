@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm sync:crm && next build",
+    "build": "pnpm sync:crm && node scripts/generate-product-redirects.mjs && next build",
     "sync:crm": "node --env-file-if-exists=.env.local scripts/sync-crm-catalog.mjs",
     "lint": "eslint .",
     "test": "vitest run",

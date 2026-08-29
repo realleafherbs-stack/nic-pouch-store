@@ -23,6 +23,7 @@ export interface ProductFaqItem {
 export interface Product {
   id: string;
   slug: string;
+  legacySlugs?: string[];
   sku: string;
   name: string;
   brand: string;
