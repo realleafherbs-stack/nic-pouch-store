@@ -104,3 +104,12 @@ it("omits thumbnails when the product has only one image", () => {
 
   expect(screen.queryByLabelText("תמונות המוצר")).not.toBeInTheDocument();
 });
+
+it("replaces a failed main product image with a bounded brand fallback", () => {
+  render(<CartProvider><ProductDetail product={{ ...product, images: ["https://invalid.example/image.jpg"] }} related={[]} /></CartProvider>);
+
+  fireEvent.error(screen.getByRole("img", { name: product.name }));
+
+  expect(screen.queryByRole("img", { name: product.name })).not.toBeInTheDocument();
+  expect(screen.getByTestId("product-detail-image-fallback")).toHaveTextContent("HQD");
+});

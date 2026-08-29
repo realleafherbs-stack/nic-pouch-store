@@ -11,6 +11,7 @@ const strengthLabels = { mild: "עדין", medium: "בינוני", strong: "חז
 
 export function ProductCard({ product }: { product: Product }) {
   const [selectedQuantity, setSelectedQuantity] = useState<PurchaseQuantity>(1);
+  const [imageFailed, setImageFailed] = useState(false);
   const { state, dispatch } = useCart();
   const cartQuantity = state.lines.find((line) => line.product.id === product.id)?.quantity ?? 0;
   const displayedQuantity = cartQuantity || selectedQuantity;
@@ -25,7 +26,9 @@ export function ProductCard({ product }: { product: Product }) {
       <Link href={`/shop/${product.slug}`} className="product-image">
         {product.badge && <span className="product-badge">{product.badge}</span>}
         {product.nicotineMg && <span className="strength-pill">{product.nicotineMg} מ״ג</span>}
-        {product.images[0] ? <img src={product.images[0]} alt={product.name} loading="lazy" /> : <span className="can-placeholder">{product.brand}</span>}
+        {product.images[0] && !imageFailed
+          ? <img src={product.images[0]} alt={product.name} loading="lazy" onError={() => setImageFailed(true)} />
+          : <span className="can-placeholder" data-testid="product-image-fallback">{product.brand}</span>}
       </Link>
       <div className="product-copy">
         <p className="eyebrow">{product.brand}</p>

@@ -22,6 +22,7 @@ interface ProductDetailProps {
 export function ProductDetail({ product, related, variant = "legacy" }: ProductDetailProps) {
   const images = product.images.length ? product.images.slice(0, 4) : [];
   const [activeImage, setActiveImage] = useState(images[0] ?? "");
+  const [imageFailed, setImageFailed] = useState(false);
 
   return (
     <div className={variant === "balanced" ? "pd-balanced" : undefined}>
@@ -32,12 +33,14 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
         <div className="pd-gallery">
           <div className="pd-image-stage">
             <ZoomIn className="pd-zoom" aria-hidden="true" />
-            {activeImage ? <img src={activeImage} alt={product.imageAlt || product.name} /> : <span className="can-placeholder">{product.brand}</span>}
+            {activeImage && !imageFailed
+              ? <img src={activeImage} alt={product.imageAlt || product.name} onError={() => setImageFailed(true)} />
+              : <span className="can-placeholder" data-testid="product-detail-image-fallback">{product.brand}</span>}
           </div>
           {images.length > 1 && (
             <div className="pd-thumbs" aria-label="תמונות המוצר">
               {images.map((image, index) => (
-                <button key={image} className={activeImage === image ? "active" : ""} onClick={() => setActiveImage(image)} aria-label={`הצגת תמונה ${index + 1} של ${product.name}`} aria-pressed={activeImage === image}>
+                <button key={image} className={activeImage === image ? "active" : ""} onClick={() => { setActiveImage(image); setImageFailed(false); }} aria-label={`הצגת תמונה ${index + 1} של ${product.name}`} aria-pressed={activeImage === image}>
                   <img src={image} alt="" />
                 </button>
               ))}
