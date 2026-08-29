@@ -8,6 +8,7 @@ import {
   productSeoTitle,
 } from "@/lib/catalog/product-seo";
 import { siteUrl } from "@/lib/seo";
+import sitemap from "@/app/sitemap";
 
 describe("SEO foundations", () => {
   let products: Product[];
@@ -59,5 +60,27 @@ describe("SEO foundations", () => {
       expect(article.relatedLinks.length).toBeGreaterThanOrEqual(3);
       expect(article.primaryKeyword.length).toBeGreaterThan(3);
     });
+  });
+
+  it("keeps health-adjacent guides neutral and backed by authoritative sources", () => {
+    const guideText = articles
+      .flatMap((article) => article.sections.flatMap((section) => section.paragraphs))
+      .join(" ");
+    const sources = articles.flatMap((article) => article.sources);
+
+    expect(guideText).not.toContain("התחילו בעוצמה נמוכה יותר");
+    expect(sources.some((source) => source.includes("cdc.gov"))).toBe(true);
+    expect(sources.some((source) => source.includes("fda.gov"))).toBe(true);
+  });
+
+  it("does not fabricate fresh last-modified dates for static and product URLs", async () => {
+    const entries = await sitemap();
+    const staticEntry = entries.find((entry) => entry.url === `${siteUrl}/terms`);
+    const productEntry = entries.find((entry) => entry.url.includes("/shop/"));
+    const articleEntry = entries.find((entry) => entry.url.includes("/blog/") && entry.url !== `${siteUrl}/blog`);
+
+    expect(staticEntry?.lastModified).toBeUndefined();
+    expect(productEntry?.lastModified).toBeUndefined();
+    expect(articleEntry?.lastModified).toBeInstanceOf(Date);
   });
 });

@@ -28,7 +28,7 @@ const faq = [
   },
   {
     question: "איך בוחרים בין שקיקי ניקוטין?",
-    answer: "משווים את המותג, הטעם, מספר המ״ג ורמת העוצמה. אם אינכם בטוחים, התחילו בעוצמה נמוכה יותר.",
+    answer: "משווים את המותג, הטעם, מספר המ״ג ורמת העוצמה לפי סימון היצרן. האתר אינו נותן המלצת מינון.",
   },
   {
     question: "האם שקיקי ניקוטין מיועדים לקטינים?",
@@ -48,6 +48,8 @@ export default function SnusPage() {
     datePublished: "2026-07-26",
     dateModified: "2026-07-26",
     inLanguage: "he-IL",
+    author: { "@type": "Organization", "@id": `${absoluteUrl("/")}#organization`, name: "NIC POUCH" },
+    publisher: { "@id": `${absoluteUrl("/")}#organization` },
   };
   const faqSchema = {
     "@type": "FAQPage",
@@ -79,12 +81,17 @@ export default function SnusPage() {
         <h2>מה מופיע בדף המוצר?</h2>
         <p>בכל דף מוצר מוצגים המותג, הטעם, נתון הניקוטין כאשר הוא מאומת, רמת העוצמה, המחיר והזמינות. אפשר לבחור יחידה אחת או כמות של 5 או 10 בהתאם למדרגות המחיר.</p>
         <h2>איך משווים בצורה נכונה?</h2>
-        <p>התחילו מעוצמה שמתאימה לניסיון הקודם שלכם, ולאחר מכן בחרו משפחת טעם ומותג. הטעם אינו מעיד על כמות הניקוטין ולכן יש לבדוק את מספר המ״ג בנפרד.</p>
+        <p>השוו את העוצמה לפי סימון היצרן, ולאחר מכן את משפחת הטעם והמותג. הטעם אינו מעיד על כמות הניקוטין ולכן יש לבדוק את מספר המ״ג בנפרד. האתר אינו נותן המלצת מינון.</p>
         <p><Link href="/blog/strength-guide">קראו את מדריך העוצמות</Link> או עברו אל <Link href="/shop">כל שקיקי הניקוטין בחנות</Link>.</p>
         <h2>שאלות נפוצות</h2>
         <div className="pd-faq">
           {faq.map((item) => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}
         </div>
+        <h2>מקורות ומידע נוסף</h2>
+        <ul>
+          <li><a href="https://www.cdc.gov/tobacco/nicotine-pouches/index.html" rel="noreferrer" target="_blank">CDC — מידע על שקיקי ניקוטין</a></li>
+          <li><a href="https://www.fda.gov/consumers/consumer-updates/properly-store-nicotine-pouches-prevent-accidental-exposure-children-and-pets" rel="noreferrer" target="_blank">FDA — אחסון בטוח והרחקה מילדים ומבעלי חיים</a></li>
+        </ul>
         <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצרים מיועדים לבגירים בלבד.</div>
       </article>
     </>

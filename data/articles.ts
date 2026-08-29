@@ -81,7 +81,7 @@ export const articles: Guide[] = [
         id: "strength",
         title: "איך בוחרים עוצמת ניקוטין?",
         paragraphs: [
-          "מספר המ״ג מציג את נתון הניקוטין לפי סימון המוצר. ככל שהמספר גבוה יותר, העוצמה עשויה להיות מורגשת יותר. מי שאינו בטוח צריך להתחיל ברמה נמוכה יותר.",
+          "מספר המ״ג מציג את נתון הניקוטין לפי סימון המוצר. ככל שהמספר גבוה יותר, העוצמה עשויה להיות מורגשת יותר. האתר אינו נותן המלצת מינון; יש לפעול לפי הוראות היצרן, ובמקרה של ספק בריאותי לפנות לאיש מקצוע.",
           "הסינון בחנות מחלק את המוצרים לעדין, בינוני, חזק וחזק מאוד כדי להקל על ההשוואה, אך סימון האריזה הוא המקור הקובע.",
         ],
       },
@@ -97,11 +97,12 @@ export const articles: Guide[] = [
     faq: [
       { question: "האם סנוס ושקיקי ניקוטין הם אותו מוצר?", answer: "לא בדיוק. סנוס מסורתי מכיל טבק; המוצרים באתר הם שקיקי ניקוטין ללא טבק. בישראל המילה סנוס משמשת לעיתים גם כשם חיפוש כללי." },
       { question: "מה חשוב לבדוק לפני שקונים?", answer: "בדקו את כמות הניקוטין, רמת העוצמה, הטעם, המותג והזמינות. הנתונים בדפי המוצר מבוססים על הקטלוג וסימון האריזה." },
-      { question: "איזו עוצמה מתאימה למתחילים?", answer: "אם אינכם בטוחים, בחרו עוצמה נמוכה יותר. ניקוטין הוא חומר ממכר והמוצרים מיועדים לבגירים שכבר משתמשים בניקוטין." },
+      { question: "איזו עוצמה מתאימה למתחילים?", answer: "האתר אינו נותן המלצת מינון. יש לקרוא את סימון היצרן; ניקוטין הוא חומר ממכר והמוצרים מיועדים לבגירים שכבר משתמשים בניקוטין." },
     ],
     sources: [
       "נתוני היצרן והמידע המופיע על אריזת המוצר",
       "קטלוג המוצרים המאושר של NIC POUCH",
+      "CDC — Nicotine Pouches: https://www.cdc.gov/tobacco/nicotine-pouches/index.html",
     ],
     relatedGuideSlugs: ["strength-guide", "how-to-use"],
     relatedLinks: [
@@ -167,6 +168,7 @@ export const articles: Guide[] = [
     sources: [
       "סימון הניקוטין ויחידת המדידה שמפרסם היצרן",
       "סולם העוצמות האחיד המשמש לסינון באתר NIC POUCH",
+      "CDC — Nicotine Pouches: https://www.cdc.gov/tobacco/nicotine-pouches/index.html",
     ],
     relatedGuideSlugs: ["nicotine-pouch-guide", "how-to-use"],
     relatedLinks: [
@@ -232,6 +234,7 @@ export const articles: Guide[] = [
     sources: [
       "הוראות השימוש והאזהרות שמפרסם היצרן",
       "כללי האחסון והשירות של NIC POUCH",
+      "FDA — Properly Store Nicotine Pouches: https://www.fda.gov/consumers/consumer-updates/properly-store-nicotine-pouches-prevent-accidental-exposure-children-and-pets",
     ],
     relatedGuideSlugs: ["nicotine-pouch-guide", "strength-guide"],
     relatedLinks: [
