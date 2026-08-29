@@ -32,7 +32,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
         <div className="pd-gallery">
           <div className="pd-image-stage">
             <ZoomIn className="pd-zoom" aria-hidden="true" />
-            {activeImage ? <img src={activeImage} alt={product.name} /> : <span className="can-placeholder">{product.brand}</span>}
+            {activeImage ? <img src={activeImage} alt={product.imageAlt || product.name} /> : <span className="can-placeholder">{product.brand}</span>}
           </div>
           {images.length > 1 && (
             <div className="pd-thumbs" aria-label="תמונות המוצר">

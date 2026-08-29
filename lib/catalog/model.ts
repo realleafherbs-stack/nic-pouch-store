@@ -36,6 +36,7 @@ export interface Product {
   active: boolean;
   packSize: number;
   images: string[];
+  imageAlt?: string;
   categories: string[];
   description?: string;
   metaTitle?: string;
