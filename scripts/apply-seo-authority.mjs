@@ -7,7 +7,7 @@ const pageDefinitions = [
   {
     page: "shop",
     focusKeyword: "שקיקי ניקוטין ללא טבק",
-    metaTitle: "שקיקי ניקוטין ללא טבק – כל המותגים | NIC POUCH",
+    metaTitle: "שקיקי ניקוטין ללא טבק – כל המותגים",
     metaDescription: "כל שקיקי הניקוטין ללא טבק בחנות NIC POUCH, מסודרים לפי מותג, טעם ועוצמה. מחיר ליחידה והנחות כמות מוצגים לפני ההזמנה.",
     heading: "שקיקי ניקוטין ללא טבק – כל המוצרים",
     summary: "קטלוג שקיקי ניקוטין למבוגרים בלבד, עם סינון לפי מותג, טעם ועוצמה ומחיר ברור לכל כמות.",
@@ -50,7 +50,7 @@ const pageDefinitions = [
   {
     page: "faq",
     focusKeyword: "שאלות על שקיקי ניקוטין",
-    metaTitle: "שאלות נפוצות על שקיקי ניקוטין | NIC POUCH",
+    metaTitle: "שאלות נפוצות על שקיקי ניקוטין",
     metaDescription: "תשובות לשאלות נפוצות על הזמנה, משלוח, עוצמות, סימון מ״ג, אחסון ושקיקי ניקוטין ללא טבק.",
     heading: "שאלות נפוצות",
     summary: "תשובות קצרות וברורות בנושאי מוצרים, הזמנה, משלוח ושימוש אחראי.",
@@ -60,7 +60,7 @@ const pageDefinitions = [
   {
     page: "about",
     focusKeyword: "אודות NIC POUCH",
-    metaTitle: "אודות NIC POUCH | שקיפות, שירות ומידע אחראי",
+    metaTitle: "אודות החנות – שקיפות, שירות ומידע אחראי",
     metaDescription: "הכירו את NIC POUCH, את עקרונות בחירת המידע באתר ואת המחויבות לשקיפות, שירות ומכירה למבוגרים בלבד.",
     heading: "אודות NIC POUCH",
     summary: "חנות ישראלית לשקיקי ניקוטין ללא טבק, עם דגש על מידע ברור, שירות ושקיפות.",
@@ -70,7 +70,7 @@ const pageDefinitions = [
   {
     page: "contact",
     focusKeyword: "יצירת קשר NIC POUCH",
-    metaTitle: "יצירת קשר ושירות לקוחות | NIC POUCH",
+    metaTitle: "יצירת קשר ושירות לקוחות",
     metaDescription: "צרו קשר עם שירות הלקוחות של NIC POUCH בנושאי מוצרים, הזמנות, משלוחים והחזרות.",
     heading: "יצירת קשר",
     summary: "ערוצי השירות של NIC POUCH לשאלות על מוצרים והזמנות.",

@@ -17,6 +17,7 @@ describe("SEO authority plan", () => {
     ]));
     expect(new Set(keywords).size).toBe(keywords.length);
     expect(pages.every(({ page, patch }) => patch.canonicalUrl === `https://nicpouch.co.il/${page}`)).toBe(true);
+    expect(pages.every(({ patch }) => !patch.metaTitle.endsWith("| NIC POUCH"))).toBe(true);
   });
 
   it("completes draft authority metadata without making the post indexable", () => {
