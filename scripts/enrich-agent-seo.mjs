@@ -1,5 +1,6 @@
 import { pathToFileURL } from "node:url";
 import { normalizeProductDisplayName } from "../lib/catalog/crm-adapter.mjs";
+import { selectProductsInSitemap } from "./product-sitemap-selection.mjs";
 
 const defaultApiBase = "https://www.ducks.co.il/api/nic-pouch/agent";
 const defaultSiteUrl = "https://nicpouch.co.il";
@@ -110,16 +111,14 @@ async function run() {
       return response.text();
     }),
   ]);
-  const productUrls = [...sitemapXml.matchAll(/<loc>([^<]+\/shop\/[^<]+)<\/loc>/g)].map((match) => match[1]);
-  const jobs = productUrls.flatMap((url) => {
-    const suffix = decodeURIComponent(url.split("/").pop()).split("-").pop();
-    const product = products.find((item) => item.id.endsWith(suffix));
-    if (!product) return [];
+  const activeProducts = selectProductsInSitemap(products, sitemapXml);
+  const jobs = activeProducts.flatMap((product) => {
+    const url = `${siteUrl}/shop/${product.handle}`;
     const patch = buildProductSeoUpdate(product, buildProductSeoPatch(product, url));
     return Object.keys(patch).length ? [{ product, patch }] : [];
   });
 
-  console.log(JSON.stringify({ activeProducts: productUrls.length, productsToUpdate: jobs.length, apply }, null, 2));
+  console.log(JSON.stringify({ activeProducts: activeProducts.length, productsToUpdate: jobs.length, apply }, null, 2));
   if (!apply) return;
 
   for (let index = 0; index < jobs.length; index += 5) {

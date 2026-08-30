@@ -1,4 +1,5 @@
 import { pathToFileURL } from "node:url";
+import { selectProductsInSitemap } from "./product-sitemap-selection.mjs";
 
 const defaultApiBase = "https://www.ducks.co.il/api/nic-pouch/agent";
 const defaultSiteUrl = "https://nicpouch.co.il";
@@ -140,8 +141,8 @@ async function run() {
   ]);
   const pages = buildPageSeoPlan(siteUrl);
   const blogIds = blogs.map((post) => post.id);
-  const activeSuffixes = new Set([...sitemapXml.matchAll(/<loc>[^<]+\/shop\/([^<]+)<\/loc>/g)].map((match) => decodeURIComponent(match[1]).split("-").pop()));
-  const productJobs = products.filter((product) => activeSuffixes.has(String(product.id).slice(-8)) && !String(product.faqRaw ?? "").trim());
+  const productJobs = selectProductsInSitemap(products, sitemapXml)
+    .filter((product) => !String(product.faqRaw ?? "").trim());
   console.log(JSON.stringify({ mode: apply ? "apply" : "dry-run", pages: pages.length, draftBlogs: blogs.filter((post) => post.status === "DRAFT").length, productFaqs: productJobs.length }, null, 2));
   if (!apply) return;
 
