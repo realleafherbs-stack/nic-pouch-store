@@ -66,11 +66,15 @@ describe("agent SEO enrichment", () => {
       description: "תיאור אוטומטי",
       metaTitle: "NOIS מנטה 25 מ״ג | שקיק ניקוטין ללא טבק",
       focusKeyword: "NOIS מנטה 25 מ״ג",
+      canonicalUrl: "https://nicpouch.co.il/shop/nois-mint-25-product",
     };
+
+    product.canonicalUrl = "https://nicpouch.co.il/shop/nois-25-product";
 
     expect(buildProductSeoUpdate(product, proposed)).toEqual({
       metaTitle: "NOIS מנטה 25 מ״ג | שקיק ניקוטין ללא טבק",
       focusKeyword: "NOIS מנטה 25 מ״ג",
+      canonicalUrl: "https://nicpouch.co.il/shop/nois-mint-25-product",
     });
   });
 });

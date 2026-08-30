@@ -77,8 +77,9 @@ export function buildProductSeoPatch(product, canonicalUrl) {
 }
 
 export function buildProductSeoUpdate(product, proposed) {
-  const alwaysNormalized = new Set(["metaTitle", "focusKeyword"]);
+  const alwaysNormalized = new Set(["metaTitle", "focusKeyword", "canonicalUrl"]);
   return Object.fromEntries(editableFields.flatMap((field) => {
+    if (proposed[field] === undefined) return [];
     const current = product[field];
     const missing = current === null || current === undefined || current === "" || (Array.isArray(current) && current.length === 0);
     const redundantProductPrefix = (field === "metaTitle" || field === "focusKeyword")

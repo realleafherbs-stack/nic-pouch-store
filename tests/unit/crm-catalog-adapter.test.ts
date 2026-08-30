@@ -60,7 +60,7 @@ describe("CRM catalog adapter", () => {
 
     expect(products).toEqual([expect.objectContaining({
       id: "crm-1",
-      slug: "nois-cherry-ice-crm-1",
+      slug: "nois-cherry-extreme-crm-1",
       sku: "729000000001",
       brand: "NOIS",
       flavor: "דובדבן אקסטרים",
@@ -81,7 +81,7 @@ describe("CRM catalog adapter", () => {
       metaDescription: "תיאור מטא ייחודי ומאושר למוצר.",
       ogImage: "https://cdn.example.com/nois-og.webp",
       focusKeyword: "שקיקי ניקוטין NOIS",
-      canonicalUrl: "/shop/nois-cherry-ice-crm-1",
+      canonicalUrl: "/shop/nois-cherry-extreme-crm-1",
       indexable: false,
       gtin: "729000000001",
     })]);
@@ -146,8 +146,25 @@ describe("CRM catalog adapter", () => {
     ]);
 
     expect(products).toHaveLength(2);
-    expect(products[0].slug).toBe("hqd-6-hqd-a");
+    expect(products[0].slug).toBe("hqd-cherry-6-hqd-a");
     expect(products[0].slug).not.toEqual(products[1].slug);
+  });
+
+  it.each([
+    ['פאוץ-ניקוטין-hqd-לימונדה-כחולה-25-מג', 'פאוץ\' ניקוטין HQD לימונדה כחולה 25 מ"ג', "HQD", "hqd-blue-lemonade-25-product1"],
+    ['נויס-בלוברי-אקסטרים-50-מג', 'נויס בלוברי אקסטרים 50 מ"ג', "NOIS", "nois-blueberry-extreme-50-product2"],
+    ['פאוצ-ניקוטין-cuba-בלאק-צ׳רי-43-מג', 'פאוצ\' ניקוטין CUBA בלאק צ\'רי 43 מ"ג', "CUBA", "cuba-black-cherry-43-product3"],
+  ])("keeps brand, flavor and strength in an ASCII product slug", (handle, name, brand, expected) => {
+    const [product] = mapCrmProducts([{
+      id: `catalog-${expected.slice(-8)}`,
+      handle,
+      name,
+      brand,
+      price: 30,
+      attributes: { packSize: 1 },
+    }]);
+
+    expect(product.slug).toBe(expected);
   });
 
   it("moves an old canonical slug into legacy redirects and canonicalizes the current handle", () => {
