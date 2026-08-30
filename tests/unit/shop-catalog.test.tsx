@@ -17,7 +17,7 @@ it("filters products by search and brand", () => {
   render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
   fireEvent.change(screen.getByLabelText("חיפוש"), { target: { value: "מנטה" } });
   expect(screen.getAllByTestId("product-card")).toHaveLength(1);
-  expect(screen.getByRole("link", { name: "מנטה" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "HQD מנטה" })).toBeInTheDocument();
 });
 
 it("adds a product directly from its card", () => {
@@ -69,7 +69,7 @@ it("opens with a brand filter from the URL", async () => {
   window.history.replaceState({}, "", "/shop?brand=NOIS");
   render(<CartProvider><ShopCatalog products={products} /></CartProvider>);
   await waitFor(() => expect(screen.getAllByTestId("product-card")).toHaveLength(1));
-  expect(screen.getByRole("link", { name: "פירות יער" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "NOIS פירות יער" })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: "NOIS" })).toBeInTheDocument();
   window.history.replaceState({}, "", "/shop");
 });

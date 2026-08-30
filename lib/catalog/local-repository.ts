@@ -8,7 +8,7 @@ const siteSlug = process.env.CRM_SITE_SLUG;
 const apiKey = process.env.CRM_API_KEY;
 
 // Multipacks are purchase quantities, not separate storefront products.
-const fallbackProducts = (fallbackCatalog as Product[]).filter((product) => product.packSize === 1);
+const fallbackProducts = (fallbackCatalog as Product[]).filter((product) => product.active && product.packSize === 1);
 
 // Live CRM-fetched catalog — mirrors polarizedx/xvape's product wiring
 // (request-time fetch, ISR-cached) instead of this site's previous
@@ -25,7 +25,7 @@ async function fetchLiveProducts(): Promise<Product[]> {
     });
     if (!res.ok) return fallbackProducts;
     const records = await res.json();
-    const mapped = (mapCrmProducts(records) as Product[]).filter((product) => product.packSize === 1);
+    const mapped = (mapCrmProducts(records) as Product[]).filter((product) => product.active && product.packSize === 1);
     return mapped.length ? mapped : fallbackProducts;
   } catch {
     return fallbackProducts;

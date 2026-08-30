@@ -32,7 +32,7 @@ export function ProductCard({ product }: { product: Product }) {
       </Link>
       <div className="product-copy">
         <p className="eyebrow">{product.brand}</p>
-        <h3><Link href={`/shop/${product.slug}`}>{product.flavor || product.name}</Link></h3>
+        <h3><Link href={`/shop/${product.slug}`}>{product.name}</Link></h3>
         <div className="product-meta">
           <span>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "עוצמה לא צוינה"}</span>
           {product.packSize > 1 && <span>מארז {product.packSize}</span>}

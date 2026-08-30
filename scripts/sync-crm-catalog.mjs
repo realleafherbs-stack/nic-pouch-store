@@ -1,21 +1,20 @@
 import { readFile, rename, writeFile } from "node:fs/promises";
-import { mapCrmProducts, selectCatalogForSync } from "../lib/catalog/crm-adapter.mjs";
+import { crmCatalogSyncEnabled, mapCrmProducts, selectCatalogForSync } from "../lib/catalog/crm-adapter.mjs";
 
 const catalogPath = new URL("../data/catalog.generated.json", import.meta.url);
 const temporaryPath = new URL("../data/catalog.generated.next.json", import.meta.url);
-const enabled = process.env.CRM_CATALOG_SYNC === "true";
-
-if (!enabled) {
-  console.log("CRM catalog sync is disabled; using the checked-in catalog.");
-  process.exit(0);
-}
-
 const apiBaseUrl = process.env.CRM_API_BASE_URL?.replace(/\/$/, "");
 const siteSlug = process.env.CRM_SITE_SLUG;
 const apiKey = process.env.CRM_API_KEY;
+const explicitlyEnabled = process.env.CRM_CATALOG_SYNC === "true";
 
-if (!apiBaseUrl || !siteSlug || !apiKey) {
+if (explicitlyEnabled && (!apiBaseUrl || !siteSlug || !apiKey)) {
   throw new Error("CRM_CATALOG_SYNC requires CRM_API_BASE_URL, CRM_SITE_SLUG and CRM_API_KEY.");
+}
+
+if (!crmCatalogSyncEnabled(process.env)) {
+  console.log("CRM catalog sync is disabled or unconfigured; using the checked-in catalog.");
+  process.exit(0);
 }
 
 const currentCatalog = JSON.parse(await readFile(catalogPath, "utf8"));

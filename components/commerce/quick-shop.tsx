@@ -144,7 +144,7 @@ function QuickProduct({ product, index }: { product: Product; index: number }) {
       </a>
       <div className="quick-product-copy">
         <p>{product.brand}</p>
-        <h3><a href={`/shop/${product.slug}`}>{product.flavor || product.name}</a></h3>
+        <h3><a href={`/shop/${product.slug}`}>{product.name}</a></h3>
         <span>{product.strengthLevel ? strengthLabels[product.strengthLevel] : "עוצמה לא צוינה"}{product.nicotineMg ? ` · ${product.nicotineMg} מ״ג` : ""}</span>
       </div>
       <div className="quick-product-buy">

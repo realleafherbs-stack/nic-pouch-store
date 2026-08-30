@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { mapCrmProducts, selectCatalogForSync } from "@/lib/catalog/crm-adapter.mjs";
+import { crmCatalogSyncEnabled, mapCrmProducts, selectCatalogForSync } from "@/lib/catalog/crm-adapter.mjs";
 
 const currentCatalog = [{
   id: "local-1",
@@ -20,6 +20,21 @@ const currentCatalog = [{
 }];
 
 describe("CRM catalog adapter", () => {
+  it("enables build-time CRM sync when the connection is configured", () => {
+    expect(crmCatalogSyncEnabled({
+      CRM_API_BASE_URL: "https://www.ducks.co.il/api",
+      CRM_SITE_SLUG: "nic-pouch",
+      CRM_API_KEY: "secret",
+    })).toBe(true);
+    expect(crmCatalogSyncEnabled({
+      CRM_CATALOG_SYNC: "false",
+      CRM_API_BASE_URL: "https://www.ducks.co.il/api",
+      CRM_SITE_SLUG: "nic-pouch",
+      CRM_API_KEY: "secret",
+    })).toBe(false);
+    expect(crmCatalogSyncEnabled({ CRM_API_BASE_URL: "https://www.ducks.co.il/api" })).toBe(false);
+  });
+
   it("maps a NIC POUCH CRM product into the storefront product contract", () => {
     const products = mapCrmProducts([{
       id: "crm-1",
@@ -116,6 +131,42 @@ describe("CRM catalog adapter", () => {
       strengthLevel: "medium",
       stock: 0,
       packSize: 1,
+    }));
+  });
+
+  it("keeps a zero-price CRM record in the snapshot but marks it unavailable", () => {
+    const products = mapCrmProducts([{
+      id: "sample-pack",
+      name: "מיקס דוגמיות נויס 3 טעמים - מארז 45 יח'",
+      price: 0,
+      brand: "NOIS",
+      indexable: false,
+      stockQuantity: 20,
+      attributes: { packSize: 1 },
+    }]);
+
+    expect(products).toEqual([expect.objectContaining({
+      id: "sample-pack",
+      retailPrice: 0,
+      stock: 0,
+      active: false,
+      indexable: false,
+    })]);
+  });
+
+  it("keeps duplicate CRM SKUs in the snapshot but exposes only the strongest record", () => {
+    const products = mapCrmProducts([
+      { id: "old-sku", name: "NOIS מנטה אקסטרים 50 מ״ג", price: 30, brand: "NOIS" },
+      { id: "new-sku", name: "NOIS מנטה אקסטרים 50 מ״ג", price: 30, brand: "NOIS", image: "https://cdn.example.com/nois.webp", stockQuantity: 40 },
+    ]);
+
+    expect(products).toHaveLength(2);
+    expect(products.find((product) => product.id === "new-sku")).toEqual(expect.objectContaining({ active: true }));
+    expect(products.find((product) => product.id === "old-sku")).toEqual(expect.objectContaining({
+      active: false,
+      indexable: false,
+      stock: 0,
+      canonicalUrl: "/shop/nois-mint-extreme-50-new-sku",
     }));
   });
 
