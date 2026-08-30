@@ -58,4 +58,19 @@ describe("product redirects", () => {
       canonicalUrl: "https://nicpouch.co.il/shop/nois-new-handle-one",
     }]);
   });
+
+  it("uses CRM handle history when the storefront catalog is mapped", async () => {
+    const { mapCrmProducts } = await import("@/lib/catalog/crm-adapter.mjs");
+    const [product] = mapCrmProducts([{
+      id: "p1",
+      handle: "hqd-דובדבן-15-מג",
+      previousHandles: ["50-zrcoow46", "hqd-cherry-old"],
+      name: "HQD דובדבן 15 מ״ג",
+      price: 30,
+      stockQuantity: 5,
+      attributes: { packSize: 1 },
+    }]);
+
+    expect(product.legacySlugs).toEqual(["50-zrcoow46", "hqd-cherry-old"]);
+  });
 });
