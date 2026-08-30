@@ -33,6 +33,12 @@ it("retains the legacy purchase UI and feedback outside the balanced variant", (
   expect(screen.getByText("נוסף לעגלה")).toBeInTheDocument();
 });
 
+it("uses the complete normalized product name as the page heading", () => {
+  render(<CartProvider><ProductDetail product={balancedProduct} related={[]} variant="balanced" /></CartProvider>);
+
+  expect(screen.getByRole("heading", { level: 1, name: "NOIS דובדבן אקסטרים" })).toBeInTheDocument();
+});
+
 it("omits the promotional delivery recommendation from legacy product pages", () => {
   render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
 

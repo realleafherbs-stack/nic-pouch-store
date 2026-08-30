@@ -27,7 +27,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
   return (
     <div className={variant === "balanced" ? "pd-balanced" : undefined}>
       <nav className="pd-breadcrumbs container" aria-label="פירורי לחם">
-        <Link href="/">דף הבית</Link><span>/</span><Link href="/shop">חנות</Link><span>/</span><Link href={`/brands/${product.brand.toLowerCase()}`}>{product.brand}</Link><span>/</span><b>{product.flavor || product.name}</b>
+        <Link href="/">דף הבית</Link><span>/</span><Link href="/shop">חנות</Link><span>/</span><Link href={`/brands/${product.brand.toLowerCase()}`}>{product.brand}</Link><span>/</span><b>{product.name}</b>
       </nav>
       <section className="pd-main container">
         <div className="pd-gallery">
@@ -50,7 +50,7 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
 
         <div className="pd-summary">
           {variant === "balanced" ? <p className="pd-brand">{product.brand}</p> : <div className="pd-kicker"><span>{product.badge || "פופולרי"}</span><p className="pd-brand">{product.brand}</p></div>}
-          <h1>{product.flavor || product.name}</h1>
+          <h1>{product.name}</h1>
           {variant === "legacy" && (
             <p className="pd-reviews">
               {product.rating
