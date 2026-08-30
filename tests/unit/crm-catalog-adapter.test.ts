@@ -75,7 +75,7 @@ describe("CRM catalog adapter", () => {
 
     expect(products).toEqual([expect.objectContaining({
       id: "crm-1",
-      slug: "nois-cherry-extreme",
+      slug: "nois-cherry-ice",
       sku: "729000000001",
       brand: "NOIS",
       flavor: "דובדבן אקסטרים",
@@ -96,11 +96,28 @@ describe("CRM catalog adapter", () => {
       metaDescription: "תיאור מטא ייחודי ומאושר למוצר.",
       ogImage: "https://cdn.example.com/nois-og.webp",
       focusKeyword: "שקיקי ניקוטין NOIS",
-      canonicalUrl: "/shop/nois-cherry-extreme",
+      canonicalUrl: "/shop/nois-cherry-ice",
       indexable: false,
       gtin: "729000000001",
     })]);
     expect(products[0].priceTiers).toHaveLength(3);
+    expect(products[0].legacySlugs).toContain("nois-cherry-extreme");
+  });
+
+  it("treats a clean CRM handle as the canonical source of truth", () => {
+    const [product] = mapCrmProducts([{
+      id: "crm-clean-handle",
+      handle: "nois-cool-strong-35",
+      name: "NOIS קול סטרונג 35 מ״ג לגרם",
+      price: 30,
+      brand: "NOIS",
+      canonicalUrl: "https://nicpouch.co.il/shop/nois-cool-strong-35",
+      attributes: { flavor: "קול חזק 35 מ\"ל" },
+    }]);
+
+    expect(product.slug).toBe("nois-cool-strong-35");
+    expect(product.canonicalUrl).toBe("/shop/nois-cool-strong-35");
+    expect(product.legacySlugs).toContain("nois-35");
   });
 
   it("keeps only valid single products and derives strength when needed", () => {
@@ -249,7 +266,7 @@ describe("CRM catalog adapter", () => {
       attributes: { packSize: 1 },
     }]);
 
-    expect(selected[0].legacySlugs).toEqual(["old-opaque-handle", "new-readable-handle", "old-readable-handle"]);
+    expect(selected[0].legacySlugs).toEqual(["old-opaque-handle", "nois-updated", "old-readable-handle"]);
   });
 
   it.each([

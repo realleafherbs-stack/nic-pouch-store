@@ -23,6 +23,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMFpMR2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--79cec04748c9616bf9d7132351a58da9ada224fa/6923742003754_.jpg"
     ],
+    "imageAlt": "HQD בריזה טרופית 15 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD בריזה טרופית 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא בריזה טרופית, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD בריזה טרופית 15 מ״ג | שקיק ניקוטין ללא טבק",
@@ -77,8 +78,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6937105495278-1-commerce.webp"
+      "https://nicpouch.co.il/products/6937105495278-1-commerce.webp"
     ],
+    "imageAlt": "HQD אוכמניות 6 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD אוכמניות 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא אוכמניות, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD אוכמניות 6 מ״ג | שקיק ניקוטין ללא טבק",
@@ -135,6 +137,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMDZGSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6d3cc574ca74bf95389349db8a60ede83689b047/6923742008391.jpg"
     ],
+    "imageAlt": "HQD דובדבן 15 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD דובדבן 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא דובדבן, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD דובדבן 15 מ״ג | שקיק ניקוטין ללא טבק",
@@ -189,8 +192,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742010561-1-commerce.webp"
+      "https://nicpouch.co.il/products/6923742010561-1-commerce.webp"
     ],
+    "imageAlt": "HQD בריזה טרופית 12 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD בריזה טרופית 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא בריזה טרופית, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD בריזה טרופית 12 מ״ג | שקיק ניקוטין ללא טבק",
@@ -224,197 +228,6 @@
     ]
   },
   {
-    "id": "cmsjejqy6000d04jt61rd99sx",
-    "slug": "hqd-sweet-passionfruit-12",
-    "legacySlugs": [
-      "hqd-פסיפלורה-מתוקה-31918",
-      "פאוצ-ניקוטין-hqd-פסיפלורה-מתוקה-12-מג",
-      "hqd-----12-61rd99sx",
-      "hqd-12-61rd99sx",
-      "hqd-sweet-passionfruit-12-61rd99sx"
-    ],
-    "sku": "6923742010585",
-    "name": "HQD פסיפלורה מתוקה 12 מ״ג",
-    "brand": "HQD",
-    "flavor": "פסיפלורה מתוקה",
-    "nicotineMg": 12,
-    "strengthLevel": "medium",
-    "retailPrice": 30,
-    "sourcePrice": 18,
-    "stock": 999,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "/products/6923742010585-1-commerce.webp"
-    ],
-    "categories": [],
-    "description": "HQD פסיפלורה מתוקה 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פסיפלורה מתוקה, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD פסיפלורה מתוקה 12 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD פסיפלורה מתוקה 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD פסיפלורה מתוקה 12 מ״ג",
-    "canonicalUrl": "/shop/hqd-sweet-passionfruit-12",
-    "indexable": true,
-    "cardFeatures": [
-      "פסיפלורה מתוקה",
-      "12 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: פסיפלורה מתוקה"
-      },
-      {
-        "title": "12 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjekazv001f04jtv3ucbozj",
-    "slug": "hqd-blueberry-15",
-    "legacySlugs": [
-      "hqd-אוכמניות-32787",
-      "פאוצ-ניקוטין-hqd-אוכמניות-15-מג",
-      "hqd---15-v3ucbozj",
-      "hqd-15-v3ucbozj",
-      "hqd-blueberry-15-v3ucbozj"
-    ],
-    "sku": "6937105495995",
-    "name": "HQD אוכמניות 15 מ״ג",
-    "brand": "HQD",
-    "flavor": "אוכמניות",
-    "nicotineMg": 15,
-    "strengthLevel": "medium",
-    "retailPrice": 30,
-    "sourcePrice": 16,
-    "stock": 999,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "/products/6937105495995-1-commerce.webp"
-    ],
-    "categories": [],
-    "description": "HQD אוכמניות 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא אוכמניות, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD אוכמניות 15 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD אוכמניות 15 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 15 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD אוכמניות 15 מ״ג",
-    "canonicalUrl": "/shop/hqd-blueberry-15",
-    "indexable": true,
-    "cardFeatures": [
-      "אוכמניות",
-      "15 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: אוכמניות"
-      },
-      {
-        "title": "15 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjekkk6001x04jtzrcoow46",
-    "slug": "nois-blueberry-extreme-50",
-    "legacySlugs": [
-      "50-zrcoow46",
-      "נויס-בלוברי-אקסטרים-50-מג",
-      "nois-----50-zrcoow46",
-      "nois-50-zrcoow46",
-      "nois-blueberry-extreme-50-zrcoow46"
-    ],
-    "sku": "4742024720217",
-    "name": "NOIS בלוברי אקסטרים 50 מ״ג",
-    "brand": "NOIS",
-    "flavor": "בלוברי אקסטרים",
-    "nicotineMg": 50,
-    "strengthLevel": "extra-strong",
-    "retailPrice": 30,
-    "sourcePrice": 0,
-    "stock": 0,
-    "active": true,
-    "packSize": 1,
-    "images": [],
-    "categories": [],
-    "description": "NOIS בלוברי אקסטרים 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא בלוברי אקסטרים, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "NOIS בלוברי אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "NOIS בלוברי אקסטרים 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "NOIS בלוברי אקסטרים 50 מ״ג",
-    "canonicalUrl": "/shop/nois-blueberry-extreme-50",
-    "indexable": true,
-    "cardFeatures": [
-      "בלוברי אקסטרים",
-      "50 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: בלוברי אקסטרים"
-      },
-      {
-        "title": "50 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmt7337tx000004l5zxj10zks",
-    "slug": "nois-nois-3",
-    "legacySlugs": [
-      "מיקס-דוגמיות-נויס-3-טעמים-מארז-45-יח",
-      "nois-nois-3-zxj10zks"
-    ],
-    "sku": "7929927307821",
-    "name": "NOIS מיקס דוגמיות נויס 3 טעמים - מארז",
-    "brand": "NOIS",
-    "flavor": "מיקס דוגמיות  3 טעמים",
-    "nicotineMg": null,
-    "strengthLevel": null,
-    "retailPrice": 0,
-    "sourcePrice": 0,
-    "stock": 0,
-    "active": false,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd25CYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c791795a7f30dbfab762fc388804c7317340c59b/ChatGPT%20Image%20Aug%2024,%202026,%2001_28_11%20PM.png"
-    ],
-    "categories": [],
-    "canonicalUrl": "/shop/nois-nois-3",
-    "indexable": false
-  },
-  {
     "id": "cmsjeku1o002f04jtp0nr5y67",
     "slug": "cuba-black-blueberry-43",
     "legacySlugs": [
@@ -437,6 +250,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBekhzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b79cda9cba7f558b932717737c856ade54dd3c0e/WhatsApp%20Image%202026-04-09%20at%2012.%20(3).jpg"
     ],
+    "imageAlt": "CUBA בלאק בלוברי 43 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA בלאק בלוברי 43 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא בלאק בלוברי, עם 43 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA בלאק בלוברי 43 מ״ג | שקיק ניקוטין ללא טבק",
@@ -470,45 +284,46 @@
     ]
   },
   {
-    "id": "cmsjekuk4002g04jtp8oycge8",
-    "slug": "cuba-black-double-fresh-43",
+    "id": "cmt1fd5zf000104jso051h9y9",
+    "slug": "rabbit-blue-ice-26",
     "legacySlugs": [
-      "פאוצ-ניקוטין-cuba-בלאק-דאבל-פרש-43-מג-1-יח",
-      "cuba-------43---1-p8oycge8",
-      "cuba-43-1-p8oycge8",
-      "cuba-black-double-fresh-43-p8oycge8"
+      "פאוצ-ניקוטין-rabbit-בלו-אייס-26-מג-1-יח",
+      "rabbit-----26---1-o051h9y9",
+      "rabbit-26-1-o051h9y9",
+      "rabbit-blue-ice-26-o051h9y9"
     ],
-    "sku": "5904316128128",
-    "name": "CUBA בלאק דאבל פרש 43 מ״ג",
-    "brand": "CUBA",
-    "flavor": "בלאק דאבל פרש  -",
-    "nicotineMg": 43,
-    "strengthLevel": "extra-strong",
+    "sku": "4779052820213",
+    "name": "RABBIT בלו אייס 26 מ״ג",
+    "brand": "RABBIT",
+    "flavor": "RABBIT בלו אייס  -",
+    "nicotineMg": 26,
+    "strengthLevel": "strong",
     "retailPrice": 30,
     "sourcePrice": 0,
-    "stock": 208,
+    "stock": 120,
     "active": true,
     "packSize": 1,
     "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeHZzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c09ee67ecc68809d8b4e015783443c3f83e2cc15/WhatsApp%20Image%202026-04-09%20at%2012.%20(2).jpg"
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK29NYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--758e27e623af94a3de1c0ceaae17c6b8edef680a/_MG_8192.jpg"
     ],
+    "imageAlt": "RABBIT בלו אייס 26 מ״ג – תמונת מוצר",
     "categories": [],
-    "description": "CUBA בלאק דאבל פרש 43 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא בלאק דאבל פרש, עם 43 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "CUBA בלאק דאבל פרש 43 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "CUBA בלאק דאבל פרש 43 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 43 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "CUBA בלאק דאבל פרש 43 מ״ג",
-    "canonicalUrl": "/shop/cuba-black-double-fresh-43",
+    "description": "RABBIT בלו אייס 26 מ״ג הוא שקיק ניקוטין ללא טבק מבית RABBIT, למבוגרים בלבד. הגרסה היא בלו אייס, עם 26 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "RABBIT בלו אייס 26 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "RABBIT בלו אייס 26 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 26 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "RABBIT בלו אייס 26 מ״ג",
+    "canonicalUrl": "/shop/rabbit-blue-ice-26",
     "indexable": true,
     "cardFeatures": [
-      "בלאק דאבל פרש",
-      "43 מ״ג"
+      "בלו אייס",
+      "26 מ״ג"
     ],
     "features": [
       {
-        "title": "טעם: בלאק דאבל פרש"
+        "title": "טעם: בלו אייס"
       },
       {
-        "title": "43 מ״ג לפי סימון האריזה"
+        "title": "26 מ״ג לפי סימון האריזה"
       },
       {
         "title": "1 שקיקים באריזה"
@@ -525,45 +340,46 @@
     ]
   },
   {
-    "id": "cmt1ey7c3000004laum4wph4d",
-    "slug": "bit-cold-mint-30",
+    "id": "cmsjektj6002e04jtd5g4zwc8",
+    "slug": "cuba-black-cherry-43",
     "legacySlugs": [
-      "פאוצ-ניקוטין-bit-קולד-מינט-30-מג-1-יח",
-      "bit-----30---1-um4wph4d",
-      "bit-30-1-um4wph4d",
-      "bit-cold-mint-30-um4wph4d"
+      "פאוצ-ניקוטין-cuba-בלאק-צרי-43-מג-1-יח",
+      "cuba-----43---1-d5g4zwc8",
+      "cuba-43-1-d5g4zwc8",
+      "cuba-black-cherry-43-d5g4zwc8"
     ],
-    "sku": "4779052820107",
-    "name": "BIT קולד מינט 30 מ״ג",
-    "brand": "BIT",
-    "flavor": "BIT קולד מינט  -",
-    "nicotineMg": 30,
-    "strengthLevel": "strong",
+    "sku": "5904717759020",
+    "name": "CUBA בלאק צ'רי 43 מ״ג",
+    "brand": "CUBA",
+    "flavor": "בלאק צ'רי  -",
+    "nicotineMg": 43,
+    "strengthLevel": "extra-strong",
     "retailPrice": 30,
     "sourcePrice": 0,
-    "stock": 120,
+    "stock": 128,
     "active": true,
     "packSize": 1,
     "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOXdNYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ddf9ade3eacfffbaf956e76ff2716674ed95c117/_MG_8188.jpg"
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMlhzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1358917a586a594bfcd548ef7850882058746d86/WhatsApp%20Image%202026-04-09%20at%2012.%20(5).jpg"
     ],
+    "imageAlt": "CUBA בלאק צ'רי 43 מ״ג – תמונת מוצר",
     "categories": [],
-    "description": "BIT קולד מינט 30 מ״ג הוא שקיק ניקוטין ללא טבק מבית BIT, למבוגרים בלבד. הגרסה היא קולד מינט, עם 30 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "BIT קולד מינט 30 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "BIT קולד מינט 30 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 30 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "BIT קולד מינט 30 מ״ג",
-    "canonicalUrl": "/shop/bit-cold-mint-30",
+    "description": "CUBA בלאק צ'רי 43 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא בלאק צ'רי, עם 43 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "CUBA בלאק צ'רי 43 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "CUBA בלאק צ'רי 43 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 43 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "CUBA בלאק צ'רי 43 מ״ג",
+    "canonicalUrl": "/shop/cuba-black-cherry-43",
     "indexable": true,
     "cardFeatures": [
-      "קולד מינט",
-      "30 מ״ג"
+      "בלאק צ'רי",
+      "43 מ״ג"
     ],
     "features": [
       {
-        "title": "טעם: קולד מינט"
+        "title": "טעם: בלאק צ'רי"
       },
       {
-        "title": "30 מ״ג לפי סימון האריזה"
+        "title": "43 מ״ג לפי סימון האריזה"
       },
       {
         "title": "1 שקיקים באריזה"
@@ -602,6 +418,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMUhyVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6c9aa5c625bba30a48294a8783dcc3dd6332735f/1.jpg"
     ],
+    "imageAlt": "CUBA בלאק קולד דריי 43 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA בלאק קולד דריי 43 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא בלאק קולד דריי, עם 43 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA בלאק קולד דריי 43 מ״ג | שקיק ניקוטין ללא טבק",
@@ -622,6 +439,572 @@
       },
       {
         "title": "1 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekc0y001h04jta53z8dfc",
+    "slug": "hqd-blueberry-25",
+    "legacySlugs": [
+      "פאוצ-ניקוטין-hqd-אוכמניות-25-מג",
+      "hqd---25-a53z8dfc",
+      "hqd-25-a53z8dfc",
+      "hqd-blueberry-25-a53z8dfc"
+    ],
+    "sku": "6923742008254",
+    "name": "HQD אוכמניות 25 מ״ג",
+    "brand": "HQD",
+    "flavor": "אוכמניות",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 30,
+    "sourcePrice": 0,
+    "stock": 999,
+    "active": true,
+    "packSize": 1,
+    "images": [],
+    "imageAlt": "HQD אוכמניות 25 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD אוכמניות 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא אוכמניות, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD אוכמניות 25 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD אוכמניות 25 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 25 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD אוכמניות 25 מ״ג",
+    "canonicalUrl": "/shop/hqd-blueberry-25",
+    "indexable": true,
+    "cardFeatures": [
+      "אוכמניות",
+      "25 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: אוכמניות"
+      },
+      {
+        "title": "25 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjek9vm001d04jt7d6kdzf0",
+    "slug": "hqd-blueberry-12",
+    "legacySlugs": [
+      "hqd-אוכמניות-31924",
+      "פאוצ-ניקוטין-hqd-אוכמניות-12-מג",
+      "hqd---12-7d6kdzf0",
+      "hqd-12-7d6kdzf0",
+      "hqd-blueberry-12-7d6kdzf0"
+    ],
+    "sku": "6923742010615",
+    "name": "HQD אוכמניות 12 מ״ג",
+    "brand": "HQD",
+    "flavor": "אוכמניות",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 30,
+    "sourcePrice": 18,
+    "stock": 999,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://nicpouch.co.il/products/6923742010615-1-commerce.webp"
+    ],
+    "imageAlt": "HQD אוכמניות 12 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD אוכמניות 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא אוכמניות, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD אוכמניות 12 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD אוכמניות 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD אוכמניות 12 מ״ג",
+    "canonicalUrl": "/shop/hqd-blueberry-12",
+    "indexable": true,
+    "cardFeatures": [
+      "אוכמניות",
+      "12 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: אוכמניות"
+      },
+      {
+        "title": "12 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekuk4002g04jtp8oycge8",
+    "slug": "cuba-black-double-fresh-43",
+    "legacySlugs": [
+      "פאוצ-ניקוטין-cuba-בלאק-דאבל-פרש-43-מג-1-יח",
+      "cuba-------43---1-p8oycge8",
+      "cuba-43-1-p8oycge8",
+      "cuba-black-double-fresh-43-p8oycge8"
+    ],
+    "sku": "5904316128128",
+    "name": "CUBA בלאק דאבל פרש 43 מ״ג",
+    "brand": "CUBA",
+    "flavor": "בלאק דאבל פרש  -",
+    "nicotineMg": 43,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 30,
+    "sourcePrice": 0,
+    "stock": 208,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeHZzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c09ee67ecc68809d8b4e015783443c3f83e2cc15/WhatsApp%20Image%202026-04-09%20at%2012.%20(2).jpg"
+    ],
+    "imageAlt": "CUBA בלאק דאבל פרש 43 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "CUBA בלאק דאבל פרש 43 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא בלאק דאבל פרש, עם 43 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "CUBA בלאק דאבל פרש 43 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "CUBA בלאק דאבל פרש 43 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 43 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "CUBA בלאק דאבל פרש 43 מ״ג",
+    "canonicalUrl": "/shop/cuba-black-double-fresh-43",
+    "indexable": true,
+    "cardFeatures": [
+      "בלאק דאבל פרש",
+      "43 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: בלאק דאבל פרש"
+      },
+      {
+        "title": "43 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "1 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekl3e001y04jt48z2x37b",
+    "slug": "nois-cherry-extreme-50",
+    "legacySlugs": [
+      "50---27-48z2x37b",
+      "nois-דובדבן-אקסטרים-43589",
+      "נויס-דובדבן-אקסטרים-50-מג-27-יח",
+      "nois-----50---27-48z2x37b",
+      "nois-50-27-48z2x37b",
+      "nois-cherry-extreme-50-48z2x37b"
+    ],
+    "sku": "4742024720569",
+    "name": "NOIS דובדבן אקסטרים 50 מ״ג",
+    "brand": "NOIS",
+    "flavor": "דובדבן אקסטרים",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 30,
+    "sourcePrice": 15,
+    "stock": 974,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOTZnVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0c137929b2009ea034bcc42e50798499a8e1d9e8/%D7%A0%D7%95%D7%99%D7%A1%20%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F%20%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D%2050%20%D7%9E%D7%92.png"
+    ],
+    "imageAlt": "NOIS דובדבן אקסטרים 50 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "NOIS דובדבן אקסטרים 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא דובדבן אקסטרים, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 27 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "NOIS דובדבן אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "NOIS דובדבן אקסטרים 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "NOIS דובדבן אקסטרים 50 מ״ג",
+    "canonicalUrl": "/shop/nois-cherry-extreme-50",
+    "indexable": true,
+    "cardFeatures": [
+      "דובדבן אקסטרים",
+      "50 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: דובדבן אקסטרים"
+      },
+      {
+        "title": "50 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "27 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjejqy6000d04jt61rd99sx",
+    "slug": "hqd-sweet-passionfruit-12",
+    "legacySlugs": [
+      "hqd-פסיפלורה-מתוקה-31918",
+      "פאוצ-ניקוטין-hqd-פסיפלורה-מתוקה-12-מג",
+      "hqd-----12-61rd99sx",
+      "hqd-12-61rd99sx",
+      "hqd-sweet-passionfruit-12-61rd99sx"
+    ],
+    "sku": "6923742010585",
+    "name": "HQD פסיפלורה מתוקה 12 מ״ג",
+    "brand": "HQD",
+    "flavor": "פסיפלורה מתוקה",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 30,
+    "sourcePrice": 18,
+    "stock": 999,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://nicpouch.co.il/products/6923742010585-1-commerce.webp"
+    ],
+    "imageAlt": "HQD פסיפלורה מתוקה 12 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD פסיפלורה מתוקה 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פסיפלורה מתוקה, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD פסיפלורה מתוקה 12 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD פסיפלורה מתוקה 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD פסיפלורה מתוקה 12 מ״ג",
+    "canonicalUrl": "/shop/hqd-sweet-passionfruit-12",
+    "indexable": true,
+    "cardFeatures": [
+      "פסיפלורה מתוקה",
+      "12 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: פסיפלורה מתוקה"
+      },
+      {
+        "title": "12 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmt1ey7c3000004laum4wph4d",
+    "slug": "bit-cold-mint-30",
+    "legacySlugs": [
+      "פאוצ-ניקוטין-bit-קולד-מינט-30-מג-1-יח",
+      "bit-----30---1-um4wph4d",
+      "bit-30-1-um4wph4d",
+      "bit-cold-mint-30-um4wph4d"
+    ],
+    "sku": "4779052820107",
+    "name": "BIT קולד מינט 30 מ״ג",
+    "brand": "BIT",
+    "flavor": "BIT קולד מינט  -",
+    "nicotineMg": 30,
+    "strengthLevel": "strong",
+    "retailPrice": 30,
+    "sourcePrice": 0,
+    "stock": 120,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOXdNYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ddf9ade3eacfffbaf956e76ff2716674ed95c117/_MG_8188.jpg"
+    ],
+    "imageAlt": "BIT קולד מינט 30 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "BIT קולד מינט 30 מ״ג הוא שקיק ניקוטין ללא טבק מבית BIT, למבוגרים בלבד. הגרסה היא קולד מינט, עם 30 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "BIT קולד מינט 30 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "BIT קולד מינט 30 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 30 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "BIT קולד מינט 30 מ״ג",
+    "canonicalUrl": "/shop/bit-cold-mint-30",
+    "indexable": true,
+    "cardFeatures": [
+      "קולד מינט",
+      "30 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: קולד מינט"
+      },
+      {
+        "title": "30 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "1 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekf5x001n04jtnuk55997",
+    "slug": "pablo-grape-ice-50",
+    "legacySlugs": [
+      "pablo-ענבים-אייס-39269",
+      "פאוצ-ניקוטין-pablo-ענבים-אייס-50-מג",
+      "pablo-----50-nuk55997",
+      "pablo-50-nuk55997",
+      "pablo-grape-ice-50-nuk55997"
+    ],
+    "sku": "5744000761626",
+    "name": "PABLO ענבים אייס 50 מ״ג",
+    "brand": "PABLO",
+    "flavor": "ענבים אייס",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 30,
+    "sourcePrice": 18,
+    "stock": 493,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeVNRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f238c1d3bd01c7c567b70153a808fc38d9a98d7e/5744000761626_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20PABLO%20%D7%A2%D7%A0%D7%91%D7%99%D7%9D%20%D7%90%D7%99%D7%99%D7%A1%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
+    ],
+    "imageAlt": "PABLO ענבים אייס 50 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "PABLO ענבים אייס 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא ענבים אייס, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "PABLO ענבים אייס 50 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "PABLO ענבים אייס 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "PABLO ענבים אייס 50 מ״ג",
+    "canonicalUrl": "/shop/pablo-grape-ice-50",
+    "indexable": true,
+    "cardFeatures": [
+      "ענבים אייס",
+      "50 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: ענבים אייס"
+      },
+      {
+        "title": "50 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjejv44000l04jtuis3iji7",
+    "slug": "hqd-bubble-gum-6",
+    "legacySlugs": [
+      "hqd-פאוץ-ניקוטין-באבל-גאם-31952",
+      "פאוץ-ניקוטין-hqd-באבל-גאם-6-מג",
+      "hqd-----6-uis3iji7",
+      "hqd-6-uis3iji7",
+      "hqd-bubble-gum-6-uis3iji7"
+    ],
+    "sku": "6923742010493",
+    "name": "HQD באבל גאם 6 מ״ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  באבל גאם",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
+    "retailPrice": 30,
+    "sourcePrice": 18,
+    "stock": 999,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://nicpouch.co.il/products/6923742010493-1-commerce.webp"
+    ],
+    "imageAlt": "HQD באבל גאם 6 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD באבל גאם 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא באבל גאם, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD באבל גאם 6 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD באבל גאם 6 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 6 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD באבל גאם 6 מ״ג",
+    "canonicalUrl": "/shop/hqd-bubble-gum-6",
+    "indexable": true,
+    "cardFeatures": [
+      "באבל גאם",
+      "6 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: באבל גאם"
+      },
+      {
+        "title": "6 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekazv001f04jtv3ucbozj",
+    "slug": "hqd-blueberry-15",
+    "legacySlugs": [
+      "hqd-אוכמניות-32787",
+      "פאוצ-ניקוטין-hqd-אוכמניות-15-מג",
+      "hqd---15-v3ucbozj",
+      "hqd-15-v3ucbozj",
+      "hqd-blueberry-15-v3ucbozj"
+    ],
+    "sku": "6937105495995",
+    "name": "HQD אוכמניות 15 מ״ג",
+    "brand": "HQD",
+    "flavor": "אוכמניות",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 30,
+    "sourcePrice": 16,
+    "stock": 999,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://nicpouch.co.il/products/6937105495995-1-commerce.webp"
+    ],
+    "imageAlt": "HQD אוכמניות 15 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD אוכמניות 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא אוכמניות, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD אוכמניות 15 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD אוכמניות 15 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 15 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD אוכמניות 15 מ״ג",
+    "canonicalUrl": "/shop/hqd-blueberry-15",
+    "indexable": true,
+    "cardFeatures": [
+      "אוכמניות",
+      "15 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: אוכמניות"
+      },
+      {
+        "title": "15 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekdl0001k04jtyts47il6",
+    "slug": "pablo-blue-raspberry-50",
+    "legacySlugs": [
+      "pablo-פטל-כחול-39266",
+      "פאוצ-ניקוטין-pablo-פטל-כחול-50-מג",
+      "pablo-----50-yts47il6",
+      "pablo-50-yts47il6",
+      "pablo-blue-raspberry-50-yts47il6"
+    ],
+    "sku": "5740031400480",
+    "name": "PABLO פטל כחול 50 מ״ג",
+    "brand": "PABLO",
+    "flavor": "פטל כחול",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 30,
+    "sourcePrice": 18,
+    "stock": 44,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdytRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b05fcff0ab2e61ad24bf7609d036e83c22cd614c/5740031400480_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20PABLO%20%D7%A4%D7%98%D7%9C%20%D7%9B%D7%97%D7%95%D7%9C%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
+    ],
+    "imageAlt": "PABLO פטל כחול 50 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "PABLO פטל כחול 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא פטל כחול, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "PABLO פטל כחול 50 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "PABLO פטל כחול 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "PABLO פטל כחול 50 מ״ג",
+    "canonicalUrl": "/shop/pablo-blue-raspberry-50",
+    "indexable": true,
+    "cardFeatures": [
+      "פטל כחול",
+      "50 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: פטל כחול"
+      },
+      {
+        "title": "50 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
       },
       {
         "title": "ללא טבק"
@@ -657,6 +1040,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBODNzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9a5dcfa0cab0d0fae0561cb0d1e9ec689c6685ae/WhatsApp%20Image%202026-04-09%20at%2012.%20(6).jpg"
     ],
+    "imageAlt": "CUBA וויט גרייפ 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA וויט גרייפ 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא וויט גרייפ, עם 16 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA וויט גרייפ 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -713,6 +1097,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMDFMR2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4da777cc0e71660b74c9f4c20fb82d2fd1a28697/6923742003723_.jpg"
     ],
+    "imageAlt": "HQD מנטה 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD מנטה 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנטה, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD מנטה 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -730,118 +1115,6 @@
       },
       {
         "title": "25 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjekdl0001k04jtyts47il6",
-    "slug": "pablo-blue-raspberry-50",
-    "legacySlugs": [
-      "pablo-פטל-כחול-39266",
-      "פאוצ-ניקוטין-pablo-פטל-כחול-50-מג",
-      "pablo-----50-yts47il6",
-      "pablo-50-yts47il6",
-      "pablo-blue-raspberry-50-yts47il6"
-    ],
-    "sku": "5740031400480",
-    "name": "PABLO פטל כחול 50 מ״ג",
-    "brand": "PABLO",
-    "flavor": "פטל כחול",
-    "nicotineMg": 50,
-    "strengthLevel": "extra-strong",
-    "retailPrice": 30,
-    "sourcePrice": 18,
-    "stock": 44,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdytRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b05fcff0ab2e61ad24bf7609d036e83c22cd614c/5740031400480_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20PABLO%20%D7%A4%D7%98%D7%9C%20%D7%9B%D7%97%D7%95%D7%9C%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
-    ],
-    "categories": [],
-    "description": "PABLO פטל כחול 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא פטל כחול, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "PABLO פטל כחול 50 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "PABLO פטל כחול 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "PABLO פטל כחול 50 מ״ג",
-    "canonicalUrl": "/shop/pablo-blue-raspberry-50",
-    "indexable": true,
-    "cardFeatures": [
-      "פטל כחול",
-      "50 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: פטל כחול"
-      },
-      {
-        "title": "50 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjejxd9000p04jt12h4zjhs",
-    "slug": "hqd-mango-12",
-    "legacySlugs": [
-      "hqd-מנגו-31920",
-      "פאוצ-ניקוטין-hqd-מנגו-12-מג",
-      "hqd---12-12h4zjhs",
-      "hqd-12-12h4zjhs",
-      "hqd-mango-12-12h4zjhs"
-    ],
-    "sku": "6923742010592",
-    "name": "HQD מנגו 12 מ״ג",
-    "brand": "HQD",
-    "flavor": "מנגו",
-    "nicotineMg": 12,
-    "strengthLevel": "medium",
-    "retailPrice": 30,
-    "sourcePrice": 18,
-    "stock": 999,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "/products/6923742010592-1-commerce.webp"
-    ],
-    "categories": [],
-    "description": "HQD מנגו 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנגו, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD מנגו 12 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD מנגו 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD מנגו 12 מ״ג",
-    "canonicalUrl": "/shop/hqd-mango-12",
-    "indexable": true,
-    "cardFeatures": [
-      "מנגו",
-      "12 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: מנגו"
-      },
-      {
-        "title": "12 מ״ג לפי סימון האריזה"
       },
       {
         "title": "אריזה בודדת"
@@ -880,6 +1153,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBL2NNYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0145681dac7913b1708a7c889a764b31b97468a7/_MG_8195.jpg"
     ],
+    "imageAlt": "RABBIT בד אפל 50 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "RABBIT בד אפל 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית RABBIT, למבוגרים בלבד. הגרסה היא בד אפל, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "RABBIT בד אפל 50 מ״ג | שקיק ניקוטין ללא טבק",
@@ -900,6 +1174,120 @@
       },
       {
         "title": "1 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjejxd9000p04jt12h4zjhs",
+    "slug": "hqd-mango-12",
+    "legacySlugs": [
+      "hqd-מנגו-31920",
+      "פאוצ-ניקוטין-hqd-מנגו-12-מג",
+      "hqd---12-12h4zjhs",
+      "hqd-12-12h4zjhs",
+      "hqd-mango-12-12h4zjhs"
+    ],
+    "sku": "6923742010592",
+    "name": "HQD מנגו 12 מ״ג",
+    "brand": "HQD",
+    "flavor": "מנגו",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 30,
+    "sourcePrice": 18,
+    "stock": 999,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://nicpouch.co.il/products/6923742010592-1-commerce.webp"
+    ],
+    "imageAlt": "HQD מנגו 12 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD מנגו 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנגו, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD מנגו 12 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD מנגו 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD מנגו 12 מ״ג",
+    "canonicalUrl": "/shop/hqd-mango-12",
+    "indexable": true,
+    "cardFeatures": [
+      "מנגו",
+      "12 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: מנגו"
+      },
+      {
+        "title": "12 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekaeb001e04jtz92obsbm",
+    "slug": "hqd-blackberry-15",
+    "legacySlugs": [
+      "hqd-פאוץ-ניקוטין-פטל-שחור-32779",
+      "פאוץ-ניקוטין-hqd-פטל-שחור-15-מג",
+      "hqd-----15-z92obsbm",
+      "hqd-15-z92obsbm",
+      "hqd-blackberry-15-z92obsbm"
+    ],
+    "sku": "6937105496145",
+    "name": "HQD פטל שחור 15 מ״ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  פטל שחור",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 30,
+    "sourcePrice": 16,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeWVGSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7faee77460438320be3497aabbfb3e5fce78d623/6923742003145.jpg"
+    ],
+    "imageAlt": "HQD פטל שחור 15 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD פטל שחור 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פטל שחור, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD פטל שחור 15 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD פטל שחור 15 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 15 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD פטל שחור 15 מ״ג",
+    "canonicalUrl": "/shop/hqd-blackberry-15",
+    "indexable": true,
+    "cardFeatures": [
+      "פטל שחור",
+      "15 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: פטל שחור"
+      },
+      {
+        "title": "15 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
       },
       {
         "title": "ללא טבק"
@@ -935,6 +1323,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK0lNYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0cc69dabcf4c3678164ac4aaab2d200524bc5005/_MG_8193.jpg"
     ],
+    "imageAlt": "RABBIT קולה 50 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "RABBIT קולה 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית RABBIT, למבוגרים בלבד. הגרסה היא קולה, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "RABBIT קולה 50 מ״ג | שקיק ניקוטין ללא טבק",
@@ -955,6 +1344,177 @@
       },
       {
         "title": "1 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmt1fhg0o000104l4ri6s4gfi",
+    "slug": "rabbit-peppermint-50",
+    "legacySlugs": [
+      "פאוצ-ניקוטין-rabbit-פפרמינט-50-מג-1-יח",
+      "rabbit---50---1-ri6s4gfi",
+      "rabbit-50-1-ri6s4gfi",
+      "rabbit-peppermint-50-ri6s4gfi"
+    ],
+    "sku": "4779052820206",
+    "name": "RABBIT פפרמינט 50 מ״ג",
+    "brand": "RABBIT",
+    "flavor": "RABBIT פפרמינט  -",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 30,
+    "sourcePrice": 0,
+    "stock": 120,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBME1OYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ba178b25011959018e2999c3032eab36a3110be4/_MG_8204.jpg"
+    ],
+    "imageAlt": "RABBIT פפרמינט 50 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "RABBIT פפרמינט 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית RABBIT, למבוגרים בלבד. הגרסה היא פפרמינט, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "RABBIT פפרמינט 50 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "RABBIT פפרמינט 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "RABBIT פפרמינט 50 מ״ג",
+    "canonicalUrl": "/shop/rabbit-peppermint-50",
+    "indexable": true,
+    "cardFeatures": [
+      "פפרמינט",
+      "50 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: פפרמינט"
+      },
+      {
+        "title": "50 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "1 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjeknqq002304jtgx51u3g5",
+    "slug": "nois-grape-extreme-50",
+    "legacySlugs": [
+      "50---27-gx51u3g5",
+      "nois-ענבים-אקסטרים-45585",
+      "נויס-ענבים-אקסטרים-50-מג-27-יח",
+      "nois-----50---27-gx51u3g5",
+      "nois-50-27-gx51u3g5",
+      "nois-grape-extreme-50-gx51u3g5"
+    ],
+    "sku": "4742024720378",
+    "name": "NOIS ענבים אקסטרים 50 מ״ג",
+    "brand": "NOIS",
+    "flavor": "ענבים אקסטרים",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 30,
+    "sourcePrice": 15,
+    "stock": 904,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMk9qVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--191899285ca6b4c1bdd405e883ea9c9e5d8c5bb3/%D7%A0%D7%95%D7%99%D7%A1%20%D7%A2%D7%A0%D7%91%D7%99%D7%9D%2050%20%D7%9E%D7%92%2027%20%D7%A4%D7%90%D7%95%D7%A6%D7%99%D7%9D.png"
+    ],
+    "imageAlt": "NOIS ענבים אקסטרים 50 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "NOIS ענבים אקסטרים 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא ענבים אקסטרים, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 27 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "NOIS ענבים אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "NOIS ענבים אקסטרים 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "NOIS ענבים אקסטרים 50 מ״ג",
+    "canonicalUrl": "/shop/nois-grape-extreme-50",
+    "indexable": true,
+    "cardFeatures": [
+      "ענבים אקסטרים",
+      "50 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: ענבים אקסטרים"
+      },
+      {
+        "title": "50 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "27 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjek9d7001c04jtzgo7hsfe",
+    "slug": "hqd-bubble-gum-15",
+    "legacySlugs": [
+      "hqd-פאוץ-ניקוטין-באבל-גאם-32788",
+      "פאוץ-ניקוטין-hqd-באבל-גאם-15-מג",
+      "hqd-----15-zgo7hsfe",
+      "hqd-15-zgo7hsfe",
+      "hqd-bubble-gum-15-zgo7hsfe"
+    ],
+    "sku": "6923742004140",
+    "name": "HQD באבל גאם 15 מ״ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  באבל גאם",
+    "nicotineMg": 15,
+    "strengthLevel": "medium",
+    "retailPrice": 30,
+    "sourcePrice": 16,
+    "stock": 3,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBLzZFSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8dcd2a121d0f235b3d7848f478f8b7a230d3a3cb/6923742003140.jpg"
+    ],
+    "imageAlt": "HQD באבל גאם 15 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD באבל גאם 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא באבל גאם, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD באבל גאם 15 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD באבל גאם 15 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 15 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD באבל גאם 15 מ״ג",
+    "canonicalUrl": "/shop/hqd-bubble-gum-15",
+    "indexable": true,
+    "cardFeatures": [
+      "באבל גאם",
+      "15 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: באבל גאם"
+      },
+      {
+        "title": "15 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
       },
       {
         "title": "ללא טבק"
@@ -992,6 +1552,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM0tpVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cf66116974811dc6d504a8b89c0e2b56c947effd/%D7%A0%D7%95%D7%99%D7%A1%20%D7%9E%D7%A0%D7%98%D7%94%2025%20%D7%9E%D7%92%2022%20%D7%A4%D7%90%D7%95%D7%A6%D7%99%D7%9D.png"
     ],
+    "imageAlt": "NOIS מנטה 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "NOIS מנטה 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא מנטה, עם 25 מ״ג לפי סימון האריזה. האריזה כוללת 22 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "NOIS מנטה 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1012,173 +1573,6 @@
       },
       {
         "title": "22 שקיקים באריזה"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjejocs000804jt811xaamf",
-    "slug": "hqd-blue-lemonade-25",
-    "legacySlugs": [
-      "hqd-פאוץ-ניקוטין-לימונדה-כחולה-20323",
-      "פאוץ-ניקוטין-hqd-לימונדה-כחולה-25-מג",
-      "hqd-----25-811xaamf",
-      "hqd-25-811xaamf",
-      "hqd-blue-lemonade-25-811xaamf"
-    ],
-    "sku": "6923742003778",
-    "name": "HQD לימונדה כחולה 25 מ״ג",
-    "brand": "HQD",
-    "flavor": "פאוץ' ניקוטין  לימונדה כחולה",
-    "nicotineMg": 25,
-    "strengthLevel": "strong",
-    "retailPrice": 30,
-    "sourcePrice": 16,
-    "stock": 97,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMGxMR2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6f28b16af4ac7f12a962a9dca73962de22b0d89/6923742003778_.jpg"
-    ],
-    "categories": [],
-    "description": "HQD לימונדה כחולה 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא לימונדה כחולה, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD לימונדה כחולה 25 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD לימונדה כחולה 25 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 25 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD לימונדה כחולה 25 מ״ג",
-    "canonicalUrl": "/shop/hqd-blue-lemonade-25",
-    "indexable": true,
-    "cardFeatures": [
-      "לימונדה כחולה",
-      "25 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: לימונדה כחולה"
-      },
-      {
-        "title": "25 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmt1fd5zf000104jso051h9y9",
-    "slug": "rabbit-blue-ice-26",
-    "legacySlugs": [
-      "פאוצ-ניקוטין-rabbit-בלו-אייס-26-מג-1-יח",
-      "rabbit-----26---1-o051h9y9",
-      "rabbit-26-1-o051h9y9",
-      "rabbit-blue-ice-26-o051h9y9"
-    ],
-    "sku": "4779052820213",
-    "name": "RABBIT בלו אייס 26 מ״ג",
-    "brand": "RABBIT",
-    "flavor": "RABBIT בלו אייס  -",
-    "nicotineMg": 26,
-    "strengthLevel": "strong",
-    "retailPrice": 30,
-    "sourcePrice": 0,
-    "stock": 120,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK29NYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--758e27e623af94a3de1c0ceaae17c6b8edef680a/_MG_8192.jpg"
-    ],
-    "categories": [],
-    "description": "RABBIT בלו אייס 26 מ״ג הוא שקיק ניקוטין ללא טבק מבית RABBIT, למבוגרים בלבד. הגרסה היא בלו אייס, עם 26 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "RABBIT בלו אייס 26 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "RABBIT בלו אייס 26 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 26 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "RABBIT בלו אייס 26 מ״ג",
-    "canonicalUrl": "/shop/rabbit-blue-ice-26",
-    "indexable": true,
-    "cardFeatures": [
-      "בלו אייס",
-      "26 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: בלו אייס"
-      },
-      {
-        "title": "26 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "1 שקיקים באריזה"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjek9d7001c04jtzgo7hsfe",
-    "slug": "hqd-bubble-gum-15",
-    "legacySlugs": [
-      "hqd-פאוץ-ניקוטין-באבל-גאם-32788",
-      "פאוץ-ניקוטין-hqd-באבל-גאם-15-מג",
-      "hqd-----15-zgo7hsfe",
-      "hqd-15-zgo7hsfe",
-      "hqd-bubble-gum-15-zgo7hsfe"
-    ],
-    "sku": "6923742004140",
-    "name": "HQD באבל גאם 15 מ״ג",
-    "brand": "HQD",
-    "flavor": "פאוץ' ניקוטין  באבל גאם",
-    "nicotineMg": 15,
-    "strengthLevel": "medium",
-    "retailPrice": 30,
-    "sourcePrice": 16,
-    "stock": 3,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBLzZFSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8dcd2a121d0f235b3d7848f478f8b7a230d3a3cb/6923742003140.jpg"
-    ],
-    "categories": [],
-    "description": "HQD באבל גאם 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא באבל גאם, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD באבל גאם 15 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD באבל גאם 15 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 15 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD באבל גאם 15 מ״ג",
-    "canonicalUrl": "/shop/hqd-bubble-gum-15",
-    "indexable": true,
-    "cardFeatures": [
-      "באבל גאם",
-      "15 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: באבל גאם"
-      },
-      {
-        "title": "15 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
       },
       {
         "title": "ללא טבק"
@@ -1215,6 +1609,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMHBMR2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4a83da6a4b67429c008d41bb7e927e29dd18ec71/6923742003822_.jpg"
     ],
+    "imageAlt": "HQD מנגו 15 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD מנגו 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנגו, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD מנגו 15 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1248,40 +1643,158 @@
     ]
   },
   {
-    "id": "cmsjekc0y001h04jta53z8dfc",
-    "slug": "hqd-blueberry-25",
+    "id": "cmsjejt1f000h04jtpg08v08w",
+    "slug": "hqd-blue-lemonade-12",
     "legacySlugs": [
-      "פאוצ-ניקוטין-hqd-אוכמניות-25-מג",
-      "hqd---25-a53z8dfc",
-      "hqd-25-a53z8dfc",
-      "hqd-blueberry-25-a53z8dfc"
+      "hqd-לימונדה-כחולה-31916",
+      "פאוצ-ניקוטין-hqd-לימונדה-כחולה-12-מג",
+      "hqd-----12-pg08v08w",
+      "hqd-12-pg08v08w",
+      "hqd-blue-lemonade-12-pg08v08w"
     ],
-    "sku": "6923742008254",
-    "name": "HQD אוכמניות 25 מ״ג",
+    "sku": "6923742010578",
+    "name": "HQD לימונדה כחולה 12 מ״ג",
     "brand": "HQD",
-    "flavor": "אוכמניות",
-    "nicotineMg": 25,
-    "strengthLevel": "strong",
+    "flavor": "לימונדה כחולה",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
     "retailPrice": 30,
-    "sourcePrice": 0,
+    "sourcePrice": 18,
     "stock": 999,
     "active": true,
     "packSize": 1,
-    "images": [],
+    "images": [
+      "https://nicpouch.co.il/products/6923742010578-1-commerce.webp"
+    ],
+    "imageAlt": "HQD לימונדה כחולה 12 מ״ג – תמונת מוצר",
     "categories": [],
-    "description": "HQD אוכמניות 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא אוכמניות, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD אוכמניות 25 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD אוכמניות 25 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 25 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD אוכמניות 25 מ״ג",
-    "canonicalUrl": "/shop/hqd-blueberry-25",
+    "description": "HQD לימונדה כחולה 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא לימונדה כחולה, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD לימונדה כחולה 12 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD לימונדה כחולה 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD לימונדה כחולה 12 מ״ג",
+    "canonicalUrl": "/shop/hqd-blue-lemonade-12",
     "indexable": true,
     "cardFeatures": [
-      "אוכמניות",
+      "לימונדה כחולה",
+      "12 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: לימונדה כחולה"
+      },
+      {
+        "title": "12 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjejocs000804jt811xaamf",
+    "slug": "hqd-blue-lemonade-25",
+    "legacySlugs": [
+      "hqd-פאוץ-ניקוטין-לימונדה-כחולה-20323",
+      "פאוץ-ניקוטין-hqd-לימונדה-כחולה-25-מג",
+      "hqd-----25-811xaamf",
+      "hqd-25-811xaamf",
+      "hqd-blue-lemonade-25-811xaamf"
+    ],
+    "sku": "6923742003778",
+    "name": "HQD לימונדה כחולה 25 מ״ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  לימונדה כחולה",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 30,
+    "sourcePrice": 16,
+    "stock": 97,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMGxMR2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6f28b16af4ac7f12a962a9dca73962de22b0d89/6923742003778_.jpg"
+    ],
+    "imageAlt": "HQD לימונדה כחולה 25 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD לימונדה כחולה 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא לימונדה כחולה, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD לימונדה כחולה 25 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD לימונדה כחולה 25 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 25 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD לימונדה כחולה 25 מ״ג",
+    "canonicalUrl": "/shop/hqd-blue-lemonade-25",
+    "indexable": true,
+    "cardFeatures": [
+      "לימונדה כחולה",
       "25 מ״ג"
     ],
     "features": [
       {
-        "title": "טעם: אוכמניות"
+        "title": "טעם: לימונדה כחולה"
+      },
+      {
+        "title": "25 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjejpek000a04jtse9wvvtj",
+    "slug": "hqd-mango-25",
+    "legacySlugs": [
+      "hqd-פאוץ-ניקוטין-מנגו-20331",
+      "פאוץ-ניקוטין-hqd-מנגו-25-מג",
+      "hqd---25-se9wvvtj",
+      "hqd-25-se9wvvtj",
+      "hqd-mango-25-se9wvvtj"
+    ],
+    "sku": "6923742003815",
+    "name": "HQD מנגו 25 מ״ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  מנגו",
+    "nicotineMg": 25,
+    "strengthLevel": "strong",
+    "retailPrice": 30,
+    "sourcePrice": 16,
+    "stock": 999,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://nicpouch.co.il/products/6923742003815-1-commerce.webp"
+    ],
+    "imageAlt": "HQD מנגו 25 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD מנגו 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנגו, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD מנגו 25 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD מנגו 25 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 25 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD מנגו 25 מ״ג",
+    "canonicalUrl": "/shop/hqd-mango-25",
+    "indexable": true,
+    "cardFeatures": [
+      "מנגו",
+      "25 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: מנגו"
       },
       {
         "title": "25 מ״ג לפי סימון האריזה"
@@ -1324,6 +1837,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMDlMR2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c23e622f64c19f531d6b26eca21647e87c84bf97/6923742003808_.jpg"
     ],
+    "imageAlt": "HQD פסיפלורה מתוקה 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD פסיפלורה מתוקה 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פסיפלורה מתוקה, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD פסיפלורה מתוקה 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1341,62 +1855,6 @@
       },
       {
         "title": "25 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjejrzm000f04jt57kx2elx",
-    "slug": "hqd-sweet-passionfruit-6",
-    "legacySlugs": [
-      "hqd-פסיפלורה-מתוקה-31936",
-      "פאוצ-ניקוטין-hqd-פסיפלורה-מתוקה-6-מג",
-      "hqd-----6-57kx2elx",
-      "hqd-6-57kx2elx",
-      "hqd-sweet-passionfruit-6-57kx2elx"
-    ],
-    "sku": "6937105495346",
-    "name": "HQD פסיפלורה מתוקה 6 מ״ג",
-    "brand": "HQD",
-    "flavor": "פסיפלורה מתוקה",
-    "nicotineMg": 6,
-    "strengthLevel": "mild",
-    "retailPrice": 30,
-    "sourcePrice": 18,
-    "stock": 999,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "/products/6937105495346-1-commerce.webp"
-    ],
-    "categories": [],
-    "description": "HQD פסיפלורה מתוקה 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פסיפלורה מתוקה, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD פסיפלורה מתוקה 6 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD פסיפלורה מתוקה 6 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 6 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD פסיפלורה מתוקה 6 מ״ג",
-    "canonicalUrl": "/shop/hqd-sweet-passionfruit-6",
-    "indexable": true,
-    "cardFeatures": [
-      "פסיפלורה מתוקה",
-      "6 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: פסיפלורה מתוקה"
-      },
-      {
-        "title": "6 מ״ג לפי סימון האריזה"
       },
       {
         "title": "אריזה בודדת"
@@ -1434,8 +1892,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742010554-1-commerce.webp"
+      "https://nicpouch.co.il/products/6923742010554-1-commerce.webp"
     ],
+    "imageAlt": "HQD מנטה 12 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD מנטה 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנטה, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD מנטה 12 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1469,46 +1928,47 @@
     ]
   },
   {
-    "id": "cmsjejsip000g04jte2tbhxun",
-    "slug": "hqd-bubble-gum-12",
+    "id": "cmsjejrzm000f04jt57kx2elx",
+    "slug": "hqd-sweet-passionfruit-6",
     "legacySlugs": [
-      "hqd-פאוץ-ניקוטין-באבל-גאם-31950",
-      "פאוץ-ניקוטין-hqd-באבל-גאם-12מג",
-      "hqd-----12-e2tbhxun",
-      "hqd-12-e2tbhxun",
-      "hqd-bubble-gum-12-e2tbhxun"
+      "hqd-פסיפלורה-מתוקה-31936",
+      "פאוצ-ניקוטין-hqd-פסיפלורה-מתוקה-6-מג",
+      "hqd-----6-57kx2elx",
+      "hqd-6-57kx2elx",
+      "hqd-sweet-passionfruit-6-57kx2elx"
     ],
-    "sku": "6923742010608",
-    "name": "HQD באבל גאם 12 מ״ג",
+    "sku": "6937105495346",
+    "name": "HQD פסיפלורה מתוקה 6 מ״ג",
     "brand": "HQD",
-    "flavor": "פאוץ' ניקוטין  באבל גאם",
-    "nicotineMg": 12,
-    "strengthLevel": "medium",
+    "flavor": "פסיפלורה מתוקה",
+    "nicotineMg": 6,
+    "strengthLevel": "mild",
     "retailPrice": 30,
     "sourcePrice": 18,
     "stock": 999,
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742010608-1-commerce.webp"
+      "https://nicpouch.co.il/products/6937105495346-1-commerce.webp"
     ],
+    "imageAlt": "HQD פסיפלורה מתוקה 6 מ״ג – תמונת מוצר",
     "categories": [],
-    "description": "HQD באבל גאם 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא באבל גאם, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD באבל גאם 12 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD באבל גאם 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD באבל גאם 12 מ״ג",
-    "canonicalUrl": "/shop/hqd-bubble-gum-12",
+    "description": "HQD פסיפלורה מתוקה 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פסיפלורה מתוקה, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD פסיפלורה מתוקה 6 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD פסיפלורה מתוקה 6 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 6 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD פסיפלורה מתוקה 6 מ״ג",
+    "canonicalUrl": "/shop/hqd-sweet-passionfruit-6",
     "indexable": true,
     "cardFeatures": [
-      "באבל גאם",
-      "12 מ״ג"
+      "פסיפלורה מתוקה",
+      "6 מ״ג"
     ],
     "features": [
       {
-        "title": "טעם: באבל גאם"
+        "title": "טעם: פסיפלורה מתוקה"
       },
       {
-        "title": "12 מ״ג לפי סימון האריזה"
+        "title": "6 מ״ג לפי סימון האריזה"
       },
       {
         "title": "אריזה בודדת"
@@ -1549,6 +2009,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBL0cwVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4b6b218a151b14b98295ad735222f278665e20a6/%D7%A0%D7%95%D7%99%D7%A1%20%D7%9E%D7%A0%D7%98%D7%94%2050%20%D7%9E%D7%92%2027%20%D7%A4%D7%90%D7%95%D7%A6.png"
     ],
+    "imageAlt": "NOIS מנטה אקסטרים 50 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "NOIS מנטה אקסטרים 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא מנטה אקסטרים, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 27 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "NOIS מנטה אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1569,6 +2030,119 @@
       },
       {
         "title": "27 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjejsip000g04jte2tbhxun",
+    "slug": "hqd-bubble-gum-12",
+    "legacySlugs": [
+      "hqd-פאוץ-ניקוטין-באבל-גאם-31950",
+      "פאוץ-ניקוטין-hqd-באבל-גאם-12מג",
+      "hqd-----12-e2tbhxun",
+      "hqd-12-e2tbhxun",
+      "hqd-bubble-gum-12-e2tbhxun"
+    ],
+    "sku": "6923742010608",
+    "name": "HQD באבל גאם 12 מ״ג",
+    "brand": "HQD",
+    "flavor": "פאוץ' ניקוטין  באבל גאם",
+    "nicotineMg": 12,
+    "strengthLevel": "medium",
+    "retailPrice": 30,
+    "sourcePrice": 18,
+    "stock": 999,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://nicpouch.co.il/products/6923742010608-1-commerce.webp"
+    ],
+    "imageAlt": "HQD באבל גאם 12 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "HQD באבל גאם 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא באבל גאם, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "HQD באבל גאם 12 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "HQD באבל גאם 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "HQD באבל גאם 12 מ״ג",
+    "canonicalUrl": "/shop/hqd-bubble-gum-12",
+    "indexable": true,
+    "cardFeatures": [
+      "באבל גאם",
+      "12 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: באבל גאם"
+      },
+      {
+        "title": "12 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekwmc002k04jtoeu2kmz2",
+    "slug": "cuba-white-cherry-16",
+    "legacySlugs": [
+      "פאוצ-ניקוטין-cuba-וויט-צרי-16-מג-1-יח",
+      "cuba-----16---1-oeu2kmz2",
+      "cuba-16-1-oeu2kmz2",
+      "cuba-white-cherry-16-oeu2kmz2"
+    ],
+    "sku": "59047177590201",
+    "name": "CUBA וויט צ'רי 16 מ״ג",
+    "brand": "CUBA",
+    "flavor": "וויט צ'רי  -",
+    "nicotineMg": 16,
+    "strengthLevel": "medium",
+    "retailPrice": 30,
+    "sourcePrice": 0,
+    "stock": 130,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeEh0VUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--015614929de8297f7f3db2a0ba54b9526f4ceccc/WhatsApp%20Image%202026-04-09%20at%2012.%20(9).jpg"
+    ],
+    "imageAlt": "CUBA וויט צ'רי 16 מ״ג – תמונת מוצר",
+    "categories": [],
+    "description": "CUBA וויט צ'רי 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא וויט צ'רי, עם 16 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "CUBA וויט צ'רי 16 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "CUBA וויט צ'רי 16 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 16 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "focusKeyword": "CUBA וויט צ'רי 16 מ״ג",
+    "canonicalUrl": "/shop/cuba-white-cherry-16",
+    "indexable": true,
+    "cardFeatures": [
+      "וויט צ'רי",
+      "16 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: וויט צ'רי"
+      },
+      {
+        "title": "16 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "1 שקיקים באריזה"
       },
       {
         "title": "ללא טבק"
@@ -1605,6 +2179,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMTZRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--631af7bb086eba8bf6b88a3c4111a3690a0d3265/5744000760131_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20KILLA%20%D7%A0%D7%A2%D7%A0%D7%A2%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "KILLA נענע 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "KILLA נענע 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית KILLA, למבוגרים בלבד. הגרסה היא נענע, עם 16 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "KILLA נענע 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1662,6 +2237,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK0dqVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b004008f1baa614b2029a780d8fd0b84cfbb0fd3/%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F%2025%20%D7%9E%D7%92%2011%20%D7%A9%D7%A7%D7%99%D7%95%D7%AA.png"
     ],
+    "imageAlt": "NOIS דובדבן קרח 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "NOIS דובדבן קרח 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא דובדבן קרח, עם 25 מ״ג לפי סימון האריזה. האריזה כוללת 22 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "NOIS דובדבן קרח 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1682,62 +2258,6 @@
       },
       {
         "title": "22 שקיקים באריזה"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjek9vm001d04jt7d6kdzf0",
-    "slug": "hqd-blueberry-12",
-    "legacySlugs": [
-      "hqd-אוכמניות-31924",
-      "פאוצ-ניקוטין-hqd-אוכמניות-12-מג",
-      "hqd---12-7d6kdzf0",
-      "hqd-12-7d6kdzf0",
-      "hqd-blueberry-12-7d6kdzf0"
-    ],
-    "sku": "6923742010615",
-    "name": "HQD אוכמניות 12 מ״ג",
-    "brand": "HQD",
-    "flavor": "אוכמניות",
-    "nicotineMg": 12,
-    "strengthLevel": "medium",
-    "retailPrice": 30,
-    "sourcePrice": 18,
-    "stock": 999,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "/products/6923742010615-1-commerce.webp"
-    ],
-    "categories": [],
-    "description": "HQD אוכמניות 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא אוכמניות, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD אוכמניות 12 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD אוכמניות 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD אוכמניות 12 מ״ג",
-    "canonicalUrl": "/shop/hqd-blueberry-12",
-    "indexable": true,
-    "cardFeatures": [
-      "אוכמניות",
-      "12 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: אוכמניות"
-      },
-      {
-        "title": "12 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
       },
       {
         "title": "ללא טבק"
@@ -1774,6 +2294,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2FHSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--77c4904f6a75def8767b58f68f966856868933a2/6923742004157.jpg"
     ],
+    "imageAlt": "HQD באבל גאם 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD באבל גאם 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא באבל גאם, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD באבל גאם 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1794,61 +2315,6 @@
       },
       {
         "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjekwmc002k04jtoeu2kmz2",
-    "slug": "cuba-white-cherry-16",
-    "legacySlugs": [
-      "פאוצ-ניקוטין-cuba-וויט-צרי-16-מג-1-יח",
-      "cuba-----16---1-oeu2kmz2",
-      "cuba-16-1-oeu2kmz2",
-      "cuba-white-cherry-16-oeu2kmz2"
-    ],
-    "sku": "59047177590201",
-    "name": "CUBA וויט צ'רי 16 מ״ג",
-    "brand": "CUBA",
-    "flavor": "וויט צ'רי  -",
-    "nicotineMg": 16,
-    "strengthLevel": "medium",
-    "retailPrice": 30,
-    "sourcePrice": 0,
-    "stock": 130,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeEh0VUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--015614929de8297f7f3db2a0ba54b9526f4ceccc/WhatsApp%20Image%202026-04-09%20at%2012.%20(9).jpg"
-    ],
-    "categories": [],
-    "description": "CUBA וויט צ'רי 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא וויט צ'רי, עם 16 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "CUBA וויט צ'רי 16 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "CUBA וויט צ'רי 16 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 16 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "CUBA וויט צ'רי 16 מ״ג",
-    "canonicalUrl": "/shop/cuba-white-cherry-16",
-    "indexable": true,
-    "cardFeatures": [
-      "וויט צ'רי",
-      "16 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: וויט צ'רי"
-      },
-      {
-        "title": "16 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "1 שקיקים באריזה"
       },
       {
         "title": "ללא טבק"
@@ -1885,6 +2351,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMUNRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f82a68db2e61194392ee94d2642db71d8dc74da6/5740031400909_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20KILLA%20%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "KILLA לימונדה 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "KILLA לימונדה 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית KILLA, למבוגרים בלבד. הגרסה היא לימונדה, עם 16 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "KILLA לימונדה 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1939,8 +2406,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6937105495322-1-commerce.webp"
+      "https://nicpouch.co.il/products/6937105495322-1-commerce.webp"
     ],
+    "imageAlt": "HQD מנטה 6 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD מנטה 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנטה, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD מנטה 6 מ״ג | שקיק ניקוטין ללא טבק",
@@ -1995,8 +2463,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742010622-1-commerce.webp"
+      "https://nicpouch.co.il/products/6923742010622-1-commerce.webp"
     ],
+    "imageAlt": "HQD פטל שחור 12 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD פטל שחור 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פטל שחור, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD פטל שחור 12 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2054,6 +2523,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN3loVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--baa138da9c54e16f71d764126375da5f8d47ff4b/%D7%A0%D7%95%D7%99%D7%A1%20%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F%208%20%D7%9E%D7%92%2030%20%D7%A4%D7%90%D7%95%D7%A6%D7%99%D7%9D.png"
     ],
+    "imageAlt": "NOIS דובדבן קרח 8 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "NOIS דובדבן קרח 8 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא דובדבן קרח, עם 8 מ״ג לפי סימון האריזה. האריזה כוללת 30 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "NOIS דובדבן קרח 8 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2074,6 +2544,64 @@
       },
       {
         "title": "30 שקיקים באריזה"
+      },
+      {
+        "title": "ללא טבק"
+      },
+      {
+        "title": "למבוגרים בלבד"
+      }
+    ],
+    "usageInstructions": [
+      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
+    ]
+  },
+  {
+    "id": "cmsjekkk6001x04jtzrcoow46",
+    "slug": "nois-blueberry-extreme-50",
+    "legacySlugs": [
+      "50-zrcoow46",
+      "נויס-בלוברי-אקסטרים-50-מג",
+      "nois-----50-zrcoow46",
+      "nois-50-zrcoow46",
+      "nois-blueberry-extreme-50-zrcoow46"
+    ],
+    "sku": "4742024720217",
+    "name": "NOIS בלוברי אקסטרים 50 מ״ג",
+    "brand": "NOIS",
+    "flavor": "בלוברי אקסטרים",
+    "nicotineMg": 50,
+    "strengthLevel": "extra-strong",
+    "retailPrice": 30,
+    "sourcePrice": 0,
+    "stock": 0,
+    "active": true,
+    "packSize": 1,
+    "images": [
+      "https://twowombats.com/cdn/shop/files/Nois_Extreme_Blueberry_Slim_Wet_50_Nicotine_Pouches-4742024720217.webp?v=1710483052&width=1214"
+    ],
+    "imageAlt": "NOIS Extreme Blueberry 50 – אריזת שקיקי ניקוטין",
+    "categories": [],
+    "description": "NOIS בלוברי אקסטרים 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא בלוברי אקסטרים, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "NOIS בלוברי אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק",
+    "metaDescription": "NOIS בלוברי אקסטרים 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
+    "ogImage": "https://twowombats.com/cdn/shop/files/Nois_Extreme_Blueberry_Slim_Wet_50_Nicotine_Pouches-4742024720217.webp?v=1710483052&width=1214",
+    "focusKeyword": "NOIS בלוברי אקסטרים 50 מ״ג",
+    "canonicalUrl": "/shop/nois-blueberry-extreme-50",
+    "indexable": true,
+    "cardFeatures": [
+      "בלוברי אקסטרים",
+      "50 מ״ג"
+    ],
+    "features": [
+      {
+        "title": "טעם: בלוברי אקסטרים"
+      },
+      {
+        "title": "50 מ״ג לפי סימון האריזה"
+      },
+      {
+        "title": "אריזה בודדת"
       },
       {
         "title": "ללא טבק"
@@ -2110,6 +2638,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeXFRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4b9d3072568b900b5e1b08a7d83633e34a59906e/5740031400695_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20PABLO%20%D7%9E%D7%A0%D7%98%D7%94%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "PABLO מנטה 50 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "PABLO מנטה 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא מנטה, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "PABLO מנטה 50 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2164,8 +2693,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6937105495384-1-commerce.webp"
+      "https://nicpouch.co.il/products/6937105495384-1-commerce.webp"
     ],
+    "imageAlt": "HQD דובדבן 6 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD דובדבן 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא דובדבן, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD דובדבן 6 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2227,6 +2757,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMW1RTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8e5b0a8ed401d9a00a8ee32733ff19435ebf5922/5744000760094_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20KILLA%20%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "KILLA אוכמניות 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "KILLA אוכמניות 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית KILLA, למבוגרים בלבד. הגרסה היא אוכמניות, עם 16 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "KILLA אוכמניות 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2247,61 +2778,6 @@
       },
       {
         "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjektj6002e04jtd5g4zwc8",
-    "slug": "cuba-black-cherry-43",
-    "legacySlugs": [
-      "פאוצ-ניקוטין-cuba-בלאק-צרי-43-מג-1-יח",
-      "cuba-----43---1-d5g4zwc8",
-      "cuba-43-1-d5g4zwc8",
-      "cuba-black-cherry-43-d5g4zwc8"
-    ],
-    "sku": "5904717759020",
-    "name": "CUBA בלאק צ'רי 43 מ״ג",
-    "brand": "CUBA",
-    "flavor": "בלאק צ'רי  -",
-    "nicotineMg": 43,
-    "strengthLevel": "extra-strong",
-    "retailPrice": 30,
-    "sourcePrice": 0,
-    "stock": 128,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMlhzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1358917a586a594bfcd548ef7850882058746d86/WhatsApp%20Image%202026-04-09%20at%2012.%20(5).jpg"
-    ],
-    "categories": [],
-    "description": "CUBA בלאק צ'רי 43 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא בלאק צ'רי, עם 43 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "CUBA בלאק צ'רי 43 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "CUBA בלאק צ'רי 43 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 43 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "CUBA בלאק צ'רי 43 מ״ג",
-    "canonicalUrl": "/shop/cuba-black-cherry-43",
-    "indexable": true,
-    "cardFeatures": [
-      "בלאק צ'רי",
-      "43 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: בלאק צ'רי"
-      },
-      {
-        "title": "43 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "1 שקיקים באריזה"
       },
       {
         "title": "ללא טבק"
@@ -2338,6 +2814,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMG1RTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c934341cb4f08c55f224840f8a0d074753d2e0d3/5744000760148_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20KILLA%20%D7%90%D7%91%D7%98%D7%99%D7%97%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "KILLA אבטיח 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "KILLA אבטיח 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית KILLA, למבוגרים בלבד. הגרסה היא אבטיח, עם 16 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "KILLA אבטיח 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2393,6 +2870,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeXdOYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--33358d04d2005c1fe47d40e575aeb44ab7610b61/_MG_8196.jpg"
     ],
+    "imageAlt": "RABBIT בלוברי 26 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "RABBIT בלוברי 26 מ״ג הוא שקיק ניקוטין ללא טבק מבית RABBIT, למבוגרים בלבד. הגרסה היא בלוברי, עם 26 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "RABBIT בלוברי 26 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2447,8 +2925,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/5744000761633-1-commerce.webp"
+      "https://nicpouch.co.il/products/5744000761633-1-commerce.webp"
     ],
+    "imageAlt": "PABLO מנגו אייס 50 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "PABLO מנגו אייס 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא מנגו אייס, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "PABLO מנגו אייס 50 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2504,6 +2983,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2pIYkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f842cf37fd1fad3d8d0a66355485ec4e10b2f654/WhatsApp%20Image%202026-04-09%20at%2012.%20(10).jpg"
     ],
+    "imageAlt": "CUBA ווטרמלון 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA ווטרמלון 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא ווטרמלון, עם 16 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA ווטרמלון 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2524,115 +3004,6 @@
       },
       {
         "title": "1 שקיקים באריזה"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjejv44000l04jtuis3iji7",
-    "slug": "hqd-bubble-gum-6",
-    "legacySlugs": [
-      "hqd-פאוץ-ניקוטין-באבל-גאם-31952",
-      "פאוץ-ניקוטין-hqd-באבל-גאם-6-מג",
-      "hqd-----6-uis3iji7",
-      "hqd-6-uis3iji7",
-      "hqd-bubble-gum-6-uis3iji7"
-    ],
-    "sku": "6923742010493",
-    "name": "HQD באבל גאם 6 מ״ג",
-    "brand": "HQD",
-    "flavor": "פאוץ' ניקוטין  באבל גאם",
-    "nicotineMg": 6,
-    "strengthLevel": "mild",
-    "retailPrice": 30,
-    "sourcePrice": 18,
-    "stock": 999,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "/products/6923742010493-1-commerce.webp"
-    ],
-    "categories": [],
-    "description": "HQD באבל גאם 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא באבל גאם, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD באבל גאם 6 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD באבל גאם 6 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 6 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD באבל גאם 6 מ״ג",
-    "canonicalUrl": "/shop/hqd-bubble-gum-6",
-    "indexable": true,
-    "cardFeatures": [
-      "באבל גאם",
-      "6 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: באבל גאם"
-      },
-      {
-        "title": "6 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjekjit001v04jt0um3cots",
-    "slug": "nois-mint-extreme-50-0um3cots",
-    "legacySlugs": [
-      "50-0um3cots",
-      "נויס-מנטה-אקסטרים-50-מג",
-      "nois-----50-0um3cots",
-      "nois-50-0um3cots"
-    ],
-    "sku": "4742024720033",
-    "name": "NOIS מנטה אקסטרים 50 מ״ג",
-    "brand": "NOIS",
-    "flavor": "מנטה אקסטרים",
-    "nicotineMg": 50,
-    "strengthLevel": "extra-strong",
-    "retailPrice": 30,
-    "sourcePrice": 0,
-    "stock": 0,
-    "active": false,
-    "packSize": 1,
-    "images": [],
-    "categories": [],
-    "description": "NOIS מנטה אקסטרים 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא מנטה אקסטרים, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "NOIS מנטה אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "NOIS מנטה אקסטרים 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "NOIS מנטה אקסטרים 50 מ״ג",
-    "canonicalUrl": "/shop/nois-mint-extreme-50",
-    "indexable": false,
-    "cardFeatures": [
-      "מנטה אקסטרים",
-      "50 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: מנטה אקסטרים"
-      },
-      {
-        "title": "50 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
       },
       {
         "title": "ללא טבק"
@@ -2669,6 +3040,7 @@
     "images": [
       "https://payper.example.com/should-now-apply.jpg"
     ],
+    "imageAlt": "NOIS בלוברי 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "NOIS בלוברי 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא בלוברי, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "NOIS בלוברי 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2725,6 +3097,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeCtRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--abc59c38d3d4c6fe4486e1aa4f832856678606b6/5740031401890_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20PABLO%20%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "PABLO פסיפלורה 50 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "PABLO פסיפלורה 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא פסיפלורה, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "PABLO פסיפלורה 50 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2781,6 +3154,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMDVMR2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f79c1b0a7bad543ee1298ec6b1036d2e73e21a7e/6923742003792_.jpg"
     ],
+    "imageAlt": "HQD פסיפלורה מתוקה 15 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD פסיפלורה מתוקה 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פסיפלורה מתוקה, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD פסיפלורה מתוקה 15 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2836,6 +3210,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeW50VUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0f5eae5d059510864cbdd3176c048c4306d3e668/WhatsApp%20Image%202026-04-09%20at%2012.07.59%20(2).jpeg"
     ],
+    "imageAlt": "CUBA וויט קולד דריי 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA וויט קולד דריי 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא וויט קולד דריי, עם 16 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA וויט קולד דריי 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2892,6 +3267,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMHhMR2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--796bee6bd447dd111fcf6045d9aa331a44843673/6923742003716_.jpg"
     ],
+    "imageAlt": "HQD מנטה 15 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD מנטה 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנטה, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD מנטה 15 מ״ג | שקיק ניקוטין ללא טבק",
@@ -2912,63 +3288,6 @@
       },
       {
         "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjekl3e001y04jt48z2x37b",
-    "slug": "nois-cherry-extreme-50",
-    "legacySlugs": [
-      "50---27-48z2x37b",
-      "nois-דובדבן-אקסטרים-43589",
-      "נויס-דובדבן-אקסטרים-50-מג-27-יח",
-      "nois-----50---27-48z2x37b",
-      "nois-50-27-48z2x37b",
-      "nois-cherry-extreme-50-48z2x37b"
-    ],
-    "sku": "4742024720569",
-    "name": "NOIS דובדבן אקסטרים 50 מ״ג",
-    "brand": "NOIS",
-    "flavor": "דובדבן אקסטרים",
-    "nicotineMg": 50,
-    "strengthLevel": "extra-strong",
-    "retailPrice": 30,
-    "sourcePrice": 15,
-    "stock": 974,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOTZnVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0c137929b2009ea034bcc42e50798499a8e1d9e8/%D7%A0%D7%95%D7%99%D7%A1%20%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F%20%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D%2050%20%D7%9E%D7%92.png"
-    ],
-    "categories": [],
-    "description": "NOIS דובדבן אקסטרים 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא דובדבן אקסטרים, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 27 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "NOIS דובדבן אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "NOIS דובדבן אקסטרים 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "NOIS דובדבן אקסטרים 50 מ״ג",
-    "canonicalUrl": "/shop/nois-cherry-extreme-50",
-    "indexable": true,
-    "cardFeatures": [
-      "דובדבן אקסטרים",
-      "50 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: דובדבן אקסטרים"
-      },
-      {
-        "title": "50 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "27 שקיקים באריזה"
       },
       {
         "title": "ללא טבק"
@@ -3003,8 +3322,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742010486-1-commerce.webp"
+      "https://nicpouch.co.il/products/6923742010486-1-commerce.webp"
     ],
+    "imageAlt": "HQD בריזה טרופית 6 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD בריזה טרופית 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא בריזה טרופית, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD בריזה טרופית 6 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3061,6 +3381,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBektRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--295b3c4617de85b78f4ef45eeea170a4af23b639/5744000761336_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20KILLA%20%D7%9E%D7%A0%D7%92%D7%95%20%D7%90%D7%99%D7%99%D7%A1%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "KILLA מנגו אייס 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "KILLA מנגו אייס 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית KILLA, למבוגרים בלבד. הגרסה היא מנגו אייס, עם 16 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "KILLA מנגו אייס 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3117,6 +3438,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBejkySGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3dd00a5f5b3d90d969fc3dabd439a65fa8c02f48/6937105495285.jpg"
     ],
+    "imageAlt": "HQD פטל שחור 6 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD פטל שחור 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פטל שחור, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD פטל שחור 6 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3171,8 +3493,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742003761-1-commerce.webp"
+      "https://nicpouch.co.il/products/6923742003761-1-commerce.webp"
     ],
+    "imageAlt": "HQD בריזה טרופית 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD בריזה טרופית 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא בריזה טרופית, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD בריזה טרופית 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3227,8 +3550,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742010639-1-commerce.webp"
+      "https://nicpouch.co.il/products/6923742010639-1-commerce.webp"
     ],
+    "imageAlt": "HQD דובדבן 12 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD דובדבן 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא דובדבן, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD דובדבן 12 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3285,6 +3609,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeldRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d419712bff699362ab0a6eafa7ae78b37796c88c/5740031401029_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20KILLA%20%D7%9E%D7%A0%D7%98%D7%94%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "KILLA מנטה 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "KILLA מנטה 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית KILLA, למבוגרים בלבד. הגרסה היא מנטה, עם 16 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "KILLA מנטה 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3341,6 +3666,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK0NHSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1bfee2adfcd4909e6dc4fde722d8321a90fc348b/6923742003730.jpg"
     ],
+    "imageAlt": "HQD לימון מנטה 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD לימון מנטה 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא לימון מנטה, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD לימון מנטה 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3358,62 +3684,6 @@
       },
       {
         "title": "25 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjekf5x001n04jtnuk55997",
-    "slug": "pablo-grape-ice-50",
-    "legacySlugs": [
-      "pablo-ענבים-אייס-39269",
-      "פאוצ-ניקוטין-pablo-ענבים-אייס-50-מג",
-      "pablo-----50-nuk55997",
-      "pablo-50-nuk55997",
-      "pablo-grape-ice-50-nuk55997"
-    ],
-    "sku": "5744000761626",
-    "name": "PABLO ענבים אייס 50 מ״ג",
-    "brand": "PABLO",
-    "flavor": "ענבים אייס",
-    "nicotineMg": 50,
-    "strengthLevel": "extra-strong",
-    "retailPrice": 30,
-    "sourcePrice": 18,
-    "stock": 493,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeVNRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f238c1d3bd01c7c567b70153a808fc38d9a98d7e/5744000761626_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20PABLO%20%D7%A2%D7%A0%D7%91%D7%99%D7%9D%20%D7%90%D7%99%D7%99%D7%A1%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
-    ],
-    "categories": [],
-    "description": "PABLO ענבים אייס 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא ענבים אייס, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "PABLO ענבים אייס 50 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "PABLO ענבים אייס 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "PABLO ענבים אייס 50 מ״ג",
-    "canonicalUrl": "/shop/pablo-grape-ice-50",
-    "indexable": true,
-    "cardFeatures": [
-      "ענבים אייס",
-      "50 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: ענבים אייס"
-      },
-      {
-        "title": "50 מ״ג לפי סימון האריזה"
       },
       {
         "title": "אריזה בודדת"
@@ -3452,6 +3722,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBL3JzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--38dec15f5f90f2efedf5b54a790653a806234b98/WhatsApp%20Image%202026-04-09%20at%2012.%20(8).jpg"
     ],
+    "imageAlt": "CUBA וויט בלוברי 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA וויט בלוברי 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא וויט בלוברי, עם 16 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA וויט בלוברי 16 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3506,8 +3777,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742010479-1-commerce.webp"
+      "https://nicpouch.co.il/products/6923742010479-1-commerce.webp"
     ],
+    "imageAlt": "HQD לימונדה כחולה 6 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD לימונדה כחולה 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא לימונדה כחולה, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD לימונדה כחולה 6 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3542,46 +3814,55 @@
   },
   {
     "id": "cmsjekk1s001w04jtyt5cq20r",
-    "slug": "nois-strong-cool-35-ml",
+    "slug": "nois-cool-strong-35",
     "legacySlugs": [
       "35-yt5cq20r",
       "נויס-קול-חזק-35-מל",
       "nois-----35-yt5cq20r",
       "nois-35-yt5cq20r",
-      "nois-strong-cool-35-ml-yt5cq20r"
+      "nois-strong-cool-35-ml-yt5cq20r",
+      "nois-strong-cool-35-ml",
+      "nois-35"
     ],
     "sku": "4742024720118",
-    "name": "NOIS קול חזק 35 מ״ל",
+    "name": "NOIS קול סטרונג 35 מ״ג לגרם",
     "brand": "NOIS",
     "flavor": "קול חזק 35 מ\"ל",
-    "nicotineMg": null,
-    "strengthLevel": null,
+    "nicotineMg": 35,
+    "strengthLevel": "extra-strong",
     "retailPrice": 30,
     "sourcePrice": 0,
     "stock": 999,
     "active": true,
     "packSize": 1,
-    "images": [],
+    "images": [
+      "https://snusmart.com/cdn/shop/files/Cool_Strong_35_8cf6dcb3-1e0a-4684-beff-13eea67e27ef.webp?v=1745060192&width=1445"
+    ],
+    "imageAlt": "NOIS Cool Strong 35 – אריזת שקיקי ניקוטין",
     "categories": [],
-    "description": "NOIS קול חזק 35 מ״ל הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא קול חזק 35 מ״ל, עם עוצמה לפי סימון היצרן. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "NOIS קול חזק 35 מ״ל | שקיק ניקוטין ללא טבק",
-    "metaDescription": "NOIS קול חזק 35 מ״ל, שקיק ניקוטין ללא טבק למבוגרים בלבד. עוצמה לפי סימון האריזה, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "NOIS קול חזק 35 מ״ל",
-    "canonicalUrl": "/shop/nois-strong-cool-35-ml",
+    "description": "NOIS Cool Strong הוא שקיק ניקוטין ללא טבק בטעם מנטה, למבוגרים בלבד. לפי נתוני המוצר התואמים ל-EAN, העוצמה היא 35 מ״ג לגרם ו-17.5 מ״ג לשקיק, באריזה של 27 שקיקים. יש לוודא את הנתונים על גבי האריזה שהתקבלה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
+    "metaTitle": "NOIS Cool Strong 35 מ״ג/גרם | שקיק ניקוטין ללא טבק",
+    "metaDescription": "NOIS Cool Strong בטעם מנטה: 35 מ״ג לגרם ו-17.5 מ״ג לשקיק, 27 שקיקים באריזה. למבוגרים בלבד; ניקוטין הוא חומר ממכר.",
+    "ogImage": "https://snusmart.com/cdn/shop/files/Cool_Strong_35_8cf6dcb3-1e0a-4684-beff-13eea67e27ef.webp?v=1745060192&width=1445",
+    "focusKeyword": "NOIS Cool Strong 35 מ״ג לגרם",
+    "canonicalUrl": "/shop/nois-cool-strong-35",
     "indexable": false,
     "cardFeatures": [
-      "קול חזק 35 מ״ל",
-      "לפי האריזה"
+      "מנטה",
+      "35 מ״ג/גרם"
     ],
     "features": [
       {
-        "title": "טעם: קול חזק 35 מ״ל"
+        "title": "טעם: מנטה קרירה"
       },
       {
-        "title": "עוצמה לפי סימון היצרן"
+        "title": "35 מ״ג לגרם"
       },
       {
-        "title": "אריזה בודדת"
+        "title": "17.5 מ״ג לשקיק"
+      },
+      {
+        "title": "27 שקיקים באריזה"
       },
       {
         "title": "ללא טבק"
@@ -3618,6 +3899,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd0tRTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8ea275bf6fe9b0b6920540643ef30c19b6462f3/5744000761954_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20PABLO%20%D7%A7%D7%99%D7%95%D7%95%D7%99%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "PABLO קיווי 50 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "PABLO קיווי 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא קיווי, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "PABLO קיווי 50 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3673,6 +3955,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMUxzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--85130b153081ea4389cbad2b4dc3268bf922bf47/WhatsApp%20Image%202026-04-09%20at%2012.%20(4).jpg"
     ],
+    "imageAlt": "CUBA בלאק גרייפ 43 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA בלאק גרייפ 43 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא בלאק גרייפ, עם 43 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA בלאק גרייפ 43 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3729,6 +4012,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeG1RTHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--757c32cd12e4c653031b413ab362125688a3cd01/5740031400572_%D7%A4%D7%90%D7%95%D7%A6'%20%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F%20PABLO%20%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%A7%D7%9C%20%D7%A4%D7%90%D7%A0%D7%A6'%2016%20%D7%9E%D7%92%20-%201%20%D7%99%D7%97'.jpg"
     ],
+    "imageAlt": "PABLO טרופיקל פאנצ' 50 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "PABLO טרופיקל פאנצ׳ 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית PABLO, למבוגרים בלבד. הגרסה היא טרופיקל פאנצ׳, עם 50 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "PABLO טרופיקל פאנצ׳ 50 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3746,62 +4030,6 @@
       },
       {
         "title": "50 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjekaeb001e04jtz92obsbm",
-    "slug": "hqd-blackberry-15",
-    "legacySlugs": [
-      "hqd-פאוץ-ניקוטין-פטל-שחור-32779",
-      "פאוץ-ניקוטין-hqd-פטל-שחור-15-מג",
-      "hqd-----15-z92obsbm",
-      "hqd-15-z92obsbm",
-      "hqd-blackberry-15-z92obsbm"
-    ],
-    "sku": "6937105496145",
-    "name": "HQD פטל שחור 15 מ״ג",
-    "brand": "HQD",
-    "flavor": "פאוץ' ניקוטין  פטל שחור",
-    "nicotineMg": 15,
-    "strengthLevel": "medium",
-    "retailPrice": 30,
-    "sourcePrice": 16,
-    "stock": 0,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeWVGSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7faee77460438320be3497aabbfb3e5fce78d623/6923742003145.jpg"
-    ],
-    "categories": [],
-    "description": "HQD פטל שחור 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא פטל שחור, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD פטל שחור 15 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD פטל שחור 15 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 15 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD פטל שחור 15 מ״ג",
-    "canonicalUrl": "/shop/hqd-blackberry-15",
-    "indexable": true,
-    "cardFeatures": [
-      "פטל שחור",
-      "15 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: פטל שחור"
-      },
-      {
-        "title": "15 מ״ג לפי סימון האריזה"
       },
       {
         "title": "אריזה בודדת"
@@ -3842,6 +4070,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBKzJpVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--95f18790740c755715f946bc4a538e4112577f45/%D7%A0%D7%95%D7%99%D7%A1%20%D7%A2%D7%A0%D7%91%D7%99%D7%9D%2025%20%D7%9E%D7%92%2022%20%D7%A9%D7%A7%D7%99%D7%95%D7%AA.png"
     ],
+    "imageAlt": "NOIS ענבים קרח 25 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "NOIS ענבים קרח 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא ענבים קרח, עם 25 מ״ג לפי סימון האריזה. האריזה כוללת 22 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "NOIS ענבים קרח 25 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3862,63 +4091,6 @@
       },
       {
         "title": "22 שקיקים באריזה"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjeknqq002304jtgx51u3g5",
-    "slug": "nois-grape-extreme-50",
-    "legacySlugs": [
-      "50---27-gx51u3g5",
-      "nois-ענבים-אקסטרים-45585",
-      "נויס-ענבים-אקסטרים-50-מג-27-יח",
-      "nois-----50---27-gx51u3g5",
-      "nois-50-27-gx51u3g5",
-      "nois-grape-extreme-50-gx51u3g5"
-    ],
-    "sku": "4742024720378",
-    "name": "NOIS ענבים אקסטרים 50 מ״ג",
-    "brand": "NOIS",
-    "flavor": "ענבים אקסטרים",
-    "nicotineMg": 50,
-    "strengthLevel": "extra-strong",
-    "retailPrice": 30,
-    "sourcePrice": 15,
-    "stock": 904,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMk9qVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--191899285ca6b4c1bdd405e883ea9c9e5d8c5bb3/%D7%A0%D7%95%D7%99%D7%A1%20%D7%A2%D7%A0%D7%91%D7%99%D7%9D%2050%20%D7%9E%D7%92%2027%20%D7%A4%D7%90%D7%95%D7%A6%D7%99%D7%9D.png"
-    ],
-    "categories": [],
-    "description": "NOIS ענבים אקסטרים 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא ענבים אקסטרים, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 27 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "NOIS ענבים אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "NOIS ענבים אקסטרים 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "NOIS ענבים אקסטרים 50 מ״ג",
-    "canonicalUrl": "/shop/nois-grape-extreme-50",
-    "indexable": true,
-    "cardFeatures": [
-      "ענבים אקסטרים",
-      "50 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: ענבים אקסטרים"
-      },
-      {
-        "title": "50 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "27 שקיקים באריזה"
       },
       {
         "title": "ללא טבק"
@@ -3956,6 +4128,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOWlrVlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a4be91ad2a30fa066f6d725eccc464864991edf0/%D7%A0%D7%95%D7%99%D7%A1%20%D7%9E%D7%A0%D7%98%D7%94%208%20%D7%9E%D7%92%2030%20%D7%A4%D7%90%D7%95%D7%A6%D7%99%D7%9D.png"
     ],
+    "imageAlt": "NOIS מנטה 8 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "NOIS מנטה 8 מ״ג הוא שקיק ניקוטין ללא טבק מבית NOIS, למבוגרים בלבד. הגרסה היא מנטה, עם 8 מ״ג לפי סימון האריזה. האריזה כוללת 30 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "NOIS מנטה 8 מ״ג | שקיק ניקוטין ללא טבק",
@@ -3976,61 +4149,6 @@
       },
       {
         "title": "30 שקיקים באריזה"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmt1fhg0o000104l4ri6s4gfi",
-    "slug": "rabbit-peppermint-50",
-    "legacySlugs": [
-      "פאוצ-ניקוטין-rabbit-פפרמינט-50-מג-1-יח",
-      "rabbit---50---1-ri6s4gfi",
-      "rabbit-50-1-ri6s4gfi",
-      "rabbit-peppermint-50-ri6s4gfi"
-    ],
-    "sku": "4779052820206",
-    "name": "RABBIT פפרמינט 50 מ״ג",
-    "brand": "RABBIT",
-    "flavor": "RABBIT פפרמינט  -",
-    "nicotineMg": 50,
-    "strengthLevel": "extra-strong",
-    "retailPrice": 30,
-    "sourcePrice": 0,
-    "stock": 120,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBME1OYXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ba178b25011959018e2999c3032eab36a3110be4/_MG_8204.jpg"
-    ],
-    "categories": [],
-    "description": "RABBIT פפרמינט 50 מ״ג הוא שקיק ניקוטין ללא טבק מבית RABBIT, למבוגרים בלבד. הגרסה היא פפרמינט, עם 50 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "RABBIT פפרמינט 50 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "RABBIT פפרמינט 50 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 50 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "RABBIT פפרמינט 50 מ״ג",
-    "canonicalUrl": "/shop/rabbit-peppermint-50",
-    "indexable": true,
-    "cardFeatures": [
-      "פפרמינט",
-      "50 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: פפרמינט"
-      },
-      {
-        "title": "50 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "1 שקיקים באריזה"
       },
       {
         "title": "ללא טבק"
@@ -4065,8 +4183,9 @@
     "active": true,
     "packSize": 1,
     "images": [
-      "/products/6923742003785-1-commerce.webp"
+      "https://nicpouch.co.il/products/6923742003785-1-commerce.webp"
     ],
+    "imageAlt": "HQD לימונדה כחולה 15 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD לימונדה כחולה 15 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא לימונדה כחולה, עם 15 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD לימונדה כחולה 15 מ״ג | שקיק ניקוטין ללא טבק",
@@ -4084,62 +4203,6 @@
       },
       {
         "title": "15 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjejt1f000h04jtpg08v08w",
-    "slug": "hqd-blue-lemonade-12",
-    "legacySlugs": [
-      "hqd-לימונדה-כחולה-31916",
-      "פאוצ-ניקוטין-hqd-לימונדה-כחולה-12-מג",
-      "hqd-----12-pg08v08w",
-      "hqd-12-pg08v08w",
-      "hqd-blue-lemonade-12-pg08v08w"
-    ],
-    "sku": "6923742010578",
-    "name": "HQD לימונדה כחולה 12 מ״ג",
-    "brand": "HQD",
-    "flavor": "לימונדה כחולה",
-    "nicotineMg": 12,
-    "strengthLevel": "medium",
-    "retailPrice": 30,
-    "sourcePrice": 18,
-    "stock": 999,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "/products/6923742010578-1-commerce.webp"
-    ],
-    "categories": [],
-    "description": "HQD לימונדה כחולה 12 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא לימונדה כחולה, עם 12 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD לימונדה כחולה 12 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD לימונדה כחולה 12 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 12 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD לימונדה כחולה 12 מ״ג",
-    "canonicalUrl": "/shop/hqd-blue-lemonade-12",
-    "indexable": true,
-    "cardFeatures": [
-      "לימונדה כחולה",
-      "12 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: לימונדה כחולה"
-      },
-      {
-        "title": "12 מ״ג לפי סימון האריזה"
       },
       {
         "title": "אריזה בודדת"
@@ -4179,6 +4242,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMGgySGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--57488147c226bc4a5b04d690f16cb32a68cdf8c8/6937105495353.jpg"
     ],
+    "imageAlt": "HQD מנגו 6 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "HQD מנגו 6 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנגו, עם 6 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "HQD מנגו 6 מ״ג | שקיק ניקוטין ללא טבק",
@@ -4234,6 +4298,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBL25yVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--af9d7dc12de0af543669765b4f28d0ebdeba12c3/WhatsApp%20Image%202026-04-09%20at%2012.%20(1).jpg"
     ],
+    "imageAlt": "CUBA בלאק ווטרמלון 43 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA בלאק ווטרמלון 43 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא בלאק ווטרמלון, עם 43 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA בלאק ווטרמלון 43 מ״ג | שקיק ניקוטין ללא טבק",
@@ -4254,62 +4319,6 @@
       },
       {
         "title": "1 שקיקים באריזה"
-      },
-      {
-        "title": "ללא טבק"
-      },
-      {
-        "title": "למבוגרים בלבד"
-      }
-    ],
-    "usageInstructions": [
-      "יש לפעול לפי הוראות היצרן שעל האריזה. אין לבלוע; יש להרחיק מילדים ומבעלי חיים. המוצר מיועד למבוגרים בלבד ומכיל ניקוטין — חומר ממכר."
-    ]
-  },
-  {
-    "id": "cmsjejpek000a04jtse9wvvtj",
-    "slug": "hqd-mango-25",
-    "legacySlugs": [
-      "hqd-פאוץ-ניקוטין-מנגו-20331",
-      "פאוץ-ניקוטין-hqd-מנגו-25-מג",
-      "hqd---25-se9wvvtj",
-      "hqd-25-se9wvvtj",
-      "hqd-mango-25-se9wvvtj"
-    ],
-    "sku": "6923742003815",
-    "name": "HQD מנגו 25 מ״ג",
-    "brand": "HQD",
-    "flavor": "פאוץ' ניקוטין  מנגו",
-    "nicotineMg": 25,
-    "strengthLevel": "strong",
-    "retailPrice": 30,
-    "sourcePrice": 16,
-    "stock": 999,
-    "active": true,
-    "packSize": 1,
-    "images": [
-      "/products/6923742003815-1-commerce.webp"
-    ],
-    "categories": [],
-    "description": "HQD מנגו 25 מ״ג הוא שקיק ניקוטין ללא טבק מבית HQD, למבוגרים בלבד. הגרסה היא מנגו, עם 25 מ״ג לפי סימון האריזה. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
-    "metaTitle": "HQD מנגו 25 מ״ג | שקיק ניקוטין ללא טבק",
-    "metaDescription": "HQD מנגו 25 מ״ג, שקיק ניקוטין ללא טבק למבוגרים בלבד. 25 מ״ג, מחיר וזמינות באתר NIC POUCH. המוצר מכיל ניקוטין — חומר ממכר.",
-    "focusKeyword": "HQD מנגו 25 מ״ג",
-    "canonicalUrl": "/shop/hqd-mango-25",
-    "indexable": true,
-    "cardFeatures": [
-      "מנגו",
-      "25 מ״ג"
-    ],
-    "features": [
-      {
-        "title": "טעם: מנגו"
-      },
-      {
-        "title": "25 מ״ג לפי סימון האריזה"
-      },
-      {
-        "title": "אריזה בודדת"
       },
       {
         "title": "ללא טבק"
@@ -4345,6 +4354,7 @@
     "images": [
       "https://app.payper.co.il/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2ZzVUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--86e01e6000b357cfa13ac2685ebffdc6b0ecd0ee/WhatsApp%20Image%202026-04-09%20at%2012.%20(7).jpg"
     ],
+    "imageAlt": "CUBA וויט דאבל פרש 16 מ״ג – תמונת מוצר",
     "categories": [],
     "description": "CUBA וויט דאבל פרש 16 מ״ג הוא שקיק ניקוטין ללא טבק מבית CUBA, למבוגרים בלבד. הגרסה היא וויט דאבל פרש, עם 16 מ״ג לפי סימון האריזה. האריזה כוללת 1 שקיקים לפי שם המוצר בקטלוג. בעמוד מוצגים מחיר ליחידה, הנחות הכמות, מלאי, מק״ט ותמונות הגרסה המדויקת. השוו את יחידת המדידה ואת סימון היצרן לפני בחירה; צבע האריזה לבדו אינו מדד לעוצמה. ניקוטין הוא חומר ממכר, והמוצר אינו מיועד למי שאינו משתמש בניקוטין.",
     "metaTitle": "CUBA וויט דאבל פרש 16 מ״ג | שקיק ניקוטין ללא טבק",

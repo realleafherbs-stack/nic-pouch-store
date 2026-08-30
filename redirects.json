@@ -100,6 +100,181 @@
     "statusCode": 301
   },
   {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
+    "destination": "/shop/cuba-black-blueberry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-----43---1-p0nr5y67",
+    "destination": "/shop/cuba-black-blueberry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-43-1-p0nr5y67",
+    "destination": "/shop/cuba-black-blueberry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-black-blueberry-43-p0nr5y67",
+    "destination": "/shop/cuba-black-blueberry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%91%D7%9C%D7%95-%D7%90%D7%99%D7%99%D7%A1-26-%D7%9E%D7%92-1-%D7%99%D7%97",
+    "destination": "/shop/rabbit-blue-ice-26",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/rabbit-----26---1-o051h9y9",
+    "destination": "/shop/rabbit-blue-ice-26",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/rabbit-26-1-o051h9y9",
+    "destination": "/shop/rabbit-blue-ice-26",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/rabbit-blue-ice-26-o051h9y9",
+    "destination": "/shop/rabbit-blue-ice-26",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%A6%D7%A8%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
+    "destination": "/shop/cuba-black-cherry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-----43---1-d5g4zwc8",
+    "destination": "/shop/cuba-black-cherry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-43-1-d5g4zwc8",
+    "destination": "/shop/cuba-black-cherry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-black-cherry-43-d5g4zwc8",
+    "destination": "/shop/cuba-black-cherry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%A7%D7%95%D7%9C%D7%93-%D7%93%D7%A8%D7%99%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
+    "destination": "/shop/cuba-black-cold-dry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-------43---1-zbx4sx45",
+    "destination": "/shop/cuba-black-cold-dry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-43-1-zbx4sx45",
+    "destination": "/shop/cuba-black-cold-dry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-black-cold-dry-43-zbx4sx45",
+    "destination": "/shop/cuba-black-cold-dry-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-25-%D7%9E%D7%92",
+    "destination": "/shop/hqd-blueberry-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd---25-a53z8dfc",
+    "destination": "/shop/hqd-blueberry-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-25-a53z8dfc",
+    "destination": "/shop/hqd-blueberry-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-blueberry-25-a53z8dfc",
+    "destination": "/shop/hqd-blueberry-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-31924",
+    "destination": "/shop/hqd-blueberry-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-12-%D7%9E%D7%92",
+    "destination": "/shop/hqd-blueberry-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd---12-7d6kdzf0",
+    "destination": "/shop/hqd-blueberry-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-12-7d6kdzf0",
+    "destination": "/shop/hqd-blueberry-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-blueberry-12-7d6kdzf0",
+    "destination": "/shop/hqd-blueberry-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%93%D7%90%D7%91%D7%9C-%D7%A4%D7%A8%D7%A9-43-%D7%9E%D7%92-1-%D7%99%D7%97",
+    "destination": "/shop/cuba-black-double-fresh-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-------43---1-p8oycge8",
+    "destination": "/shop/cuba-black-double-fresh-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-43-1-p8oycge8",
+    "destination": "/shop/cuba-black-double-fresh-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-black-double-fresh-43-p8oycge8",
+    "destination": "/shop/cuba-black-double-fresh-43",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/50---27-48z2x37b",
+    "destination": "/shop/nois-cherry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-43589",
+    "destination": "/shop/nois-cherry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92-27-%D7%99%D7%97",
+    "destination": "/shop/nois-cherry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-----50---27-48z2x37b",
+    "destination": "/shop/nois-cherry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-50-27-48z2x37b",
+    "destination": "/shop/nois-cherry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-cherry-extreme-50-48z2x37b",
+    "destination": "/shop/nois-cherry-extreme-50",
+    "statusCode": 301
+  },
+  {
     "source": "/shop/hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-31918",
     "destination": "/shop/hqd-sweet-passionfruit-12",
     "statusCode": 301
@@ -122,6 +297,76 @@
   {
     "source": "/shop/hqd-sweet-passionfruit-12-61rd99sx",
     "destination": "/shop/hqd-sweet-passionfruit-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-bit-%D7%A7%D7%95%D7%9C%D7%93-%D7%9E%D7%99%D7%A0%D7%98-30-%D7%9E%D7%92-1-%D7%99%D7%97",
+    "destination": "/shop/bit-cold-mint-30",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/bit-----30---1-um4wph4d",
+    "destination": "/shop/bit-cold-mint-30",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/bit-30-1-um4wph4d",
+    "destination": "/shop/bit-cold-mint-30",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/bit-cold-mint-30-um4wph4d",
+    "destination": "/shop/bit-cold-mint-30",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/pablo-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%99%D7%99%D7%A1-39269",
+    "destination": "/shop/pablo-grape-ice-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%99%D7%99%D7%A1-50-%D7%9E%D7%92",
+    "destination": "/shop/pablo-grape-ice-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/pablo-----50-nuk55997",
+    "destination": "/shop/pablo-grape-ice-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/pablo-50-nuk55997",
+    "destination": "/shop/pablo-grape-ice-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/pablo-grape-ice-50-nuk55997",
+    "destination": "/shop/pablo-grape-ice-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-31952",
+    "destination": "/shop/hqd-bubble-gum-6",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-6-%D7%9E%D7%92",
+    "destination": "/shop/hqd-bubble-gum-6",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-----6-uis3iji7",
+    "destination": "/shop/hqd-bubble-gum-6",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-6-uis3iji7",
+    "destination": "/shop/hqd-bubble-gum-6",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-bubble-gum-6-uis3iji7",
+    "destination": "/shop/hqd-bubble-gum-6",
     "statusCode": 301
   },
   {
@@ -150,118 +395,28 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/50-zrcoow46",
-    "destination": "/shop/nois-blueberry-extreme-50",
+    "source": "/shop/pablo-%D7%A4%D7%98%D7%9C-%D7%9B%D7%97%D7%95%D7%9C-39266",
+    "destination": "/shop/pablo-blue-raspberry-50",
     "statusCode": 301
   },
   {
-    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92",
-    "destination": "/shop/nois-blueberry-extreme-50",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%A4%D7%98%D7%9C-%D7%9B%D7%97%D7%95%D7%9C-50-%D7%9E%D7%92",
+    "destination": "/shop/pablo-blue-raspberry-50",
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-----50-zrcoow46",
-    "destination": "/shop/nois-blueberry-extreme-50",
+    "source": "/shop/pablo-----50-yts47il6",
+    "destination": "/shop/pablo-blue-raspberry-50",
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-50-zrcoow46",
-    "destination": "/shop/nois-blueberry-extreme-50",
+    "source": "/shop/pablo-50-yts47il6",
+    "destination": "/shop/pablo-blue-raspberry-50",
     "statusCode": 301
   },
   {
-    "source": "/shop/nois-blueberry-extreme-50-zrcoow46",
-    "destination": "/shop/nois-blueberry-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%9E%D7%99%D7%A7%D7%A1-%D7%93%D7%95%D7%92%D7%9E%D7%99%D7%95%D7%AA-%D7%A0%D7%95%D7%99%D7%A1-3-%D7%98%D7%A2%D7%9E%D7%99%D7%9D-%D7%9E%D7%90%D7%A8%D7%96-45-%D7%99%D7%97",
-    "destination": "/shop/nois-nois-3",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-nois-3-zxj10zks",
-    "destination": "/shop/nois-nois-3",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
-    "destination": "/shop/cuba-black-blueberry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-----43---1-p0nr5y67",
-    "destination": "/shop/cuba-black-blueberry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-43-1-p0nr5y67",
-    "destination": "/shop/cuba-black-blueberry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-black-blueberry-43-p0nr5y67",
-    "destination": "/shop/cuba-black-blueberry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%93%D7%90%D7%91%D7%9C-%D7%A4%D7%A8%D7%A9-43-%D7%9E%D7%92-1-%D7%99%D7%97",
-    "destination": "/shop/cuba-black-double-fresh-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-------43---1-p8oycge8",
-    "destination": "/shop/cuba-black-double-fresh-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-43-1-p8oycge8",
-    "destination": "/shop/cuba-black-double-fresh-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-black-double-fresh-43-p8oycge8",
-    "destination": "/shop/cuba-black-double-fresh-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-bit-%D7%A7%D7%95%D7%9C%D7%93-%D7%9E%D7%99%D7%A0%D7%98-30-%D7%9E%D7%92-1-%D7%99%D7%97",
-    "destination": "/shop/bit-cold-mint-30",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/bit-----30---1-um4wph4d",
-    "destination": "/shop/bit-cold-mint-30",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/bit-30-1-um4wph4d",
-    "destination": "/shop/bit-cold-mint-30",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/bit-cold-mint-30-um4wph4d",
-    "destination": "/shop/bit-cold-mint-30",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%A7%D7%95%D7%9C%D7%93-%D7%93%D7%A8%D7%99%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
-    "destination": "/shop/cuba-black-cold-dry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-------43---1-zbx4sx45",
-    "destination": "/shop/cuba-black-cold-dry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-43-1-zbx4sx45",
-    "destination": "/shop/cuba-black-cold-dry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-black-cold-dry-43-zbx4sx45",
-    "destination": "/shop/cuba-black-cold-dry-43",
+    "source": "/shop/pablo-blue-raspberry-50-yts47il6",
+    "destination": "/shop/pablo-blue-raspberry-50",
     "statusCode": 301
   },
   {
@@ -310,28 +465,23 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-%D7%A4%D7%98%D7%9C-%D7%9B%D7%97%D7%95%D7%9C-39266",
-    "destination": "/shop/pablo-blue-raspberry-50",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%91%D7%93-%D7%90%D7%A4%D7%9C-50-%D7%9E%D7%92-1-%D7%99%D7%97-1",
+    "destination": "/shop/rabbit-bad-apple-50",
     "statusCode": 301
   },
   {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%A4%D7%98%D7%9C-%D7%9B%D7%97%D7%95%D7%9C-50-%D7%9E%D7%92",
-    "destination": "/shop/pablo-blue-raspberry-50",
+    "source": "/shop/rabbit-----50---1---1-jkhsl05x",
+    "destination": "/shop/rabbit-bad-apple-50",
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-----50-yts47il6",
-    "destination": "/shop/pablo-blue-raspberry-50",
+    "source": "/shop/rabbit-50-1-1-jkhsl05x",
+    "destination": "/shop/rabbit-bad-apple-50",
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-50-yts47il6",
-    "destination": "/shop/pablo-blue-raspberry-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/pablo-blue-raspberry-50-yts47il6",
-    "destination": "/shop/pablo-blue-raspberry-50",
+    "source": "/shop/rabbit-bad-apple-50-jkhsl05x",
+    "destination": "/shop/rabbit-bad-apple-50",
     "statusCode": 301
   },
   {
@@ -360,23 +510,28 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%91%D7%93-%D7%90%D7%A4%D7%9C-50-%D7%9E%D7%92-1-%D7%99%D7%97-1",
-    "destination": "/shop/rabbit-bad-apple-50",
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-32779",
+    "destination": "/shop/hqd-blackberry-15",
     "statusCode": 301
   },
   {
-    "source": "/shop/rabbit-----50---1---1-jkhsl05x",
-    "destination": "/shop/rabbit-bad-apple-50",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-15-%D7%9E%D7%92",
+    "destination": "/shop/hqd-blackberry-15",
     "statusCode": 301
   },
   {
-    "source": "/shop/rabbit-50-1-1-jkhsl05x",
-    "destination": "/shop/rabbit-bad-apple-50",
+    "source": "/shop/hqd-----15-z92obsbm",
+    "destination": "/shop/hqd-blackberry-15",
     "statusCode": 301
   },
   {
-    "source": "/shop/rabbit-bad-apple-50-jkhsl05x",
-    "destination": "/shop/rabbit-bad-apple-50",
+    "source": "/shop/hqd-15-z92obsbm",
+    "destination": "/shop/hqd-blackberry-15",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-blackberry-15-z92obsbm",
+    "destination": "/shop/hqd-blackberry-15",
     "statusCode": 301
   },
   {
@@ -397,6 +552,81 @@
   {
     "source": "/shop/rabbit-cola-50-iy6lg0jp",
     "destination": "/shop/rabbit-cola-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%A4%D7%A4%D7%A8%D7%9E%D7%99%D7%A0%D7%98-50-%D7%9E%D7%92-1-%D7%99%D7%97",
+    "destination": "/shop/rabbit-peppermint-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/rabbit---50---1-ri6s4gfi",
+    "destination": "/shop/rabbit-peppermint-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/rabbit-50-1-ri6s4gfi",
+    "destination": "/shop/rabbit-peppermint-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/rabbit-peppermint-50-ri6s4gfi",
+    "destination": "/shop/rabbit-peppermint-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/50---27-gx51u3g5",
+    "destination": "/shop/nois-grape-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-45585",
+    "destination": "/shop/nois-grape-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92-27-%D7%99%D7%97",
+    "destination": "/shop/nois-grape-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-----50---27-gx51u3g5",
+    "destination": "/shop/nois-grape-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-50-27-gx51u3g5",
+    "destination": "/shop/nois-grape-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-grape-extreme-50-gx51u3g5",
+    "destination": "/shop/nois-grape-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-32788",
+    "destination": "/shop/hqd-bubble-gum-15",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-15-%D7%9E%D7%92",
+    "destination": "/shop/hqd-bubble-gum-15",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-----15-zgo7hsfe",
+    "destination": "/shop/hqd-bubble-gum-15",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-15-zgo7hsfe",
+    "destination": "/shop/hqd-bubble-gum-15",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-bubble-gum-15-zgo7hsfe",
+    "destination": "/shop/hqd-bubble-gum-15",
     "statusCode": 301
   },
   {
@@ -430,76 +660,6 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-20323",
-    "destination": "/shop/hqd-blue-lemonade-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-25-%D7%9E%D7%92",
-    "destination": "/shop/hqd-blue-lemonade-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-----25-811xaamf",
-    "destination": "/shop/hqd-blue-lemonade-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-25-811xaamf",
-    "destination": "/shop/hqd-blue-lemonade-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-blue-lemonade-25-811xaamf",
-    "destination": "/shop/hqd-blue-lemonade-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%91%D7%9C%D7%95-%D7%90%D7%99%D7%99%D7%A1-26-%D7%9E%D7%92-1-%D7%99%D7%97",
-    "destination": "/shop/rabbit-blue-ice-26",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/rabbit-----26---1-o051h9y9",
-    "destination": "/shop/rabbit-blue-ice-26",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/rabbit-26-1-o051h9y9",
-    "destination": "/shop/rabbit-blue-ice-26",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/rabbit-blue-ice-26-o051h9y9",
-    "destination": "/shop/rabbit-blue-ice-26",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-32788",
-    "destination": "/shop/hqd-bubble-gum-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-15-%D7%9E%D7%92",
-    "destination": "/shop/hqd-bubble-gum-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-----15-zgo7hsfe",
-    "destination": "/shop/hqd-bubble-gum-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-15-zgo7hsfe",
-    "destination": "/shop/hqd-bubble-gum-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-bubble-gum-15-zgo7hsfe",
-    "destination": "/shop/hqd-bubble-gum-15",
-    "statusCode": 301
-  },
-  {
     "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%92%D7%95-20325",
     "destination": "/shop/hqd-mango-15",
     "statusCode": 301
@@ -525,23 +685,78 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-25-%D7%9E%D7%92",
-    "destination": "/shop/hqd-blueberry-25",
+    "source": "/shop/hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-31916",
+    "destination": "/shop/hqd-blue-lemonade-12",
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd---25-a53z8dfc",
-    "destination": "/shop/hqd-blueberry-25",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-12-%D7%9E%D7%92",
+    "destination": "/shop/hqd-blue-lemonade-12",
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-25-a53z8dfc",
-    "destination": "/shop/hqd-blueberry-25",
+    "source": "/shop/hqd-----12-pg08v08w",
+    "destination": "/shop/hqd-blue-lemonade-12",
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-blueberry-25-a53z8dfc",
-    "destination": "/shop/hqd-blueberry-25",
+    "source": "/shop/hqd-12-pg08v08w",
+    "destination": "/shop/hqd-blue-lemonade-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-blue-lemonade-12-pg08v08w",
+    "destination": "/shop/hqd-blue-lemonade-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-20323",
+    "destination": "/shop/hqd-blue-lemonade-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-25-%D7%9E%D7%92",
+    "destination": "/shop/hqd-blue-lemonade-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-----25-811xaamf",
+    "destination": "/shop/hqd-blue-lemonade-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-25-811xaamf",
+    "destination": "/shop/hqd-blue-lemonade-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-blue-lemonade-25-811xaamf",
+    "destination": "/shop/hqd-blue-lemonade-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%92%D7%95-20331",
+    "destination": "/shop/hqd-mango-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%92%D7%95-25-%D7%9E%D7%92",
+    "destination": "/shop/hqd-mango-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd---25-se9wvvtj",
+    "destination": "/shop/hqd-mango-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-25-se9wvvtj",
+    "destination": "/shop/hqd-mango-25",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-mango-25-se9wvvtj",
+    "destination": "/shop/hqd-mango-25",
     "statusCode": 301
   },
   {
@@ -570,31 +785,6 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-31936",
-    "destination": "/shop/hqd-sweet-passionfruit-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-6-%D7%9E%D7%92",
-    "destination": "/shop/hqd-sweet-passionfruit-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-----6-57kx2elx",
-    "destination": "/shop/hqd-sweet-passionfruit-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-6-57kx2elx",
-    "destination": "/shop/hqd-sweet-passionfruit-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-sweet-passionfruit-6-57kx2elx",
-    "destination": "/shop/hqd-sweet-passionfruit-6",
-    "statusCode": 301
-  },
-  {
     "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%98%D7%94-31912",
     "destination": "/shop/hqd-mint-12",
     "statusCode": 301
@@ -620,28 +810,28 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-31950",
-    "destination": "/shop/hqd-bubble-gum-12",
+    "source": "/shop/hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-31936",
+    "destination": "/shop/hqd-sweet-passionfruit-6",
     "statusCode": 301
   },
   {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-12%D7%9E%D7%92",
-    "destination": "/shop/hqd-bubble-gum-12",
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%A1%D7%99%D7%A4%D7%9C%D7%95%D7%A8%D7%94-%D7%9E%D7%AA%D7%95%D7%A7%D7%94-6-%D7%9E%D7%92",
+    "destination": "/shop/hqd-sweet-passionfruit-6",
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-----12-e2tbhxun",
-    "destination": "/shop/hqd-bubble-gum-12",
+    "source": "/shop/hqd-----6-57kx2elx",
+    "destination": "/shop/hqd-sweet-passionfruit-6",
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-12-e2tbhxun",
-    "destination": "/shop/hqd-bubble-gum-12",
+    "source": "/shop/hqd-6-57kx2elx",
+    "destination": "/shop/hqd-sweet-passionfruit-6",
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-bubble-gum-12-e2tbhxun",
-    "destination": "/shop/hqd-bubble-gum-12",
+    "source": "/shop/hqd-sweet-passionfruit-6-57kx2elx",
+    "destination": "/shop/hqd-sweet-passionfruit-6",
     "statusCode": 301
   },
   {
@@ -672,6 +862,51 @@
   {
     "source": "/shop/nois-mint-extreme-50-qe4rq0lz",
     "destination": "/shop/nois-mint-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-31950",
+    "destination": "/shop/hqd-bubble-gum-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-12%D7%9E%D7%92",
+    "destination": "/shop/hqd-bubble-gum-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-----12-e2tbhxun",
+    "destination": "/shop/hqd-bubble-gum-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-12-e2tbhxun",
+    "destination": "/shop/hqd-bubble-gum-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/hqd-bubble-gum-12-e2tbhxun",
+    "destination": "/shop/hqd-bubble-gum-12",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%99%D7%98-%D7%A6%D7%A8%D7%99-16-%D7%9E%D7%92-1-%D7%99%D7%97",
+    "destination": "/shop/cuba-white-cherry-16",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-----16---1-oeu2kmz2",
+    "destination": "/shop/cuba-white-cherry-16",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-16-1-oeu2kmz2",
+    "destination": "/shop/cuba-white-cherry-16",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/cuba-white-cherry-16-oeu2kmz2",
+    "destination": "/shop/cuba-white-cherry-16",
     "statusCode": 301
   },
   {
@@ -730,31 +965,6 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-31924",
-    "destination": "/shop/hqd-blueberry-12",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%90%D7%95%D7%9B%D7%9E%D7%A0%D7%99%D7%95%D7%AA-12-%D7%9E%D7%92",
-    "destination": "/shop/hqd-blueberry-12",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd---12-7d6kdzf0",
-    "destination": "/shop/hqd-blueberry-12",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-12-7d6kdzf0",
-    "destination": "/shop/hqd-blueberry-12",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-blueberry-12-7d6kdzf0",
-    "destination": "/shop/hqd-blueberry-12",
-    "statusCode": 301
-  },
-  {
     "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-31646",
     "destination": "/shop/hqd-bubble-gum-25",
     "statusCode": 301
@@ -777,26 +987,6 @@
   {
     "source": "/shop/hqd-bubble-gum-25-ehxmiwqm",
     "destination": "/shop/hqd-bubble-gum-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%99%D7%98-%D7%A6%D7%A8%D7%99-16-%D7%9E%D7%92-1-%D7%99%D7%97",
-    "destination": "/shop/cuba-white-cherry-16",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-----16---1-oeu2kmz2",
-    "destination": "/shop/cuba-white-cherry-16",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-16-1-oeu2kmz2",
-    "destination": "/shop/cuba-white-cherry-16",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-white-cherry-16-oeu2kmz2",
-    "destination": "/shop/cuba-white-cherry-16",
     "statusCode": 301
   },
   {
@@ -905,6 +1095,31 @@
     "statusCode": 301
   },
   {
+    "source": "/shop/50-zrcoow46",
+    "destination": "/shop/nois-blueberry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92",
+    "destination": "/shop/nois-blueberry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-----50-zrcoow46",
+    "destination": "/shop/nois-blueberry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-50-zrcoow46",
+    "destination": "/shop/nois-blueberry-extreme-50",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-blueberry-extreme-50-zrcoow46",
+    "destination": "/shop/nois-blueberry-extreme-50",
+    "statusCode": 301
+  },
+  {
     "source": "/shop/pablo-%D7%9E%D7%A0%D7%98%D7%94-39271",
     "destination": "/shop/pablo-mint-50",
     "statusCode": 301
@@ -977,26 +1192,6 @@
   {
     "source": "/shop/killa-blueberry-16-wfcwffqb",
     "destination": "/shop/killa-blueberry-16",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%91%D7%9C%D7%90%D7%A7-%D7%A6%D7%A8%D7%99-43-%D7%9E%D7%92-1-%D7%99%D7%97",
-    "destination": "/shop/cuba-black-cherry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-----43---1-d5g4zwc8",
-    "destination": "/shop/cuba-black-cherry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-43-1-d5g4zwc8",
-    "destination": "/shop/cuba-black-cherry-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/cuba-black-cherry-43-d5g4zwc8",
-    "destination": "/shop/cuba-black-cherry-43",
     "statusCode": 301
   },
   {
@@ -1087,51 +1282,6 @@
   {
     "source": "/shop/cuba-watermelon-16-7dt94ytb",
     "destination": "/shop/cuba-watermelon-16",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-31952",
-    "destination": "/shop/hqd-bubble-gum-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%91%D7%90%D7%91%D7%9C-%D7%92%D7%90%D7%9D-6-%D7%9E%D7%92",
-    "destination": "/shop/hqd-bubble-gum-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-----6-uis3iji7",
-    "destination": "/shop/hqd-bubble-gum-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-6-uis3iji7",
-    "destination": "/shop/hqd-bubble-gum-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-bubble-gum-6-uis3iji7",
-    "destination": "/shop/hqd-bubble-gum-6",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/50-0um3cots",
-    "destination": "/shop/nois-mint-extreme-50-0um3cots",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%9E%D7%A0%D7%98%D7%94-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92",
-    "destination": "/shop/nois-mint-extreme-50-0um3cots",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-----50-0um3cots",
-    "destination": "/shop/nois-mint-extreme-50-0um3cots",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-50-0um3cots",
-    "destination": "/shop/nois-mint-extreme-50-0um3cots",
     "statusCode": 301
   },
   {
@@ -1252,36 +1402,6 @@
   {
     "source": "/shop/hqd-mint-15-efg6diea",
     "destination": "/shop/hqd-mint-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/50---27-48z2x37b",
-    "destination": "/shop/nois-cherry-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-43589",
-    "destination": "/shop/nois-cherry-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%93%D7%95%D7%91%D7%93%D7%91%D7%9F-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92-27-%D7%99%D7%97",
-    "destination": "/shop/nois-cherry-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-----50---27-48z2x37b",
-    "destination": "/shop/nois-cherry-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-50-27-48z2x37b",
-    "destination": "/shop/nois-cherry-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-cherry-extreme-50-48z2x37b",
-    "destination": "/shop/nois-cherry-extreme-50",
     "statusCode": 301
   },
   {
@@ -1460,31 +1580,6 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/pablo-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%99%D7%99%D7%A1-39269",
-    "destination": "/shop/pablo-grape-ice-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-pablo-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%99%D7%99%D7%A1-50-%D7%9E%D7%92",
-    "destination": "/shop/pablo-grape-ice-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/pablo-----50-nuk55997",
-    "destination": "/shop/pablo-grape-ice-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/pablo-50-nuk55997",
-    "destination": "/shop/pablo-grape-ice-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/pablo-grape-ice-50-nuk55997",
-    "destination": "/shop/pablo-grape-ice-50",
-    "statusCode": 301
-  },
-  {
     "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-cuba-%D7%95%D7%95%D7%99%D7%98-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-16-%D7%9E%D7%92-1-%D7%99%D7%97",
     "destination": "/shop/cuba-white-blueberry-16",
     "statusCode": 301
@@ -1531,27 +1626,37 @@
   },
   {
     "source": "/shop/35-yt5cq20r",
-    "destination": "/shop/nois-strong-cool-35-ml",
+    "destination": "/shop/nois-cool-strong-35",
     "statusCode": 301
   },
   {
     "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%A7%D7%95%D7%9C-%D7%97%D7%96%D7%A7-35-%D7%9E%D7%9C",
-    "destination": "/shop/nois-strong-cool-35-ml",
+    "destination": "/shop/nois-cool-strong-35",
     "statusCode": 301
   },
   {
     "source": "/shop/nois-----35-yt5cq20r",
-    "destination": "/shop/nois-strong-cool-35-ml",
+    "destination": "/shop/nois-cool-strong-35",
     "statusCode": 301
   },
   {
     "source": "/shop/nois-35-yt5cq20r",
-    "destination": "/shop/nois-strong-cool-35-ml",
+    "destination": "/shop/nois-cool-strong-35",
     "statusCode": 301
   },
   {
     "source": "/shop/nois-strong-cool-35-ml-yt5cq20r",
-    "destination": "/shop/nois-strong-cool-35-ml",
+    "destination": "/shop/nois-cool-strong-35",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-strong-cool-35-ml",
+    "destination": "/shop/nois-cool-strong-35",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/nois-35",
+    "destination": "/shop/nois-cool-strong-35",
     "statusCode": 301
   },
   {
@@ -1625,31 +1730,6 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-32779",
-    "destination": "/shop/hqd-blackberry-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%A4%D7%98%D7%9C-%D7%A9%D7%97%D7%95%D7%A8-15-%D7%9E%D7%92",
-    "destination": "/shop/hqd-blackberry-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-----15-z92obsbm",
-    "destination": "/shop/hqd-blackberry-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-15-z92obsbm",
-    "destination": "/shop/hqd-blackberry-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-blackberry-15-z92obsbm",
-    "destination": "/shop/hqd-blackberry-15",
-    "statusCode": 301
-  },
-  {
     "source": "/shop/25---22-yhu3mbvc",
     "destination": "/shop/nois-grape-ice-25",
     "statusCode": 301
@@ -1677,36 +1757,6 @@
   {
     "source": "/shop/nois-grape-ice-25-yhu3mbvc",
     "destination": "/shop/nois-grape-ice-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/50---27-gx51u3g5",
-    "destination": "/shop/nois-grape-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-45585",
-    "destination": "/shop/nois-grape-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%90%D7%A7%D7%A1%D7%98%D7%A8%D7%99%D7%9D-50-%D7%9E%D7%92-27-%D7%99%D7%97",
-    "destination": "/shop/nois-grape-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-----50---27-gx51u3g5",
-    "destination": "/shop/nois-grape-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-50-27-gx51u3g5",
-    "destination": "/shop/nois-grape-extreme-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/nois-grape-extreme-50-gx51u3g5",
-    "destination": "/shop/nois-grape-extreme-50",
     "statusCode": 301
   },
   {
@@ -1740,26 +1790,6 @@
     "statusCode": 301
   },
   {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-rabbit-%D7%A4%D7%A4%D7%A8%D7%9E%D7%99%D7%A0%D7%98-50-%D7%9E%D7%92-1-%D7%99%D7%97",
-    "destination": "/shop/rabbit-peppermint-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/rabbit---50---1-ri6s4gfi",
-    "destination": "/shop/rabbit-peppermint-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/rabbit-50-1-ri6s4gfi",
-    "destination": "/shop/rabbit-peppermint-50",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/rabbit-peppermint-50-ri6s4gfi",
-    "destination": "/shop/rabbit-peppermint-50",
-    "statusCode": 301
-  },
-  {
     "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-20324",
     "destination": "/shop/hqd-blue-lemonade-15",
     "statusCode": 301
@@ -1782,31 +1812,6 @@
   {
     "source": "/shop/hqd-blue-lemonade-15-4dclyj1y",
     "destination": "/shop/hqd-blue-lemonade-15",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-31916",
-    "destination": "/shop/hqd-blue-lemonade-12",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A6-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9C%D7%99%D7%9E%D7%95%D7%A0%D7%93%D7%94-%D7%9B%D7%97%D7%95%D7%9C%D7%94-12-%D7%9E%D7%92",
-    "destination": "/shop/hqd-blue-lemonade-12",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-----12-pg08v08w",
-    "destination": "/shop/hqd-blue-lemonade-12",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-12-pg08v08w",
-    "destination": "/shop/hqd-blue-lemonade-12",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-blue-lemonade-12-pg08v08w",
-    "destination": "/shop/hqd-blue-lemonade-12",
     "statusCode": 301
   },
   {
@@ -1852,31 +1857,6 @@
   {
     "source": "/shop/cuba-black-watermelon-43-nr60z4fz",
     "destination": "/shop/cuba-black-watermelon-43",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-%D7%9E%D7%A0%D7%92%D7%95-20331",
-    "destination": "/shop/hqd-mango-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/%D7%A4%D7%90%D7%95%D7%A5-%D7%A0%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%9F-hqd-%D7%9E%D7%A0%D7%92%D7%95-25-%D7%9E%D7%92",
-    "destination": "/shop/hqd-mango-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd---25-se9wvvtj",
-    "destination": "/shop/hqd-mango-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-25-se9wvvtj",
-    "destination": "/shop/hqd-mango-25",
-    "statusCode": 301
-  },
-  {
-    "source": "/shop/hqd-mango-25-se9wvvtj",
-    "destination": "/shop/hqd-mango-25",
     "statusCode": 301
   },
   {
