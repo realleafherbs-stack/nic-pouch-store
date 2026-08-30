@@ -1,4 +1,5 @@
 import { pathToFileURL } from "node:url";
+import { normalizeProductDisplayName } from "../lib/catalog/crm-adapter.mjs";
 
 const defaultApiBase = "https://www.ducks.co.il/api/nic-pouch/agent";
 const defaultSiteUrl = "https://nicpouch.co.il";
@@ -37,10 +38,7 @@ function nicotineMg(product) {
 }
 
 function productLabel(product, brand) {
-  const cleaned = typography(String(product.name ?? ""))
-    .replace(/^פא[ו]?[צץ][׳']?\s*ניקוטין\s*/i, "")
-    .replace(/\s*-?\s*1\s*יח(?:ידה)?[׳']?\s*$/i, "")
-    .replace(/\s+\d+\s*יח[׳']?\s*$/i, "");
+  const cleaned = normalizeProductDisplayName(typography(String(product.name ?? "")), brand);
   const normalized = compact(cleaned);
   return normalized || brand;
 }
@@ -78,14 +76,16 @@ export function buildProductSeoPatch(product, canonicalUrl) {
   };
 }
 
-function missingPatch(product, proposed) {
+export function buildProductSeoUpdate(product, proposed) {
+  const alwaysNormalized = new Set(["metaTitle", "focusKeyword"]);
   return Object.fromEntries(editableFields.flatMap((field) => {
     const current = product[field];
     const missing = current === null || current === undefined || current === "" || (Array.isArray(current) && current.length === 0);
     const redundantProductPrefix = (field === "metaTitle" || field === "focusKeyword")
       && typeof current === "string"
       && /^פא[ו]?[צץ][׳']?\s*ניקוטין\s*/i.test(current);
-    return missing || redundantProductPrefix ? [[field, proposed[field]]] : [];
+    const staleSearchField = alwaysNormalized.has(field) && current !== proposed[field];
+    return missing || redundantProductPrefix || staleSearchField ? [[field, proposed[field]]] : [];
   }));
 }
 
@@ -114,7 +114,7 @@ async function run() {
     const suffix = decodeURIComponent(url.split("/").pop()).split("-").pop();
     const product = products.find((item) => item.id.endsWith(suffix));
     if (!product) return [];
-    const patch = missingPatch(product, buildProductSeoPatch(product, url));
+    const patch = buildProductSeoUpdate(product, buildProductSeoPatch(product, url));
     return Object.keys(patch).length ? [{ product, patch }] : [];
   });
 

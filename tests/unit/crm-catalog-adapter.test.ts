@@ -182,4 +182,24 @@ describe("CRM catalog adapter", () => {
 
     expect(selected[0].legacySlugs).toEqual(["old-opaque-handle", "new-readable-handle", "old-readable-handle"]);
   });
+
+  it.each([
+    ['פאוץ\' ניקוטין HQD לימונדה כחולה 25 מ"ג', "HQD", "HQD לימונדה כחולה 25 מ״ג"],
+    ['פאוצ\' ניקוטין CUBA בלאק בלוברי 43 מ"ג -1 יח', "CUBA", "CUBA בלאק בלוברי 43 מ״ג"],
+    ['נויס מנטה 25 מ"ג 22 יח\'', "NOIS", "NOIS מנטה 25 מ״ג"],
+    ['נויס מנטה אקסטרים 50 מ"ג 27 יח\'', "NOIS", "NOIS מנטה אקסטרים 50 מ״ג"],
+    ['פאוץ׳ ניקוטין HQD מנטה 12מ"ג', "HQD", "HQD מנטה 12 מ״ג"],
+    ['נויס קול חזק 35 מ"ל', "NOIS", "NOIS קול חזק 35 מ״ל"],
+  ])("normalizes the customer-facing product name without inventing product data", (name, brand, expected) => {
+    const [product] = mapCrmProducts([{
+      id: `product-${brand.toLowerCase()}`,
+      handle: name,
+      name,
+      brand,
+      price: 30,
+      attributes: { packSize: 1 },
+    }]);
+
+    expect(product.name).toBe(expected);
+  });
 });

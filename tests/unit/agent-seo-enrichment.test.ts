@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildProductSeoPatch } from "../../scripts/enrich-agent-seo.mjs";
+import { buildProductSeoPatch, buildProductSeoUpdate } from "../../scripts/enrich-agent-seo.mjs";
 
 describe("agent SEO enrichment", () => {
   it("builds factual, unique Hebrew SEO fields without duplicating product boilerplate", () => {
@@ -43,5 +43,34 @@ describe("agent SEO enrichment", () => {
 
     expect(patch.metaTitle).toBe("HQD בריזה טרופית 15 מ״ג | שקיק ניקוטין ללא טבק");
     expect(patch.focusKeyword).toBe("HQD בריזה טרופית 15 מ״ג");
+  });
+
+  it("uses a stable Latin brand and removes the pouch count from a NOIS search title", () => {
+    const patch = buildProductSeoPatch({
+      name: 'נויס מנטה אקסטרים 50 מ"ג 27 יח\'',
+      brand: "NOIS",
+      attributes: { nicotineMg: 50 },
+    }, "https://nicpouch.co.il/shop/nois-mint-extreme-example");
+
+    expect(patch.metaTitle).toBe("NOIS מנטה אקסטרים 50 מ״ג | שקיק ניקוטין ללא טבק");
+    expect(patch.focusKeyword).toBe("NOIS מנטה אקסטרים 50 מ״ג");
+  });
+
+  it("replaces stale search fields while preserving existing editorial copy", () => {
+    const product = {
+      description: "תיאור ערוך שאסור לדרוס",
+      metaTitle: "נויס מנטה 25 מ״ג 22 יח׳ | NOIS",
+      focusKeyword: "נויס מנטה 25 מ״ג 22 יח׳",
+    };
+    const proposed = {
+      description: "תיאור אוטומטי",
+      metaTitle: "NOIS מנטה 25 מ״ג | שקיק ניקוטין ללא טבק",
+      focusKeyword: "NOIS מנטה 25 מ״ג",
+    };
+
+    expect(buildProductSeoUpdate(product, proposed)).toEqual({
+      metaTitle: "NOIS מנטה 25 מ״ג | שקיק ניקוטין ללא טבק",
+      focusKeyword: "NOIS מנטה 25 מ״ג",
+    });
   });
 });
