@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/seo/json-ld";
-import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
+import { absoluteUrl, breadcrumbSchema, getPageSeo, mergePageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק",
-  description: "מה זה סנוס, מה ההבדל בין סנוס מסורתי לשקיקי ניקוטין ללא טבק ואיך משווים טעמים ועוצמות לפני בחירה.",
-  keywords: ["מה זה סנוס", "סנוס", "סנוס ללא טבק", "שקיקי ניקוטין", "סנוס בישראל"],
-  alternates: { canonical: "/snus" },
-  openGraph: {
-    type: "article",
-    title: "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק",
-    description: "הסבר ברור על המונח סנוס ועל המוצרים ללא טבק שנמכרים באתר.",
-    url: "/snus",
-    images: [{ url: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg"), alt: "מדריך לסנוס ושקיקי ניקוטין ללא טבק" }],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackTitle = "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק";
+  const fallbackDescription = "מה זה סנוס, מה ההבדל בין סנוס מסורתי לשקיקי ניקוטין ללא טבק ואיך משווים טעמים ועוצמות לפני בחירה.";
+  const seo = await getPageSeo("snus");
+  const copy = mergePageSeo(seo, { metaTitle: fallbackTitle, metaDescription: fallbackDescription, heading: "מה זה סנוס?", summary: fallbackDescription, ogImage: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg") });
+  return {
+    title: copy.metaTitle,
+    description: copy.metaDescription,
+    keywords: [seo.focusKeyword || "מה זה סנוס", "סנוס", "סנוס ללא טבק", "שקיקי ניקוטין", "סנוס בישראל"],
+    alternates: { canonical: seo.canonicalUrl || "/snus" },
+    robots: seo.indexable === false ? { index: false, follow: true } : undefined,
+    openGraph: { type: "article", title: copy.metaTitle, description: copy.metaDescription, url: "/snus", images: [{ url: copy.ogImage!, alt: "מדריך לסנוס ושקיקי ניקוטין ללא טבק" }] },
+  };
+}
 
 const faq = [
   {
@@ -36,7 +37,14 @@ const faq = [
   },
 ];
 
-export default function SnusPage() {
+export default async function SnusPage() {
+  const seo = await getPageSeo("snus");
+  const copy = mergePageSeo(seo, {
+    metaTitle: "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק",
+    metaDescription: "הסבר ברור על המונח סנוס ועל המוצרים ללא טבק שנמכרים באתר.",
+    heading: "מה זה סנוס?",
+    summary: "ההבדל בין סנוס מסורתי לבין שקיקי הניקוטין ללא טבק שנמכרים באתר.",
+  });
   const articleUrl = absoluteUrl("/snus");
   const schema = {
     "@type": "Article",
@@ -70,8 +78,8 @@ export default function SnusPage() {
       <header className="page-hero">
         <div className="container">
           <p className="eyebrow">מילון NIC POUCH</p>
-          <h1>מה זה סנוס?</h1>
-          <p>ההבדל בין סנוס מסורתי לבין שקיקי הניקוטין ללא טבק שנמכרים באתר.</p>
+          <h1>{copy.heading}</h1>
+          <p>{copy.summary}</p>
         </div>
       </header>
       <article className="container article article-designed">

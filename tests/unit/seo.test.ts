@@ -7,7 +7,7 @@ import {
   productSeoDescription,
   productSeoTitle,
 } from "@/lib/catalog/product-seo";
-import { siteUrl } from "@/lib/seo";
+import { mergePageSeo, siteUrl } from "@/lib/seo";
 import sitemap from "@/app/sitemap";
 
 describe("SEO foundations", () => {
@@ -22,6 +22,25 @@ describe("SEO foundations", () => {
 
   it("uses the custom production domain", () => {
     expect(siteUrl).toBe("https://nicpouch.co.il");
+  });
+
+  it("uses page-level CRM copy while preserving factual fallbacks", () => {
+    expect(mergePageSeo({
+      metaTitle: "NOIS שקיקי ניקוטין",
+      heading: "מוצרי NOIS",
+      summary: "כל מוצרי NOIS הזמינים בחנות.",
+    }, {
+      metaTitle: "fallback title",
+      metaDescription: "fallback description",
+      heading: "fallback heading",
+      summary: "fallback summary",
+    })).toEqual({
+      metaTitle: "NOIS שקיקי ניקוטין",
+      metaDescription: "fallback description",
+      heading: "מוצרי NOIS",
+      summary: "כל מוצרי NOIS הזמינים בחנות.",
+      ogImage: null,
+    });
   });
 
   it("creates useful and differentiated metadata for every product", () => {

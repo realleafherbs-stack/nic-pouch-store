@@ -71,6 +71,34 @@ export interface PageSeo {
   metaTitle: string | null;
   metaDescription: string | null;
   ogImage: string | null;
+  canonicalUrl: string | null;
+  focusKeyword: string | null;
+  indexable: boolean | null;
+  directAnswer: string | null;
+  heading: string | null;
+  summary: string | null;
+  schemaType: string | null;
+}
+
+type ResolvedPageCopy = {
+  metaTitle: string;
+  metaDescription: string;
+  heading: string;
+  summary: string;
+  ogImage: string | null;
+};
+
+export function mergePageSeo(
+  override: Partial<PageSeo>,
+  fallback: { metaTitle: string; metaDescription: string; heading: string; summary: string; ogImage?: string | null },
+): ResolvedPageCopy {
+  return {
+    metaTitle: override.metaTitle || fallback.metaTitle,
+    metaDescription: override.metaDescription || fallback.metaDescription,
+    heading: override.heading || fallback.heading,
+    summary: override.summary || fallback.summary,
+    ogImage: override.ogImage || fallback.ogImage || null,
+  };
 }
 
 const CRM_URL = process.env.CRM_API_BASE_URL;

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ProductCard } from "@/components/product/product-card";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getAllProducts } from "@/lib/catalog/local-repository";
-import { absoluteUrl, breadcrumbSchema } from "@/lib/seo";
+import { absoluteUrl, breadcrumbSchema, getPageSeo, mergePageSeo } from "@/lib/seo";
 
 export async function generateStaticParams() {
   const products = await getAllProducts();
@@ -17,15 +17,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!items.length) return {};
   const primary = brand === "HQD" ? `שקיקי ניקוטין ${brand}` : `סנוס ${brand} ושקיקי ניקוטין ${brand}`;
   const description = `${primary}: כל הטעמים, העוצמות, המחירים והזמינות במקום אחד. המוצרים ללא טבק ומיועדים לבגירים בלבד.`;
+  const seo = await getPageSeo(`brands/${brand.toLowerCase()}`);
+  const copy = mergePageSeo(seo, { metaTitle: primary, metaDescription: description, heading: primary, summary: description });
   return {
-    title: primary,
-    description,
-    alternates: { canonical: `/brands/${brand.toLowerCase()}` },
+    title: copy.metaTitle,
+    description: copy.metaDescription,
+    alternates: { canonical: seo.canonicalUrl || `/brands/${brand.toLowerCase()}` },
+    robots: seo.indexable === false ? { index: false, follow: true } : undefined,
     openGraph: {
-      title: primary,
-      description,
+      title: copy.metaTitle,
+      description: copy.metaDescription,
       url: `/brands/${brand.toLowerCase()}`,
-      images: [{ url: absoluteUrl(items[0].images[0]), alt: primary }],
+      images: [{ url: copy.ogImage || absoluteUrl(items[0].images[0]), alt: copy.heading }],
     },
   };
 }
@@ -52,5 +55,8 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
     { name: brand, path: `/brands/${brand.toLowerCase()}` },
   ]);
   const heading = brand === "HQD" ? `שקיקי ניקוטין ${brand}` : `סנוס ${brand} ושקיקי ניקוטין ${brand}`;
-  return <><JsonLd data={[itemList, breadcrumbs]} /><div className="page-hero"><div className="container"><p className="eyebrow">מותג</p><h1>{heading}</h1><p>{`כל מוצרי ${brand} ללא טבק הזמינים כרגע בחנות, לפי טעם ועוצמה.`}</p></div></div><section className="section"><div className="container product-grid">{items.map((item) => <ProductCard key={item.id} product={item} />)}</div></section></>;
+  const fallbackSummary = `כל מוצרי ${brand} ללא טבק הזמינים כרגע בחנות, לפי טעם ועוצמה.`;
+  const seo = await getPageSeo(`brands/${brand.toLowerCase()}`);
+  const copy = mergePageSeo(seo, { metaTitle: heading, metaDescription: fallbackSummary, heading, summary: fallbackSummary });
+  return <><JsonLd data={[itemList, breadcrumbs]} /><div className="page-hero"><div className="container"><p className="eyebrow">מותג</p><h1>{copy.heading}</h1><p>{copy.summary}</p></div></div><section className="section"><div className="container product-grid">{items.map((item) => <ProductCard key={item.id} product={item} />)}</div></section></>;
 }
