@@ -18,11 +18,17 @@ export async function generateMetadata() {
 
 export default async function BlogPage() {
   const posts = await getBlogs();
+  const staticSlugs = new Set(articles.map((article) => article.slug));
+  const crmPosts = posts.filter((post) => !staticSlugs.has(post.slug));
+  const allItems = [
+    ...articles.map((guide) => ({ title: guide.title, slug: guide.slug })),
+    ...crmPosts.map((post) => ({ title: post.title, slug: post.slug })),
+  ];
   const itemList = {
     "@type": "ItemList",
     name: "NIC GUIDE",
-    numberOfItems: articles.length,
-    itemListElement: articles.map((guide, index) => ({
+    numberOfItems: allItems.length,
+    itemListElement: allItems.map((guide, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: guide.title,
@@ -63,7 +69,7 @@ export default async function BlogPage() {
           <GuideIndex guides={articles} />
         </section>
 
-        {posts.length > 0 && (
+        {crmPosts.length > 0 && (
           <section className="container blog-posts-section" aria-labelledby="blog-posts-title">
             <div className="guide-index-heading">
               <div>
@@ -72,7 +78,7 @@ export default async function BlogPage() {
               </div>
             </div>
             <div className="blog-posts-grid">
-              {posts.map((post) => <BlogPostCard post={post} key={post.id} />)}
+              {crmPosts.map((post) => <BlogPostCard post={post} key={post.id} />)}
             </div>
           </section>
         )}

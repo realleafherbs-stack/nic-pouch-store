@@ -13,11 +13,19 @@ export interface BlogPost {
   title: string;
   slug: string;
   publishedAt: string | null;
+  updatedAt?: string | null;
   featuredImage: string | null;
   metaTitle: string | null;
   metaDescription: string | null;
   ogImage: string | null;
   tags: string[];
+  excerpt?: string | null;
+  primaryKeyword?: string | null;
+  directAnswer?: string | null;
+  authorName?: string | null;
+  authorRole?: string | null;
+  reviewedBy?: string | null;
+  faq?: Array<{ question: string; answer: string }>;
 }
 
 export interface BlogPostFull extends BlogPost {

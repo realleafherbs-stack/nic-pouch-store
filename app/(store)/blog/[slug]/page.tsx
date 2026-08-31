@@ -20,6 +20,7 @@ import {
   relatedGuidesFor,
 } from "@/data/articles";
 import { getBlog } from "@/lib/blog";
+import { blogFaqSchema } from "@/lib/blog-seo";
 import {
   absoluteUrl,
   breadcrumbSchema,
@@ -117,12 +118,21 @@ export default async function ArticlePage({
       "@id": `${postUrl}#article`,
       mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
       headline: post.title,
+      ...(post.metaDescription ? { description: post.metaDescription } : {}),
       ...(post.ogImage ? { image: [absoluteUrl(post.ogImage)] } : {}),
       datePublished: post.publishedAt ?? undefined,
+      dateModified: post.updatedAt ?? post.publishedAt ?? undefined,
       inLanguage: "he-IL",
-      author: { "@type": "Organization", name: siteName, url: siteUrl },
+      author: {
+        "@type": "Organization",
+        name: post.authorName ?? siteName,
+        url: siteUrl,
+      },
       publisher: { "@id": `${siteUrl}/#organization` },
+      ...(post.primaryKeyword ? { keywords: post.primaryKeyword } : {}),
+      wordCount: post.body.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length,
     };
+    const postFaqSchema = blogFaqSchema(post.faq);
     const postBreadcrumbs = breadcrumbSchema([
       { name: "דף הבית", path: "/" },
       { name: "NIC GUIDE", path: "/blog" },
@@ -132,7 +142,7 @@ export default async function ArticlePage({
 
     return (
       <div className="guide-article-page">
-        <JsonLd data={[postSchema, postBreadcrumbs]} />
+        <JsonLd data={[postSchema, ...(postFaqSchema ? [postFaqSchema] : []), postBreadcrumbs]} />
         <header className="guide-article-hero">
           <div className="container guide-article-hero-grid">
             <div className="guide-article-hero-copy">
@@ -157,7 +167,13 @@ export default async function ArticlePage({
         </header>
 
         <div className="container blog-post-shell">
-          <article className="guide-article blog-post-article" dangerouslySetInnerHTML={{ __html: post.body }} />
+          <article className="guide-article blog-post-article">
+            {post.directAnswer && (
+              <GuideCallout title="התשובה הקצרה">{post.directAnswer}</GuideCallout>
+            )}
+            <div dangerouslySetInnerHTML={{ __html: post.body }} />
+            {post.faq && post.faq.length > 0 && <GuideFAQ items={post.faq} />}
+          </article>
         </div>
 
         <section className="guide-store-cta">

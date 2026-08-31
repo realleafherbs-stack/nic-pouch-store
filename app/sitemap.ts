@@ -3,9 +3,17 @@ import { getAllProducts, getBrands } from "@/lib/catalog/local-repository";
 import { articles } from "@/data/articles";
 import { absoluteUrl } from "@/lib/seo";
 import { flavorCategories, strengthCategories } from "@/lib/catalog/seo-categories";
-export const dynamic = "force-static";
+import { getBlogs } from "@/lib/blog";
+import { blogSitemapEntries } from "@/lib/blog-seo";
+
+export const revalidate = 60;
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [products, brands] = await Promise.all([getAllProducts(), getBrands()]);
+  const [products, brands, blogPosts] = await Promise.all([
+    getAllProducts(),
+    getBrands(),
+    getBlogs(),
+  ]);
+  const staticBlogSlugs = new Set(articles.map((article) => article.slug));
   return [
     { url: absoluteUrl("/"), priority: 1, changeFrequency: "weekly" },
     { url: absoluteUrl("/shop"), priority: .9, changeFrequency: "daily" },
@@ -45,6 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: .6,
       changeFrequency: "monthly" as const,
       lastModified: new Date(article.modified),
-    }))
+    })),
+    ...blogSitemapEntries(blogPosts.filter((post) => !staticBlogSlugs.has(post.slug))),
   ];
 }
