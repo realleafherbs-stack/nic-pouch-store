@@ -52,6 +52,7 @@ button,.button { cursor:pointer; border:0; }
 .announcement-group { display:flex; align-items:center; flex-shrink:0; direction:rtl; }
 .announcement-group span { display:flex; align-items:center; white-space:nowrap; }
 .announcement-group span:after { content:"•"; margin-inline:38px; color:#dfff3f; font-size:12px; }
+.announcement-reduced { width:100%; margin:0; padding-inline:16px; text-align:center; white-space:nowrap; }
 @keyframes announcement-marquee {
   from { transform:translateX(0); }
   to { transform:translateX(-50%); }
