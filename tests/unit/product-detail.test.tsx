@@ -138,3 +138,28 @@ it("replaces a failed main product image with a bounded brand fallback", () => {
   expect(screen.queryByRole("img", { name: product.name })).not.toBeInTheDocument();
   expect(screen.getByTestId("product-detail-image-fallback")).toHaveTextContent("HQD");
 });
+
+it("opens the product image in an accessible lightbox and closes it from the close button", () => {
+  render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
+
+  fireEvent.click(screen.getByRole("button", { name: `הגדלת התמונה של ${product.name}` }));
+
+  expect(screen.getByRole("dialog", { name: `תמונה מוגדלת של ${product.name}` })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: "סגירת התמונה המוגדלת" }));
+  expect(screen.queryByRole("dialog", { name: `תמונה מוגדלת של ${product.name}` })).not.toBeInTheDocument();
+});
+
+it("closes the product image lightbox with Escape", () => {
+  render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
+
+  fireEvent.click(screen.getByRole("button", { name: `הגדלת התמונה של ${product.name}` }));
+  fireEvent.keyDown(document, { key: "Escape" });
+
+  expect(screen.queryByRole("dialog", { name: `תמונה מוגדלת של ${product.name}` })).not.toBeInTheDocument();
+});
+
+it("does not render an image zoom control when no product image exists", () => {
+  render(<CartProvider><ProductDetail product={{ ...product, images: [] }} related={[]} /></CartProvider>);
+
+  expect(screen.queryByRole("button", { name: `הגדלת התמונה של ${product.name}` })).not.toBeInTheDocument();
+});
