@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { CircleGauge, PackageCheck, ShieldCheck, Sparkles, Truck, ZoomIn } from "lucide-react";
+import { CircleGauge, PackageCheck, ShieldCheck, Sparkles, Truck, X, ZoomIn } from "lucide-react";
 import type { Product } from "@/lib/catalog/model";
 import type { ProductDetailVariant } from "@/lib/catalog/product-page-variant";
 import { resolveVideoEmbed } from "@/lib/catalog/video-embed";
@@ -23,6 +23,24 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
   const images = product.images.length ? product.images.slice(0, 4) : [];
   const [activeImage, setActiveImage] = useState(images[0] ?? "");
   const [imageFailed, setImageFailed] = useState(false);
+  const [imageZoomOpen, setImageZoomOpen] = useState(false);
+
+  useEffect(() => {
+    if (!imageZoomOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setImageZoomOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [imageZoomOpen]);
 
   return (
     <div className={variant === "balanced" ? "pd-balanced" : undefined}>
@@ -32,7 +50,16 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
       <section className="pd-main container">
         <div className="pd-gallery">
           <div className="pd-image-stage">
-            <ZoomIn className="pd-zoom" aria-hidden="true" />
+            {activeImage && !imageFailed ? (
+              <button
+                type="button"
+                className="pd-zoom"
+                aria-label={`הגדלת התמונה של ${product.name}`}
+                onClick={() => setImageZoomOpen(true)}
+              >
+                <ZoomIn aria-hidden="true" />
+              </button>
+            ) : null}
             {activeImage && !imageFailed
               ? <img src={activeImage} alt={product.imageAlt || product.name} onError={() => setImageFailed(true)} />
               : <span className="can-placeholder" data-testid="product-detail-image-fallback">{product.brand}</span>}
@@ -147,6 +174,29 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
 
       <ProductReviews product={product} />
       <RelatedProducts products={related} variant={variant} />
+
+      {imageZoomOpen && activeImage && !imageFailed ? (
+        <div
+          className="pd-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`תמונה מוגדלת של ${product.name}`}
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setImageZoomOpen(false);
+          }}
+        >
+          <button
+            type="button"
+            className="pd-lightbox-close"
+            aria-label="סגירת התמונה המוגדלת"
+            onClick={() => setImageZoomOpen(false)}
+            autoFocus
+          >
+            <X aria-hidden="true" />
+          </button>
+          <img src={activeImage} alt={product.imageAlt || product.name} />
+        </div>
+      ) : null}
     </div>
   );
 }
