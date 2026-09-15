@@ -40,8 +40,26 @@ export async function verifyHypRedirect(
     });
     const text = await res.text();
     const valid = /(^|&)CCode=0(&|$)/.test(text) && rawParams.CCode === "0";
+    // Diagnostic only, no logic change: this call has been silently
+    // returning {valid:false} for real customer orders with no trail to
+    // explain why. Logging on every rejection until we have real evidence
+    // of what Hyp actually returns for a genuine successful payment — do
+    // not remove until that's found. Never log Sign (a replayable
+    // signature) or Fild1/Fild2/Fild3 (carry the customer's name/email per
+    // Hyp's own docs) — only non-sensitive diagnostic fields.
+    if (!valid) {
+      const { Sign: _sign, Fild1: _f1, Fild2: _f2, Fild3: _f3, ...safeParamsSent } =
+        Object.fromEntries(params.entries());
+      console.error("[verifyHypRedirect] rejected", {
+        orderId,
+        rawCCode: rawParams.CCode,
+        verifyResponseText: text.slice(0, 200),
+        redirectParamsSent: safeParamsSent,
+      });
+    }
     return { valid, orderId: valid ? orderId : undefined };
-  } catch {
+  } catch (err) {
+    console.error("[verifyHypRedirect] request failed", { orderId, err });
     return { valid: false };
   }
 }
