@@ -7,6 +7,7 @@ import { CartProvider } from "@/components/commerce/cart-provider";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SiteUtilities } from "@/components/layout/site-utilities";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { createAnalyticsBootstrap } from "@/lib/analytics-bootstrap";
 import {
   absoluteUrl,
   defaultDescription,
@@ -81,26 +82,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="he" dir="rtl">
       <head>
-        {measurementId && <Script id="google-analytics-consent" strategy="beforeInteractive">{`
-          window.dataLayer = window.dataLayer || [];
-          window.gtag = function(){window.dataLayer.push(arguments);};
-          window.gtag('consent', 'default', {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-          });
-          try {
-            if (localStorage.getItem('nic-pouch-cookie-choice') === 'all') {
-              window.gtag('consent', 'update', { analytics_storage: 'granted' });
-            }
-          } catch (error) {}
-          window.gtag('js', new Date());
-          window.gtag('config', '${measurementId}', {
-            anonymize_ip: true,
-            allow_google_signals: false
-          });
-        `}</Script>}
+        {measurementId && <Script id="google-analytics-consent" strategy="beforeInteractive">{createAnalyticsBootstrap(measurementId)}</Script>}
       </head>
       <body>
         <JsonLd data={[organizationSchema, websiteSchema]} />
