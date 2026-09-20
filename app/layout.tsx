@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { AgeGate } from "@/components/layout/age-gate";
@@ -20,6 +21,8 @@ import "./globals.css";
 
 const defaultTitle = "סנוס ושקיקי ניקוטין ללא טבק | NIC POUCH";
 const defaultOgImage = absoluteUrl("/generated/home-hero-nois-killa-desktop.webp");
+const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "";
+const measurementId = /^G-[A-Z0-9]+$/.test(configuredMeasurementId) ? configuredMeasurementId : null;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSiteSeo();
@@ -77,6 +80,28 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="he" dir="rtl">
+      <head>
+        {measurementId && <Script id="google-analytics-consent" strategy="beforeInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function(){window.dataLayer.push(arguments);};
+          window.gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+          });
+          try {
+            if (localStorage.getItem('nic-pouch-cookie-choice') === 'all') {
+              window.gtag('consent', 'update', { analytics_storage: 'granted' });
+            }
+          } catch (error) {}
+          window.gtag('js', new Date());
+          window.gtag('config', '${measurementId}', {
+            anonymize_ip: true,
+            allow_google_signals: false
+          });
+        `}</Script>}
+      </head>
       <body>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <CartProvider>
@@ -86,7 +111,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SiteFooter />
           <AgeGate />
           <SiteUtilities />
-          <GoogleAnalytics />
+          {measurementId && <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} strategy="afterInteractive" />
+            <GoogleAnalytics />
+          </>}
         </CartProvider>
       </body>
     </html>

@@ -61,7 +61,7 @@ export function SiteUtilities() {
 
       {showCookiePanel && <section className="utility-panel cookie-panel" role="dialog" aria-modal="false" aria-label="הגדרות עוגיות">
         <header><h2>עוגיות ופרטיות</h2><button aria-label="סגירה" onClick={() => { setDismissed(true); setOpen(null); }}><X /></button></header>
-        <p>האתר משתמש באחסון חיוני להפעלת העגלה, אימות הגיל והעדפות הנגישות. Google Analytics יופעל למדידה אנונימית רק לאחר בחירה ב״אישור הכול״. כלי פרסום אינם מופעלים.</p>
+        <p>האתר משתמש באחסון חיוני להפעלת העגלה, אימות הגיל והעדפות הנגישות. Google Analytics מקבל אותות מדידה גם ללא עוגיות מדידה. בחירה ב״אישור הכול״ מאפשרת שימוש בעוגיות מדידה. המדידה ללא הסכמה מוגבלת, וייתכן שלא כל ביקור יופיע בדוחות. כלי פרסום אינם מופעלים.</p>
         <div className="utility-actions"><button onClick={() => chooseCookies("essential")}>חיוניות בלבד</button><button className="primary" onClick={() => chooseCookies("all")}>אישור הכול</button></div>
         {cookieChoice && <small>הבחירה הנוכחית נשמרה במכשיר הזה.</small>}
         <p><Link href="/privacy">למדיניות הפרטיות המלאה</Link></p>

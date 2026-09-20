@@ -1,48 +1,26 @@
 "use client";
 
-import Script from "next/script";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+type ConsentWindow = Window & {
+  gtag?: (command: string, action: string, options: { analytics_storage: "denied" | "granted" }) => void;
+};
 
 export function GoogleAnalytics() {
-  const [enabled, setEnabled] = useState(false);
-
   useEffect(() => {
     const syncConsent = () => {
-      setEnabled(localStorage.getItem("nic-pouch-cookie-choice") === "all");
+      const analyticsStorage = localStorage.getItem("nic-pouch-cookie-choice") === "all" ? "granted" : "denied";
+      (window as ConsentWindow).gtag?.("consent", "update", { analytics_storage: analyticsStorage });
     };
 
     syncConsent();
     window.addEventListener("nic-pouch-cookie-consent", syncConsent);
-    return () => window.removeEventListener("nic-pouch-cookie-consent", syncConsent);
+    window.addEventListener("storage", syncConsent);
+    return () => {
+      window.removeEventListener("nic-pouch-cookie-consent", syncConsent);
+      window.removeEventListener("storage", syncConsent);
+    };
   }, []);
 
-  if (!measurementId || !enabled) return null;
-
-  return (
-    <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('consent', 'default', {
-            analytics_storage: 'granted',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-          });
-          gtag('config', '${measurementId}', {
-            anonymize_ip: true,
-            allow_google_signals: false
-          });
-        `}
-      </Script>
-    </>
-  );
+  return null;
 }
