@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { Accessibility, Cookie, X } from "lucide-react";
 import Link from "next/link";
 
@@ -11,10 +11,25 @@ const options = [
   ["a11y-reduce-motion", "הפחתת תנועה"],
 ] as const;
 
+function subscribeToCookieChoice(callback: () => void) {
+  window.addEventListener("nic-pouch-cookie-consent", callback);
+  window.addEventListener("storage", callback);
+  return () => {
+    window.removeEventListener("nic-pouch-cookie-consent", callback);
+    window.removeEventListener("storage", callback);
+  };
+}
+
+function getCookieChoice() {
+  return localStorage.getItem("nic-pouch-cookie-choice");
+}
+
 export function SiteUtilities() {
   const [open, setOpen] = useState<"accessibility" | "cookies" | null>(null);
+  const [dismissed, setDismissed] = useState(false);
   const [active, setActive] = useState<string[]>(() => typeof window === "undefined" ? [] : JSON.parse(localStorage.getItem("nic-pouch-accessibility") || "[]"));
-  const [cookieChoice, setCookieChoice] = useState<string | null>(() => typeof window === "undefined" ? null : localStorage.getItem("nic-pouch-cookie-choice"));
+  const cookieChoice = useSyncExternalStore(subscribeToCookieChoice, getCookieChoice, () => "essential");
+  const showCookiePanel = open === "cookies" || (cookieChoice === null && !dismissed && open !== "accessibility");
 
   useEffect(() => {
     active.forEach((item) => document.documentElement.classList.add(item));
@@ -29,7 +44,6 @@ export function SiteUtilities() {
 
   function chooseCookies(value: "essential" | "all") {
     localStorage.setItem("nic-pouch-cookie-choice", value);
-    setCookieChoice(value);
     window.dispatchEvent(new Event("nic-pouch-cookie-consent"));
     setOpen(null);
   }
@@ -37,7 +51,7 @@ export function SiteUtilities() {
   return (
     <>
       <button className="site-utility-button accessibility-trigger" aria-label="פתיחת אפשרויות נגישות" aria-expanded={open === "accessibility"} onClick={() => setOpen(open === "accessibility" ? null : "accessibility")}><Accessibility /></button>
-      <button className="site-utility-button cookie-trigger" aria-label="פתיחת הגדרות עוגיות" aria-expanded={open === "cookies"} onClick={() => setOpen(open === "cookies" ? null : "cookies")}><Cookie /></button>
+      <button className="site-utility-button cookie-trigger" aria-label="פתיחת הגדרות עוגיות" aria-expanded={showCookiePanel} onClick={() => { if (showCookiePanel) { setDismissed(true); setOpen(null); } else setOpen("cookies"); }}><Cookie /></button>
 
       {open === "accessibility" && <section className="utility-panel accessibility-panel" role="dialog" aria-modal="false" aria-label="אפשרויות נגישות">
         <header><h2>נגישות באתר</h2><button aria-label="סגירה" onClick={() => setOpen(null)}><X /></button></header>
@@ -45,9 +59,9 @@ export function SiteUtilities() {
         <p><Link href="/accessibility">להצהרת הנגישות וליצירת קשר</Link></p>
       </section>}
 
-      {open === "cookies" && <section className="utility-panel cookie-panel" role="dialog" aria-modal="false" aria-label="הגדרות עוגיות">
-        <header><h2>עוגיות ופרטיות</h2><button aria-label="סגירה" onClick={() => setOpen(null)}><X /></button></header>
-        <p>האתר משתמש באחסון חיוני להפעלת העגלה, אימות הגיל והעדפות הנגישות. Google Analytics יופעל למדידה אנונימית רק לאחר בחירה ב״אישור הכול״. כלי פרסום אינם מופעלים.</p>
+      {showCookiePanel && <section className="utility-panel cookie-panel" role="dialog" aria-modal="false" aria-label="הגדרות עוגיות">
+        <header><h2>עוגיות ופרטיות</h2><button aria-label="סגירה" onClick={() => { setDismissed(true); setOpen(null); }}><X /></button></header>
+        <p>האתר משתמש באחסון חיוני להפעלת העגלה, אימות הגיל והעדפות הנגישות. Google Analytics מקבל אותות מדידה גם ללא עוגיות מדידה. בחירה ב״אישור הכול״ מאפשרת שימוש בעוגיות מדידה. המדידה ללא הסכמה מוגבלת, וייתכן שלא כל ביקור יופיע בדוחות. כלי פרסום אינם מופעלים.</p>
         <div className="utility-actions"><button onClick={() => chooseCookies("essential")}>חיוניות בלבד</button><button className="primary" onClick={() => chooseCookies("all")}>אישור הכול</button></div>
         {cookieChoice && <small>הבחירה הנוכחית נשמרה במכשיר הזה.</small>}
         <p><Link href="/privacy">למדיניות הפרטיות המלאה</Link></p>
