@@ -6,12 +6,12 @@ import { flavorCategories, strengthCategories } from "@/lib/catalog/seo-categori
 import { getBlogs } from "@/lib/blog";
 import { blogSitemapEntries } from "@/lib/blog-seo";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [products, brands, blogPosts] = await Promise.all([
     getAllProducts(),
     getBrands(),
-    getBlogs(),
+    getBlogs({ fresh: true }),
   ]);
   const staticBlogSlugs = new Set(articles.map((article) => article.slug));
   return [
