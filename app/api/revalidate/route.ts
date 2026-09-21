@@ -1,4 +1,4 @@
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
@@ -6,6 +6,16 @@ export async function POST(request: Request) {
   if (!process.env.REVALIDATE_SECRET || secret !== process.env.REVALIDATE_SECRET) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
-  revalidatePath(path ?? "/");
-  return NextResponse.json({ revalidated: true, path });
+
+  const requestedPath = typeof path === "string" && path.startsWith("/") ? path : "/";
+  revalidateTag("crm-blogs", "max");
+  revalidatePath(requestedPath);
+  revalidatePath("/blog");
+  revalidatePath("/sitemap.xml");
+
+  return NextResponse.json({
+    revalidated: true,
+    path: requestedPath,
+    relatedPaths: ["/blog", "/sitemap.xml"],
+  });
 }
