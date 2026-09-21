@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [products, brands, blogPosts] = await Promise.all([
     getAllProducts(),
     getBrands(),
-    getBlogs({ fresh: true }),
+    getBlogs(),
   ]);
   const staticBlogSlugs = new Set(articles.map((article) => article.slug));
   return [
