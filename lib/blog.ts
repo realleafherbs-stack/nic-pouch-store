@@ -36,12 +36,14 @@ function isJson(res: Response) {
   return (res.headers.get("content-type") ?? "").includes("application/json");
 }
 
-export async function getBlogs(): Promise<BlogPost[]> {
+export async function getBlogs({ fresh = false }: { fresh?: boolean } = {}): Promise<BlogPost[]> {
   if (!apiBaseUrl || !siteSlug || !apiKey) return [];
   try {
     const res = await fetch(`${apiBaseUrl}/${encodeURIComponent(siteSlug)}/blogs`, {
       headers: { "x-api-key": apiKey, accept: "application/json" },
-      next: { revalidate: 60, tags: ["crm-blogs"] },
+      ...(fresh
+        ? { cache: "no-store" as const }
+        : { next: { revalidate: 60, tags: ["crm-blogs"] } }),
     });
     if (!res.ok || !isJson(res)) return [];
     return res.json();
