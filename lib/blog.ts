@@ -41,7 +41,7 @@ export async function getBlogs(): Promise<BlogPost[]> {
   try {
     const res = await fetch(`${apiBaseUrl}/${encodeURIComponent(siteSlug)}/blogs`, {
       headers: { "x-api-key": apiKey, accept: "application/json" },
-      next: { revalidate: 60 },
+      next: { revalidate: 60, tags: ["crm-blogs"] },
     });
     if (!res.ok || !isJson(res)) return [];
     return res.json();
@@ -55,7 +55,7 @@ export async function getBlog(slug: string): Promise<BlogPostFull | null> {
   try {
     const res = await fetch(`${apiBaseUrl}/${encodeURIComponent(siteSlug)}/blogs/${encodeURIComponent(slug)}`, {
       headers: { "x-api-key": apiKey, accept: "application/json" },
-      next: { revalidate: 60 },
+      next: { revalidate: 60, tags: ["crm-blogs", `crm-blog:${slug}`] },
     });
     if (!res.ok || !isJson(res)) return null;
     return res.json();
