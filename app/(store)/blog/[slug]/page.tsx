@@ -179,10 +179,11 @@ export default async function ArticlePage({
         <section className="guide-store-cta">
           <div className="container">
             <div>
-              <p className="guide-kicker">מוכנים לבחור?</p>
-              <h2>השוו לפי מותג, טעם ועוצמה</h2>
+              <p className="guide-kicker">מוכנים להזמין?</p>
+              <h2>מצאו את המוצר המדויק במלאי</h2>
+              <p>השוו מותג, טעם וסימון — ובדקו מחיר וזמינות בסל לפני התשלום.</p>
             </div>
-            <Link className="button" href="/shop">לכל המוצרים</Link>
+            <Link className="button" href="/shop">למוצרים זמינים</Link>
           </div>
         </section>
       </div>

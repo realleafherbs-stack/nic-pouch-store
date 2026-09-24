@@ -717,6 +717,7 @@ nav a:hover { opacity:.55; }
 .guide-store-cta { color:#11110f; background:#d8ff3e; }
 .guide-store-cta .container { min-height:250px; display:flex; align-items:center; justify-content:space-between; gap:35px; }
 .guide-store-cta h2 { margin:0; font-size:clamp(46px,6vw,82px); letter-spacing:-.055em; }
+.guide-store-cta p:not(.guide-kicker) { max-width:550px; margin:16px 0 0; font-size:17px; font-weight:700; line-height:1.45; }
 .guide-store-cta .button { min-width:180px; color:#f4f2eb; background:#11110f; }
 .guide-article-page {
   --guide-ink:#0b0b0a;
