@@ -6,12 +6,16 @@ import { flavorCategories, strengthCategories } from "@/lib/catalog/seo-categori
 import { getBlogs } from "@/lib/blog";
 import { blogSitemapEntries } from "@/lib/blog-seo";
 
-export const revalidate = 60;
+// Blog publication happens in the CRM. A sitemap must expose a newly published
+// URL immediately; otherwise it can remain undiscoverable while a stale ISR
+// response is served. This route is requested infrequently and is intentionally
+// rendered from fresh CRM data.
+export const dynamic = "force-dynamic";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [products, brands, blogPosts] = await Promise.all([
     getAllProducts(),
     getBrands(),
-    getBlogs(),
+    getBlogs({ fresh: true }),
   ]);
   const staticBlogSlugs = new Set(articles.map((article) => article.slug));
   return [
