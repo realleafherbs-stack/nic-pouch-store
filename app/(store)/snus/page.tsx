@@ -4,14 +4,14 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { absoluteUrl, breadcrumbSchema, getPageSeo, mergePageSeo } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackTitle = "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק";
-  const fallbackDescription = "מה זה סנוס, מה ההבדל בין סנוס מסורתי לשקיקי ניקוטין ללא טבק ואיך משווים טעמים ועוצמות לפני בחירה.";
+  const fallbackTitle = "סנוס ושקיקי ניקוטין: מה זה וההבדל מטבק";
+  const fallbackDescription = "מה זה סנוס ושקיקי ניקוטין ללא טבק? הסבר על המונחים פאוץ׳ ושקית ניקוטין, ומה בודקים לפני בחירה באתר בישראל.";
   const seo = await getPageSeo("snus");
   const copy = mergePageSeo(seo, { metaTitle: fallbackTitle, metaDescription: fallbackDescription, heading: "מה זה סנוס?", summary: fallbackDescription, ogImage: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg") });
   return {
     title: copy.metaTitle,
     description: copy.metaDescription,
-    keywords: [seo.focusKeyword || "מה זה סנוס", "סנוס", "סנוס ללא טבק", "שקיקי ניקוטין", "סנוס בישראל"],
+    keywords: [seo.focusKeyword || "מה זה סנוס", "סנוס", "סנוסים", "סנוס ניקוטין", "שקיקי ניקוטין", "שקיקי ניקוטין ללא טבק", "פאוץ׳ ניקוטין", "סנוס ישראל"],
     alternates: { canonical: seo.canonicalUrl || "/snus" },
     robots: seo.indexable === false ? { index: false, follow: true } : undefined,
     openGraph: { type: "article", title: copy.metaTitle, description: copy.metaDescription, url: "/snus", images: [{ url: copy.ogImage!, alt: "מדריך לסנוס ושקיקי ניקוטין ללא טבק" }] },
@@ -40,18 +40,18 @@ const faq = [
 export default async function SnusPage() {
   const seo = await getPageSeo("snus");
   const copy = mergePageSeo(seo, {
-    metaTitle: "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק",
-    metaDescription: "הסבר ברור על המונח סנוס ועל המוצרים ללא טבק שנמכרים באתר.",
-    heading: "מה זה סנוס?",
-    summary: "ההבדל בין סנוס מסורתי לבין שקיקי הניקוטין ללא טבק שנמכרים באתר.",
+    metaTitle: "סנוס ושקיקי ניקוטין: מה זה וההבדל מטבק",
+    metaDescription: "הסבר ברור על סנוס, שקיקי ניקוטין ללא טבק ופאוץ׳ ניקוטין, ועל הפרטים שצריך לקרוא לפני בחירה באתר.",
+    heading: "מה זה סנוס ושקיקי ניקוטין?",
+    summary: "ההבדל בין סנוס מסורתי לבין שקיקי הניקוטין ללא טבק שנמכרים באתר בישראל.",
   });
   const articleUrl = absoluteUrl("/snus");
   const schema = {
     "@type": "Article",
     "@id": `${articleUrl}#article`,
     mainEntityOfPage: articleUrl,
-    headline: "מה זה סנוס? ההבדל משקיקי ניקוטין ללא טבק",
-    description: "הסבר על סנוס מסורתי ועל שקיקי הניקוטין ללא טבק שנמכרים באתר.",
+    headline: "סנוס ושקיקי ניקוטין: מה זה וההבדל מטבק",
+    description: "הסבר על סנוס מסורתי ועל שקיקי ניקוטין ללא טבק שנמכרים באתר בישראל.",
     image: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg"),
     datePublished: "2026-07-26",
     dateModified: "2026-07-26",
@@ -69,7 +69,7 @@ export default async function SnusPage() {
   };
   const breadcrumbs = breadcrumbSchema([
     { name: "דף הבית", path: "/" },
-    { name: "מה זה סנוס", path: "/snus" },
+    { name: "סנוס ושקיקי ניקוטין", path: "/snus" },
   ]);
 
   return (
@@ -83,14 +83,23 @@ export default async function SnusPage() {
         </div>
       </header>
       <article className="container article article-designed">
-        <p className="article-lead">המילה ״סנוס״ היא הביטוי שרבים בישראל מחפשים, אבל חשוב להבחין בין סוגי המוצרים ולקרוא את הסימון שעל האריזה.</p>
+        <p className="article-lead">המילים ״סנוס״, ״סנוסים״ ו״סנוס ניקוטין״ משמשות בישראל גם לחיפוש שקיקי ניקוטין. חשוב להבחין בין סוגי המוצרים ולקרוא את הסימון שעל האריזה.</p>
         <h2>סנוס מסורתי לעומת שקיקי ניקוטין</h2>
         <p>סנוס מסורתי מכיל טבק. שקיקי ניקוטין מודרניים אינם מכילים טבק, אף שהם עשויים להיראות דומים ולהיות מיועדים לשימוש מתחת לשפה. כל המוצרים בחנות NIC POUCH הם שקיקי ניקוטין ללא טבק.</p>
+        <h2>מה זה שקיק ניקוטין, פאוץ׳ או שקית ניקוטין?</h2>
+        <p>שקיק ניקוטין, פאוץ׳ ניקוטין ושקית ניקוטין הם שמות חיפוש נפוצים לאותו סוג מוצר: שקיק קטן שמכיל ניקוטין ומיועד לשימוש לפי הוראות היצרן. השם המסחרי, הטעם והסימון משתנים בין מותגים, ולכן יש לקרוא את דף המוצר ואת האריזה.</p>
         <h2>מה מופיע בדף המוצר?</h2>
         <p>בכל דף מוצר מוצגים המותג, הטעם, נתון הניקוטין כאשר הוא מאומת, רמת העוצמה, המחיר והזמינות. אפשר לבחור יחידה אחת או כמות של 5 או 10 בהתאם למדרגות המחיר.</p>
         <h2>איך משווים בצורה נכונה?</h2>
         <p>השוו את העוצמה לפי סימון היצרן, ולאחר מכן את משפחת הטעם והמותג. הטעם אינו מעיד על כמות הניקוטין ולכן יש לבדוק את מספר המ״ג בנפרד. האתר אינו נותן המלצת מינון.</p>
         <p><Link href="/blog/strength-guide">קראו את מדריך העוצמות</Link> או עברו אל <Link href="/shop">כל שקיקי הניקוטין בחנות</Link>.</p>
+        <section className="info-cta" aria-label="מעבר למוצרים">
+          <div>
+            <p>מוכנים לראות מוצרים זמינים?</p>
+            <span>השוו מותג, טעם וסימון, ובדקו מחיר ומלאי בסל לפני התשלום.</span>
+          </div>
+          <Link className="button" href="/shop">למוצרים זמינים</Link>
+        </section>
         <h2>שאלות נפוצות</h2>
         <div className="pd-faq">
           {faq.map((item) => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}
