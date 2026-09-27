@@ -38,15 +38,18 @@ export async function verifyHypRedirect(
     const res = await fetch(`https://pay.hyp.co.il/p/?${params.toString()}`, {
       signal: AbortSignal.timeout(10_000),
     });
-    const text = await res.text();
+    // Hyp's VERIFY response is "CCode=0" but with a trailing newline
+    // ("CCode=0\n") — confirmed from real production logs on 2026-09-27.
+    // The un-trimmed text made the old regex's end-of-string anchor never
+    // match, so this rejected every genuinely successful payment since the
+    // day this file was written (2026-08-08). Trim before testing.
+    const text = (await res.text()).trim();
     const valid = /(^|&)CCode=0(&|$)/.test(text) && rawParams.CCode === "0";
-    // Diagnostic only, no logic change: this call has been silently
-    // returning {valid:false} for real customer orders with no trail to
-    // explain why. Logging on every rejection until we have real evidence
-    // of what Hyp actually returns for a genuine successful payment — do
-    // not remove until that's found. Never log Sign (a replayable
-    // signature) or Fild1/Fild2/Fild3 (carry the customer's name/email per
-    // Hyp's own docs) — only non-sensitive diagnostic fields.
+    // Diagnostic only, no logic change: kept so any future rejection still
+    // leaves a trail instead of failing silently like this one did. Never
+    // log Sign (a replayable signature) or Fild1/Fild2/Fild3 (carry the
+    // customer's name/email per Hyp's own docs) — only non-sensitive
+    // diagnostic fields.
     if (!valid) {
       const { Sign: _sign, Fild1: _f1, Fild2: _f2, Fild3: _f3, ...safeParamsSent } =
         Object.fromEntries(params.entries());
