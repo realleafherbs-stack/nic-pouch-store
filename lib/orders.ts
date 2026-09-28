@@ -25,6 +25,7 @@ interface OrderItem {
   name: string;
   price: number;
   qty: number;
+  variantId?: string;
 }
 
 export interface OrderPayload {

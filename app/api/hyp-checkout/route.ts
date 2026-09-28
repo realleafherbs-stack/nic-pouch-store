@@ -195,6 +195,10 @@ export async function POST(req: NextRequest) {
       name: product.name,
       price: unitPriceForQuantity(product, quantity),
       qty: quantity,
+      // Payper invoice line items only get a catalog_id (SKU/barcode) when
+      // this is present — see B2BCRM's lib/payper.ts. Without it, every
+      // nic-pouch order's Payper receipt prints with no ברקוד at all.
+      variantId: product.sku,
     })),
   });
   if (!staged) {
