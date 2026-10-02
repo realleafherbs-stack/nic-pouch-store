@@ -1,11 +1,13 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { vi } from "vitest";
 import { CartProvider } from "@/components/commerce/cart-provider";
 import { ProductDetail } from "@/components/product/product-detail";
 import type { Product } from "@/lib/catalog/model";
 
+const push = vi.fn();
+
 vi.mock("next/navigation", () => ({
-  useRouter: () => ({ push: vi.fn() }),
+  useRouter: () => ({ push }),
 }));
 
 const product: Product = {
@@ -31,6 +33,22 @@ it("retains the legacy purchase UI and feedback outside the balanced variant", (
   expect(screen.getByText("59.80 ₪")).toBeInTheDocument();
   fireEvent.click(screen.getByRole("button", { name: /הוסף לעגלה · 2/ }));
   expect(screen.getByText("נוסף לעגלה")).toBeInTheDocument();
+});
+
+it("adds the selected legacy product to the cart before taking the buyer to checkout", async () => {
+  window.localStorage.clear();
+  push.mockClear();
+  render(<CartProvider><ProductDetail product={product} related={[]} /></CartProvider>);
+
+  fireEvent.click(screen.getByRole("button", { name: "קנה עכשיו · 1" }));
+
+  expect(push).toHaveBeenCalledWith("/checkout");
+  await waitFor(() => {
+    const cart = JSON.parse(window.localStorage.getItem("nic-cart-v2") ?? "{}");
+    expect(cart.lines).toEqual(expect.arrayContaining([
+      expect.objectContaining({ product: expect.objectContaining({ id: product.id }), quantity: 1 }),
+    ]));
+  });
 });
 
 it("uses the complete normalized product name as the page heading", () => {

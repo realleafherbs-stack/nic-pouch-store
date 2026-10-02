@@ -61,14 +61,20 @@ export function ProductDetail({ product, related, variant = "legacy" }: ProductD
               </button>
             ) : null}
             {activeImage && !imageFailed
-              ? <img src={activeImage} alt={product.imageAlt || product.name} onError={() => setImageFailed(true)} />
+              ? <img
+                  src={activeImage}
+                  alt={product.imageAlt || product.name}
+                  fetchPriority="high"
+                  decoding="async"
+                  onError={() => setImageFailed(true)}
+                />
               : <span className="can-placeholder" data-testid="product-detail-image-fallback">{product.brand}</span>}
           </div>
           {images.length > 1 && (
             <div className="pd-thumbs" aria-label="תמונות המוצר">
               {images.map((image, index) => (
                 <button key={image} className={activeImage === image ? "active" : ""} onClick={() => { setActiveImage(image); setImageFailed(false); }} aria-label={`הצגת תמונה ${index + 1} של ${product.name}`} aria-pressed={activeImage === image}>
-                  <img src={image} alt="" />
+                  <img src={image} alt="" loading="lazy" decoding="async" />
                 </button>
               ))}
             </div>

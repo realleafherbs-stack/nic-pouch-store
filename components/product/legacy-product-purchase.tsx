@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Minus, Plus, ShoppingBag } from "lucide-react";
 import { useCart } from "@/components/commerce/cart-provider";
 import type { Product } from "@/lib/catalog/model";
@@ -11,12 +11,19 @@ export function LegacyProductPurchase({ product }: { product: Product }) {
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   const { dispatch } = useCart();
+  const router = useRouter();
 
   function addToCart() {
     if (product.stock <= 0) return;
     dispatch({ type: "add", product, quantity });
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1800);
+  }
+
+  function buyNow() {
+    if (product.stock <= 0) return;
+    dispatch({ type: "add", product, quantity });
+    router.push("/checkout");
   }
 
   return (
@@ -53,7 +60,9 @@ export function LegacyProductPurchase({ product }: { product: Product }) {
       <button type="button" disabled={product.stock <= 0} className="pd-add" onClick={addToCart}>
         <ShoppingBag /> {product.stock <= 0 ? "אזל מהמלאי" : added ? "נוסף לעגלה" : `הוסף לעגלה · ${quantity}`}
       </button>
-      <Link className="pd-buy" href="/checkout">קנה עכשיו</Link>
+      <button type="button" disabled={product.stock <= 0} className="pd-buy" onClick={buyNow}>
+        קנה עכשיו · {quantity}
+      </button>
     </div>
   );
 }

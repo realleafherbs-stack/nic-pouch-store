@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
+import { preconnect } from "react-dom";
 import { ProductDetail } from "@/components/product/product-detail";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getAllProducts, getProductByCurrentOrLegacySlug, getProduct, getProductsByIds } from "@/lib/catalog/local-repository";
 import { productVariantForSlug } from "@/lib/catalog/product-page-variant";
 import { retiredProductRedirectDestination } from "@/lib/catalog/retired-product-redirects";
 import { productFaq, productSeoDescription, productSeoTitle, productStrengthLabel } from "@/lib/catalog/product-seo";
-import { absoluteUrl, breadcrumbSchema, defaultKeywords, organizationName, siteName } from "@/lib/seo";
+import { absoluteUrl, breadcrumbSchema, defaultKeywords, organizationName, siteName, siteUrl } from "@/lib/seo";
 
 // Historic Hebrew product URLs can arrive percent-encoded. Rendering this
 // route dynamically prevents Next from placing those raw characters in its
@@ -62,6 +63,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const product = await getProductByCurrentOrLegacySlug(requestedSlug);
   if (!product) notFound();
   if (requestedSlug !== product.slug) permanentRedirect(`/shop/${product.slug}`);
+  const primaryImage = product.images[0];
+  if (primaryImage) {
+    try {
+      const imageOrigin = new URL(primaryImage, siteUrl).origin;
+      if (imageOrigin !== siteUrl) preconnect(imageOrigin, { crossOrigin: "anonymous" });
+    } catch {
+      // A malformed catalog image must never prevent the product page from rendering.
+    }
+  }
   const curatedRelated = product.relatedProductIds?.length
     ? (await getProductsByIds(product.relatedProductIds)).filter((item) => item.id !== product.id)
     : [];
