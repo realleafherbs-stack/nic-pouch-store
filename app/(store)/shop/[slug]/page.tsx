@@ -7,6 +7,11 @@ import { productVariantForSlug } from "@/lib/catalog/product-page-variant";
 import { productFaq, productSeoDescription, productSeoTitle, productStrengthLabel } from "@/lib/catalog/product-seo";
 import { absoluteUrl, breadcrumbSchema, defaultKeywords, organizationName, siteName } from "@/lib/seo";
 
+// Historic Hebrew product URLs can arrive percent-encoded. Rendering this
+// route dynamically prevents Next from placing those raw characters in its
+// static cache-tag response header before the canonical redirect is returned.
+export const dynamic = "force-dynamic";
+
 export async function generateStaticParams() {
   const products = await getAllProducts();
   return products.flatMap(({ slug, legacySlugs = [] }) => [slug, ...legacySlugs]).map((slug) => ({ slug }));
