@@ -35,12 +35,12 @@ describe("product redirects", () => {
     }]);
   });
 
-  it("percent-encodes non-ASCII legacy paths for Vercel's exact-match engine", () => {
+  it("keeps non-ASCII legacy paths decoded for Vercel's exact-match engine", () => {
     expect(buildProductRedirects([{
       slug: "nois-blueberry-25",
       legacySlugs: ["נויס-בלוברי-25-מג"],
     }])).toEqual([{
-      source: "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-25-%D7%9E%D7%92",
+      source: "/shop/נויס-בלוברי-25-מג",
       destination: "/shop/nois-blueberry-25",
       permanent: true,
     }]);
