@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { buildCanonicalUpdates, buildProductRedirects } from "@/lib/catalog/product-redirects.mjs";
 
 describe("product redirects", () => {
-  it("builds literal 301 redirects from every legacy product slug", () => {
+  it("builds literal permanent redirects from every legacy product slug", () => {
     const redirects = buildProductRedirects([{
       slug: "nois-blueberry-extreme-50-mg",
       legacySlugs: ["50-zrcoow46", "older-nois-blueberry"],
@@ -12,12 +12,12 @@ describe("product redirects", () => {
       {
         source: "/shop/50-zrcoow46",
         destination: "/shop/nois-blueberry-extreme-50-mg",
-        statusCode: 301,
+        permanent: true,
       },
       {
         source: "/shop/older-nois-blueberry",
         destination: "/shop/nois-blueberry-extreme-50-mg",
-        statusCode: 301,
+        permanent: true,
       },
     ]);
   });
@@ -31,7 +31,7 @@ describe("product redirects", () => {
     expect(redirects).toEqual([{
       source: "/shop/legacy",
       destination: "/shop/current",
-      statusCode: 301,
+      permanent: true,
     }]);
   });
 
@@ -42,7 +42,7 @@ describe("product redirects", () => {
     }])).toEqual([{
       source: "/shop/%D7%A0%D7%95%D7%99%D7%A1-%D7%91%D7%9C%D7%95%D7%91%D7%A8%D7%99-25-%D7%9E%D7%92",
       destination: "/shop/nois-blueberry-25",
-      statusCode: 301,
+      permanent: true,
     }]);
   });
 
