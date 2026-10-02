@@ -60,7 +60,9 @@ export async function getProduct(slug: string) {
 /** Finds a current product from either its current slug or a recorded historic slug. */
 export async function getProductByCurrentOrLegacySlug(slug: string) {
   const products = await fetchLiveProducts();
-  return products.find((product) => product.slug === slug || product.legacySlugs?.includes(slug)) ?? null;
+  return products.find((product) => product.slug === slug || product.legacySlugs?.includes(slug))
+    ?? fallbackProducts.find((product) => product.slug === slug || product.legacySlugs?.includes(slug))
+    ?? null;
 }
 
 export async function getProductsByIds(ids: string[]) {

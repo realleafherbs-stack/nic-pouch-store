@@ -4,6 +4,7 @@ import { ProductDetail } from "@/components/product/product-detail";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getAllProducts, getProductByCurrentOrLegacySlug, getProduct, getProductsByIds } from "@/lib/catalog/local-repository";
 import { productVariantForSlug } from "@/lib/catalog/product-page-variant";
+import { retiredProductRedirectDestination } from "@/lib/catalog/retired-product-redirects";
 import { productFaq, productSeoDescription, productSeoTitle, productStrengthLabel } from "@/lib/catalog/product-seo";
 import { absoluteUrl, breadcrumbSchema, defaultKeywords, organizationName, siteName } from "@/lib/seo";
 
@@ -56,6 +57,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const requestedSlug = decodeURIComponent((await params).slug);
+  const retiredDestination = retiredProductRedirectDestination(requestedSlug);
+  if (retiredDestination) permanentRedirect(retiredDestination);
   const product = await getProductByCurrentOrLegacySlug(requestedSlug);
   if (!product) notFound();
   if (requestedSlug !== product.slug) permanentRedirect(`/shop/${product.slug}`);
