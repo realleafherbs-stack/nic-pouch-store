@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ProductDetail } from "@/components/product/product-detail";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getAllProducts, getProduct, getProductsByIds } from "@/lib/catalog/local-repository";
+import { getAllProducts, getProductByCurrentOrLegacySlug, getProduct, getProductsByIds } from "@/lib/catalog/local-repository";
 import { productVariantForSlug } from "@/lib/catalog/product-page-variant";
 import { productFaq, productSeoDescription, productSeoTitle, productStrengthLabel } from "@/lib/catalog/product-seo";
 import { absoluteUrl, breadcrumbSchema, defaultKeywords, organizationName, siteName } from "@/lib/seo";
 
 export async function generateStaticParams() {
   const products = await getAllProducts();
-  return products.map(({ slug }) => ({ slug }));
+  return products.flatMap(({ slug, legacySlugs = [] }) => [slug, ...legacySlugs]).map((slug) => ({ slug }));
 }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const product = await getProduct(decodeURIComponent((await params).slug));
+  const product = await getProductByCurrentOrLegacySlug(decodeURIComponent((await params).slug));
   if (!product) return {};
   const seoName = productSeoTitle(product);
   const description = productSeoDescription(product);
@@ -50,8 +50,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const product = await getProduct(decodeURIComponent((await params).slug));
+  const requestedSlug = decodeURIComponent((await params).slug);
+  const product = await getProductByCurrentOrLegacySlug(requestedSlug);
   if (!product) notFound();
+  if (requestedSlug !== product.slug) permanentRedirect(`/shop/${product.slug}`);
   const curatedRelated = product.relatedProductIds?.length
     ? (await getProductsByIds(product.relatedProductIds)).filter((item) => item.id !== product.id)
     : [];

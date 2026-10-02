@@ -57,6 +57,12 @@ export async function getProduct(slug: string) {
   return products.find((product) => product.slug === slug) ?? null;
 }
 
+/** Finds a current product from either its current slug or a recorded historic slug. */
+export async function getProductByCurrentOrLegacySlug(slug: string) {
+  const products = await fetchLiveProducts();
+  return products.find((product) => product.slug === slug || product.legacySlugs?.includes(slug)) ?? null;
+}
+
 export async function getProductsByIds(ids: string[]) {
   const products = await fetchLiveProducts();
   const byId = new Map(products.map((product) => [product.id, product]));
