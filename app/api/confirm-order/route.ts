@@ -13,11 +13,12 @@ export async function POST(req: NextRequest) {
   // alone. Re-verify against Hyp's own transaction record before touching
   // the CRM, or this endpoint would let anyone conjure up an order just by
   // knowing (or guessing) its id.
-  const { valid, orderId } = await verifyHypRedirect(rawParams);
-  if (!valid || !orderId) {
+  const { valid, orderId, payment } = await verifyHypRedirect(rawParams);
+  if (!valid || !orderId || !payment) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
-  const ok = await finalizeOrder(orderId);
+  const ok = await finalizeOrder(orderId, payment);
+  if (!ok) console.error("[confirm-order] payment verified but order was NOT created", { orderId, amount: payment.amount });
   return NextResponse.json({ ok });
 }

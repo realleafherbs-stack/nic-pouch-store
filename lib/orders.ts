@@ -28,6 +28,13 @@ interface OrderItem {
   variantId?: string;
 }
 
+export interface VerifiedPaymentAudit {
+  orderId: string;
+  amount: number;
+  transactionId: string | null;
+  approvalCode: string | null;
+}
+
 export interface OrderPayload {
   total: number;
   shipping: number;
@@ -59,8 +66,14 @@ async function postToCrm(path: string, body?: unknown): Promise<boolean> {
         ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
       });
       if (res.ok) return true;
-    } catch {
-      // fall through to retry
+      // A failure here used to be completely silent: from Sep 28 the CRM
+      // rejected every finalize call with a 400 and orders were lost with no
+      // trace. Always record what the CRM said.
+      console.error("[crm] request rejected", { path, status: res.status, attempt: attempt + 1, body: (await res.text().catch(() => "")).slice(0, 300) });
+      // A 4xx (other than timeout/rate-limit) won't change on retry.
+      if (res.status >= 400 && res.status < 500 && res.status !== 408 && res.status !== 429) return false;
+    } catch (err) {
+      console.error("[crm] request failed", { path, attempt: attempt + 1, err });
     }
     if (attempt < attempts - 1) await new Promise((resolve) => setTimeout(resolve, 800 * (attempt + 1)));
   }
@@ -72,7 +85,10 @@ export async function stageCheckoutIntent(orderId: string, payload: OrderPayload
   return postToCrm("/checkout-intents", { id: orderId, payload });
 }
 
-export async function finalizeOrder(orderId: string): Promise<boolean> {
-  if (!ORDER_ID_PATTERN.test(orderId)) return false;
-  return postToCrm(`/checkout-intents/${encodeURIComponent(orderId)}/finalize`);
+export async function finalizeOrder(orderId: string, verifiedPayment: VerifiedPaymentAudit): Promise<boolean> {
+  if (!ORDER_ID_PATTERN.test(orderId) || verifiedPayment.orderId !== orderId) return false;
+  // The CRM only creates the paid Order when handed the verified payment
+  // (order id, amount, Hyp transaction + approval code) and checks the amount
+  // against the staged checkout total itself.
+  return postToCrm(`/checkout-intents/${encodeURIComponent(orderId)}/finalize`, { verifiedPayment });
 }

@@ -13,9 +13,23 @@
 // KEY/PassP and have us "verify" against a different terminal entirely).
 const ALLOWED_REDIRECT_KEYS = ["Id", "CCode", "Amount", "ACode", "Order", "Sign", "Coin", "Fild1", "Fild2", "Fild3", "tmp"];
 
+export type VerifiedHypPayment = {
+  orderId: string;
+  amount: number;
+  transactionId: string | null;
+  approvalCode: string | null;
+};
+
+// Hyp's own redirect Amount ("565" or "565.00") as a number, or null if it
+// isn't a plain amount. The CRM compares it to the staged checkout total.
+function parseAmount(value: string | undefined): number | null {
+  if (!value || !/^\d+(?:\.\d{1,2})?$/.test(value)) return null;
+  return Math.round((Number(value) + Number.EPSILON) * 100) / 100;
+}
+
 export async function verifyHypRedirect(
   rawParams: Record<string, string>,
-): Promise<{ valid: boolean; orderId?: string }> {
+): Promise<{ valid: boolean; orderId?: string; payment?: VerifiedHypPayment }> {
   const masof = process.env.HYP_MASOF;
   const key = process.env.HYP_KEY;
   const passP = process.env.HYP_PASSP;
@@ -60,7 +74,23 @@ export async function verifyHypRedirect(
         redirectParamsSent: safeParamsSent,
       });
     }
-    return { valid, orderId: valid ? orderId : undefined };
+    if (!valid) return { valid: false };
+
+    const amount = parseAmount(rawParams.Amount);
+    if (amount === null) {
+      console.error("[verifyHypRedirect] verified payment has an unreadable Amount", { orderId, rawAmount: rawParams.Amount });
+      return { valid: false };
+    }
+    return {
+      valid: true,
+      orderId,
+      payment: {
+        orderId,
+        amount,
+        transactionId: rawParams.Id?.trim() || null,
+        approvalCode: rawParams.ACode?.trim() || null,
+      },
+    };
   } catch (err) {
     console.error("[verifyHypRedirect] request failed", { orderId, err });
     return { valid: false };

@@ -23,9 +23,12 @@ export default async function PaymentSuccessPage({
   // order without ever paying. SuccessClient also retries client-side as a
   // backup in case this whole request never completes (e.g. the browser
   // closed mid-redirect).
-  const { valid, orderId } = await verifyHypRedirect(rawParams);
-  if (valid && orderId) {
-    await finalizeOrder(orderId);
+  const { valid, orderId, payment } = await verifyHypRedirect(rawParams);
+  if (valid && orderId && payment) {
+    const finalized = await finalizeOrder(orderId, payment);
+    // The customer sees the success screen either way, so a failure here
+    // must leave a trace — a verified payment with no Order is a lost sale.
+    if (!finalized) console.error("[payment/success] payment verified but order was NOT created", { orderId, amount: payment.amount });
   }
 
   return (
