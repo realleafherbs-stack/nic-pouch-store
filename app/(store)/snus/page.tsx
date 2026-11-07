@@ -54,7 +54,7 @@ export default async function SnusPage() {
     description: "הסבר על סנוס מסורתי ועל שקיקי ניקוטין ללא טבק שנמכרים באתר בישראל.",
     image: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg"),
     datePublished: "2026-07-26",
-    dateModified: "2026-07-26",
+    dateModified: "2026-11-07",
     inLanguage: "he-IL",
     author: { "@type": "Organization", "@id": `${absoluteUrl("/")}#organization`, name: "NIC POUCH" },
     publisher: { "@id": `${absoluteUrl("/")}#organization` },
@@ -93,6 +93,11 @@ export default async function SnusPage() {
         <h2>איך משווים בצורה נכונה?</h2>
         <p>השוו את העוצמה לפי סימון היצרן, ולאחר מכן את משפחת הטעם והמותג. הטעם אינו מעיד על כמות הניקוטין ולכן יש לבדוק את מספר המ״ג בנפרד. האתר אינו נותן המלצת מינון.</p>
         <p><Link href="/blog/strength-guide">קראו את מדריך העוצמות</Link> או עברו אל <Link href="/shop">כל שקיקי הניקוטין בחנות</Link>.</p>
+        <h2>מדריכים לבחירה ולהזמנה</h2>
+        <ul>
+          <li><Link href="/blog/cherry-snus-nicotine-pouches-israel-guide">סנוס דובדבן: השוואת NOIS, HQD ו־CUBA</Link></li>
+          <li><Link href="/blog/snus-delivery-israel-online-order-guide">סנוס משלוח עד הבית: בדיקת מחיר, כתובת ומעקב</Link></li>
+        </ul>
         <section className="info-cta" aria-label="מעבר למוצרים">
           <div>
             <p>מוכנים לראות מוצרים זמינים?</p>
