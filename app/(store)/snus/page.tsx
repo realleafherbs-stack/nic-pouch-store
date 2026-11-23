@@ -4,10 +4,10 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { absoluteUrl, breadcrumbSchema, getPageSeo, mergePageSeo } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackTitle = "סנוס ושקיקי ניקוטין: מה זה וההבדל מטבק";
-  const fallbackDescription = "מה זה סנוס ושקיקי ניקוטין ללא טבק? הסבר על המונחים פאוץ׳ ושקית ניקוטין, ומה בודקים לפני בחירה באתר בישראל.";
+  const fallbackTitle = "מה זה סנוס ומה ההבדל משקיק ניקוטין?";
+  const fallbackDescription = "מהו סנוס מסורתי המכיל טבק, כיצד הוא שונה משקיק ניקוטין ללא טבק ומה חשוב לדעת על ניקוטין ואזהרות? מידע לבני 18 ומעלה.";
   const seo = await getPageSeo("snus");
-  const copy = mergePageSeo(seo, { metaTitle: fallbackTitle, metaDescription: fallbackDescription, heading: "מה זה סנוס?", summary: fallbackDescription, ogImage: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg") });
+  const copy = mergePageSeo({ ...seo, metaTitle: null, metaDescription: null, heading: null, summary: null }, { metaTitle: fallbackTitle, metaDescription: fallbackDescription, heading: "מה זה סנוס ומה ההבדל משקיק ניקוטין?", summary: fallbackDescription, ogImage: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg") });
   return {
     title: copy.metaTitle,
     description: copy.metaDescription,
@@ -24,12 +24,12 @@ const faq = [
     answer: "סנוס מסורתי הוא מוצר שמכיל טבק ומונח מתחת לשפה. בישראל משתמשים לעיתים במילה סנוס גם כשם כללי לשקיקי ניקוטין.",
   },
   {
-    question: "האם המוצרים באתר מכילים טבק?",
-    answer: "לא. המוצרים המוצגים באתר הם שקיקי ניקוטין ללא טבק. נתוני כל מוצר מופיעים בדף המוצר ועל גבי האריזה.",
+    question: "האם כל שקיק ניקוטין מכיל טבק?",
+    answer: "לא בהכרח. יש לבדוק את הרכיבים ואת סיווג המוצר על האריזה או אצל היצרן; שם המוצר לבדו אינו מספיק.",
   },
   {
-    question: "איך בוחרים בין שקיקי ניקוטין?",
-    answer: "משווים את המותג, הטעם, מספר המ״ג ורמת העוצמה לפי סימון היצרן. האתר אינו נותן המלצת מינון.",
+    question: "מה בודקים בסימון הניקוטין?",
+    answer: "בודקים אם הנתון מציין מ״ג לשקיק או מ״ג לגרם. אין להשוות ביניהם בלי משקל שקיק ויחידות מאומתים.",
   },
   {
     question: "האם שקיקי ניקוטין מיועדים לקטינים?",
@@ -39,22 +39,22 @@ const faq = [
 
 export default async function SnusPage() {
   const seo = await getPageSeo("snus");
-  const copy = mergePageSeo(seo, {
-    metaTitle: "סנוס ושקיקי ניקוטין: מה זה וההבדל מטבק",
+  const copy = mergePageSeo({ ...seo, metaTitle: null, metaDescription: null, heading: null, summary: null }, {
+    metaTitle: "מה זה סנוס ומה ההבדל משקיק ניקוטין?",
     metaDescription: "הסבר ברור על סנוס, שקיקי ניקוטין ללא טבק ופאוץ׳ ניקוטין, ועל הפרטים שצריך לקרוא לפני בחירה באתר.",
-    heading: "מה זה סנוס ושקיקי ניקוטין?",
-    summary: "ההבדל בין סנוס מסורתי לבין שקיקי הניקוטין ללא טבק שנמכרים באתר בישראל.",
+    heading: "מה זה סנוס ומה ההבדל משקיק ניקוטין?",
+    summary: "מידע על ההבדל בין סנוס מסורתי לשקיקי ניקוטין ועל בדיקת הרכיבים והסימון.",
   });
   const articleUrl = absoluteUrl("/snus");
   const schema = {
     "@type": "Article",
     "@id": `${articleUrl}#article`,
     mainEntityOfPage: articleUrl,
-    headline: "סנוס ושקיקי ניקוטין: מה זה וההבדל מטבק",
-    description: "הסבר על סנוס מסורתי ועל שקיקי ניקוטין ללא טבק שנמכרים באתר בישראל.",
+    headline: "מה זה סנוס ומה ההבדל משקיק ניקוטין?",
+    description: "מידע על ההבדל בין סנוס מסורתי לשקיקי ניקוטין ועל בדיקת הרכיבים והסימון.",
     image: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg"),
     datePublished: "2026-07-26",
-    dateModified: "2026-11-07",
+    dateModified: "2026-11-23",
     inLanguage: "he-IL",
     author: { "@type": "Organization", "@id": `${absoluteUrl("/")}#organization`, name: "NIC POUCH" },
     publisher: { "@id": `${absoluteUrl("/")}#organization` },
@@ -85,26 +85,17 @@ export default async function SnusPage() {
       <article className="container article article-designed">
         <p className="article-lead">המילים ״סנוס״, ״סנוסים״ ו״סנוס ניקוטין״ משמשות בישראל גם לחיפוש שקיקי ניקוטין. חשוב להבחין בין סוגי המוצרים ולקרוא את הסימון שעל האריזה.</p>
         <h2>סנוס מסורתי לעומת שקיקי ניקוטין</h2>
-        <p>סנוס מסורתי מכיל טבק. שקיקי ניקוטין מודרניים אינם מכילים טבק, אף שהם עשויים להיראות דומים ולהיות מיועדים לשימוש מתחת לשפה. כל המוצרים בחנות NIC POUCH הם שקיקי ניקוטין ללא טבק.</p>
+        <p>סנוס מסורתי מכיל טבק. שקיקי ניקוטין ללא טבק אינם מכילים טבק, אף שהם עשויים להיראות דומים ולהיות מיועדים לשימוש מתחת לשפה. יש לבדוק את הרכיבים ואת סיווג המוצר על האריזה או אצל היצרן; השם לבדו אינו מאמת את הרכבו.</p>
         <h2>מה זה שקיק ניקוטין, פאוץ׳ או שקית ניקוטין?</h2>
         <p>שקיק ניקוטין, פאוץ׳ ניקוטין ושקית ניקוטין הם שמות חיפוש נפוצים לאותו סוג מוצר: שקיק קטן שמכיל ניקוטין ומיועד לשימוש לפי הוראות היצרן. השם המסחרי, הטעם והסימון משתנים בין מותגים, ולכן יש לקרוא את דף המוצר ואת האריזה.</p>
-        <h2>מה מופיע בדף המוצר?</h2>
-        <p>בכל דף מוצר מוצגים המותג, הטעם, נתון הניקוטין כאשר הוא מאומת, רמת העוצמה, המחיר והזמינות. אפשר לבחור יחידה אחת או כמות של 5 או 10 בהתאם למדרגות המחיר.</p>
+        <h2>מה בודקים על תווית שקיק ניקוטין?</h2>
+        <p>התווית עשויה לכלול את שם היצרן, הרכיבים, סימון הניקוטין ואזהרות. יש לקרוא את הסימון של המוצר המסוים ולוודא את יחידת המדידה; מספר בשם המוצר אינו מעיד לבדו על היחידה או על הרכב המוצר.</p>
         <h2>איך משווים בצורה נכונה?</h2>
-        <p>השוו את העוצמה לפי סימון היצרן, ולאחר מכן את משפחת הטעם והמותג. הטעם אינו מעיד על כמות הניקוטין ולכן יש לבדוק את מספר המ״ג בנפרד. האתר אינו נותן המלצת מינון.</p>
-        <p><Link href="/blog/strength-guide">קראו את מדריך העוצמות</Link> או עברו אל <Link href="/shop">כל שקיקי הניקוטין בחנות</Link>.</p>
-        <h2>מדריכים לבחירה ולהזמנה</h2>
-        <ul>
-          <li><Link href="/blog/cherry-snus-nicotine-pouches-israel-guide">סנוס דובדבן: השוואת NOIS, HQD ו־CUBA</Link></li>
-          <li><Link href="/blog/snus-delivery-israel-online-order-guide">סנוס משלוח עד הבית: בדיקת מחיר, כתובת ומעקב</Link></li>
-        </ul>
-        <section className="info-cta" aria-label="מעבר למוצרים">
-          <div>
-            <p>מוכנים לראות מוצרים זמינים?</p>
-            <span>השוו מותג, טעם וסימון, ובדקו מחיר ומלאי בסל לפני התשלום.</span>
-          </div>
-          <Link className="button" href="/shop">למוצרים זמינים</Link>
-        </section>
+        <p>בדקו את יחידת המדידה בסימון היצרן: מ״ג לשקיק מציין כמות בשקיק אחד ומ״ג לגרם מציין ריכוז לפי משקל. אין להשוות ביניהם בלי משקל שקיק ויחידות מאומתים. הטעם אינו מעיד על כמות הניקוטין ולכן יש לבדוק את מספר המ״ג בנפרד. האתר אינו נותן המלצת מינון.</p>
+        <p><Link href="/blog/nicotine-pouch-guide">מה בודקים על אריזת שקיק ניקוטין</Link> · <Link href="/blog/strength-guide">קראו את מדריך העוצמות</Link>.</p>
+        <h2>ניקוטין ואזהרות</h2>
+        <p>ניקוטין ממכר. שקיקי ניקוטין אינם מיועדים למי שאינם משתמשים בניקוטין, ויש להרחיקם מילדים ומבעלי חיים. במקרה של חשיפה או בליעה יש לפנות מיד למרכז הרעלות או לשירותי חירום, לפי הנסיבות.</p>
+        <p>למידע נוסף על ניקוטין ואזהרות ראו את <Link href="/nicotine-information">עמוד המידע על ניקוטין</Link>. אין להסיק מהשם או מהטעם שמוצר כלשהו בטוח.</p>
         <h2>שאלות נפוצות</h2>
         <div className="pd-faq">
           {faq.map((item) => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}
@@ -114,7 +105,7 @@ export default async function SnusPage() {
           <li><a href="https://www.cdc.gov/tobacco/nicotine-pouches/index.html" rel="noreferrer" target="_blank">CDC — מידע על שקיקי ניקוטין</a></li>
           <li><a href="https://www.fda.gov/consumers/consumer-updates/properly-store-nicotine-pouches-prevent-accidental-exposure-children-and-pets" rel="noreferrer" target="_blank">FDA — אחסון בטוח והרחקה מילדים ומבעלי חיים</a></li>
         </ul>
-        <div className="warning"><strong>אזהרה:</strong> ניקוטין הוא חומר ממכר. המוצרים מיועדים לבגירים בלבד.</div>
+        <div className="warning"><strong>אזהרה:</strong> ניקוטין ממכר. המידע לבני 18 ומעלה שכבר משתמשים בניקוטין בלבד; אינו מיועד למי שאינם משתמשים בניקוטין ואינו תרופת גמילה. המידע אינו ייעוץ רפואי.</div>
       </article>
     </>
   );
