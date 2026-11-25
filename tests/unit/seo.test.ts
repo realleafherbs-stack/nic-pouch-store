@@ -4,8 +4,11 @@ import { getAllProducts } from "@/lib/catalog/local-repository";
 import type { Product } from "@/lib/catalog/model";
 import {
   productFaq,
+  productFlavorLabel,
+  productSchema,
   productSeoDescription,
   productSeoTitle,
+  productStrengthLabel,
 } from "@/lib/catalog/product-seo";
 import { mergePageSeo, siteUrl } from "@/lib/seo";
 import sitemap from "@/app/sitemap";
@@ -43,7 +46,7 @@ describe("SEO foundations", () => {
     });
   });
 
-  it("creates useful and differentiated metadata for every product", () => {
+  it("creates a unique Hebrew title and description inside the length window for every product", () => {
     const titles = products.map(productSeoTitle);
     const descriptions = products.map(productSeoDescription);
 
@@ -51,21 +54,57 @@ describe("SEO foundations", () => {
     expect(new Set(descriptions).size).toBe(products.length);
 
     products.forEach((product) => {
-      expect(productSeoTitle(product).length).toBeGreaterThan(20);
-      expect(productSeoDescription(product).length).toBeGreaterThan(70);
+      const title = productSeoTitle(product);
+      const description = productSeoDescription(product);
+      const flavor = productFlavorLabel(product);
+
+      expect(title.length).toBeGreaterThan(20);
+      expect(title.length).toBeLessThanOrEqual(60);
+      expect(description.length).toBeGreaterThanOrEqual(120);
+      expect(description.length).toBeLessThanOrEqual(155);
+      expect(description).toContain(product.brand);
+      expect(description).toContain(productStrengthLabel(product));
+      expect(description).not.toMatch(/₪|גמילה|בריא|רפואי|מומלץ/);
+      expect(title).not.toMatch(/גמילה|בריא|רפואי|מומלץ/);
+      if (flavor) expect(description).toContain(flavor);
       expect(productFaq(product)).toHaveLength(4);
+
+      const schema = productSchema(product);
+      expect(schema.name).toBe(product.name);
+      expect(schema.description).toBe(description);
+      expect(schema).not.toHaveProperty("aggregateRating");
+      expect(schema).not.toHaveProperty("review");
+      expect(schema).not.toHaveProperty("gtin13");
+      expect(schema).not.toHaveProperty("manufacturer");
+      expect(schema.offers).toMatchObject({
+        price: product.retailPrice.toFixed(2),
+        priceCurrency: "ILS",
+        availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      });
     });
   });
 
-  it("prefers approved CRM metadata when it exists", () => {
+  it("builds metadata from catalog facts instead of stored CRM boilerplate", () => {
     const product = {
-      ...products[0],
-      metaTitle: "כותרת SEO מאושרת מה־CRM",
-      metaDescription: "תיאור SEO מאושר מה־CRM שנכתב במיוחד עבור עמוד המוצר.",
+      ...products.find((item) => item.slug === "hqd-mint-6")!,
+      metaTitle: "כותרת CRM ארוכה שלא אמורה להחליף את שם המוצר בתבנית",
+      metaDescription: "קצר מדי",
     };
 
-    expect(productSeoTitle(product)).toBe(product.metaTitle);
-    expect(productSeoDescription(product)).toBe(product.metaDescription);
+    expect(productSeoTitle(product)).toBe("HQD מנטה 6 מ״ג | שקיק ניקוטין ללא טבק");
+    expect(productSeoDescription(product)).not.toBe("קצר מדי");
+    expect(productSeoDescription(product)).toContain("בטעם מנטה");
+    expect(productSeoDescription(product)).toContain("עוצמה עדינה");
+  });
+
+  it("does not turn a malformed flavor into a different taste", () => {
+    const product = products.find((item) => item.slug === "nois-cool-strong-35");
+    expect(product).toBeTruthy();
+    expect(productFlavorLabel(product!)).toBeNull();
+    expect(productSeoDescription(product!)).not.toContain("מנטה");
+    expect(productSeoDescription(product!)).not.toContain("17.5");
+    expect(productSeoDescription(product!)).not.toContain("27");
+    expect(productSeoTitle(product!).length).toBeLessThanOrEqual(60);
   });
 
   it("keeps every article unique, useful and schema-ready", () => {

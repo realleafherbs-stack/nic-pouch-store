@@ -3,11 +3,11 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { preconnect } from "react-dom";
 import { ProductDetail } from "@/components/product/product-detail";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getAllProducts, getProductByCurrentOrLegacySlug, getProduct, getProductsByIds } from "@/lib/catalog/local-repository";
+import { getAllProducts, getProductByCurrentOrLegacySlug, getProductsByIds } from "@/lib/catalog/local-repository";
 import { productVariantForSlug } from "@/lib/catalog/product-page-variant";
 import { retiredProductRedirectDestination } from "@/lib/catalog/retired-product-redirects";
-import { productFaq, productSeoDescription, productSeoTitle, productStrengthLabel } from "@/lib/catalog/product-seo";
-import { absoluteUrl, breadcrumbSchema, defaultKeywords, organizationName, siteName, siteUrl } from "@/lib/seo";
+import { productFaq, productSchema, productSeoDescription, productSeoKeywords, productSeoTitle, productSocialImages } from "@/lib/catalog/product-seo";
+import { absoluteUrl, breadcrumbSchema, siteName, siteUrl } from "@/lib/seo";
 
 // Historic Hebrew product URLs can arrive percent-encoded. Rendering this
 // route dynamically prevents Next from placing those raw characters in its
@@ -21,38 +21,34 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const product = await getProductByCurrentOrLegacySlug(decodeURIComponent((await params).slug));
   if (!product) return {};
-  const seoName = productSeoTitle(product);
+  const title = productSeoTitle(product);
   const description = productSeoDescription(product);
-  const socialImages = product.ogImage ? [product.ogImage] : product.images;
+  const canonical = `/shop/${product.slug}`;
+  const images = productSocialImages(product).map((image) => ({
+    url: absoluteUrl(image),
+    alt: product.imageAlt || product.name,
+  }));
   return {
-    title: seoName,
+    // Absolute, so the root template does not append " | NIC POUCH" and push the title over 60 characters.
+    title: { absolute: title },
     description,
-    keywords: [
-      product.name,
-      product.brand,
-      product.flavor ?? "",
-      product.nicotineMg ? `${product.nicotineMg} מ״ג` : "",
-      `שקיקי ניקוטין ${product.brand}`,
-      `סנוס ${product.brand}`,
-      ...defaultKeywords,
-    ].filter(Boolean),
-    alternates: { canonical: `/shop/${product.slug}` },
+    keywords: productSeoKeywords(product),
+    alternates: { canonical },
     robots: product.indexable === false ? { index: false, follow: false } : undefined,
     openGraph: {
       type: "website",
-      title: `${seoName} | ${siteName}`,
+      locale: "he_IL",
+      siteName,
+      title,
       description,
-      url: `/shop/${product.slug}`,
-      images: socialImages.map((image) => ({
-        url: absoluteUrl(image),
-        alt: `${product.name} – תמונת מוצר`,
-      })),
+      url: canonical,
+      images,
     },
     twitter: {
-      card: "summary_large_image",
-      title: `${seoName} | ${siteName}`,
+      card: images.length ? "summary_large_image" : "summary",
+      title,
       description,
-      images: socialImages.map((image) => absoluteUrl(image)),
+      images: images.map((image) => image.url),
     },
   };
 }
@@ -83,44 +79,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const related = curatedRelated.length
     ? curatedRelated.slice(0, 4)
     : [...sameBrand, ...sameStrengthOtherBrand].slice(0, 4);
-  const productUrl = absoluteUrl(`/shop/${product.slug}`);
-  const faq = productFaq(product);
-  const schema = {
-    "@type": "Product",
-    "@id": `${productUrl}#product`,
-    name: `${product.name} – שקיקי ניקוטין ללא טבק`,
-    description: product.description ?? product.metaDescription ?? `${product.name} מבית ${product.brand}, שקיקי ניקוטין ללא טבק. המחיר והזמינות מעודכנים בדף המוצר.`,
-    image: product.images.map((image) => absoluteUrl(image)),
-    sku: product.sku,
-    ...((product.gtin ?? product.sku).replace(/\D/g, "").length === 13 ? { gtin13: (product.gtin ?? product.sku).replace(/\D/g, "") } : {}),
-    category: "שקיקי ניקוטין ללא טבק",
-    audience: { "@type": "PeopleAudience", suggestedMinAge: 18 },
-    brand: { "@type": "Brand", name: product.brand },
-    manufacturer: { "@type": "Organization", name: product.brand },
-    additionalProperty: [
-      ...(product.flavor ? [{ "@type": "PropertyValue", name: "טעם", value: product.flavor }] : []),
-      ...(product.nicotineMg ? [{ "@type": "PropertyValue", name: "ניקוטין", value: `${product.nicotineMg} מ״ג` }] : []),
-      { "@type": "PropertyValue", name: "עוצמה", value: productStrengthLabel(product) },
-      { "@type": "PropertyValue", name: "אריזה", value: "יחידה" },
-    ],
-    offers: {
-      "@type": "Offer",
-      url: productUrl,
-      price: product.retailPrice.toFixed(2),
-      priceCurrency: "ILS",
-      availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@type": "Organization", name: organizationName },
-    },
-  };
-  const faqSchema = {
-    "@type": "FAQPage",
-    mainEntity: faq.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  };
   const breadcrumbs = breadcrumbSchema([
     { name: "דף הבית", path: "/" },
     { name: "חנות", path: "/shop" },
@@ -128,10 +86,20 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     { name: product.name, path: `/shop/${product.slug}` },
   ]);
   const variant = productVariantForSlug(product.slug);
+  // The shared FAQ is rendered only on the balanced product layout. Emitting
+  // FAQPage on the legacy pages would describe questions that are not on the page.
+  const faqSchema = variant === "balanced" ? {
+    "@type": "FAQPage",
+    mainEntity: productFaq(product).map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  } : null;
 
   return (
     <>
-      <JsonLd data={[schema, faqSchema, breadcrumbs]} />
+      <JsonLd data={[productSchema(product), breadcrumbs, ...(faqSchema ? [faqSchema] : [])]} />
       <ProductDetail product={product} related={related} variant={variant} />
     </>
   );
