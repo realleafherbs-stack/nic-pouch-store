@@ -284,24 +284,26 @@ export default async function ArticlePage({
             <p>{guide.excerpt} תמיד כדאי להשוות את סימון היצרן ואת פרטי המוצר המעודכנים.</p>
           </section>
 
-          <section className="guide-article-shop-cta">
+          {!guide.informationalOnly && <section className="guide-article-shop-cta">
             <div>
               <p className="guide-kicker">מוכנים לבחור?</p>
               <h2>השוו לפי מותג, טעם ועוצמה</h2>
             </div>
             <Link className="button" href="/shop">לכל המוצרים</Link>
-          </section>
+          </section>}
 
-          <nav className="guide-next" aria-label="המדריך הבא">
+          {guide.informationalOnly && <nav aria-label="קישורים למידע נוסף"><h2>מידע נוסף ועמודים קשורים</h2><ul>{guide.relatedLinks.map((link) => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul></nav>}
+
+          {!guide.informationalOnly && <nav className="guide-next" aria-label="המדריך הבא">
             <span>המדריך הבא</span>
             <Link href={`/blog/${nextGuide.slug}`}>
               <b>{nextGuide.number}</b>
               <strong>{nextGuide.title}</strong>
               <ArrowLeft aria-hidden="true" />
             </Link>
-          </nav>
+          </nav>}
 
-          <section className="guide-related" aria-labelledby="guide-related-title">
+          {!guide.informationalOnly && <section className="guide-related" aria-labelledby="guide-related-title">
             <p className="guide-kicker">להמשיך ללמוד</p>
             <h2 id="guide-related-title">מדריכים קשורים</h2>
             <div>
@@ -309,7 +311,7 @@ export default async function ArticlePage({
                 <GuideCard guide={related} variant="compact" key={related.slug} />
               ))}
             </div>
-          </section>
+          </section>}
         </article>
       </div>
     </div>
