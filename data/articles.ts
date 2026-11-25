@@ -26,6 +26,7 @@ export interface Guide {
   modified: string;
   updated: string;
   featured?: boolean;
+  informationalOnly?: boolean;
   image?: { src: string; alt: string };
   takeaways: string[];
   sections: GuideSection[];
@@ -44,6 +45,77 @@ export const guideCategoryLabels: Record<GuideCategory, string> = {
 };
 
 export const articles: Guide[] = [
+  {
+    slug: "snus-vs-chewing-tobacco",
+    number: "04",
+    title: "טבק לעיסה וסנוס: מה ההבדל?",
+    excerpt: "הסבר על ההבדלים בין טבק לעיסה, סנוס ושקיקי ניקוטין, ואיך לקרוא את תיאור המוצר בלי להסתמך על השם בלבד.",
+    primaryKeyword: "טבק לעיסה סנוס",
+    category: "beginner",
+    readingTime: 4,
+    readTime: "4 דקות",
+    publishedAt: "2026-11-25",
+    published: "2026-11-25",
+    modified: "2026-11-25",
+    updated: "25.11.2026",
+    informationalOnly: true,
+    takeaways: [
+      "טבק לעיסה וסנוס הם סוגים שונים של טבק ללא עשן.",
+      "שקיק ניקוטין אינו בהכרח סנוס המכיל טבק; יש לבדוק את התווית.",
+      "שם או צורת האריזה לבדם אינם מספיקים לזיהוי הרכיבים.",
+    ],
+    sections: [
+      {
+        id: "definitions",
+        title: "טבק לעיסה וסנוס: שתי הגדרות",
+        paragraphs: [
+          "טבק לעיסה הוא סוג של טבק ללא עשן, המשווק בין היתר כעלים חופשיים, גושים או רצועות. סנוס הוא סוג של טבק לח וגרוס ללא עשן, הנמכר גם בשקיקים. שתי הקטגוריות מכילות טבק, אך אינן אותו מוצר.",
+          "המונח טבק ללא עשן מתאר קבוצה רחבה של מוצרים שאינם נשרפים; הוא אינו שם נרדף מדויק לטבק לעיסה. גם צורת השקיק לבדה אינה קובעת אם המוצר הוא סנוס.",
+        ],
+      },
+      {
+        id: "pouches",
+        title: "ומה לגבי שקיקי ניקוטין?",
+        paragraphs: [
+          "שקיקי ניקוטין משווקים לעיתים כנטולי טבק, והם נבדלים מסנוס שמכיל טבק. בישראל השם סנוס משמש לעיתים גם בתיאור שקיקי ניקוטין, ולכן כדאי לבדוק את הסיווג והרכיבים על האריזה במקום להסיק מהשם בלבד.",
+          "גם כשמוצר מסומן כנטול טבק, אין להסיק מכך שהוא נטול ניקוטין. ניקוטין הוא חומר ממכר, והמוצרים אינם מיועדים לקטינים או למי שאינו משתמש בניקוטין.",
+        ],
+      },
+      {
+        id: "label",
+        title: "איך מבחינים לפי התווית?",
+        paragraphs: [
+          "חפשו את שם סוג המוצר, רשימת הרכיבים, פרטי היצרן והאזהרות. אם מופיע נתון ניקוטין, בדקו גם את יחידת המדידה: מ״ג לשקיק ומ״ג לגרם אינם אותו נתון. צבע האריזה, שם טעם או תמונה אינם מאמתים את הרכב המוצר.",
+          "כאשר הסימון חסר או לא ברור, אין לנחש לפי שם המותג או המספר בשם המוצר; אפשר לבדוק מול פרטי היצרן. אין במדריך המלצה לשימוש, למינון או לבחירת מוצר.",
+        ],
+      },
+      {
+        id: "safety",
+        title: "אזהרה ואחסון",
+        paragraphs: [
+          "המידע מיועד לבני 18 ומעלה. הרחיקו מוצרי טבק וניקוטין, כולל שקיקים משומשים, מילדים ומבעלי חיים. במקרה של חשיפה או בליעה יש לפנות מיד למרכז הרעלות או למוקד חירום בהתאם לנסיבות.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "האם סנוס הוא טבק לעיסה?", answer: "סנוס וטבק לעיסה הם סוגים שונים של טבק ללא עשן. סנוס הוא טבק לח וגרוס, ואילו טבק לעיסה נמכר גם כעלים, גושים או רצועות." },
+      { question: "האם כל שקיק מכיל טבק?", answer: "לא. יש שקיקי ניקוטין המשווקים כנטולי טבק; סנוס מסורתי מכיל טבק. יש לבדוק את הרכיבים והסיווג על האריזה." },
+      { question: "האם אפשר לזהות את הרכב המוצר לפי השם סנוס?", answer: "לא בהכרח. השם משמש לעיתים גם לשקיקי ניקוטין, ולכן יש לבדוק את התווית ופרטי היצרן." },
+    ],
+    sources: [
+      "המכון הלאומי לסרטן בארה״ב, Smokeless Tobacco and Cancer: https://www.cancer.gov/about-cancer/causes-prevention/risk/tobacco/smokeless-fact-sheet",
+      "CDC, Nicotine Pouches: https://www.cdc.gov/tobacco/nicotine-pouches/",
+      "FDA, אחסון שקיקי ניקוטין והרחקתם מילדים ובעלי חיים: https://www.fda.gov/consumers/consumer-updates/properly-store-nicotine-pouches-prevent-accidental-exposure-children-and-pets",
+    ],
+    relatedGuideSlugs: [],
+    relatedLinks: [
+      { label: "מהו סנוס?", href: "/snus" },
+      { label: "מידע על ניקוטין ואזהרות", href: "/nicotine-information" },
+      { label: "מדריך ליחידות ניקוטין", href: "/blog/nicotine-mg-per-pouch-vs-per-gram" },
+      { label: "עמוד המותג NOIS", href: "/brands/nois" },
+      { label: "קטגוריית שקיקי ניקוטין", href: "/shop" },
+    ],
+  },
   {
     slug: "nicotine-pouch-guide",
     number: "01",
