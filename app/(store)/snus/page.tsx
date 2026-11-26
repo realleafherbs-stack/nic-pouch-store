@@ -54,7 +54,7 @@ export default async function SnusPage() {
     description: "מידע על ההבדל בין סנוס מסורתי לשקיקי ניקוטין ועל בדיקת הרכיבים והסימון.",
     image: absoluteUrl("/generated/guide-choosing-editorial-v3.jpg"),
     datePublished: "2026-07-26",
-    dateModified: "2026-11-23",
+    dateModified: "2026-11-26",
     inLanguage: "he-IL",
     author: { "@type": "Organization", "@id": `${absoluteUrl("/")}#organization`, name: "NIC POUCH" },
     publisher: { "@id": `${absoluteUrl("/")}#organization` },
@@ -92,7 +92,7 @@ export default async function SnusPage() {
         <p>התווית עשויה לכלול את שם היצרן, הרכיבים, סימון הניקוטין ואזהרות. יש לקרוא את הסימון של המוצר המסוים ולוודא את יחידת המדידה; מספר בשם המוצר אינו מעיד לבדו על היחידה או על הרכב המוצר.</p>
         <h2>איך משווים בצורה נכונה?</h2>
         <p>בדקו את יחידת המדידה בסימון היצרן: מ״ג לשקיק מציין כמות בשקיק אחד ומ״ג לגרם מציין ריכוז לפי משקל. אין להשוות ביניהם בלי משקל שקיק ויחידות מאומתים. הטעם אינו מעיד על כמות הניקוטין ולכן יש לבדוק את מספר המ״ג בנפרד. האתר אינו נותן המלצת מינון.</p>
-        <p><Link href="/blog/nicotine-pouch-guide">מה בודקים על אריזת שקיק ניקוטין</Link> · <Link href="/blog/strength-guide">קראו את מדריך העוצמות</Link>.</p>
+        <p><Link href="/blog/nicotine-pouch-guide">מה בודקים על אריזת שקיק ניקוטין</Link> · <Link href="/blog/strength-guide">קראו את מדריך העוצמות</Link> · <Link href="/blog/nicotine-label-missing-units">מה עושים כשיחידת המ״ג אינה ברורה?</Link>.</p>
         <h2>ניקוטין ואזהרות</h2>
         <p>ניקוטין ממכר. שקיקי ניקוטין אינם מיועדים למי שאינם משתמשים בניקוטין, ויש להרחיקם מילדים ומבעלי חיים. במקרה של חשיפה או בליעה יש לפנות מיד למרכז הרעלות או לשירותי חירום, לפי הנסיבות.</p>
         <p>למידע נוסף על ניקוטין ואזהרות ראו את <Link href="/nicotine-information">עמוד המידע על ניקוטין</Link>. אין להסיק מהשם או מהטעם שמוצר כלשהו בטוח.</p>
